@@ -1,37 +1,22 @@
 'use client';
 import { Star } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-const testimonials = [
-  {
-    name: 'Sophie',
-    profession: 'Executive Director, Copenhagen',
-    review: 'Two years of impeccable service. Zero complaints. Best team in Copenhagen.',
-    initials: 'SA',
-    rating: 5,
-  },
-  {
-    name: 'Marcus',
-    profession: 'Property Owner',
-    review: 'The team delivers exactly what they promise. Premium, reliable, and perfectly professional.',
-    initials: 'MV',
-    rating: 5,
-  },
-  {
-    name: 'Henrik',
-    profession: 'Architect',
-    review: 'I had very high standards. WiCare not only met them, they exceeded them.',
-    initials: 'HC',
-    rating: 5,
-  },
+const meta = [
+  { name: 'Sophie', initials: 'SA', rating: 5 },
+  { name: 'Marcus', initials: 'MV', rating: 5 },
+  { name: 'Henrik', initials: 'HC', rating: 5 },
 ];
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+  const testimonials = meta.map((m, i) => ({ ...m, profession: t.testimonials.short[i].profession, review: t.testimonials.short[i].review }));
   return (
     <section id="testimonials" className="section-padding bg-light">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Client Stories</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">What Our Clients Say</h2>
+          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">{t.testimonials.badge}</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.testimonials.heading}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

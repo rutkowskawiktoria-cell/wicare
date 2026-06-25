@@ -3,15 +3,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Phone, Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
-
-const navLinks = [
-  { label: 'Services', href: '/#services' },
-  { label: 'Why WiCare', href: '/#why-us' },
-  { label: 'Testimonials', href: '/#testimonials' },
-  { label: 'Contact', href: '/#contact' },
-];
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function Navbar() {
+  const { t } = useLanguage();
+  const navLinks = [
+    { label: t.nav.services, href: '/#services' },
+    { label: t.nav.whyWiCare, href: '/#why-us' },
+    { label: t.nav.testimonials, href: '/#testimonials' },
+    { label: t.nav.contact, href: '/#contact' },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -44,7 +45,7 @@ export default function Navbar() {
             <a href="tel:+4552721102" className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
               <Phone size={16} /><span>+45 52 72 11 02</span>
             </a>
-            <Link href="/#booking" className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-yellow-600 transition-colors duration-200 shadow-md">Book Now</Link>
+            <Link href="/#booking" className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-yellow-600 transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
           </div>
           <button onClick={() => setMenuOpen(!menuOpen)} className={`md:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,7 +61,7 @@ export default function Navbar() {
             <div className="py-3">
               <LanguageSwitcher />
             </div>
-            <Link href="/#booking" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">Get Started</Link>
+            <Link href="/#booking" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">{t.nav.getStarted}</Link>
           </div>
         </div>
       )}
