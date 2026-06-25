@@ -14,8 +14,8 @@ const iconMap: Record<string, React.ElementType> = {
   'wi-wardrobe': Shirt,
   'wi-scent': Flower2,
   'wi-device': Smartphone,
-  'wi-paws': Dog,
-  'wi-green': Leaf,
+  'wi-pet': Dog,
+  'wi-garden': Leaf,
 };
 
 const subServices = [

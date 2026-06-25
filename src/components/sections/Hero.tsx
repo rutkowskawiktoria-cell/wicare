@@ -24,7 +24,7 @@ export default function Hero() {
           <Link href="#brands" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Explore Our Services</Link>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          {['WiClean','WiCook','WiHelp','WiShine','WiWardrobe','WiScent','WiDevice','WiPaws','WiGreen'].map((brand) => (
+          {['WiClean','WiCook','WiHelp','WiShine','WiWardrobe','WiScent','WiDevice','WiPet','WiGarden'].map((brand) => (
             <span key={brand} className="bg-white/10 border border-white/15 text-white/70 text-xs px-3 py-1.5 rounded-full tracking-wide font-medium">{brand}</span>
           ))}
         </div>

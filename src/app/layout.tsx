@@ -5,14 +5,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
 
 export const metadata: Metadata = {
   title: 'WiCare Group | Elite Home & Lifestyle Services Copenhagen',
-  description: 'WiCare Group — Denmark\'s premier luxury lifestyle services group. Nine elite brands: WiClean, WiCook, WiHelp, WiShine, WiWardrobe, WiScent, WiDevice, WiPaws, WiGreen. Serving CEOs, executives, and high-net-worth families across Copenhagen.',
-  keywords: ['luxury home services Copenhagen', 'private chef Copenhagen', 'premium cleaning Denmark', 'executive lifestyle services', 'WiCare', 'concierge services Copenhagen', 'high net worth services Denmark', 'vehicle detailing Copenhagen', 'pet valet', 'plant care', 'WiClean', 'WiCook', 'WiHelp', 'WiPaws', 'WiGreen'],
+  description: 'WiCare Group — Denmark\'s premier luxury lifestyle services group. Five core services: WiClean, WiCook, WiHelp, WiPet, WiGarden. WiClean covers all cleaning, detailing, wardrobe, scent, and device care. Serving CEOs, executives, and high-net-worth families across Copenhagen.',
+  keywords: ['luxury home services Copenhagen', 'private chef Copenhagen', 'premium cleaning Denmark', 'executive lifestyle services', 'WiCare', 'concierge services Copenhagen', 'high net worth services Denmark', 'vehicle detailing Copenhagen', 'pet valet', 'plant care', 'WiClean', 'WiCook', 'WiHelp', 'WiPet', 'WiGarden'],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website', locale: 'en_DK', siteName: 'WiCare Group',
     title: 'WiCare Group | Elite Home & Lifestyle Services',
-    description: 'Elite home and lifestyle services delivered with discretion, precision, and trust. Nine premium brands serving Copenhagen.',
+    description: 'Elite home and lifestyle services delivered with discretion, precision, and trust. Five core services serving Copenhagen.',
     url: siteUrl,
   },
   twitter: {
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'WiCare Group',
               url: siteUrl,
               logo: `${siteUrl}/logo.png`,
-              description: 'Denmark\'s premier luxury lifestyle services group. Nine elite brands serving CEOs, executives, and high-net-worth families across Copenhagen.',
+              description: 'Denmark\'s premier luxury lifestyle services group. Five core services serving CEOs, executives, and high-net-worth families across Copenhagen.',
               address: { '@type': 'PostalAddress', addressLocality: 'Copenhagen', addressCountry: 'DK' },
               telephone: '+4552721102',
               email: 'wicare.cleaning@gmail.com',
@@ -52,8 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { '@type': 'Brand', name: 'WiClean', description: 'Executive Home Cleaning — including WiShine, WiWardrobe, WiScent, WiDevice' },
                 { '@type': 'Brand', name: 'WiCook', description: 'Private Dining & Catering' },
                 { '@type': 'Brand', name: 'WiHelp', description: 'Premier Property Care' },
-                { '@type': 'Brand', name: 'WiPaws', description: 'Elite Pet Valet' },
-                { '@type': 'Brand', name: 'WiGreen', description: 'Architectural Botanical Care' },
+                { '@type': 'Brand', name: 'WiPet', description: 'Elite Pet Valet' },
+                { '@type': 'Brand', name: 'WiGarden', description: 'Architectural Botanical Care' },
               ],
             }),
           }}
