@@ -28,10 +28,6 @@ export function LanguageProvider({ children, initialLocale }: { children: ReactN
     localStorage.setItem('wicare-locale', newLocale);
   };
 
-  if (!mounted && !initialLocale) {
-    return <>{children}</>;
-  }
-
   return (
     <LanguageContext.Provider value={{ locale, setLocale, t: translations[locale] }}>
       {children}
