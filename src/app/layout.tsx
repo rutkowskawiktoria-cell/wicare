@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
-import { headers } from "next/headers";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare Group | Elite Home & Lifestyle Services Copenhagen",
-  description: "WiCare Group, Denmark's premier luxury services: WiClean, WiCook, WiHelp, WiShine, WiWardrobe, WiScent, WiDevice. Serving CEOs and executives across Copenhagen.",
-  keywords: ["luxury home services Copenhagen", "private chef Copenhagen", "premium cleaning Denmark", "executive lifestyle services", "WiCare", "concierge services Copenhagen", "high net worth services Denmark", "property care", "pet valet", "plant care", "WiClean", "WiCook", "WiHelp", "WiShine", "WiWardrobe"],
+  description: "WiCare Group, Denmark's premier luxury services: WiClean, WiCook, and WiHelp. Serving CEOs and executives across Copenhagen.",
+  keywords: ["luxury home services Copenhagen", "private chef Copenhagen", "premium cleaning Denmark", "executive lifestyle services", "WiCare", "concierge services Copenhagen", "high net worth services Denmark", "property care", "WiClean", "WiCook", "WiHelp"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
@@ -55,10 +54,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { "@type": "Brand", name: "WiClean", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
                 { "@type": "Brand", name: "WiCook", description: "Private Dining & Catering" },
                 { "@type": "Brand", name: "WiHelp", description: "Premier Property & Lifestyle Care" },
-                { "@type": "Brand", name: "WiShine", description: "Executive Vehicle Detailing" },
-                { "@type": "Brand", name: "WiWardrobe", description: "Garment & Shoe Valet" },
-                { "@type": "Brand", name: "WiScent", description: "Ambient Atmosphere Management" },
-                { "@type": "Brand", name: "WiDevice", description: "Tech Sanitization & Cable Management" },
               ],
             }),
           }}

@@ -41,6 +41,10 @@ export function LanguageProvider({ children, initialLocale }: { children: ReactN
       .finally(() => clearTimeout(timeout));
   }, [initialLocale]);
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') document.documentElement.lang = locale;
+  }, [locale]);
+
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
     localStorage.setItem('wicare-locale', newLocale);
