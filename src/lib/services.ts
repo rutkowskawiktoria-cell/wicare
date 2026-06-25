@@ -24,7 +24,7 @@ export const services: Service[] = [
     slug: 'wi-cook',
     name: 'WiCook',
     subtitle: 'Private Dining & Catering',
-    description: '13+ years of Michelin-star and Danish Parliament culinary expertise. Private chef experiences, exclusive dinner parties, and executive catering.',
+    description: 'Professional private chef experiences, exclusive dinner parties, and executive catering in Copenhagen.',
     longDescription: 'WiCook brings Michelin-star and Danish Parliament culinary expertise directly to your home. Our chefs have cooked for heads of state, royalty, and the most demanding palates in Copenhagen. Whether it is an intimate dinner for two, a boardroom lunch, or a grand celebration, every dish is crafted with precision, creativity, and world-class technique.',
     features: ['Private chef dining', 'Corporate catering', 'Michelin pedigree', 'Bespoke menus', 'Wine pairing', 'Event planning'],
     details: ['13+ years of Michelin-star and Danish Parliament experience', 'Custom menu design for every occasion', 'Ingredient sourcing from premium Danish purveyors', 'Seamless setup, service, and cleanup'],
