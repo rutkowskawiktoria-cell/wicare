@@ -9,9 +9,9 @@ export default function Navbar() {
   const { t } = useLanguage();
   const navLinks = [
     { label: t.nav.services, href: '/#services' },
-    { label: t.nav.whyWiCare, href: '/#why-us' },
+    { label: t.nav.whyWiCare, href: '/#trust' },
     { label: t.nav.testimonials, href: '/#testimonials' },
-    { label: t.nav.contact, href: '/#contact' },
+    { label: t.nav.contact, href: '/#booking' },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);

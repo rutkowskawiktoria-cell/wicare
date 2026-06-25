@@ -5,18 +5,14 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 export default function Booking() {
   const { t } = useLanguage();
 
-  const stats = [
-    { number: '10+', label: 'Years of Service', desc: 'Trusted since 2016' },
-    { number: '100%', label: 'Insured', desc: 'Full coverage' },
-    { number: '2h', label: 'Response Time', desc: 'Always quick' },
-  ];
+  const stats = t.booking.stats;
 
   return (
     <section id="booking" className="section-padding bg-primary">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 className="font-serif text-4xl md:text-5xl text-white font-semibold mb-4">Ready to Get Started?</h2>
+        <h2 className="font-serif text-4xl md:text-5xl text-white font-semibold mb-4">{t.booking.heading}</h2>
         <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-          Call us today. We respond within 2 business hours.
+          {t.booking.subheading}
         </p>
 
         <a

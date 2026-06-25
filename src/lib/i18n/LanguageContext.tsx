@@ -1,7 +1,6 @@
 'use client';
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, type Locale } from './translations';
-import { getClientLocale } from './getClientLocale';
 
 interface LanguageContextType {
   locale: Locale;
@@ -13,14 +12,33 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children, initialLocale }: { children: ReactNode; initialLocale?: Locale }) {
   const [locale, setLocaleState] = useState<Locale>(initialLocale || 'en');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    if (!initialLocale) {
-      const clientLocale = getClientLocale();
-      setLocaleState(clientLocale);
+    if (initialLocale) return;
+
+    // 1. A manual choice always wins.
+    const stored = localStorage.getItem('wicare-locale');
+    if (stored === 'en' || stored === 'da') {
+      setLocaleState(stored);
+      return;
     }
+
+    // 2. Fast first guess from the browser language while geo loads.
+    const browserDanish = (navigator.language || '').toLowerCase().startsWith('da');
+    setLocaleState(browserDanish ? 'da' : 'en');
+
+    // 3. Refine by visitor country: Danish only inside Denmark, English elsewhere.
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2500);
+    fetch('https://ipapi.co/country/', { signal: controller.signal })
+      .then((r) => (r.ok ? r.text() : ''))
+      .then((country) => {
+        const c = country.trim().toUpperCase();
+        if (c === 'DK') setLocaleState('da');
+        else if (c) setLocaleState('en');
+      })
+      .catch(() => {})
+      .finally(() => clearTimeout(timeout));
   }, [initialLocale]);
 
   const setLocale = (newLocale: Locale) => {
