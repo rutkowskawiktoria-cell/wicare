@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-sm font-semibold tracking-widest uppercase mb-5">Navigate</h4>
             <ul className="space-y-3">
-              {[{label:'Services',href:'/#services'},{label:'Why WiCare',href:'/#why-us'},{label:'Testimonials',href:'/#testimonials'},{label:'Book Now',href:'/#booking'},{label:'Contact',href:'/#contact'}].map(({ label, href }) => (
+              {[{label:'Services',href:'/#services'},{label:'Why WiCare',href:'/#why-us'},{label:'Testimonials',href:'/#testimonials'},{label:'Book',href:'/#booking'},{label:'Contact',href:'/#contact'}].map(({ label, href }) => (
                 <li key={label}><Link href={href} className="text-white/50 hover:text-accent text-sm transition-colors duration-200">{label}</Link></li>
               ))}
             </ul>

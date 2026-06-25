@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <Link href="#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">Request a Consultation</Link>
-          <Link href="/#services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Explore Our Services</Link>
+          <Link href="/#services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Our Services</Link>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
           {['WiClean','WiCook','WiHelp','WiPet','WiGarden'].map((brand) => (

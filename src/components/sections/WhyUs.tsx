@@ -38,7 +38,7 @@ export default function WhyUs() {
               ))}
             </div>
             <div className="mt-10 flex items-center gap-6">
-              <a href="#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 text-sm tracking-wide uppercase shadow-lg">Book Now</a>
+              <a href="#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 text-sm tracking-wide uppercase shadow-lg">Book a Service</a>
               <a href="tel:+4552721102" className="text-primary hover:text-accent font-semibold text-sm transition-colors duration-200 underline underline-offset-4">Call +45 52 72 11 02</a>
             </div>
           </div>
