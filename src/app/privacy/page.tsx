@@ -31,7 +31,7 @@ export default function PrivacyPage() {
         <section className="py-16">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 prose prose-gray prose-lg">
             <h2>1. Information We Collect</h2>
-            <p>We collect only the information necessary to provide our services: name, phone number, email address, and service address. We do not collect payment card details directly — transactions are processed through our secure payment partner.</p>
+            <p>We collect only the information necessary to provide our services: name, phone number, email address, and service address. We do not collect payment card details directly   transactions are processed through our secure payment partner.</p>
             <h2>2. How We Use Your Information</h2>
             <p>Your information is used solely to schedule and deliver services, communicate appointment details, and send service-related follow-ups. We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
             <h2>3. Data Storage & Security</h2>

@@ -2,10 +2,10 @@ import { Star, Quote } from 'lucide-react';
 const testimonials = [
   { name: 'Sophie', profession: 'Executive Director, Copenhagen', rating: 5, review: 'WiCare has been looking after our penthouse for two years. The level of discretion and attention to detail is genuinely unmatched.', initials: 'SA' },
   { name: 'Marcus', profession: 'Expat & Property Owner', rating: 5, review: 'Moving to Copenhagen with a family, I needed a cleaning team I could trust completely. WiCare deliver exactly what they promise: premium, reliable, and perfectly professional.', initials: 'MV' },
-  { name: 'Ingrid', profession: 'Partner, Law Firm', rating: 5, review: 'Our office has never looked better. The team is discreet, punctual, and thorough. The eco-friendly products were important to us — WiCare ticked every box.', initials: 'IH' },
-  { name: 'Thomas', profession: 'Tech Entrepreneur', rating: 5, review: 'I was sceptical about premium cleaning — until WiCare. My villa has never been cleaner, and the team works around my busy schedule without any disruption.', initials: 'TK' },
+  { name: 'Ingrid', profession: 'Partner, Law Firm', rating: 5, review: 'Our office has never looked better. The team is discreet, punctual, and thorough. The eco-friendly products were important to us   WiCare ticked every box.', initials: 'IH' },
+  { name: 'Thomas', profession: 'Tech Entrepreneur', rating: 5, review: 'I was sceptical about premium cleaning   until WiCare. My villa has never been cleaner, and the team works around my busy schedule without any disruption.', initials: 'TK' },
   { name: 'Camille', profession: 'French Expat, Finance Director', rating: 5, review: 'Three apartments managed, zero complaints. WiCare is the only team I trust with my properties.', initials: 'CD' },
-  { name: 'Henrik', profession: 'Architect', rating: 5, review: 'As someone obsessed with detail in my own work, I had very high standards. WiCare not only met them — they exceeded them.', initials: 'HC' },
+  { name: 'Henrik', profession: 'Architect', rating: 5, review: 'As someone obsessed with detail in my own work, I had very high standards. WiCare not only met them   they exceeded them.', initials: 'HC' },
 ];
 export default function Testimonials() {
   return (

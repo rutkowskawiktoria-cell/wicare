@@ -1,9 +1,9 @@
 import { CheckCircle2 } from 'lucide-react';
 const reasons = [
   { title: 'Professional & Insured', desc: 'Every team member is fully insured and trained to a white-glove standard.' },
-  { title: 'Eco-Friendly Products', desc: 'Certified green cleaning products — effective, safe, and kind to the environment.' },
+  { title: 'Eco-Friendly Products', desc: 'Certified green cleaning products   effective, safe, and kind to the environment.' },
   { title: 'Tailored Cleaning Plans', desc: 'We design every programme around your unique needs and lifestyle.' },
-  { title: 'Flexible Scheduling', desc: 'We work around your calendar — mornings, evenings, weekends.' },
+  { title: 'Flexible Scheduling', desc: 'We work around your calendar   mornings, evenings, weekends.' },
   { title: 'Exceptional Attention to Detail', desc: 'The details others miss are the ones we obsess over.' },
   { title: 'Trusted by Professionals', desc: "Copenhagen's most discerning clients rely on WiCare." },
 ];

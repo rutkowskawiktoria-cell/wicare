@@ -26,7 +26,7 @@ export default function Hero() {
           <span className="text-accent italic">for Those Who Demand the Best</span>
         </h1>
         <p className="text-xl md:text-2xl text-white/75 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-          Discretion. Precision. Trust. One trusted partner managing every aspect of your home, lifestyle, and private residence — executing your vision with flawless precision.
+          Discretion. Precision. Trust. One trusted partner managing every aspect of your home, lifestyle, and private residence   executing your vision with flawless precision.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <Link href="/#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">Request a Consultation</Link>

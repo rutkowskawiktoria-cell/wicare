@@ -25,8 +25,8 @@ const services = [
     icon: Wrench,
     title: 'WiHelp',
     subtitle: 'Premier Property Care',
-    desc: 'Complete property and lifestyle support. Expert gardening, construction, handyman services, elite pet care, and botanical expertise. Skilled professionals for every property need — from rooftop terraces to basement renovations.',
-    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Elite pet valet & walks', 'Paw care & hygiene', 'Plant care & botanical expertise', 'Leaf dusting & precision watering'],
+    desc: 'Complete property and lifestyle support. Expert gardening, construction, handyman services, elite pet care, and botanical expertise. Skilled professionals for every property need   from rooftop terraces to basement renovations.',
+    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Elite pet valet & walks', 'Plant care & botanical expertise', 'Leaf dusting & precision watering'],
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Services() {
         <div className="text-center mb-16">
           <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Our Services</p>
           <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold mb-5">Everything We Offer</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">Every service is defined based on your agreement. Choose what you need — nothing is pre-bundled.</p>
+          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">Every service is defined based on your agreement. Choose what you need   nothing is pre-bundled.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map(({ slug, icon: Icon, title, subtitle, desc, features, highlight }) => (
@@ -61,7 +61,7 @@ export default function Services() {
               </ul>
               {highlight && (
                 <p className="text-white/50 text-xs italic mb-4 leading-relaxed">
-                  Extends to vehicle detailing, wardrobe care, ambient scenting, and device sanitization — all defined by your agreement.
+                  Extends to vehicle detailing, wardrobe care, ambient scenting, and device sanitization   all defined by your agreement.
                 </p>
               )}
               <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent group-hover:underline`}>

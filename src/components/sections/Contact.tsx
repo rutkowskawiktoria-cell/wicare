@@ -38,7 +38,7 @@ export default function Contact() {
               <Phone size={32} className="text-accent" />
             </div>
             <h3 className="font-serif text-2xl text-primary font-semibold mb-2">Call Us Directly</h3>
-            <p className="text-gray-500 text-sm mb-6 max-w-xs">Our team is ready to help. No forms, no waiting — just a conversation.</p>
+            <p className="text-gray-500 text-sm mb-6 max-w-xs">Our team is ready to help. No forms, no waiting   just a conversation.</p>
             <a href="tel:+4552721102" className="text-accent hover:text-yellow-600 font-bold text-3xl md:text-4xl transition-colors duration-200 tracking-tight">
               +45 52 72 11 02
             </a>
