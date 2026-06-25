@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && touch out/.nojekyll && echo wicare.vip > out/CNAME",
     "start": "next start -p 3002",
     "lint": "next lint",
     "db:push": "prisma db push",
