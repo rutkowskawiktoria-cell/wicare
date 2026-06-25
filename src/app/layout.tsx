@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               founder: { '@type': 'Person', name: 'WiCare' },
               sameAs: [],
               brand: [
-                { '@type': 'Brand', name: 'WiClean', description: 'Executive Home Cleaning — including WiShine, WiWardrobe, WiScent, WiDevice' },
+                { '@type': 'Brand', name: 'WiClean', description: 'Executive Home Cleaning — tailored to your needs, from deep cleaning to specialized care' },
                 { '@type': 'Brand', name: 'WiCook', description: 'Private Dining & Catering' },
                 { '@type': 'Brand', name: 'WiHelp', description: 'Premier Property Care' },
                 { '@type': 'Brand', name: 'WiPet', description: 'Elite Pet Valet' },
