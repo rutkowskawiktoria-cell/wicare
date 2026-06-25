@@ -42,7 +42,7 @@ export default function Contact() {
             <a href="tel:+4552721102" className="text-accent hover:text-yellow-600 font-bold text-3xl md:text-4xl transition-colors duration-200 tracking-tight">
               +45 52 72 11 02
             </a>
-            <p className="text-gray-400 text-xs mt-4">Available 7 days a week · Response within 2 hours</p>
+            <p className="text-gray-400 text-xs mt-4">Available 5 days a week · Response within 2 hours</p>
           </div>
         </div>
       </div>
