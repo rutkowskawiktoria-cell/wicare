@@ -5,7 +5,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare Group | Elite Home & Lifestyle Services Copenhagen",
-  description: "WiCare Group — Denmark’s premier luxury services group: WiClean, WiCook, WiHelp, WiPet, WiGarden. Serving CEOs, executives, and high-net-worth families across Copenhagen.",
+  description: "WiCare Group — Denmark’s premier luxury services: WiClean, WiCook, WiHelp, WiPet, WiGarden. Serving CEOs and executives across Copenhagen.",
   keywords: ["luxury home services Copenhagen", "private chef Copenhagen", "premium cleaning Denmark", "executive lifestyle services", "WiCare", "concierge services Copenhagen", "high net worth services Denmark", "vehicle detailing Copenhagen", "pet valet", "plant care", "WiClean", "WiCook", "WiHelp", "WiPet", "WiGarden"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
