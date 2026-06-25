@@ -34,7 +34,7 @@ export default function Services() {
                 <p className="text-accent text-xs font-medium uppercase tracking-wider">{subtitle}</p>
               </div>
 
-              <p className={`text-base leading-relaxed mb-6 ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
+              <p className={`text-base leading-relaxed mb-6 break-words hyphens-auto ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
 
               <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent group-hover:underline`}>
                 {t.services.learnMore} <ExternalLink size={12} />

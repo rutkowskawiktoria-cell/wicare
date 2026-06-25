@@ -48,7 +48,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
               {service.features.map((f) => (
                 <div key={f} className="flex items-start gap-3 p-4 bg-light rounded-xl hover:bg-gray-100 transition-colors">
                   <CheckCircle2 size={24} className="text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-base font-medium">{f}</span>
+                  <span className="text-gray-700 text-base font-medium break-words hyphens-auto">{f}</span>
                 </div>
               ))}
             </div>

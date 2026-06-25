@@ -35,25 +35,25 @@ export default function Navbar() {
               <span className="block text-xs tracking-widest uppercase text-accent">Group</span>
             </div>
           </Link>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={`text-sm font-medium tracking-wide transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className={`whitespace-nowrap text-sm font-medium tracking-wide transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>{link.label}</Link>
             ))}
           </nav>
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <a href="tel:+4552721102" className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
+            <a href="tel:+4552721102" className={`flex items-center gap-2 whitespace-nowrap text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
               <Phone size={16} /><span>+45 52 72 11 02</span>
             </a>
-            <Link href="/#booking" className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-yellow-600 transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
+            <Link href="/#booking" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-yellow-600 transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
           </div>
-          <button onClick={() => setMenuOpen(!menuOpen)} className={`md:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className={`lg:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-xl">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-xl">
           <div className="px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="block text-primary font-medium py-2 border-b border-gray-50">{link.label}</Link>

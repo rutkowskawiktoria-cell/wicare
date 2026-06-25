@@ -25,11 +25,11 @@ export default function Hero() {
         <p className="text-xl md:text-2xl text-white/75 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
           {t.hero.subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-12 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <Link href="/#booking" className="w-full sm:w-auto text-center bg-accent hover:bg-yellow-600 text-white font-semibold px-10 sm:px-12 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">
             {t.hero.ctaConsultation}
           </Link>
-          <Link href="/#services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-12 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">
+          <Link href="/#services" className="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 sm:px-12 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">
             {t.hero.ctaServices}
           </Link>
         </div>
