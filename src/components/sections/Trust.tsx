@@ -3,7 +3,7 @@ import { ShieldCheck, Leaf, Clock, Star, Award, Users } from 'lucide-react';
 const trustItems = [
   { icon: Award, label: '10+ Years Experience', desc: 'A decade of premium service' },
   { icon: ShieldCheck, label: '100% Insured', desc: 'Full liability coverage' },
-  { icon: Leaf, label: 'Eco-Friendly', desc: 'Green certified products' },
+  { icon: Leaf, label: 'Smart Product Selection', desc: 'Balanced for safety & efficacy' },
   { icon: Users, label: 'Background Checked', desc: 'Vetted & trusted staff' },
   { icon: Clock, label: 'Reliable Scheduling', desc: 'Always on time' },
   { icon: Star, label: 'Premium Service', desc: 'White-glove standard' },

@@ -16,8 +16,8 @@ export const services: Service[] = [
     subtitle: 'Executive Home Cleaning',
     description: 'Premium residential cleaning for CEOs and industry leaders. Discreet, meticulous, and tailored to the highest standards of luxury living.',
     longDescription: 'WiClean is our flagship service — the foundation of the WiCare Group. We provide premium residential cleaning for CEOs, executives, and high-net-worth individuals across Copenhagen. Every detail is handled with discretion, precision, and an uncompromising commitment to quality. Our teams are fully insured, background-checked, and trained to a white-glove standard.',
-    features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Eco-friendly products', 'Background-checked staff', 'Fully insured'],
-    details: ['Serving Copenhagen\'s most discerning clients since 2016', 'Certified green cleaning products — effective, safe, and kind to the environment', 'Flexible scheduling — mornings, evenings, weekends', 'Dedicated team assigned to your property'],
+    features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Smart product selection', 'Background-checked staff', 'Fully insured'],
+    details: ['Serving Copenhagen\'s most discerning clients since 2016', 'Thoughtfully selected products — balanced for safety and efficacy', 'Flexible scheduling — mornings, evenings, weekends', 'Dedicated team assigned to your property'],
     highlight: true,
   },
   {
