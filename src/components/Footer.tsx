@@ -43,6 +43,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/60 text-sm">{t.footer.copyright}</p>
+          <p className="text-white/40 text-sm mt-1">{t.footer.cvr}</p>
         </div>
       </div>
     </footer>

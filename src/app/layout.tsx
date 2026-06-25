@@ -48,6 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               telephone: "+4552721102",
               email: "wicare.cleaning@gmail.com",
               foundingDate: "2016",
+              taxID: "46213270",
+              vatID: "DK46213270",
+              identifier: { "@type": "PropertyValue", propertyID: "CVR", value: "46213270" },
               founder: { "@type": "Person", name: "WiCare" },
               sameAs: [],
               brand: [
