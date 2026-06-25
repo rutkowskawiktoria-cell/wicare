@@ -1,6 +1,15 @@
 'use client';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
+
+const brandSlugs: Record<string, string> = {
+  WiClean: '/services/wi-clean',
+  WiCook: '/services/wi-cook',
+  WiHelp: '/services/wi-help',
+  WiPet: '/services/wi-pet',
+  WiGarden: '/services/wi-garden',
+};
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -25,7 +34,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
           {['WiClean','WiCook','WiHelp','WiPet','WiGarden'].map((brand) => (
-            <span key={brand} className="bg-white/10 border border-white/15 text-white/70 text-xs px-3 py-1.5 rounded-full tracking-wide font-medium">{brand}</span>
+            <Link key={brand} href={brandSlugs[brand]} className="bg-white/10 border border-white/15 text-white/70 text-xs px-3 py-1.5 rounded-full tracking-wide font-medium hover:bg-white/20 hover:text-white transition-colors duration-200">{brand}</Link>
           ))}
         </div>
       </div>
