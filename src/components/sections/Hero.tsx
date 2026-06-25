@@ -21,10 +21,10 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <Link href="#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">Request a Consultation</Link>
-          <Link href="#brands" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Explore Our Services</Link>
+          <Link href="/#services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Explore Our Services</Link>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          {['WiClean','WiCook','WiHelp','WiShine','WiWardrobe','WiScent','WiDevice','WiPet','WiGarden'].map((brand) => (
+          {['WiClean','WiCook','WiHelp','WiPet','WiGarden'].map((brand) => (
             <span key={brand} className="bg-white/10 border border-white/15 text-white/70 text-xs px-3 py-1.5 rounded-full tracking-wide font-medium">{brand}</span>
           ))}
         </div>
