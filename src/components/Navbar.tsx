@@ -5,7 +5,7 @@ import { Phone, Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Services', href: '/#services' },
-  { label: 'Our Brands', href: '/#brands' },
+  
   { label: 'Why WiCare', href: '/#why-us' },
   { label: 'Testimonials', href: '/#testimonials' },
   { label: 'Contact', href: '/#contact' },

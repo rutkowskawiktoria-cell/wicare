@@ -1,17 +1,57 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, Car, Shirt, Flower2, Smartphone, Dog, Leaf, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, Dog, Leaf, CheckCircle2, ExternalLink, Car, Shirt, Flower2, Smartphone } from 'lucide-react';
+
+const wicleanExtras = [
+  { icon: Car, name: 'WiShine', subtitle: 'Vehicle Detailing' },
+  { icon: Shirt, name: 'WiWardrobe', subtitle: 'Garment & Shoe Valet' },
+  { icon: Flower2, name: 'WiScent', subtitle: 'Ambient Atmosphere' },
+  { icon: Smartphone, name: 'WiDevice', subtitle: 'Tech Sanitization' },
+];
 
 const services = [
-  { slug: 'wi-clean', icon: Sparkles, title: 'WiClean', subtitle: 'Executive Home Cleaning', desc: 'Premium residential cleaning for CEOs and industry leaders. Discreet, meticulous, and tailored to the highest standards of luxury living.', features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Smart product selection'], highlight: true },
-  { slug: 'wi-cook', icon: ChefHat, title: 'WiCook', subtitle: 'Private Dining & Catering', desc: '13+ years of Michelin-star and Danish Parliament culinary expertise. Private chef experiences, exclusive dinner parties, and executive catering.', features: ['Private chef dining', 'Corporate catering', 'Michelin pedigree', 'Bespoke menus'] },
-  { slug: 'wi-help', icon: Wrench, title: 'WiHelp', subtitle: 'Premier Property Care', desc: 'Expert gardening, construction, and handyman services. Skilled professionals for every property need — from rooftop terraces to basement renovations.', features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance'] },
-  { slug: 'wi-shine', icon: Car, title: 'WiShine', subtitle: 'Executive Vehicle Detailing', desc: 'On-site waterless car care while you work. Exterior wash, premium leather conditioning, dashboard sanitization, and interior vacuuming.', features: ['Waterless exterior wash', 'Leather conditioning', 'Dashboard sanitization', 'Interior vacuuming'] },
-  { slug: 'wi-wardrobe', icon: Shirt, title: 'WiWardrobe', subtitle: 'Garment & Shoe Valet', desc: 'Professional shoe shining, luxury sneaker cleaning, lint-rolling bespoke suits, and dry-cleaning logistics. Your wardrobe, perfectly maintained every visit.', features: ['Shoe shining & care', 'Sneaker cleaning', 'Suit lint-rolling', 'Dry-cleaning logistics'] },
-  { slug: 'wi-scent', icon: Flower2, title: 'WiScent', subtitle: 'Ambient Atmosphere Management', desc: 'Luxury scent management for a 5-star home experience. Refilling premium reed diffusers, swapping essential oils, and replacing air purifier filters.', features: ['Reed diffuser refills', 'Essential oil swaps', 'Air purifier filters', 'Premium scent refills'] },
-  { slug: 'wi-device', icon: Smartphone, title: 'WiDevice', subtitle: 'Tech Sanitization & Cable Management', desc: 'Medical-grade UV sanitization and microfiber screen-cleaning for all laptops, tablets, and remotes. Loose cables wrapped with premium leather ties.', features: ['UV device sanitization', 'Screen cleaning', 'Leather cable ties', 'Charging station organization'] },
-  { slug: 'wi-paws', icon: Dog, title: 'WiPaws', subtitle: 'Elite Pet Valet', desc: 'Premium walks with full hygiene care. Paws wiped, water refreshed, and a photo update sent straight to your phone.', features: ['Brisk neighborhood walk', 'Paw wiping & hygiene', 'Hydration refill', 'Photo proof of life'] },
-  { slug: 'wi-green', icon: Leaf, title: 'WiGreen', subtitle: 'Architectural Botanical Care', desc: 'Expert care for luxury indoor plants. Leaf dusting, soil moisture checks, precision watering, dead leaf removal, and rotation for even sunlight.', features: ['Leaf dusting & cleaning', 'Moisture meter check', 'Precision watering', 'Aesthetic pruning'] },
+  {
+    slug: 'wi-clean',
+    icon: Sparkles,
+    title: 'WiClean',
+    subtitle: 'Executive Home Cleaning',
+    desc: 'Premium residential cleaning for CEOs and industry leaders. Discreet, meticulous, and tailored to the highest standards of luxury living.',
+    features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Smart product selection'],
+    highlight: true,
+    hasSubs: true,
+  },
+  {
+    slug: 'wi-cook',
+    icon: ChefHat,
+    title: 'WiCook',
+    subtitle: 'Private Dining & Catering',
+    desc: '13+ years of Michelin-star and Danish Parliament culinary expertise. Private chef experiences, exclusive dinner parties, and executive catering.',
+    features: ['Private chef dining', 'Corporate catering', 'Michelin pedigree', 'Bespoke menus'],
+  },
+  {
+    slug: 'wi-help',
+    icon: Wrench,
+    title: 'WiHelp',
+    subtitle: 'Premier Property Care',
+    desc: 'Expert gardening, construction, and handyman services. Skilled professionals for every property need — from rooftop terraces to basement renovations.',
+    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance'],
+  },
+  {
+    slug: 'wi-paws',
+    icon: Dog,
+    title: 'WiPaws',
+    subtitle: 'Elite Pet Valet',
+    desc: 'Premium walks with full hygiene care. Paws wiped, water refreshed, and a photo update sent straight to your phone.',
+    features: ['Brisk neighborhood walk', 'Paw wiping & hygiene', 'Hydration refill', 'Photo proof of life'],
+  },
+  {
+    slug: 'wi-green',
+    icon: Leaf,
+    title: 'WiGreen',
+    subtitle: 'Architectural Botanical Care',
+    desc: 'Expert care for luxury indoor plants. Leaf dusting, soil moisture checks, precision watering, dead leaf removal, and rotation for even sunlight.',
+    features: ['Leaf dusting & cleaning', 'Moisture meter check', 'Precision watering', 'Aesthetic pruning'],
+  },
 ];
 
 export default function Services() {
@@ -21,10 +61,10 @@ export default function Services() {
         <div className="text-center mb-16">
           <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Our Services</p>
           <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold mb-5">Everything We Offer</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">Nine distinct services. One trusted partner. Every detail handled with precision and care.</p>
+          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">Every service is defined based on your agreement. Choose what you need — nothing is pre-bundled.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map(({ slug, icon: Icon, title, subtitle, desc, features, highlight }) => (
+          {services.map(({ slug, icon: Icon, title, subtitle, desc, features, highlight, hasSubs }) => (
             <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-white text-primary shadow-md'}`}>
               {highlight && <div className="absolute top-4 right-4 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">Flagship</div>}
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${highlight ? 'bg-accent/20' : 'bg-light'}`}>
@@ -43,6 +83,22 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {hasSubs && (
+                <div className={`border-t ${highlight ? 'border-white/20' : 'border-gray-100'} pt-4 mb-4`}>
+                  <p className={`text-xs font-semibold uppercase tracking-wider mb-3 ${highlight ? 'text-white/50' : 'text-gray-400'}`}>Also available</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {wicleanExtras.map(({ icon: SubIcon, name, subtitle: sub }) => (
+                      <div key={name} className={`flex items-center gap-2 rounded-lg px-3 py-2 ${highlight ? 'bg-white/10' : 'bg-light'}`}>
+                        <SubIcon size={14} className="text-accent flex-shrink-0" />
+                        <div className="min-w-0">
+                          <p className={`text-xs font-semibold ${highlight ? 'text-white' : 'text-primary'}`}>{name}</p>
+                          <p className={`text-[10px] ${highlight ? 'text-white/50' : 'text-gray-400'} truncate`}>{sub}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider ${highlight ? 'text-accent' : 'text-accent'} group-hover:underline`}>
                 Learn More <ExternalLink size={12} />
               </span>

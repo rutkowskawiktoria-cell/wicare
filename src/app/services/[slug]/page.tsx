@@ -18,6 +18,13 @@ const iconMap: Record<string, React.ElementType> = {
   'wi-green': Leaf,
 };
 
+const subServices = [
+  { slug: 'wi-shine', icon: Car, name: 'WiShine', subtitle: 'Executive Vehicle Detailing' },
+  { slug: 'wi-wardrobe', icon: Shirt, name: 'WiWardrobe', subtitle: 'Garment & Shoe Valet' },
+  { slug: 'wi-scent', icon: Flower2, name: 'WiScent', subtitle: 'Ambient Atmosphere Management' },
+  { slug: 'wi-device', icon: Smartphone, name: 'WiDevice', subtitle: 'Tech Sanitization & Cable Management' },
+];
+
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
@@ -117,13 +124,40 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </section>
 
+          {slug === 'wi-clean' && (
+            <section className="py-16 bg-white border-t border-gray-100">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="text-center mb-12">
+                  <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4">Also Available with WiClean</h2>
+                  <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+                    While your home is being serviced, your WiCare team can handle these additional services — tailored to your agreement, never pre-bundled.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {subServices.map(({ slug: sSlug, icon: SubIcon, name, subtitle }) => (
+                    <Link key={sSlug} href={`/services/${sSlug}`} className="group bg-light rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                        <SubIcon size={22} className="text-accent" />
+                      </div>
+                      <div className="flex items-baseline gap-2 mb-2">
+                        <h3 className="font-serif text-lg font-semibold text-primary">{name}</h3>
+                        <span className="text-accent text-xs font-medium uppercase tracking-wider">{subtitle}</span>
+                      </div>
+                      <p className="text-gray-500 text-sm">{services.find((s) => s.slug === sSlug)?.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
           <section className="bg-light py-20">
             <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4">
                 Book {service.name} Today
               </h2>
               <p className="text-gray-500 text-lg mb-8">
-                Call us to schedule your {service.name.toLowerCase()} service. We respond within 2 business hours.
+                All services are defined based on your agreement — choose what you need, nothing is pre-bundled. Call us to schedule your {service.name.toLowerCase()} service. We respond within 2 business hours.
               </p>
               <a
                 href="tel:+4552721102"

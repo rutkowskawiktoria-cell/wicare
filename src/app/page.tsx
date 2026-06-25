@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
 import Trust from '@/components/sections/Trust';
 import Services from '@/components/sections/Services';
-import Brands from '@/components/sections/Brands';
 import WhyUs from '@/components/sections/WhyUs';
 import Booking from '@/components/sections/Booking';
 import Testimonials from '@/components/sections/Testimonials';
@@ -17,7 +16,6 @@ export default function Home() {
         <Hero />
         <Trust />
         <Services />
-        <Brands />
         <WhyUs />
         <Testimonials />
         <Booking />
