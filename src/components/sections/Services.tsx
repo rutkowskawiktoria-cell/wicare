@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, Dog, Leaf, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, CheckCircle2, ExternalLink } from 'lucide-react';
 
 const services = [
   {
@@ -25,24 +25,8 @@ const services = [
     icon: Wrench,
     title: 'WiHelp',
     subtitle: 'Premier Property Care',
-    desc: 'Expert gardening, construction, and handyman services. Skilled professionals for every property need — from rooftop terraces to basement renovations.',
-    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance'],
-  },
-  {
-    slug: 'wi-pet',
-    icon: Dog,
-    title: 'WiPet',
-    subtitle: 'Elite Pet Valet',
-    desc: 'Premium walks with full hygiene care. Paws wiped, water refreshed, and a photo update sent straight to your phone.',
-    features: ['Brisk neighborhood walk', 'Paw wiping & hygiene', 'Hydration refill', 'Photo proof of life'],
-  },
-  {
-    slug: 'wi-garden',
-    icon: Leaf,
-    title: 'WiGarden',
-    subtitle: 'Architectural Botanical Care',
-    desc: 'Expert care for luxury indoor plants. Leaf dusting, soil moisture checks, precision watering, dead leaf removal, and rotation for even sunlight.',
-    features: ['Leaf dusting & cleaning', 'Moisture meter check', 'Precision watering', 'Aesthetic pruning'],
+    desc: 'Complete property and lifestyle support. Expert gardening, construction, handyman services, elite pet care, and botanical expertise. Skilled professionals for every property need — from rooftop terraces to basement renovations.',
+    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Elite pet valet & walks', 'Paw care & hygiene', 'Plant care & botanical expertise', 'Leaf dusting & precision watering'],
   },
 ];
 
