@@ -6,7 +6,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
 export const metadata: Metadata = {
   title: 'WiCare Group | Elite Home & Lifestyle Services Copenhagen',
   description: 'WiCare Group — Denmark\'s premier luxury lifestyle services group. Nine elite brands: WiClean, WiCook, WiHelp, WiShine, WiWardrobe, WiScent, WiDevice, WiPaws, WiGreen. Serving CEOs, executives, and high-net-worth families across Copenhagen.',
-  keywords: ['luxury home services Copenhagen', 'private chef Copenhagen', 'premium cleaning Denmark', 'executive lifestyle services', 'WiCare', 'concierge services Copenhagen', 'high net worth services Denmark', 'vehicle detailing Copenhagen', 'pet valet', 'plant care', 'WiClean', 'WiCook', 'WiHelp', 'WiShine', 'WiWardrobe', 'WiScent', 'WiDevice', 'WiPaws', 'WiGreen'],
+  keywords: ['luxury home services Copenhagen', 'private chef Copenhagen', 'premium cleaning Denmark', 'executive lifestyle services', 'WiCare', 'concierge services Copenhagen', 'high net worth services Denmark', 'vehicle detailing Copenhagen', 'pet valet', 'plant care', 'WiClean', 'WiCook', 'WiHelp', 'WiPaws', 'WiGreen'],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
   openGraph: {
@@ -49,13 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               founder: { '@type': 'Person', name: 'WiCare' },
               sameAs: [],
               brand: [
-                { '@type': 'Brand', name: 'WiClean', description: 'Executive Home Cleaning' },
+                { '@type': 'Brand', name: 'WiClean', description: 'Executive Home Cleaning — including WiShine, WiWardrobe, WiScent, WiDevice' },
                 { '@type': 'Brand', name: 'WiCook', description: 'Private Dining & Catering' },
                 { '@type': 'Brand', name: 'WiHelp', description: 'Premier Property Care' },
-                { '@type': 'Brand', name: 'WiShine', description: 'Executive Vehicle Detailing' },
-                { '@type': 'Brand', name: 'WiWardrobe', description: 'Garment & Shoe Valet' },
-                { '@type': 'Brand', name: 'WiScent', description: 'Ambient Atmosphere Management' },
-                { '@type': 'Brand', name: 'WiDevice', description: 'Tech Sanitization & Cable Management' },
                 { '@type': 'Brand', name: 'WiPaws', description: 'Elite Pet Valet' },
                 { '@type': 'Brand', name: 'WiGreen', description: 'Architectural Botanical Care' },
               ],
