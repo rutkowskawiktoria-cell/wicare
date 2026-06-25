@@ -15,7 +15,7 @@ export default function Testimonials() {
     <section id="testimonials" className="section-padding bg-light">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">{t.testimonials.badge}</p>
+          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.testimonials.badge}</p>
           <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.testimonials.heading}</h2>
         </div>
 

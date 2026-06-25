@@ -16,7 +16,7 @@ export default function Services() {
     <section id="services" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">{t.services.sectionBadge}</p>
+          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.services.sectionBadge}</p>
           <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.services.heading}</h2>
         </div>
 
@@ -31,12 +31,12 @@ export default function Services() {
 
               <div className="mb-4">
                 <h3 className={`font-serif text-2xl font-semibold mb-1 ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
-                <p className="text-accent text-xs font-medium uppercase tracking-wider">{subtitle}</p>
+                <p className={`text-xs font-semibold uppercase tracking-wider ${highlight ? 'text-accent' : 'text-accent-dark'}`}>{subtitle}</p>
               </div>
 
               <p className={`text-base leading-relaxed mb-6 break-words hyphens-auto ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
 
-              <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent group-hover:underline`}>
+              <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider group-hover:underline ${highlight ? 'text-accent' : 'text-accent-dark'}`}>
                 {t.services.learnMore} <ExternalLink size={12} />
               </span>
             </Link>

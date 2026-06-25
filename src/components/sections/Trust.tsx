@@ -11,7 +11,7 @@ export default function Trust() {
     <section id="trust" className="section-padding bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">{t.trust.badge}</p>
+          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.trust.badge}</p>
           <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.trust.heading}</h2>
         </div>
         
