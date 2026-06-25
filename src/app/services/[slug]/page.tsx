@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { services } from '@/lib/services';
 import { notFound } from 'next/navigation';
-import { Sparkles, ChefHat, Wrench, Car, Shirt, Flower2, Smartphone, Dog, Leaf, Phone, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, Car, Shirt, Flower2, Smartphone, Phone, CheckCircle2, ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -14,8 +14,6 @@ const iconMap: Record<string, React.ElementType> = {
   'wi-wardrobe': Shirt,
   'wi-scent': Flower2,
   'wi-device': Smartphone,
-  'wi-pet': Dog,
-  'wi-garden': Leaf,
 };
 
 const subServices = [

@@ -6,8 +6,8 @@ const brandSlugs: Record<string, string> = {
   WiClean: '/services/wi-clean',
   WiCook: '/services/wi-cook',
   WiHelp: '/services/wi-help',
-  WiPet: '/services/wi-pet',
-  WiGarden: '/services/wi-garden',
+  WiShine: '/services/wi-shine',
+  WiWardrobe: '/services/wi-wardrobe',
 };
 
 export default function Hero() {
@@ -29,11 +29,11 @@ export default function Hero() {
           Discretion. Precision. Trust. One trusted partner managing every aspect of your home, lifestyle, and private residence — executing your vision with flawless precision.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-          <Link href="#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">Request a Consultation</Link>
+          <Link href="/#booking" className="bg-accent hover:bg-yellow-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105 text-sm tracking-wide uppercase">Request a Consultation</Link>
           <Link href="/#services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 text-sm tracking-wide uppercase">Our Services</Link>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          {['WiClean','WiCook','WiHelp','WiPet','WiGarden'].map((brand) => (
+          {['WiClean','WiCook','WiHelp','WiShine','WiWardrobe'].map((brand) => (
             <Link key={brand} href={brandSlugs[brand]} className="bg-white/10 border border-white/15 text-white/70 text-xs px-3 py-1.5 rounded-full tracking-wide font-medium hover:bg-white/20 hover:text-white transition-colors duration-200">{brand}</Link>
           ))}
         </div>
