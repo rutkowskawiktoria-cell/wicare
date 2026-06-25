@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rutkowskawiktoria-cell.github.io/wicare';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
 
 export const metadata: Metadata = {
   title: 'WiCare Group | Elite Home & Lifestyle Services Copenhagen',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: '/wicare/favicon.ico',
+    icon: '/favicon.ico',
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Organization',
               name: 'WiCare Group',
               url: siteUrl,
-              logo: `${siteUrl}/wicare/logo.png`,
+              logo: `${siteUrl}/logo.png`,
               description: 'Denmark\'s premier luxury lifestyle services group. Nine elite brands serving CEOs, executives, and high-net-worth families across Copenhagen.',
               address: { '@type': 'PostalAddress', addressLocality: 'Copenhagen', addressCountry: 'DK' },
               telephone: '+4552721102',

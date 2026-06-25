@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://rutkowskawiktoria-cell.github.io/wicare/sitemap.xml
+Sitemap: https://wicare.vip/sitemap.xml
