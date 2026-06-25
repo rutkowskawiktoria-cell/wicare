@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { services } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import { Sparkles, ChefHat, Wrench, Car, Shirt, Flower2, Smartphone, Dog, Leaf, Phone, CheckCircle2, ArrowLeft } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import FloatingActions from '@/components/FloatingActions';
 
 const iconMap: Record<string, React.ElementType> = {
   'wi-clean': Sparkles,
@@ -66,102 +69,82 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         }}
       />
       <div className="min-h-screen bg-white">
-        <header className="bg-primary border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 text-white/70 hover:text-accent transition-colors">
-              <ArrowLeft size={18} />
-              <span className="text-sm font-medium">Back to WiCare</span>
-            </Link>
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-xs">W</span>
+        <Navbar />
+        <main>
+          <section className="bg-primary pt-20 pb-24" style={{ paddingTop: '5.5rem' }}>
+            <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+              {Icon && (
+                <div className="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-6">
+                  <Icon size={34} className="text-accent" />
+                </div>
+              )}
+              <div className="flex items-baseline justify-center gap-3 mb-4">
+                <h1 className="font-serif text-4xl md:text-5xl text-white font-semibold">{service.name}</h1>
+                <span className="text-accent text-sm font-medium uppercase tracking-wider">{service.subtitle}</span>
               </div>
-              <span className="font-serif text-lg font-semibold text-white">WiCare</span>
-            </Link>
-          </div>
-        </header>
-
-        <section className="bg-primary pt-20 pb-24">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            {Icon && (
-              <div className="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-6">
-                <Icon size={34} className="text-accent" />
-              </div>
-            )}
-            <div className="flex items-baseline justify-center gap-3 mb-4">
-              <h1 className="font-serif text-4xl md:text-5xl text-white font-semibold">{service.name}</h1>
-              <span className="text-accent text-sm font-medium uppercase tracking-wider">{service.subtitle}</span>
+              <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+                {service.longDescription}
+              </p>
             </div>
-            <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
-              {service.longDescription}
-            </p>
-          </div>
-        </section>
+          </section>
 
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div>
-                <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">What&apos;s Included</h2>
-                <ul className="space-y-4">
-                  {service.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-base">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">Why Choose {service.name}</h2>
-                <ul className="space-y-4">
-                  {service.details.map((d) => (
-                    <li key={d} className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-base">{d}</span>
-                    </li>
-                  ))}
-                </ul>
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                  <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">What&apos;s Included</h2>
+                  <ul className="space-y-4">
+                    {service.features.map((f) => (
+                      <li key={f} className="flex items-start gap-3">
+                        <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-base">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">Why Choose {service.name}</h2>
+                  <ul className="space-y-4">
+                    {service.details.map((d) => (
+                      <li key={d} className="flex items-start gap-3">
+                        <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-base">{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="bg-light py-20">
-          <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4">
-              Book {service.name} Today
-            </h2>
-            <p className="text-gray-500 text-lg mb-8">
-              Call us to schedule your {service.name.toLowerCase()} service. We respond within 2 business hours.
-            </p>
-            <a
-              href="tel:+4552721102"
-              className="inline-flex items-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold text-xl md:text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
-            >
-              <Phone size={28} />+45 52 72 11 02
-            </a>
-          </div>
-        </section>
+          <section className="bg-light py-20">
+            <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+              <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4">
+                Book {service.name} Today
+              </h2>
+              <p className="text-gray-500 text-lg mb-8">
+                Call us to schedule your {service.name.toLowerCase()} service. We respond within 2 business hours.
+              </p>
+              <a
+                href="tel:+4552721102"
+                className="inline-flex items-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold text-xl md:text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
+              >
+                <Phone size={28} />+45 52 72 11 02
+              </a>
+            </div>
+          </section>
 
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <Link href="/#services" className="inline-flex items-center gap-2 text-primary hover:text-accent font-medium transition-colors">
-              <ArrowLeft size={16} />
-              View all WiCare services
-            </Link>
-          </div>
-        </section>
-
-        <footer className="bg-primary border-t border-white/5 py-10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 justify-center mb-4 text-white/50 hover:text-accent text-sm transition-colors">
-              <ArrowLeft size={16} className="text-accent" />
-              Back to WiCare Group home
-            </Link>
-            <p className="text-white/30 text-xs">&copy; 2026 WiCare Cleaning ApS. All rights reserved.</p>
-          </div>
-        </footer>
+          <section className="py-16">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+              <Link href="/#services" className="inline-flex items-center gap-2 text-primary hover:text-accent font-medium transition-colors">
+                <ArrowLeft size={16} />
+                View all WiCare services
+              </Link>
+            </div>
+          </section>
+        </main>
+        <Footer />
+        <FloatingActions />
       </div>
     </>
   );
