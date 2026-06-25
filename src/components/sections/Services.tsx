@@ -20,27 +20,27 @@ const services = [
   },
   {
     icon: Car, title: 'WiShine', subtitle: 'Executive Vehicle Detailing',
-    desc: 'On-site waterless car care while you work. Exterior wash, premium leather conditioning, dashboard sanitization, and interior vacuuming. Takes 30–45 minutes.',
+    desc: 'On-site waterless car care while you work. Exterior wash, premium leather conditioning, dashboard sanitization, and interior vacuuming. ',
     features: ['Waterless exterior wash', 'Leather conditioning', 'Dashboard sanitization', 'Interior vacuuming'],
   },
   {
     icon: Shirt, title: 'WiWardrobe', subtitle: 'Garment & Shoe Valet',
-    desc: 'Professional shoe shining, luxury sneaker cleaning, lint-rolling bespoke suits, and dry-cleaning logistics. Your wardrobe, perfectly maintained in 15–20 minutes.',
+    desc: 'Professional shoe shining, luxury sneaker cleaning, lint-rolling bespoke suits, and dry-cleaning logistics. Your wardrobe, perfectly maintained every visit.',
     features: ['Shoe shining & care', 'Sneaker cleaning', 'Suit lint-rolling', 'Dry-cleaning logistics'],
   },
   {
     icon: Flower2, title: 'WiScent', subtitle: 'Ambient Atmosphere Management',
     desc: 'Luxury scent management for a 5-star home experience. Refilling premium reed diffusers, swapping essential oils, and replacing air purifier filters.',
-    features: ['Reed diffuser refills', 'Essential oil swaps', 'Air purifier filters', '5-minute touch-up'],
+    features: ['Reed diffuser refills', 'Essential oil swaps', 'Air purifier filters', 'Premium scent refills'],
   },
   {
     icon: Smartphone, title: 'WiDevice', subtitle: 'Tech Sanitization & Cable Management',
     desc: 'Medical-grade UV sanitization and microfiber screen-cleaning for all laptops, tablets, and remotes. Loose cables wrapped with premium leather ties.',
-    features: ['UV device sanitization', 'Screen cleaning', 'Leather cable ties', '10-minute service'],
+    features: ['UV device sanitization', 'Screen cleaning', 'Leather cable ties', 'Leather cable ties'],
   },
   {
     icon: Dog, title: 'WiPaws', subtitle: 'Elite Pet Valet',
-    desc: 'Premium 20–30 minute walks with full hygiene care. Paws wiped, water refreshed, and a photo update sent straight to your phone.',
+    desc: 'Premium walks with full hygiene care. Paws wiped, water refreshed, and a photo update sent straight to your phone.',
     features: ['Brisk neighborhood walk', 'Paw wiping & hygiene', 'Hydration refill', 'Photo proof of life'],
   },
   {
