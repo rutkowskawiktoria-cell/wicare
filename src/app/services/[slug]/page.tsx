@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${service.name} | WiCare Group`,
       description: service.description,
-      url: `/services/${service.slug}`,
+      url: `/services/${service.slug}/`,
       siteName: 'WiCare Group',
       locale: 'en_DK',
       type: 'website',
     },
-    alternates: { canonical: `/services/${service.slug}` },
+    alternates: { canonical: `/services/${service.slug}/` },
   };
 }
 

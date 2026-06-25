@@ -32,6 +32,8 @@ export default function Booking() {
             </div>
           ))}
         </div>
+
+        <p className="text-white/60 text-sm mt-10 max-w-xl mx-auto leading-relaxed">{t.booking.note}</p>
       </div>
     </section>
   );
