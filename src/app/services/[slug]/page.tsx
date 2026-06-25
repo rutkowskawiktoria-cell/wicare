@@ -83,45 +83,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </section>
 
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                  <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">What's Included</h2>
-                  <ul className="space-y-4">
-                    {service.features.map((f) => (
-                      <li key={f} className="flex items-start gap-3">
-                        <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-base">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-8">Why Choose {service.name}</h2>
-                  <ul className="space-y-4">
-                    {service.details.map((d) => (
-                      <li key={d} className="flex items-start gap-3">
-                        <CheckCircle2 size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-base">{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+              <h2 className="font-serif text-3xl text-primary font-semibold mb-10">What's Included</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {service.features.map((f) => (
+                  <div key={f} className="flex items-start gap-3 p-4 bg-light rounded-xl hover:bg-gray-100 transition-colors">
+                    <CheckCircle2 size={24} className="text-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-base font-medium">{f}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
 
           <section className="bg-light py-20">
             <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4">
-                Book {service.name} Today
+              <h2 className="font-serif text-3xl text-primary font-semibold mb-6">
+                Ready to Book?
               </h2>
-              <p className="text-gray-500 text-lg mb-8">
-                Call us to schedule your {service.name.toLowerCase()} service. We respond within 2 business hours.
+              <p className="text-gray-600 text-lg mb-8">
+                Call us to schedule your {service.name.toLowerCase()} service.
               </p>
               <a
                 href="tel:+4552721102"
-                className="inline-flex items-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold text-xl md:text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
+                className="inline-flex items-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
               >
                 <Phone size={28} />+45 52 72 11 02
               </a>
@@ -132,7 +117,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
               <Link href="/#services" className="inline-flex items-center gap-2 text-primary hover:text-accent font-medium transition-colors">
                 <ArrowLeft size={16} />
-                View all WiCare services
+                Back to Services
               </Link>
             </div>
           </section>

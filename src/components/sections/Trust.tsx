@@ -1,29 +1,33 @@
 'use client';
-import { ShieldCheck, Leaf, Clock, Star, Award, Users } from 'lucide-react';
-const trustItems = [
-  { icon: Award, label: '10+ Years Experience', desc: 'A decade of premium service' },
-  { icon: ShieldCheck, label: '100% Insured', desc: 'Full liability coverage' },
-  { icon: Leaf, label: 'Smart Product Selection', desc: 'Balanced for safety & efficacy' },
-  { icon: Users, label: 'Background Checked', desc: 'Vetted & trusted staff' },
-  { icon: Clock, label: 'Reliable Scheduling', desc: 'Always on time' },
-  { icon: Star, label: 'Premium Service', desc: 'White-glove standard' },
-];
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { CheckCircle2 } from 'lucide-react';
+
 export default function Trust() {
+  const { t } = useLanguage();
+
+  const keyReasons = [
+    { title: '10+ Years', description: 'Trusted by Copenhagen elite since 2016' },
+    { title: '100% Insured', description: 'Full liability coverage for peace of mind' },
+    { title: 'Background Checked', description: 'Every team member vetted and trusted' },
+    { title: 'White-Glove Service', description: 'Premium standards on every visit' },
+  ];
+
   return (
-    <section id="trust" className="section-padding bg-primary">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Why Clients Choose Us</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-semibold">The WiCare Standard</h2>
+    <section id="trust" className="section-padding bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Why Choose Us</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">The WiCare Difference</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {trustItems.map(({ icon: Icon, label, desc }) => (
-            <div key={label} className="group flex flex-col items-center text-center p-6 rounded-2xl border border-white/10 hover:border-accent/40 bg-white/5 hover:bg-white/10 transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors duration-300">
-                <Icon size={22} className="text-accent" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {keyReasons.map(({ title, description }) => (
+            <div key={title} className="text-center">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <CheckCircle2 size={28} className="text-accent" />
               </div>
-              <p className="text-white text-sm font-semibold mb-1 leading-snug">{label}</p>
-              <p className="text-white/45 text-xs">{desc}</p>
+              <h3 className="font-serif text-lg font-semibold text-primary mb-2">{title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
             </div>
           ))}
         </div>

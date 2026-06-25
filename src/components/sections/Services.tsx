@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
 
 const services = [
   {
@@ -8,8 +8,7 @@ const services = [
     icon: Sparkles,
     title: 'WiClean',
     subtitle: 'Executive Home Cleaning',
-    desc: 'Premium residential cleaning for CEOs and industry leaders. Discreet, meticulous, and tailored to the highest standards of luxury living.',
-    features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Smart product selection'],
+    desc: 'Premium cleaning for your home and workspace. White-glove service, carefully selected products, flexible scheduling.',
     highlight: true,
   },
   {
@@ -17,61 +16,47 @@ const services = [
     icon: ChefHat,
     title: 'WiCook',
     subtitle: 'Private Dining & Catering',
-    desc: '13+ years of Michelin-star and Danish Parliament culinary expertise. Private chef experiences, exclusive dinner parties, and executive catering.',
-    features: ['Private chef dining', 'Corporate catering', 'Michelin pedigree', 'Bespoke menus'],
+    desc: '13+ years Michelin-star expertise. Private chef dinners, corporate catering, exclusive events.',
   },
   {
     slug: 'wi-help',
     icon: Wrench,
     title: 'WiHelp',
-    subtitle: 'Premier Property Care',
-    desc: 'Complete property and lifestyle support. Expert gardening, construction, handyman services, elite pet care, and botanical expertise. Skilled professionals for every property need   from rooftop terraces to basement renovations.',
-    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Elite pet valet & walks', 'Plant care & botanical expertise', 'Leaf dusting & precision watering'],
+    subtitle: 'Property & Lifestyle Care',
+    desc: 'Gardening, construction, handyman services, pet care, and plant expertise. One trusted partner for everything.',
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="section-padding bg-light">
+    <section id="services" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-accent text-xs tracking-widest uppercase font-medium mb-3">Our Services</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold mb-5">Everything We Offer</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">Every service is defined based on your agreement. Choose what you need   nothing is pre-bundled.</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">What We Offer</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map(({ slug, icon: Icon, title, subtitle, desc, features, highlight }) => (
-            <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-white text-primary shadow-md'}`}>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map(({ slug, icon: Icon, title, subtitle, desc, highlight }) => (
+            <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-light text-primary shadow-md hover:shadow-xl'}`}>
               {highlight && <div className="absolute top-4 right-4 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">Flagship</div>}
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${highlight ? 'bg-accent/20' : 'bg-light'}`}>
-                <Icon size={26} className="text-accent" />
+              
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${highlight ? 'bg-accent/20' : 'bg-white'}`}>
+                <Icon size={28} className="text-accent" />
               </div>
-              <div className="flex items-baseline gap-2 mb-1">
-                <h3 className={`font-serif text-xl font-semibold ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
-                <span className="text-accent text-xs font-medium uppercase tracking-wider">{subtitle}</span>
+
+              <div className="mb-4">
+                <h3 className={`font-serif text-2xl font-semibold mb-1 ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
+                <p className="text-accent text-xs font-medium uppercase tracking-wider">{subtitle}</p>
               </div>
-              <p className={`text-sm leading-relaxed mb-6 ${highlight ? 'text-white/70' : 'text-gray-500'}`}>{desc}</p>
-              <ul className="space-y-2 mb-6">
-                {features.map((f) => (
-                  <li key={f} className="flex items-center gap-2.5">
-                    <CheckCircle2 size={15} className="text-accent" />
-                    <span className={`text-sm font-medium ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              {highlight && (
-                <p className="text-white/50 text-xs italic mb-4 leading-relaxed">
-                  Extends to vehicle detailing, wardrobe care, ambient scenting, and device sanitization   all defined by your agreement.
-                </p>
-              )}
+
+              <p className={`text-base leading-relaxed mb-6 ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
+
               <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent group-hover:underline`}>
                 Learn More <ExternalLink size={12} />
               </span>
             </Link>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <a href="#booking" className="inline-block bg-primary text-white font-semibold px-10 py-4 rounded-full hover:bg-secondary transition-colors duration-300 shadow-lg text-sm tracking-wide uppercase">Book Any Service</a>
         </div>
       </div>
     </section>
