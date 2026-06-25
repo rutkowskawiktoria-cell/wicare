@@ -2,8 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html { scroll-behavior: smooth; }
-body { font-family: Inter, system-ui, sans-serif; color: #0F172A; background: #fff; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; font-size: 17px; }
+@media (max-width: 400px) { html { font-size: 16px; } }
+body { font-family: Inter, system-ui, sans-serif; color: #0F172A; background: #fff; -webkit-font-smoothing: antialiased; line-height: 1.65; text-rendering: optimizeLegibility; }
+p { line-height: 1.7; }
+:focus-visible { outline: 3px solid #D4AF37; outline-offset: 2px; border-radius: 4px; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #F8FAFC; }
 ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }

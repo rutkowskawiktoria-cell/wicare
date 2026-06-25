@@ -1,5 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#0F172A",
+  width: "device-width",
+  initialScale: 1,
+};
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
@@ -15,11 +21,13 @@ export const metadata: Metadata = {
     title: "WiCare Group | Premium Home & Lifestyle Services",
     description: "Premium home and lifestyle services delivered with discretion, precision, and trust, across Copenhagen.",
     url: siteUrl,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare Group" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "WiCare Group | Premium Home & Lifestyle Services",
     description: "Premium home and lifestyle services delivered with discretion, precision, and trust.",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
   icons: {
