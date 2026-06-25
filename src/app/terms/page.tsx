@@ -41,11 +41,11 @@ export default function TermsPage() {
           <h2>4. Liability</h2>
           <p>WiCare Group carries professional liability insurance. Clients are responsible for securing valuable items prior to service. WiCare Group is not liable for pre-existing damage or wear and tear.</p>
           <h2>5. Privacy</h2>
-          <p>Client information is handled in accordance with our <Link href="/privacy" className="text-accent underline">Privacy Policy</Link>. We never share personal data without explicit consent.</p>
+          <p>Client information is handled in accordance with our <Link href=/privacy className=text-accent underline>Privacy Policy</Link>. We never share personal data without explicit consent.</p>
           <h2>6. Amendments</h2>
           <p>WiCare Group reserves the right to amend these terms at any time. Clients will be notified of material changes.</p>
           <h2>Contact</h2>
-          <p>WiCare Cleaning ApS &bull; Copenhagen, Denmark<br/>Phone: <a href="tel:+4552721102" className="text-accent">+45 52 72 11 02</a><br/>Email: <a href="mailto:wicare.cleaning@gmail.com" className="text-accent">wicare.cleaning@gmail.com</a></p>
+          <p>WiCare Cleaning ApS &bull; Copenhagen, Denmark<br/>Phone: <a href=tel:+4552721102 className=text-accent>+45 52 72 11 02</a><br/>Email: <a href=mailto:wicare.cleaning@gmail.com className=text-accent>wicare.cleaning@gmail.com</a></p>
         </div>
       </section>
     </div>

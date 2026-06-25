@@ -39,13 +39,13 @@ export default function PrivacyPage() {
           <h2>3. Data Storage & Security</h2>
           <p>Client data is stored securely and accessed only by authorized personnel. We retain records for the duration of the client relationship plus 24 months, after which data is anonymized or deleted.</p>
           <h2>4. Your Rights</h2>
-          <p>Under GDPR, you have the right to access, rectify, or delete your personal data at any time. To exercise these rights, contact us at <a href="mailto:wicare.cleaning@gmail.com" className="text-accent">wicare.cleaning@gmail.com</a>.</p>
+          <p>Under GDPR, you have the right to access, rectify, or delete your personal data at any time. To exercise these rights, contact us at <a href=mailto:wicare.cleaning@gmail.com className=text-accent>wicare.cleaning@gmail.com</a>.</p>
           <h2>5. Cookies</h2>
           <p>This website does not use tracking cookies or third-party analytics. No personal data is collected through browsing.</p>
           <h2>6. Third-Party Links</h2>
           <p>Our website may contain links to third-party sites (e.g., payment processors). We are not responsible for their privacy practices.</p>
           <h2>7. Contact</h2>
-          <p>WiCare Cleaning ApS &bull; Copenhagen, Denmark<br/>Phone: <a href="tel:+4552721102" className="text-accent">+45 52 72 11 02</a><br/>Email: <a href="mailto:wicare.cleaning@gmail.com" className="text-accent">wicare.cleaning@gmail.com</a></p>
+          <p>WiCare Cleaning ApS &bull; Copenhagen, Denmark<br/>Phone: <a href=tel:+4552721102 className=text-accent>+45 52 72 11 02</a><br/>Email: <a href=mailto:wicare.cleaning@gmail.com className=text-accent>wicare.cleaning@gmail.com</a></p>
         </div>
       </section>
     </div>
