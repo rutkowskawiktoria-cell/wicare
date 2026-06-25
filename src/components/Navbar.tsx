@@ -2,10 +2,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Phone, Menu, X } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navLinks = [
   { label: 'Services', href: '/#services' },
-  
   { label: 'Why WiCare', href: '/#why-us' },
   { label: 'Testimonials', href: '/#testimonials' },
   { label: 'Contact', href: '/#contact' },
@@ -40,6 +40,7 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
             <a href="tel:+4552721102" className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
               <Phone size={16} /><span>+45 52 72 11 02</span>
             </a>
@@ -56,6 +57,9 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="block text-primary font-medium py-2 border-b border-gray-50">{link.label}</Link>
             ))}
+            <div className="py-3">
+              <LanguageSwitcher />
+            </div>
             <Link href="/#booking" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">Get Started</Link>
           </div>
         </div>

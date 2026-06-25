@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
+import { headers } from "next/headers";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare Group | Elite Home & Lifestyle Services Copenhagen",
-  description: "WiCare Group — Denmark's premier luxury services: WiClean, WiCook, WiHelp, WiShine, WiWardrobe, WiScent, WiDevice. Serving CEOs and executives across Copenhagen.",
+  description: "WiCare Group, Denmark's premier luxury services: WiClean, WiCook, WiHelp, WiShine, WiWardrobe, WiScent, WiDevice. Serving CEOs and executives across Copenhagen.",
   keywords: ["luxury home services Copenhagen", "private chef Copenhagen", "premium cleaning Denmark", "executive lifestyle services", "WiCare", "concierge services Copenhagen", "high net worth services Denmark", "property care", "pet valet", "plant care", "WiClean", "WiCook", "WiHelp", "WiShine", "WiWardrobe"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -50,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               founder: { "@type": "Person", name: "WiCare" },
               sameAs: [],
               brand: [
-                { "@type": "Brand", name: "WiClean", description: "Executive Home Cleaning — tailored to your needs, from deep cleaning to specialized care" },
+                { "@type": "Brand", name: "WiClean", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
                 { "@type": "Brand", name: "WiCook", description: "Private Dining & Catering" },
                 { "@type": "Brand", name: "WiHelp", description: "Premier Property & Lifestyle Care" },
                 { "@type": "Brand", name: "WiShine", description: "Executive Vehicle Detailing" },
@@ -62,7 +64,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
