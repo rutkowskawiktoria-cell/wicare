@@ -12,6 +12,7 @@ export default function Navbar() {
     { label: t.nav.services, href: '/#services' },
     { label: t.nav.whyWiCare, href: '/#trust' },
     { label: t.nav.testimonials, href: '/#testimonials' },
+    { label: t.blog.nav, href: '/blog/' },
     { label: t.nav.contact, href: '/#booking' },
   ];
   const [scrolled, setScrolled] = useState(false);
