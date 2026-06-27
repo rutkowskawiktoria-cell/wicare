@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { Phone } from 'lucide-react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -14,8 +15,17 @@ function WhatsAppIcon({ size = 24 }: { size?: number }) {
 export default function FloatingActions() {
   const { t } = useLanguage();
   const wa = `https://wa.me/4552721102?text=${encodeURIComponent(t.floating.whatsappMsg)}`;
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.85);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className={`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 transition-all duration-300 ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
       <Link href="/#booking" className="bg-accent text-white text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full shadow-2xl hover:bg-yellow-600 hover:scale-105 transition-all duration-200 hidden sm:block">{t.floating.bookNow}</Link>
       <a href={wa} target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-200" aria-label={t.floating.whatsappAria}>
         <WhatsAppIcon size={26} />
