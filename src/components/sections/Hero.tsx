@@ -25,14 +25,11 @@ export default function Hero() {
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
           <span className="text-[11px] sm:text-sm text-white/90 tracking-[0.12em] sm:tracking-widest uppercase font-medium leading-snug">{t.hero.badge}</span>
         </div>
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-3 sm:mb-5">
           {t.hero.title}
         </h1>
-        <p className="text-2xl md:text-3xl text-accent italic font-light mb-8">
+        <p className="text-xl sm:text-2xl md:text-3xl text-accent italic font-light mb-7">
           {t.hero.titleHighlight}
-        </p>
-        <p className="text-xl md:text-2xl text-white/75 max-w-3xl mx-auto mb-12 leading-relaxed font-light whitespace-pre-line">
-          {t.hero.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
           <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
@@ -42,8 +39,11 @@ export default function Hero() {
             <WhatsAppIcon size={24} />WhatsApp
           </a>
         </div>
-        <p className="text-white/80 text-base mt-5">
+        <p className="text-white/80 text-base mt-4">
           <Link href="/#services" className="underline underline-offset-4 hover:text-accent">{t.hero.ctaServices}</Link>
+        </p>
+        <p className="text-lg md:text-2xl text-white/70 max-w-3xl mx-auto mt-8 leading-relaxed font-light whitespace-pre-line">
+          {t.hero.subtitle}
         </p>
       </div>
       <a href="#trust" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-accent transition-colors duration-300 animate-bounce">
