@@ -58,12 +58,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "LocalBusiness",
+              "@id": `${siteUrl}/#business`,
               name: "WiCare Group",
               url: siteUrl,
               logo: `${siteUrl}/logo.png`,
+              image: `${siteUrl}/og-image.png`,
+              priceRange: "$$$",
+              slogan: "Discretion. Precision. Trust.",
               description: "Premium home and lifestyle services for private residences and professionals across the northern suburbs of Copenhagen: cleaning, private dining, and property care.",
               address: { "@type": "PostalAddress", addressLocality: "Hellerup", addressRegion: "Capital Region of Denmark", addressCountry: "DK" },
+              geo: { "@type": "GeoCoordinates", latitude: 55.7320, longitude: 12.5640 },
+              openingHoursSpecification: [
+                { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
+              ],
               areaServed: [
                 { "@type": "City", name: "Hellerup" },
                 { "@type": "City", name: "Charlottenlund" },
