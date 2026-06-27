@@ -4,9 +4,9 @@ import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const serviceMeta = [
-  { slug: 'wi-clean', icon: Sparkles, title: 'WiClean', highlight: true },
-  { slug: 'wi-cook', icon: ChefHat, title: 'WiCook' },
-  { slug: 'wi-help', icon: Wrench, title: 'WiHelp' },
+  { slug: 'maison', icon: Sparkles, title: 'Maison', highlight: true },
+  { slug: 'la-table', icon: ChefHat, title: 'La Table' },
+  { slug: 'le-domaine', icon: Wrench, title: 'Le Domaine' },
 ];
 
 export default function Services() {

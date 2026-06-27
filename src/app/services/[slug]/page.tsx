@@ -57,7 +57,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           }),
         }}
       />
-      <ServiceDetail slug={slug as 'wi-clean' | 'wi-cook' | 'wi-help'} />
+      <ServiceDetail slug={slug as 'maison' | 'la-table' | 'le-domaine'} />
     </>
   );
 }

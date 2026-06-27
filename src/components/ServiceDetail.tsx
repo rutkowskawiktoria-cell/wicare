@@ -7,12 +7,12 @@ import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const iconMap: Record<string, React.ElementType> = {
-  'wi-clean': Sparkles,
-  'wi-cook': ChefHat,
-  'wi-help': Wrench,
+  'maison': Sparkles,
+  'la-table': ChefHat,
+  'le-domaine': Wrench,
 };
 
-type Slug = 'wi-clean' | 'wi-cook' | 'wi-help';
+type Slug = 'maison' | 'la-table' | 'le-domaine';
 
 export default function ServiceDetail({ slug }: { slug: Slug }) {
   const { t } = useLanguage();
