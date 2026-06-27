@@ -12,9 +12,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/75 to-primary/95" />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-sm text-white/90 tracking-widest uppercase font-medium">{t.hero.badge}</span>
+        <div className="inline-flex items-center gap-2 max-w-[88vw] bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-5 py-2 mb-8">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
+          <span className="text-[11px] sm:text-sm text-white/90 tracking-[0.12em] sm:tracking-widest uppercase font-medium leading-snug">{t.hero.badge}</span>
         </div>
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
           {t.hero.title}
