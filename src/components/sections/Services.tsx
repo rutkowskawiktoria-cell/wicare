@@ -31,7 +31,7 @@ export default function Services() {
 
               <div className="mb-4">
                 <h3 className={`font-serif text-2xl font-semibold mb-1 ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
-                <p className={`text-xs font-semibold uppercase tracking-wider ${highlight ? 'text-accent' : 'text-accent-dark'}`}>{subtitle}</p>
+                <p className={`text-sm font-semibold uppercase tracking-wider mt-1 ${highlight ? 'text-accent' : 'text-accent-dark'}`}>{subtitle}</p>
               </div>
 
               <p className={`text-base leading-relaxed mb-6 break-words hyphens-auto whitespace-pre-line ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
