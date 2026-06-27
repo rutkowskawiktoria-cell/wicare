@@ -11,9 +11,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.name} | WiCare Group Copenhagen`,
+    title: `${service.name} | WiCare Group North Copenhagen`,
     description: service.description,
-    keywords: [`${service.name}`, `${service.subtitle}`, 'Copenhagen', 'luxury home services', 'WiCare Group'],
+    keywords: [`${service.name}`, `${service.subtitle}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'luxury home services', 'WiCare Group'],
     openGraph: {
       title: `${service.name} | WiCare Group`,
       description: service.description,
@@ -44,9 +44,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             provider: {
               '@type': 'Organization',
               name: 'WiCare Group',
-              address: { '@type': 'PostalAddress', addressLocality: 'Copenhagen', addressCountry: 'DK' },
+              address: { '@type': 'PostalAddress', addressLocality: 'Hellerup', addressRegion: 'Capital Region of Denmark', addressCountry: 'DK' },
             },
-            areaServed: { '@type': 'City', name: 'Copenhagen' },
+            areaServed: [
+              { '@type': 'City', name: 'Hellerup' },
+              { '@type': 'City', name: 'Charlottenlund' },
+              { '@type': 'City', name: 'Klampenborg' },
+              { '@type': 'City', name: 'Gentofte' },
+              { '@type': 'AdministrativeArea', name: 'Rudersdal' },
+              { '@type': 'AdministrativeArea', name: 'Hørsholm' },
+            ],
           }),
         }}
       />
