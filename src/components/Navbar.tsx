@@ -32,7 +32,7 @@ export default function Navbar() {
             <Logo size={42} />
             <div>
               <span className={`font-serif text-xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>WiCare</span>
-              <span className="block text-xs tracking-[0.25em] uppercase text-accent">Group</span>
+              <span className="block text-xs tracking-wider text-accent">wicare.vip</span>
             </div>
           </Link>
           <nav className="hidden lg:flex items-center gap-7">

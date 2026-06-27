@@ -14,7 +14,7 @@ export default function Footer() {
             <Logo size={44} />
             <div className="text-left">
               <span className="font-serif text-2xl font-semibold tracking-wide">WiCare</span>
-              <span className="block text-xs tracking-[0.25em] uppercase text-accent">Group</span>
+              <span className="block text-xs tracking-wider text-accent">wicare.vip</span>
             </div>
           </Link>
           <p className="text-white/70 text-base max-w-md mt-5 leading-relaxed">{t.footer.tagline}</p>
