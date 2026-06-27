@@ -56,7 +56,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-2">{t.footer.areasTitle}</p>
-          <p className="text-white/70 text-sm max-w-3xl mx-auto mb-8 leading-relaxed">{t.footer.areas}</p>
+          <p className="text-white/70 text-sm max-w-3xl mx-auto mb-8 leading-relaxed whitespace-pre-line">{t.footer.areas}</p>
         </div>
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/75 text-sm">{t.footer.copyright}</p>
