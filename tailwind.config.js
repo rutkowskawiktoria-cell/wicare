@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0F172A',
-        secondary: '#1E293B',
-        accent: '#D4AF37',
-        'accent-dark': '#8A6D14',
-        light: '#F8FAFC',
+        primary: '#12302A',
+        secondary: '#1B4138',
+        accent: '#C9A96A',
+        'accent-dark': '#7C5E2A',
+        'accent-deep': '#A88B57',
+        light: '#F7F4EC',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

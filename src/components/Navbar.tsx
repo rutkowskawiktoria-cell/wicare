@@ -45,7 +45,7 @@ export default function Navbar() {
             <a href="tel:+4552721102" className={`flex items-center gap-2 whitespace-nowrap text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
               <Phone size={16} /><span>+45 52 72 11 02</span>
             </a>
-            <Link href="/#booking" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-yellow-600 transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
+            <Link href="/#booking" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-accent-deep transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
           </div>
           <button onClick={() => setMenuOpen(!menuOpen)} className={`lg:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}

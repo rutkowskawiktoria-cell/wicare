@@ -32,7 +32,7 @@ export default function Hero() {
           {t.hero.titleHighlight}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
-          <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-yellow-600 text-primary font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
+          <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
             <Phone size={26} />+45 52 72 11 02
           </a>
           <a href={wa} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-7 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-lg">

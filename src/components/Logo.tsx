@@ -10,13 +10,13 @@ export default function Logo({ size = 40 }: { size?: number }) {
     >
       <defs>
         <linearGradient id="wc-bg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#1E293B" />
-          <stop offset="1" stopColor="#0F172A" />
+          <stop offset="0" stopColor="#1B4138" />
+          <stop offset="1" stopColor="#12302A" />
         </linearGradient>
         <linearGradient id="wc-gold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#F1D27A" />
-          <stop offset="0.5" stopColor="#D4AF37" />
-          <stop offset="1" stopColor="#B8932B" />
+          <stop offset="0" stopColor="#E2CFA0" />
+          <stop offset="0.5" stopColor="#C9A96A" />
+          <stop offset="1" stopColor="#A88B57" />
         </linearGradient>
       </defs>
       <rect x="3" y="3" width="94" height="94" rx="26" fill="url(#wc-bg)" />

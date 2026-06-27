@@ -41,7 +41,7 @@ export default function BlogArticle({ slug }: { slug: string }) {
 
             <div className="mt-12 bg-light rounded-2xl p-8 text-center">
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">{c.cta}</p>
-              <a href="tel:+4552721102" className="inline-flex items-center gap-2 bg-accent hover:bg-yellow-600 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 text-sm tracking-wide uppercase shadow-lg">
+              <a href="tel:+4552721102" className="inline-flex items-center gap-2 bg-accent hover:bg-accent-deep text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 text-sm tracking-wide uppercase shadow-lg">
                 <Phone size={18} />+45 52 72 11 02
               </a>
             </div>
