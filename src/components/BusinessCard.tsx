@@ -34,7 +34,7 @@ export default function BusinessCard() {
 
         {/* Actions */}
         <div className="px-6 py-8 space-y-4">
-          <a href="tel:+4552721102" className="flex items-center justify-center gap-3 bg-accent hover:bg-yellow-600 text-white font-bold text-2xl py-5 rounded-2xl shadow-lg transition-colors">
+          <a href="tel:+4552721102" className="flex items-center justify-center gap-3 bg-accent hover:bg-yellow-600 text-primary font-bold text-2xl py-5 rounded-2xl shadow-lg transition-colors">
             <Phone size={28} />+45 52 72 11 02
           </a>
           <p className="text-center text-gray-500 text-base">{t.card.call}</p>
