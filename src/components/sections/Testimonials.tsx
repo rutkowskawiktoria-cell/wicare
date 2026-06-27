@@ -3,9 +3,9 @@ import { Star } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const meta = [
-  { name: 'Sophie', initials: 'SA', rating: 5 },
-  { name: 'Marcus', initials: 'MV', rating: 5 },
-  { name: 'Henrik', initials: 'HC', rating: 5 },
+  { name: 'Sophie A.', initials: 'SA', rating: 5 },
+  { name: 'Marcus V.', initials: 'MV', rating: 5 },
+  { name: 'Henrik C.', initials: 'HC', rating: 5 },
 ];
 
 export default function Testimonials() {
