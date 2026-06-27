@@ -33,9 +33,9 @@ export const services: Service[] = [
     slug: 'wi-help',
     name: 'WiHelp',
     subtitle: 'Premier Property & Lifestyle Care',
-    description: 'Complete property management including gardening, construction, handyman services, elite pet care, and botanical expertise.',
-    longDescription: 'WiHelp is your comprehensive solution for property and lifestyle needs. From expert landscaping and garden design to construction projects, handyman repairs, elite pet valet services, and specialized plant care. Our skilled professionals deliver the same standard of excellence that defines every WiCare brand. One trusted partner handles it all.',
-    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Elite pet valet & walks', 'Plant care & botanical expertise', 'Leaf dusting & precision watering'],
-    details: ['Vetted, licensed professionals for every service', 'Full project management from concept to completion', 'Expert plant care for luxury indoor greenery', 'GPS-tracked pet walks with photo updates', 'Transparent, fixed-price quotes'],
+    description: 'Complete property management including gardening, construction, handyman services, dog walking, and watering plants.',
+    longDescription: 'WiHelp is your comprehensive solution for property and lifestyle needs. From expert landscaping and garden design to construction projects, handyman repairs, dog walking, and watering plants. Our skilled professionals deliver the same standard of excellence that defines every WiCare brand. One trusted partner handles it all.',
+    features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Dog walking', 'Watering plants'],
+    details: ['Vetted, licensed professionals for every service', 'Full project management from concept to completion', 'Watering and tending your plants', 'Dog walking with photo updates', 'Transparent, fixed-price quotes'],
   },
 ]
