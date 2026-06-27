@@ -11,7 +11,7 @@ import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare Group | Premium Home & Lifestyle Services Copenhagen",
+  title: "WiCare Group | Premium Home & Lifestyle Services, North Copenhagen",
   description: "WiCare Group offers premium home and lifestyle services in the northern suburbs of Copenhagen: WiClean, WiCook, and WiHelp.",
   keywords: ["luxury home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "WiClean", "WiCook", "WiHelp"],
   metadataBase: new URL(siteUrl),
