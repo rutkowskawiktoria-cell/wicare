@@ -11,14 +11,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.name} | WiCare Group North Copenhagen`,
+    title: `${service.name} | WiCare ApS North Copenhagen`,
     description: service.description,
-    keywords: [`${service.name}`, `${service.subtitle}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'luxury home services', 'WiCare Group'],
+    keywords: [`${service.name}`, `${service.subtitle}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'luxury home services', 'WiCare ApS'],
     openGraph: {
-      title: `${service.name} | WiCare Group`,
+      title: `${service.name} | WiCare ApS`,
       description: service.description,
       url: `/services/${service.slug}/`,
-      siteName: 'WiCare Group',
+      siteName: 'WiCare ApS',
       locale: 'en_DK',
       type: 'website',
     },
@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             description: service.description,
             provider: {
               '@type': 'Organization',
-              name: 'WiCare Group',
+              name: 'WiCare ApS',
               address: { '@type': 'PostalAddress', addressLocality: 'Hellerup', addressRegion: 'Capital Region of Denmark', addressCountry: 'DK' },
             },
             areaServed: [

@@ -14,15 +14,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
   const c = post.en;
   return {
-    title: `${c.title} | WiCare Group`,
+    title: `${c.title} | WiCare ApS`,
     description: c.description,
-    keywords: [post.category, 'North Copenhagen', 'Hellerup', 'Gentofte', 'WiCare Group'],
+    keywords: [post.category, 'North Copenhagen', 'Hellerup', 'Gentofte', 'WiCare ApS'],
     alternates: { canonical: `/blog/${post.slug}/` },
     openGraph: {
       title: c.title,
       description: c.description,
       url: `/blog/${post.slug}/`,
-      siteName: 'WiCare Group',
+      siteName: 'WiCare ApS',
       locale: 'en_DK',
       type: 'article',
       publishedTime: post.date,
@@ -52,10 +52,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             url: `${siteUrl}/blog/${post.slug}/`,
             mainEntityOfPage: `${siteUrl}/blog/${post.slug}/`,
             image: `${siteUrl}/og-image.png`,
-            author: { '@type': 'Organization', name: 'WiCare Group' },
+            author: { '@type': 'Organization', name: 'WiCare ApS' },
             publisher: {
               '@type': 'Organization',
-              name: 'WiCare Group',
+              name: 'WiCare ApS',
               logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
             },
           }),

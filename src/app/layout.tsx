@@ -11,21 +11,21 @@ import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare Group | Premium Home & Lifestyle Services, North Copenhagen",
-  description: "WiCare Group offers premium home and lifestyle services in the northern suburbs of Copenhagen: Maison, La Table, and Le Domaine.",
+  title: "WiCare ApS | Premium Home & Lifestyle Services, North Copenhagen",
+  description: "WiCare ApS offers premium home and lifestyle services in the northern suburbs of Copenhagen: Maison, La Table, and Le Domaine.",
   keywords: ["luxury home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "Maison", "La Table", "Le Domaine"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
-    type: "website", locale: "en_DK", siteName: "WiCare Group",
-    title: "WiCare Group | Premium Home & Lifestyle Services",
+    type: "website", locale: "en_DK", siteName: "WiCare ApS",
+    title: "WiCare ApS | Premium Home & Lifestyle Services",
     description: "Premium home and lifestyle services delivered with discretion, precision, and trust, across the northern suburbs of Copenhagen.",
     url: siteUrl,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare Group" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WiCare Group | Premium Home & Lifestyle Services",
+    title: "WiCare ApS | Premium Home & Lifestyle Services",
     description: "Premium home and lifestyle services delivered with discretion, precision, and trust.",
     images: ["/og-image.png"],
   },
@@ -60,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id": `${siteUrl}/#business`,
-              name: "WiCare Group",
+              name: "WiCare ApS",
               url: siteUrl,
               logo: `${siteUrl}/logo.png`,
               image: `${siteUrl}/og-image.png`,

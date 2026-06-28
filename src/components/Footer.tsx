@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-primary text-white py-14 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12">
-          <Link href="/" className="flex items-center gap-3" aria-label="WiCare Group home">
+          <Link href="/" className="flex items-center gap-3" aria-label="WiCare ApS home">
             <Logo size={44} />
             <div className="text-left">
               <span className="font-serif text-2xl font-semibold tracking-wide">WiCare</span>
