@@ -49,7 +49,7 @@ export default function BusinessCard() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <a href="mailto:wicare.cleaning@gmail.com" className="flex flex-col items-center justify-center gap-2 border-2 border-primary text-primary hover:border-accent hover:text-accent-dark py-5 rounded-2xl transition-colors">
+            <a href="mailto:wicareaps@gmail.com" className="flex flex-col items-center justify-center gap-2 border-2 border-primary text-primary hover:border-accent hover:text-accent-dark py-5 rounded-2xl transition-colors">
               <Mail size={26} /><span className="font-semibold text-base">{t.card.email}</span>
             </a>
             <a href="/wicare.vcf" download className="flex flex-col items-center justify-center gap-2 border-2 border-primary text-primary hover:border-accent hover:text-accent-dark py-5 rounded-2xl transition-colors">

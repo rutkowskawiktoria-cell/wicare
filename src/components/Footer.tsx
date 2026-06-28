@@ -28,9 +28,9 @@ export default function Footer() {
                 <Phone size={16} />
                 +45 52 72 11 02
               </a>
-              <a href="mailto:wicare.cleaning@gmail.com" className="flex items-center gap-2 text-white/85 hover:text-accent transition-colors">
+              <a href="mailto:wicareaps@gmail.com" className="flex items-center gap-2 text-white/85 hover:text-accent transition-colors">
                 <Mail size={16} />
-                wicare.cleaning@gmail.com
+                wicareaps@gmail.com
               </a>
             </div>
           </div>
@@ -40,6 +40,7 @@ export default function Footer() {
             <div className="space-y-2">
               <Link href="/#services" className="block text-white/85 hover:text-accent transition-colors">{t.nav.services}</Link>
               <Link href="/blog/" className="block text-white/85 hover:text-accent transition-colors">{t.blog.nav}</Link>
+              <Link href="/careers/" className="block text-white/85 hover:text-accent transition-colors">{t.careers.nav}</Link>
               <Link href="/card/" className="block text-white/85 hover:text-accent transition-colors">{t.card.nav}</Link>
               <Link href="/#testimonials" className="block text-white/85 hover:text-accent transition-colors">{t.nav.testimonials}</Link>
               <Link href="/#booking" className="block text-white/85 hover:text-accent transition-colors">{t.footer.bookNow}</Link>
