@@ -12,8 +12,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare ApS | Premium Home & Lifestyle Services, North Copenhagen",
-  description: "WiCare ApS offers premium home and lifestyle services in the northern suburbs of Copenhagen: Maison, La Table, and Le Domaine.",
-  keywords: ["luxury home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "Maison", "La Table", "Le Domaine"],
+  description: "WiCare ApS offers premium home and lifestyle services in the northern suburbs of Copenhagen: The Home, The Table, and The Estate.",
+  keywords: ["luxury home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "The Home", "The Table", "The Estate"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
@@ -91,9 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               founder: { "@type": "Person", name: "WiCare" },
               sameAs: [],
               brand: [
-                { "@type": "Brand", name: "Maison", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
-                { "@type": "Brand", name: "La Table", description: "Private Dining & Catering" },
-                { "@type": "Brand", name: "Le Domaine", description: "Premier Property & Lifestyle Care" },
+                { "@type": "Brand", name: "The Home", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
+                { "@type": "Brand", name: "The Table", description: "Private Dining & Catering" },
+                { "@type": "Brand", name: "The Estate", description: "Premier Property & Lifestyle Care" },
               ],
             }),
           }}

@@ -19,7 +19,7 @@ export const posts: BlogPost[] = [
   {
     slug: "choosing-luxury-home-cleaning-north-copenhagen",
     date: "2026-02-04",
-    category: "Maison",
+    category: "The Home",
     readingMins: 5,
     en: {
       title: "How to Choose a Trusted Luxury Home Cleaning Service in North Copenhagen",
@@ -32,7 +32,7 @@ export const posts: BlogPost[] = [
         { h: "Respect for your belongings", p: "A professional team treats your home with care and will ask you to secure cash, jewellery and valuables before each visit. That honesty is a sign of a well-run business, not a red flag." },
         { h: "Reliability you can feel", p: "Punctuality, a quick response time, and the same standard on every visit are what separate a luxury service from an ordinary one. Ask about response times and how scheduling is handled." },
       ],
-      cta: "Maison provides discreet, white-glove home cleaning across the northern suburbs of Copenhagen. Call us to arrange a consultation.",
+      cta: "The Home provides discreet, white-glove home cleaning across the northern suburbs of Copenhagen. Call us to arrange a consultation.",
     },
     da: {
       title: "Sådan Vælger Du en Betroet Luksus Rengøringsservice i Nord for København",
@@ -45,13 +45,13 @@ export const posts: BlogPost[] = [
         { h: "Respekt for dine ejendele", p: "Et professionelt team behandler dit hjem med omhu og beder dig om at sikre kontanter, smykker og værdigenstande inden hvert besøg. Den ærlighed er tegn på en velsmurt forretning, ikke en advarsel." },
         { h: "Pålidelighed du kan mærke", p: "Punktlighed, hurtig svartid og den samme standard ved hvert besøg adskiller en luksusservice fra en almindelig. Spørg om svartider, og hvordan planlægning håndteres." },
       ],
-      cta: "Maison leverer diskret white-glove rengøring i hele Københavns nordlige forstæder. Ring til os for at aftale en konsultation.",
+      cta: "The Home leverer diskret white-glove rengøring i hele Københavns nordlige forstæder. Ring til os for at aftale en konsultation.",
     },
   },
   {
     slug: "hiring-private-chef-dinner-party-hellerup",
     date: "2026-02-18",
-    category: "La Table",
+    category: "The Table",
     readingMins: 6,
     en: {
       title: "Hiring a Private Chef for a Dinner Party in Hellerup & Gentofte",
@@ -63,7 +63,7 @@ export const posts: BlogPost[] = [
         { h: "Consider wine and flow", p: "Great food deserves thoughtful pairing and pacing. Discuss whether you would like wine suggestions, how many courses suit the evening, and when you would like to be at the table versus mingling." },
         { h: "Let them handle the rest", p: "A professional chef brings the ingredients, cooks in your kitchen, serves each course, and leaves the kitchen spotless. Your only job is to enjoy the evening with your guests." },
       ],
-      cta: "La Table brings professional private dining and catering to homes across North Copenhagen. Call us to plan your evening.",
+      cta: "The Table brings professional private dining and catering to homes across North Copenhagen. Call us to plan your evening.",
     },
     da: {
       title: "Lej en Privat Kok til Middagsselskab i Hellerup og Gentofte",
@@ -75,13 +75,13 @@ export const posts: BlogPost[] = [
         { h: "Overvej vin og forløb", p: "God mad fortjener gennemtænkt parring og tempo. Tal om, hvorvidt du ønsker vinforslag, hvor mange retter der passer til aftenen, og hvornår du vil sidde til bords kontra mingle." },
         { h: "Lad dem klare resten", p: "En professionel kok medbringer råvarerne, laver mad i dit køkken, serverer hver ret og efterlader køkkenet skinnende rent. Din eneste opgave er at nyde aftenen med dine gæster." },
       ],
-      cta: "La Table bringer professionel privat spisning og catering til hjem i hele Nord for København. Ring til os for at planlægge din aften.",
+      cta: "The Table bringer professionel privat spisning og catering til hjem i hele Nord for København. Ring til os for at planlægge din aften.",
     },
   },
   {
     slug: "strandvej-villa-maintenance-checklist",
     date: "2026-03-03",
-    category: "Le Domaine",
+    category: "The Estate",
     readingMins: 5,
     en: {
       title: "The Strandvej Villa Maintenance Checklist",
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
         { h: "Autumn: prepare for weather", p: "Clear gutters, check drainage, and service anything that will face the colder months. A little maintenance now prevents costly surprises later." },
         { h: "Winter: keep things running", p: "Indoor plant care, regular home checks, and quick handyman fixes keep the home comfortable and cared for, even when you are travelling." },
       ],
-      cta: "Le Domaine handles gardening, construction, handyman work, dog walking and watering plants across North Copenhagen. Call us to plan your property care.",
+      cta: "The Estate handles gardening, construction, handyman work, dog walking and watering plants across North Copenhagen. Call us to plan your property care.",
     },
     da: {
       title: "Vedligeholdelsestjeklisten til Strandvejsvillaen",
@@ -105,13 +105,13 @@ export const posts: BlogPost[] = [
         { h: "Efterår: forbered til vejret", p: "Rens tagrender, tjek afvanding, og servicér alt, der skal stå over for de koldere måneder. Lidt vedligeholdelse nu forhindrer dyre overraskelser senere." },
         { h: "Vinter: hold tingene kørende", p: "Pasning af indendørs planter, regelmæssige hjemtjek og hurtige handyman-reparationer holder hjemmet komfortabelt og passet, også når du er på rejse." },
       ],
-      cta: "Le Domaine klarer havearbejde, byggeri, handyman-arbejde, hundeluftning og vanding af planter i hele Nord for København. Ring til os for at planlægge din ejendomspleje.",
+      cta: "The Estate klarer havearbejde, byggeri, handyman-arbejde, hundeluftning og vanding af planter i hele Nord for København. Ring til os for at planlægge din ejendomspleje.",
     },
   },
   {
     slug: "what-to-expect-white-glove-cleaning",
     date: "2026-03-17",
-    category: "Maison",
+    category: "The Home",
     readingMins: 4,
     en: {
       title: "What to Expect from a White-Glove Cleaning Service",
@@ -123,7 +123,7 @@ export const posts: BlogPost[] = [
         { h: "A team that knows your home", p: "Because the same vetted team returns each time, they learn your preferences, your materials, and the small things that make your home yours." },
         { h: "Quietly thorough", p: "The best service is discreet and unobtrusive. You should feel the result without ever feeling the disruption." },
       ],
-      cta: "Experience the Maison standard in your home across North Copenhagen. Call us to arrange a visit.",
+      cta: "Experience the The Home standard in your home across North Copenhagen. Call us to arrange a visit.",
     },
     da: {
       title: "Hvad Du Kan Forvente af en White-Glove Rengøringsservice",
@@ -135,13 +135,13 @@ export const posts: BlogPost[] = [
         { h: "Et team der kender dit hjem", p: "Fordi det samme godkendte team vender tilbage hver gang, lærer de dine præferencer, dine materialer og de små ting, der gør dit hjem til dit." },
         { h: "Stille grundighed", p: "Den bedste service er diskret og diskret. Du skal mærke resultatet uden nogensinde at mærke forstyrrelsen." },
       ],
-      cta: "Oplev Maison-standarden i dit hjem i hele Nord for København. Ring til os for at aftale et besøg.",
+      cta: "Oplev The Home-standarden i dit hjem i hele Nord for København. Ring til os for at aftale et besøg.",
     },
   },
   {
     slug: "hosting-intimate-private-dinner-at-home",
     date: "2026-03-31",
-    category: "La Table",
+    category: "The Table",
     readingMins: 5,
     en: {
       title: "Hosting an Intimate Private Dinner at Home: A Host's Guide",
@@ -153,7 +153,7 @@ export const posts: BlogPost[] = [
         { h: "Let the kitchen be handled", p: "When a private chef takes care of the menu, cooking and service, you are free to host rather than disappear into the kitchen between courses." },
         { h: "End unhurried", p: "Leave room after the meal for coffee, conversation and a relaxed close. The goal is an evening your guests remember, not a schedule to keep." },
       ],
-      cta: "La Table handles the menu, cooking and cleanup so you can simply host. Call us to plan your dinner in North Copenhagen.",
+      cta: "The Table handles the menu, cooking and cleanup so you can simply host. Call us to plan your dinner in North Copenhagen.",
     },
     da: {
       title: "Vært for en Intim Privat Middag Derhjemme: En Værtsguide",
@@ -165,13 +165,13 @@ export const posts: BlogPost[] = [
         { h: "Lad køkkenet blive klaret", p: "Når en privat kok tager sig af menu, madlavning og servering, er du fri til at være vært frem for at forsvinde ud i køkkenet mellem retterne." },
         { h: "Slut i ro", p: "Giv plads efter måltidet til kaffe, samtale og en afslappet afslutning. Målet er en aften, dine gæster husker, ikke en tidsplan, der skal holdes." },
       ],
-      cta: "La Table klarer menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag i Nord for København.",
+      cta: "The Table klarer menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag i Nord for København.",
     },
   },
   {
     slug: "preparing-your-home-for-a-cleaning-visit",
     date: "2026-04-14",
-    category: "Maison",
+    category: "The Home",
     readingMins: 4,
     en: {
       title: "Preparing Your Home for a Cleaning Visit",
@@ -183,7 +183,7 @@ export const posts: BlogPost[] = [
         { h: "Share your priorities", p: "If certain rooms or details matter most this week, say so. A dedicated team adapts each visit to what your home needs right now." },
         { h: "Leave access clear", p: "Agree in advance how the team will enter and which areas are in scope, so the visit runs smoothly from the first minute." },
       ],
-      cta: "Maison makes every visit discreet, careful and tailored to your home. Call us to arrange your cleaning in North Copenhagen.",
+      cta: "The Home makes every visit discreet, careful and tailored to your home. Call us to arrange your cleaning in North Copenhagen.",
     },
     da: {
       title: "Forbered Dit Hjem til et Rengøringsbesøg",
@@ -195,13 +195,13 @@ export const posts: BlogPost[] = [
         { h: "Del dine prioriteter", p: "Hvis bestemte rum eller detaljer betyder mest denne uge, så sig det. Et fast team tilpasser hvert besøg til, hvad dit hjem har brug for lige nu." },
         { h: "Sørg for fri adgang", p: "Aftal på forhånd, hvordan teamet kommer ind, og hvilke områder der er omfattet, så besøget forløber gnidningsfrit fra første minut." },
       ],
-      cta: "Maison gør hvert besøg diskret, omhyggeligt og tilpasset dit hjem. Ring til os for at aftale din rengøring i Nord for København.",
+      cta: "The Home gør hvert besøg diskret, omhyggeligt og tilpasset dit hjem. Ring til os for at aftale din rengøring i Nord for København.",
     },
   },
   {
     slug: "property-care-while-you-travel",
     date: "2026-04-28",
-    category: "Le Domaine",
+    category: "The Estate",
     readingMins: 4,
     en: {
       title: "Property Care While You Travel: Plants, Pets and Home Checks",
@@ -213,7 +213,7 @@ export const posts: BlogPost[] = [
         { h: "Regular home checks", p: "Periodic checks catch small issues, such as a leak or a fault, before they become real problems, and keep the home aired and ready." },
         { h: "One point of contact", p: "Having a single trusted partner manage it all means fewer keys, fewer strangers, and one number to call if anything is needed." },
       ],
-      cta: "Le Domaine keeps your home cared for while you travel across North Copenhagen. Call us to arrange support.",
+      cta: "The Estate keeps your home cared for while you travel across North Copenhagen. Call us to arrange support.",
     },
     da: {
       title: "Ejendomspleje Mens Du Rejser: Planter, Kæledyr og Hjemtjek",
@@ -225,7 +225,7 @@ export const posts: BlogPost[] = [
         { h: "Regelmæssige hjemtjek", p: "Periodiske tjek fanger små problemer, som en lækage eller en fejl, før de bliver til rigtige problemer, og holder hjemmet udluftet og klar." },
         { h: "Ét kontaktpunkt", p: "At have én betroet partner til at styre det hele betyder færre nøgler, færre fremmede og ét nummer at ringe til, hvis der er behov for noget." },
       ],
-      cta: "Le Domaine holder dit hjem passet, mens du rejser, i hele Nord for København. Ring til os for at aftale støtte.",
+      cta: "The Estate holder dit hjem passet, mens du rejser, i hele Nord for København. Ring til os for at aftale støtte.",
     },
   },
   {
