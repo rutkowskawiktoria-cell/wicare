@@ -26,7 +26,7 @@ export default function FloatingActions() {
 
   return (
     <div className={`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 transition-all duration-300 ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-      <Link href="/#booking" className="bg-accent text-white text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full shadow-2xl hover:bg-accent-deep hover:scale-105 transition-all duration-200 hidden sm:block">{t.floating.bookNow}</Link>
+      <Link href="/#booking" className="bg-accent text-primary text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full shadow-2xl hover:bg-accent-deep hover:scale-105 transition-all duration-200 block">{t.floating.bookNow}</Link>
       <a href={wa} target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-200" aria-label={t.floating.whatsappAria}>
         <WhatsAppIcon size={26} />
       </a>
