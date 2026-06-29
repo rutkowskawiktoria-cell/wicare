@@ -11,22 +11,22 @@ import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare ApS | Premium Home & Lifestyle Services, North Copenhagen",
-  description: "WiCare ApS offers premium home and lifestyle services in the northern suburbs of Copenhagen: The Home, The Table, and The Estate.",
-  keywords: ["luxury home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "The Home", "The Table", "The Estate"],
+  title: "WiCare ApS | VIP Home & Lifestyle Services, North Copenhagen",
+  description: "WiCare ApS offers VIP home and lifestyle services in the northern suburbs of Copenhagen: The Home, The Table, and The Estate.",
+  keywords: ["VIP home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "The Home", "The Table", "The Estate"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "en_DK", siteName: "WiCare ApS",
-    title: "WiCare ApS | Premium Home & Lifestyle Services",
-    description: "Premium home and lifestyle services delivered with discretion, precision, and trust, across the northern suburbs of Copenhagen.",
+    title: "WiCare ApS | VIP Home & Lifestyle Services",
+    description: "VIP home and lifestyle services delivered with discretion, precision, and trust, across the northern suburbs of Copenhagen.",
     url: siteUrl,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WiCare ApS | Premium Home & Lifestyle Services",
-    description: "Premium home and lifestyle services delivered with discretion, precision, and trust.",
+    title: "WiCare ApS | VIP Home & Lifestyle Services",
+    description: "VIP home and lifestyle services delivered with discretion, precision, and trust.",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -66,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               image: `${siteUrl}/og-image.png`,
               priceRange: "$$$",
               slogan: "Discretion. Precision. Trust.",
-              description: "Premium home and lifestyle services for private residences and professionals across the northern suburbs of Copenhagen: cleaning, private dining, and property care.",
+              description: "VIP home and lifestyle services for private residences and professionals across the northern suburbs of Copenhagen: cleaning, private dining, and property care.",
               address: { "@type": "PostalAddress", addressLocality: "Hellerup", addressRegion: "Capital Region of Denmark", addressCountry: "DK" },
               geo: { "@type": "GeoCoordinates", latitude: 55.7320, longitude: 12.5640 },
               openingHoursSpecification: [
@@ -93,7 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               brand: [
                 { "@type": "Brand", name: "The Home", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
                 { "@type": "Brand", name: "The Table", description: "Private Dining & Catering" },
-                { "@type": "Brand", name: "The Estate", description: "Premier Property & Lifestyle Care" },
+                { "@type": "Brand", name: "The Estate", description: "VIP Property & Lifestyle Care" },
               ],
             }),
           }}

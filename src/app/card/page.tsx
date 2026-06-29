@@ -2,7 +2,7 @@ import BusinessCard from '@/components/BusinessCard';
 
 export const metadata = {
   title: 'WiCare ApS | Contact Card',
-  description: 'WiCare ApS digital business card: call, email, save our contact, or scan the QR code. Premium home and lifestyle services in North Copenhagen.',
+  description: 'WiCare ApS digital business card: call, email, save our contact, or scan the QR code. VIP home and lifestyle services in North Copenhagen.',
   alternates: { canonical: '/card/' },
   robots: { index: false, follow: true },
 };
