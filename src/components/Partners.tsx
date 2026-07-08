@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Mail, Plus, Minus, X } from 'lucide-react';
+import { Mail, Plus, Minus, X, Copy, ExternalLink } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -10,6 +10,8 @@ export default function Partners() {
   const { t, locale } = useLanguage();
   const p = t.partners;
   const [qty, setQty] = useState<Record<string, number>>({});
+  const [showSend, setShowSend] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const setQ = (name: string, n: number) =>
     setQty((prev) => {
@@ -22,12 +24,24 @@ export default function Partners() {
   const items = Object.entries(qty); // [name, count][]
   const totalUnits = items.reduce((s, [, n]) => s + n, 0);
 
-  const mailto = () => {
-    const list = items.length ? items.map(([n, c]) => `- ${c} × ${n}`).join('\n') : '';
-    const body = p.emailBody
-      .replace('Product(s):', `Product(s):\n${list}`)
-      .replace('Produkt(er):', `Produkt(er):\n${list}`);
-    return `mailto:wicareaps@gmail.com?subject=${encodeURIComponent(p.emailSubject)}&body=${encodeURIComponent(body)}`;
+  const TO = 'wicareaps@gmail.com';
+  const orderList = items.map(([n, c]) => `- ${c} × ${n}`).join('\n');
+  const bodyText = p.emailBody
+    .replace('Product(s):', `Product(s):\n${orderList}`)
+    .replace('Produkt(er):', `Produkt(er):\n${orderList}`);
+
+  const mailtoHref = `mailto:${TO}?subject=${encodeURIComponent(p.emailSubject)}&body=${encodeURIComponent(bodyText)}`;
+  const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(TO)}&su=${encodeURIComponent(p.emailSubject)}&body=${encodeURIComponent(bodyText)}`;
+
+  const copyOrder = async () => {
+    const text = `To: ${TO}\nSubject: ${p.emailSubject}\n\n${bodyText}`;
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
   };
 
   return (
@@ -107,15 +121,64 @@ export default function Partners() {
               <X size={14} />{p.clear}
             </button>
           )}
-          <a
-            href={mailto()}
-            aria-disabled={items.length === 0}
-            className={`inline-flex items-center justify-center gap-2 font-bold px-7 py-3.5 rounded-full text-sm tracking-wide uppercase shrink-0 transition-all ${items.length ? 'bg-accent hover:bg-accent-deep text-black' : 'bg-white/15 text-white/40 pointer-events-none'}`}
+          <button
+            type="button"
+            onClick={() => items.length && setShowSend(true)}
+            disabled={items.length === 0}
+            className={`inline-flex items-center justify-center gap-2 font-bold px-7 py-3.5 rounded-full text-sm tracking-wide uppercase shrink-0 transition-all ${items.length ? 'bg-accent hover:bg-accent-deep text-black' : 'bg-white/15 text-white/40 cursor-not-allowed'}`}
           >
             <Mail size={18} />{p.send}
-          </a>
+          </button>
         </div>
       </div>
+
+      {/* Send options modal */}
+      {showSend && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowSend(false)}>
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-7 relative" onClick={(e) => e.stopPropagation()}>
+            <button type="button" onClick={() => setShowSend(false)} aria-label={p.close} className="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+              <X size={22} />
+            </button>
+            <h3 className="font-serif text-2xl text-primary font-semibold mb-2 pr-8">{p.sendTitle}</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-5">{p.sendHint}</p>
+
+            <div className="bg-light rounded-xl p-4 mb-6 max-h-40 overflow-y-auto">
+              {items.map(([n, c]) => (
+                <div key={n} className="flex justify-between text-sm text-gray-800 py-0.5">
+                  <span className="break-words pr-3">{n}</span>
+                  <span className="font-semibold tabular-nums shrink-0">× {c}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href={gmailHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-deep text-black font-bold px-6 py-3.5 rounded-full transition-all text-sm tracking-wide uppercase"
+              >
+                <ExternalLink size={17} />{p.gmail}
+              </a>
+              <a
+                href={mailtoHref}
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-secondary text-white font-semibold px-6 py-3.5 rounded-full transition-all text-sm tracking-wide uppercase"
+              >
+                <Mail size={17} />{p.mailApp}
+              </a>
+              <button
+                type="button"
+                onClick={copyOrder}
+                className="inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-accent text-gray-700 font-semibold px-6 py-3 rounded-full transition-all text-sm tracking-wide uppercase"
+              >
+                <Copy size={16} />{copied ? p.copied : p.copyOrder}
+              </button>
+            </div>
+
+            <p className="text-gray-400 text-xs text-center mt-5 break-words">{TO}</p>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
