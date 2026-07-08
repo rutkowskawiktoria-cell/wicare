@@ -18,9 +18,10 @@ const imgMap: Record<string, string> = {
   'the-estate': '/services/garden.jpg',
 };
 
-const detailImgMap: Record<string, string> = {
-  'the-home': '/services/home-detail.jpg',
-  'the-table': '/services/dining-detail.jpg',
+const detailImgMap: Record<string, string[]> = {
+  'the-home': ['/services/home-detail.jpg', '/services/home-detail2.jpg'],
+  'the-table': ['/services/dining-detail.jpg'],
+  'the-estate': ['/services/garden-detail.jpg'],
 };
 
 type Slug = 'the-home' | 'the-table' | 'the-estate';
@@ -31,7 +32,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
   const sp = t.servicePage;
   const Icon = iconMap[slug];
   const img = imgMap[slug];
-  const detailImg = detailImgMap[slug];
+  const detailImgs = detailImgMap[slug] || [];
 
   return (
     <div className="min-h-screen bg-white">
@@ -74,11 +75,13 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
           </div>
         </section>
 
-        {detailImg && (
+        {detailImgs.length > 0 && (
           <section className="pb-8">
-            <div className="max-w-5xl mx-auto px-6 lg:px-8">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={detailImg} alt={service.name} className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
+            <div className={`max-w-5xl mx-auto px-6 lg:px-8 grid gap-6 ${detailImgs.length > 1 ? 'md:grid-cols-2' : ''}`}>
+              {detailImgs.map((src) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={src} src={src} alt={service.name} className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
+              ))}
             </div>
           </section>
         )}
