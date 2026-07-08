@@ -4,14 +4,14 @@ import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const serviceMeta = [
-  { slug: 'the-home', icon: Sparkles, title: 'The Home', highlight: true },
-  { slug: 'the-table', icon: ChefHat, title: 'The Table' },
-  { slug: 'the-estate', icon: Wrench, title: 'The Estate' },
+  { slug: 'the-home', icon: Sparkles, highlight: true },
+  { slug: 'the-table', icon: ChefHat },
+  { slug: 'the-estate', icon: Wrench },
 ];
 
 export default function Services() {
   const { t } = useLanguage();
-  const services = serviceMeta.map((s, i) => ({ ...s, subtitle: t.services.cards[i].subtitle, desc: t.services.cards[i].desc }));
+  const services = serviceMeta.map((s, i) => ({ ...s, title: t.services.cards[i].subtitle, desc: t.services.cards[i].desc }));
   return (
     <section id="services" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map(({ slug, icon: Icon, title, subtitle, desc, highlight }) => (
+          {services.map(({ slug, icon: Icon, title, desc, highlight }) => (
             <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-light text-primary shadow-md hover:shadow-xl'}`}>
               {highlight && <div className="absolute top-4 right-4 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">{t.services.flagship}</div>}
               
@@ -30,8 +30,7 @@ export default function Services() {
               </div>
 
               <div className="mb-4">
-                <h3 className={`font-serif text-2xl font-semibold mb-1 ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
-                <p className={`text-sm font-semibold uppercase tracking-wider mt-1 ${highlight ? 'text-accent' : 'text-accent-dark'}`}>{subtitle}</p>
+                <h3 className={`font-serif text-2xl font-semibold ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
               </div>
 
               <p className={`text-base leading-relaxed mb-6 break-words hyphens-auto whitespace-pre-line ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>

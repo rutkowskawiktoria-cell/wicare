@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${service.name} | WiCare ApS North Copenhagen`,
     description: service.description,
-    keywords: [`${service.name}`, `${service.subtitle}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'VIP home services', 'WiCare ApS'],
+    keywords: [`${service.name}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'VIP home services', 'WiCare ApS'],
     openGraph: {
       title: `${service.name} | WiCare ApS`,
       description: service.description,
@@ -39,7 +39,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: `${service.name} - ${service.subtitle}`,
+            name: service.name,
             description: service.description,
             provider: {
               '@type': 'Organization',

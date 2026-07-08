@@ -33,7 +33,6 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             )}
             <div className="flex items-baseline justify-center gap-3 mb-4 flex-wrap">
               <h1 className="font-serif text-4xl md:text-5xl text-white font-semibold">{service.name}</h1>
-              <span className="text-accent text-sm font-medium uppercase tracking-wider">{service.subtitle}</span>
             </div>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
               {service.longDescription}

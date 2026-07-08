@@ -12,8 +12,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare ApS | VIP Home & Lifestyle Services, North Copenhagen",
-  description: "WiCare ApS offers VIP home and lifestyle services in the northern suburbs of Copenhagen: The Home, The Table, and The Estate.",
-  keywords: ["VIP home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "The Home", "The Table", "The Estate"],
+  description: "WiCare ApS offers VIP home and lifestyle services in the northern suburbs of Copenhagen: home cleaning, private dining & catering, and property & garden care.",
+  keywords: ["VIP home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "home cleaning", "private dining & catering", "property & garden care"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
@@ -91,9 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               founder: { "@type": "Person", name: "WiCare" },
               sameAs: [],
               brand: [
-                { "@type": "Brand", name: "The Home", description: "Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
-                { "@type": "Brand", name: "The Table", description: "Private Dining & Catering" },
-                { "@type": "Brand", name: "The Estate", description: "Property & Garden Care" },
+                { "@type": "Brand", name: "Home Cleaning", description: "VIP home cleaning, tailored to your needs, from deep cleaning to specialized care" },
+                { "@type": "Brand", name: "Private Dining & Catering", description: "Private chef dining and executive catering" },
+                { "@type": "Brand", name: "Property & Garden Care", description: "Gardening, handyman, and property maintenance" },
               ],
             }),
           }}
