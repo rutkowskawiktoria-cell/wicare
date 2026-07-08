@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" />
         {/* Preload LCP hero image */}
-        <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/hero-bg.webp" fetchPriority="high" />
         {/* Consent Mode v2 — deny non-essential storage until the visitor opts in (GDPR) */}
         <script
           dangerouslySetInnerHTML={{

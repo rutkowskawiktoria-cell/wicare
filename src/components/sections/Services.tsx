@@ -4,9 +4,9 @@ import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const serviceMeta = [
-  { slug: 'the-home', icon: Sparkles, img: '/services/home.jpg', highlight: true },
-  { slug: 'the-table', icon: ChefHat, img: '/services/dining.jpg' },
-  { slug: 'the-estate', icon: Wrench, img: '/services/garden.jpg' },
+  { slug: 'the-home', icon: Sparkles, img: '/services/home.webp', highlight: true },
+  { slug: 'the-table', icon: ChefHat, img: '/services/dining.webp' },
+  { slug: 'the-estate', icon: Wrench, img: '/services/garden.webp' },
 ];
 
 export default function Services() {

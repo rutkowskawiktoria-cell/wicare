@@ -13,15 +13,15 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const imgMap: Record<string, string> = {
-  'the-home': '/services/home.jpg',
-  'the-table': '/services/dining.jpg',
-  'the-estate': '/services/garden.jpg',
+  'the-home': '/services/home.webp',
+  'the-table': '/services/dining.webp',
+  'the-estate': '/services/garden.webp',
 };
 
 const detailImgMap: Record<string, string[]> = {
-  'the-home': ['/services/home-detail.jpg', '/services/home-detail2.jpg'],
-  'the-table': ['/services/dining-detail.jpg'],
-  'the-estate': ['/services/garden-detail.jpg'],
+  'the-home': ['/services/home-detail.webp', '/services/home-detail2.webp'],
+  'the-table': ['/services/dining-detail.webp'],
+  'the-estate': ['/services/garden-detail.webp'],
 };
 
 type Slug = 'the-home' | 'the-table' | 'the-estate';
