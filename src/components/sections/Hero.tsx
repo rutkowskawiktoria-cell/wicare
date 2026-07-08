@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { ChevronDown, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { track } from '@/lib/track';
 
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
@@ -32,10 +33,10 @@ export default function Hero() {
           {t.hero.titleHighlight}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
-          <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-black font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
+          <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-black font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
             <Phone size={26} />+45 52 72 11 02
           </a>
-          <a href={wa} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-7 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-lg">
+          <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-7 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-lg">
             <WhatsAppIcon size={24} />WhatsApp
           </a>
         </div>
