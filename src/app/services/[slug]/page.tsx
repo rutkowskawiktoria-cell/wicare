@@ -31,8 +31,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = services.find((s) => s.slug === slug);
   if (!service) notFound();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteUrl}/#services` },
+              { '@type': 'ListItem', position: 3, name: service.name, item: `${siteUrl}/services/${service.slug}/` },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
