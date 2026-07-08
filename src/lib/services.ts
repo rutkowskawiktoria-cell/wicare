@@ -13,7 +13,7 @@ export const services: Service[] = [
   {
     slug: 'the-home',
     name: 'The Home',
-    subtitle: 'Executive Home Cleaning',
+    subtitle: 'Home Cleaning',
     description: 'VIP residential cleaning for CEOs and industry leaders. Discreet, meticulous, and tailored to the highest standards of luxury living.',
     longDescription: 'The Home is our flagship service, the foundation of WiCare ApS. We provide VIP residential cleaning for CEOs, executives, and high-net-worth individuals across the northern suburbs of Copenhagen. Every detail is handled with discretion, precision, and an uncompromising commitment to quality. Our teams are background-checked and trained to a white-glove standard.',
     features: ['Private residences & estates', 'CEO-ready workspaces', 'White-glove finish', 'Smart product selection', 'Background-checked staff', 'Respectful of your home'],
@@ -32,7 +32,7 @@ export const services: Service[] = [
   {
     slug: 'the-estate',
     name: 'The Estate',
-    subtitle: 'VIP Property & Lifestyle Care',
+    subtitle: 'Property & Garden Care',
     description: 'Complete property management including gardening, construction, handyman services, dog walking, and watering plants.',
     longDescription: 'The Estate is your comprehensive solution for property and lifestyle needs. From expert landscaping and garden design to construction projects, handyman repairs, dog walking, and watering plants. Our skilled professionals deliver the same standard of excellence that defines every WiCare brand. One trusted partner handles it all.',
     features: ['Landscaping & gardening', 'Construction projects', 'Handyman services', 'Property maintenance', 'Dog walking', 'Watering plants'],

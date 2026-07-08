@@ -91,9 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               founder: { "@type": "Person", name: "WiCare" },
               sameAs: [],
               brand: [
-                { "@type": "Brand", name: "The Home", description: "Executive Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
+                { "@type": "Brand", name: "The Home", description: "Home Cleaning, tailored to your needs, from deep cleaning to specialized care" },
                 { "@type": "Brand", name: "The Table", description: "Private Dining & Catering" },
-                { "@type": "Brand", name: "The Estate", description: "VIP Property & Lifestyle Care" },
+                { "@type": "Brand", name: "The Estate", description: "Property & Garden Care" },
               ],
             }),
           }}
