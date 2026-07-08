@@ -18,7 +18,8 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-start sm:items-center justify-center overflow-hidden pt-28 sm:pt-24 lg:pt-0">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/hero-bg.webp')" }} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/hero-bg.webp" alt="" aria-hidden="true" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1376} height={768} />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/35 to-primary/70" />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
