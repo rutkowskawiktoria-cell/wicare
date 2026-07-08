@@ -12,6 +12,12 @@ const iconMap: Record<string, React.ElementType> = {
   'the-estate': Wrench,
 };
 
+const imgMap: Record<string, string> = {
+  'the-home': '/services/home.jpg',
+  'the-table': '/services/dining.jpg',
+  'the-estate': '/services/garden.jpg',
+};
+
 type Slug = 'the-home' | 'the-table' | 'the-estate';
 
 export default function ServiceDetail({ slug }: { slug: Slug }) {
@@ -19,6 +25,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
   const service = t.serviceDetail[slug];
   const sp = t.servicePage;
   const Icon = iconMap[slug];
+  const img = imgMap[slug];
 
   return (
     <div className="min-h-screen bg-white">
@@ -39,6 +46,13 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             </p>
           </div>
         </section>
+
+        {img && (
+          <div className="max-w-5xl mx-auto px-6 lg:px-8 -mt-14 relative z-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={img} alt={service.name} className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl" width={1200} height={700} />
+          </div>
+        )}
 
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
