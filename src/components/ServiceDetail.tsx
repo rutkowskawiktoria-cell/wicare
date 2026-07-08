@@ -18,6 +18,11 @@ const imgMap: Record<string, string> = {
   'the-estate': '/services/garden.jpg',
 };
 
+const detailImgMap: Record<string, string> = {
+  'the-home': '/services/home-detail.jpg',
+  'the-table': '/services/dining-detail.jpg',
+};
+
 type Slug = 'the-home' | 'the-table' | 'the-estate';
 
 export default function ServiceDetail({ slug }: { slug: Slug }) {
@@ -26,6 +31,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
   const sp = t.servicePage;
   const Icon = iconMap[slug];
   const img = imgMap[slug];
+  const detailImg = detailImgMap[slug];
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,6 +73,15 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             </div>
           </div>
         </section>
+
+        {detailImg && (
+          <section className="pb-8">
+            <div className="max-w-5xl mx-auto px-6 lg:px-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={detailImg} alt={service.name} className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
+            </div>
+          </section>
+        )}
 
         <section className="bg-light py-20">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">

@@ -23,6 +23,11 @@ export default function Booking() {
           +45 52 72 11 02
         </a>
 
+        <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/services/van.jpg" alt="WiCare service van at a client's home in North Copenhagen" className="w-full h-56 md:h-72 object-cover" width={1400} height={520} />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map(({ number, label, desc }) => (
             <div key={label} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
