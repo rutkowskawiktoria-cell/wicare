@@ -47,7 +47,7 @@ export default function Navbar() {
             </a>
             <Link href="/#booking" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-accent-deep transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
           </div>
-          <button onClick={() => setMenuOpen(!menuOpen)} className={`lg:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
+          <button onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} className={`lg:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
