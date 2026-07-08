@@ -20,8 +20,11 @@ export default function ContactForm() {
   const set = (k: Field) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((p) => ({ ...p, [k]: e.target.value }));
 
+  const [trap, setTrap] = useState('');
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (trap) { setStatus('ok'); return; } // honeypot: silently drop bots
     track('contact_form', 'generate_lead');
 
     if (!WEB3FORMS_KEY) {
@@ -64,6 +67,7 @@ export default function ContactForm() {
           </div>
         ) : (
           <form onSubmit={submit} className="space-y-4">
+            <input type="text" name="company" tabIndex={-1} autoComplete="off" value={trap} onChange={(e) => setTrap(e.target.value)} aria-hidden="true" className="hidden" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input required aria-label={f.name} placeholder={f.name} value={form.name} onChange={set('name')} className={inputCls} />
               <input required type="email" aria-label={f.email} placeholder={f.email} value={form.email} onChange={set('email')} className={inputCls} />
