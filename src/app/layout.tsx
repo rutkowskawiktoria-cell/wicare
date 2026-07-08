@@ -47,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Preload LCP hero image */}
         <link rel="preload" as="image" href="/hero-bg.webp" fetchPriority="high" />
+        {/* Warm the connection for the client-side geo/language lookup */}
+        <link rel="preconnect" href="https://ipapi.co" crossOrigin="anonymous" />
         {/* Consent Mode v2 — deny non-essential storage until the visitor opts in (GDPR) */}
         <script
           dangerouslySetInnerHTML={{

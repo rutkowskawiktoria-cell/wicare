@@ -2,6 +2,13 @@
   "name": "wicare",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "chrome >=92",
+    "edge >=92",
+    "firefox >=91",
+    "safari >=15.4",
+    "ios_saf >=15.4"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build && touch out/.nojekyll && echo wicare.vip > out/CNAME",
