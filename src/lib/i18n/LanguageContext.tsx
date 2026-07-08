@@ -11,7 +11,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children, initialLocale }: { children: ReactNode; initialLocale?: Locale }) {
-  const [locale, setLocaleState] = useState<Locale>(initialLocale || 'en');
+  // Danish is the primary market, so the statically-rendered (crawlable) HTML
+  // defaults to Danish. Non-Danish visitors are switched to English client-side below.
+  const [locale, setLocaleState] = useState<Locale>(initialLocale || 'da');
 
   useEffect(() => {
     if (initialLocale) return;

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
-    type: "website", locale: "en_DK", siteName: "WiCare ApS",
+    type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
     title: "WiCare ApS | VIP Home & Lifestyle Services",
     description: "VIP home and lifestyle services delivered with discretion, precision, and trust, across the northern suburbs of Copenhagen.",
     url: siteUrl,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="da" suppressHydrationWarning>
       <head>
         {/* Fonts — non-blocking, self-swapping to avoid render-block */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
