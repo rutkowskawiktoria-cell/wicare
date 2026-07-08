@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], display: "swap", variable: "--font-serif" });
+const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap", variable: "--font-sans" });
 
 export const viewport: Viewport = {
   themeColor: "#12302A",
@@ -39,12 +43,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="da" suppressHydrationWarning>
+    <html lang="da" suppressHydrationWarning className={`${playfair.variable} ${inter.variable}`}>
       <head>
-        {/* Fonts — non-blocking, self-swapping to avoid render-block */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" />
         {/* Preload LCP hero image */}
         <link rel="preload" as="image" href="/hero-bg.webp" fetchPriority="high" />
         {/* Consent Mode v2 — deny non-essential storage until the visitor opts in (GDPR) */}
