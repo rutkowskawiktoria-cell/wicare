@@ -41,7 +41,6 @@ export default function Footer() {
               <Link href="/#services" className="block text-white/85 hover:text-accent transition-colors">{t.nav.services}</Link>
               <Link href="/blog/" className="block text-white/85 hover:text-accent transition-colors">{t.blog.nav}</Link>
               <Link href="/careers/" className="block text-white/85 hover:text-accent transition-colors">{t.careers.nav}</Link>
-              <Link href="/partners/" className="block text-white/85 hover:text-accent transition-colors">{t.partners.nav}</Link>
               <Link href="/card/" className="block text-white/85 hover:text-accent transition-colors">{t.card.nav}</Link>
               <Link href="/#testimonials" className="block text-white/85 hover:text-accent transition-colors">{t.nav.testimonials}</Link>
               <Link href="/#booking" className="block text-white/85 hover:text-accent transition-colors">{t.footer.bookNow}</Link>

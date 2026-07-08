@@ -4,7 +4,6 @@ import Trust from '@/components/sections/Trust';
 import Services from '@/components/sections/Services';
 import Testimonials from '@/components/sections/Testimonials';
 import Booking from '@/components/sections/Booking';
-import PartnersTeaser from '@/components/sections/PartnersTeaser';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 
@@ -17,7 +16,6 @@ export default function Home() {
         <Services />
         <Trust />
         <Testimonials />
-        <PartnersTeaser />
         <Booking />
       </main>
       <Footer />
