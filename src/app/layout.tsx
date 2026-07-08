@@ -7,6 +7,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
+import ConsentBanner from "@/components/ConsentBanner";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
@@ -40,6 +41,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Fonts — non-blocking, self-swapping to avoid render-block */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" />
+        {/* Preload LCP hero image */}
+        <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" />
+        {/* Consent Mode v2 — deny non-essential storage until the visitor opts in (GDPR) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var __c=null;try{__c=localStorage.getItem('wicare-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+if(__c==='granted'){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -51,8 +67,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -112,6 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         <LanguageProvider>
           {children}
+          <ConsentBanner />
         </LanguageProvider>
       </body>
     </html>

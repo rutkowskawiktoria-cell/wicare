@@ -25,7 +25,7 @@ export default function Services() {
             <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-light text-primary shadow-md hover:shadow-xl'}`}>
               <div className="relative h-52 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={520} />
+                <img src={img} alt={title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={520} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 {highlight && <div className="absolute top-4 right-4 bg-accent text-black text-xs font-semibold px-3 py-1 rounded-full">{t.services.flagship}</div>}
                 <div className="absolute bottom-3 left-4 w-11 h-11 rounded-xl bg-primary/85 backdrop-blur-sm flex items-center justify-center">

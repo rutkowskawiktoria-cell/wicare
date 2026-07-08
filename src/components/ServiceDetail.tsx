@@ -67,7 +67,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {service.features.map((f) => (
                 <div key={f} className="flex items-start gap-3 p-4 bg-light rounded-xl hover:bg-gray-100 transition-colors">
-                  <CheckCircle2 size={24} className="text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 size={24} className="text-accent-dark mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-base font-medium break-words hyphens-auto">{f}</span>
                 </div>
               ))}
@@ -80,7 +80,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             <div className={`max-w-5xl mx-auto px-6 lg:px-8 grid gap-6 ${detailImgs.length > 1 ? 'md:grid-cols-2' : ''}`}>
               {detailImgs.map((src) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img key={src} src={src} alt={service.name} className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
+                <img key={src} src={src} alt={service.name} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
               ))}
             </div>
           </section>

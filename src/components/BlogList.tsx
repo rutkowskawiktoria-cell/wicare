@@ -17,7 +17,7 @@ export default function BlogList() {
       <main>
         <section className="bg-primary pt-20 pb-16" style={{ paddingTop: '6.5rem' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-3">{t.blog.badge}</p>
+            <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.blog.badge}</p>
             <h1 className="font-serif text-4xl md:text-5xl text-white font-semibold mb-4">{t.blog.heading}</h1>
             <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">{t.blog.subheading}</p>
           </div>

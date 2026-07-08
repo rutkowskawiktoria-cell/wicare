@@ -22,7 +22,7 @@ export default function BlogArticle({ slug }: { slug: string }) {
           <header className="bg-primary pt-20 pb-16" style={{ paddingTop: '6.5rem' }}>
             <div className="max-w-3xl mx-auto px-6 lg:px-8">
               <div className="flex items-center gap-3 mb-5 text-xs">
-                <span className="text-accent font-semibold uppercase tracking-wider">{post.category}</span>
+                <span className="text-accent-dark font-semibold uppercase tracking-wider">{post.category}</span>
                 <span className="text-white/50 flex items-center gap-1"><Clock size={12} />{post.readingMins} {t.blog.minRead}</span>
                 <span className="text-white/50">{dateStr}</span>
               </div>

@@ -19,7 +19,7 @@ export default function Trust() {
           {keyReasons.map(({ title, description }) => (
             <div key={title} className="text-center">
               <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 size={28} className="text-accent" />
+                <CheckCircle2 size={28} className="text-accent-dark" />
               </div>
               <h3 className="font-serif text-lg font-semibold text-primary mb-2 break-words">{title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed break-words hyphens-auto">{description}</p>
