@@ -1,15 +1,16 @@
 import BlogList from '@/components/BlogList';
 
 export const metadata = {
-  title: 'Insights & Guides | WiCare ApS North Copenhagen',
-  description: 'Practical advice on VIP home cleaning, private dining and property care in the northern suburbs of Copenhagen: Hellerup, Gentofte, Rudersdal and more.',
+  title: 'Indsigt & Guides | WiCare ApS Nord for København',
+  description: 'Praktiske råd om VIP rengøring, privat madlavning og havepleje i Københavns nordlige forstæder: Hellerup, Gentofte, Rudersdal og flere.',
+  keywords: ['rengøring guide København', 'privat kok tips', 'havepleje råd nord for København', 'WiCare ApS'],
   alternates: { canonical: '/blog/' },
   openGraph: {
-    title: 'Insights & Guides | WiCare ApS',
-    description: 'Practical advice on home, lifestyle and property care in the northern suburbs of Copenhagen.',
+    title: 'Indsigt & Guides | WiCare ApS',
+    description: 'Praktiske råd om hjem, livsstil og ejendomspleje i Københavns nordlige forstæder.',
     url: '/blog/',
     siteName: 'WiCare ApS',
-    locale: 'en_DK',
+    locale: 'da_DK',
     type: 'website',
   },
 };

@@ -4,15 +4,16 @@ import { translations } from '@/lib/i18n/translations';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
 
 export const metadata = {
-  title: 'FAQ | WiCare ApS North Copenhagen',
-  description: "Frequently asked questions about WiCare's VIP home cleaning, private dining and property care in the northern suburbs of Copenhagen.",
+  title: 'Ofte Stillede Spørgsmål | WiCare ApS Nord for København',
+  description: 'Svar på almindelige spørgsmål om WiCares VIP rengøring, private madlavning og havepleje i Hellerup, Gentofte, Rudersdal og Københavns nordlige forstæder.',
+  keywords: ['rengøring nord for København', 'privat kok Hellerup', 'havepleje Gentofte', 'WiCare ApS'],
   alternates: { canonical: '/faq/' },
   openGraph: {
-    title: 'FAQ | WiCare ApS',
-    description: 'Common questions about WiCare VIP home and lifestyle services in North Copenhagen.',
+    title: 'Ofte Stillede Spørgsmål | WiCare ApS',
+    description: 'Almindelige spørgsmål om WiCares VIP hjem- og livsstilsservice i Københavns nordlige forstæder.',
     url: '/faq/',
     siteName: 'WiCare ApS',
-    locale: 'en_DK',
+    locale: 'da_DK',
     type: 'website',
   },
 };

@@ -12,22 +12,22 @@ import ConsentBanner from "@/components/ConsentBanner";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare ApS | VIP Home & Lifestyle Services, North Copenhagen",
-  description: "WiCare ApS offers VIP home and lifestyle services in the northern suburbs of Copenhagen: home cleaning, private dining & catering, and property & garden care.",
-  keywords: ["VIP home services North Copenhagen", "private chef Hellerup", "premium cleaning Gentofte", "executive lifestyle services Rudersdal", "WiCare", "concierge services Hellerup", "home services Hørsholm", "property care Charlottenlund", "Strandvejen luxury services", "home cleaning", "private dining & catering", "property & garden care"],
+  title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
+  description: "VIP hjemmerengøring, privat madlavning & catering og ejendoms- & havepleje i Københavns nordlige forstæder: Hellerup, Gentofte, Charlottenlund, Rudersdal, Hørsholm m.fl. Diskret, professionel service. Ring +45 52 72 11 02.",
+  keywords: ["rengøring Hellerup", "hjemmerengøring Gentofte", "rengøringsfirma nord for København", "privat kok København", "catering Hellerup", "havepleje Rudersdal", "vinduespudsning Klampenborg", "ejendomsservice Charlottenlund", "handyman Hørsholm", "VIP rengøring Strandvejen", "rengøringshjælp Rungsted", "privat madlavning Vedbæk", "WiCare"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
-    title: "WiCare ApS | VIP Home & Lifestyle Services",
-    description: "VIP home and lifestyle services delivered with discretion, precision, and trust, across the northern suburbs of Copenhagen.",
+    title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
+    description: "Diskret VIP hjemmerengøring, privat madlavning & catering og havepleje i Hellerup, Gentofte, Rudersdal og resten af Københavns nordlige forstæder.",
     url: siteUrl,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WiCare ApS | VIP Home & Lifestyle Services",
-    description: "VIP home and lifestyle services delivered with discretion, precision, and trust.",
+    title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje",
+    description: "Diskret VIP hjem- og livsstilsservice i Københavns nordlige forstæder.",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

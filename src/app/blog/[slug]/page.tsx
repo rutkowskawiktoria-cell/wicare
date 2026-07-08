@@ -12,18 +12,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const c = post.en;
+  const c = post.da;
   return {
     title: `${c.title} | WiCare ApS`,
     description: c.description,
-    keywords: [post.category, 'North Copenhagen', 'Hellerup', 'Gentofte', 'WiCare ApS'],
+    keywords: [post.category, 'Nord for København', 'Hellerup', 'Gentofte', 'WiCare ApS'],
     alternates: { canonical: `/blog/${post.slug}/` },
     openGraph: {
       title: c.title,
       description: c.description,
       url: `/blog/${post.slug}/`,
       siteName: 'WiCare ApS',
-      locale: 'en_DK',
+      locale: 'da_DK',
       type: 'article',
       publishedTime: post.date,
     },
@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-  const c = post.en;
+  const c = post.da;
 
   return (
     <>
@@ -45,8 +45,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-              { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteUrl}/blog/` },
+              { '@type': 'ListItem', position: 1, name: 'Forside', item: `${siteUrl}/` },
+              { '@type': 'ListItem', position: 2, name: 'Indsigt', item: `${siteUrl}/blog/` },
               { '@type': 'ListItem', position: 3, name: c.title, item: `${siteUrl}/blog/${post.slug}/` },
             ],
           }),
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             description: c.description,
             datePublished: post.date,
             dateModified: post.date,
-            inLanguage: 'en',
+            inLanguage: 'da',
             url: `${siteUrl}/blog/${post.slug}/`,
             mainEntityOfPage: `${siteUrl}/blog/${post.slug}/`,
             image: `${siteUrl}/og-image.png`,

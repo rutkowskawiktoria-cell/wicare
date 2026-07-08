@@ -6,20 +6,39 @@ export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
+const daMeta: Record<string, { title: string; description: string; keywords: string[] }> = {
+  'the-home': {
+    title: 'Hjemmerengøring i Nord for København | WiCare ApS',
+    description: 'VIP hjemmerengøring i Hellerup, Gentofte, Charlottenlund og resten af Københavns nordlige forstæder. Diskret white-glove service med baggrundstjekket personale. Ring +45 52 72 11 02.',
+    keywords: ['rengøring Hellerup', 'hjemmerengøring Gentofte', 'rengøringsfirma nord for København', 'vinduespudsning Klampenborg', 'rengøringshjælp Charlottenlund', 'VIP rengøring Strandvejen', 'WiCare ApS'],
+  },
+  'the-table': {
+    title: 'Privat Kok & Catering i Nord for København | WiCare ApS',
+    description: 'Privat madlavning og catering til middage, fejringer og firmafrokoster i Hellerup, Gentofte og omegn. Erfarne kokke, skræddersyede menuer. Ring +45 52 72 11 02.',
+    keywords: ['privat kok København', 'privat kok Hellerup', 'catering Gentofte', 'privat madlavning Rudersdal', 'firmacatering nord for København', 'middagsselskab kok Vedbæk', 'WiCare ApS'],
+  },
+  'the-estate': {
+    title: 'Havepleje & Ejendomsservice i Nord for København | WiCare ApS',
+    description: 'Havearbejde, handyman, byggeri og ejendomspleje i Rudersdal, Hørsholm, Hellerup og omegn. Én betroet partner til det hele. Ring +45 52 72 11 02.',
+    keywords: ['havepleje Rudersdal', 'havearbejde Hørsholm', 'handyman Hellerup', 'ejendomsservice Charlottenlund', 'anlægsgartner nord for København', 'vedligeholdelse villa Rungsted', 'WiCare ApS'],
+  },
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
+  const m = daMeta[slug] ?? { title: `${service.name} | WiCare ApS`, description: service.description, keywords: [] };
   return {
-    title: `${service.name} | WiCare ApS North Copenhagen`,
-    description: service.description,
-    keywords: [`${service.name}`, 'North Copenhagen', 'Hellerup', 'Gentofte', 'VIP home services', 'WiCare ApS'],
+    title: m.title,
+    description: m.description,
+    keywords: m.keywords,
     openGraph: {
-      title: `${service.name} | WiCare ApS`,
-      description: service.description,
+      title: m.title,
+      description: m.description,
       url: `/services/${service.slug}/`,
       siteName: 'WiCare ApS',
-      locale: 'en_DK',
+      locale: 'da_DK',
       type: 'website',
     },
     alternates: { canonical: `/services/${service.slug}/` },

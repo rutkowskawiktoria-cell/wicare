@@ -1,15 +1,16 @@
 import Careers from '@/components/Careers';
 
 export const metadata = {
-  title: 'Careers | Join WiCare ApS, North Copenhagen',
-  description: 'WiCare welcomes unsolicited applications from exceptional home cleaning, private chef, and property care professionals in North Copenhagen. Apply by email.',
+  title: 'Karriere | Bliv en del af WiCare ApS – Nord for København',
+  description: 'WiCare modtager gerne uopfordrede ansøgninger fra dygtige fagfolk inden for rengøring, privat madlavning og havepleje i Københavns nordlige forstæder. Ansøg via e-mail.',
+  keywords: ['job rengøring nord for København', 'kok job Hellerup', 'gartner job Gentofte', 'WiCare ApS karriere'],
   alternates: { canonical: '/careers/' },
   openGraph: {
-    title: 'Careers | Join WiCare ApS',
-    description: 'We welcome unsolicited applications from exceptional people across home cleaning, private dining, and property care in North Copenhagen.',
+    title: 'Karriere hos WiCare ApS',
+    description: 'Vi modtager gerne uopfordrede ansøgninger fra dygtige fagfolk inden for rengøring, privat madlavning og havepleje i Københavns nordlige forstæder.',
     url: '/careers/',
     siteName: 'WiCare ApS',
-    locale: 'en_DK',
+    locale: 'da_DK',
     type: 'website',
   },
 };
