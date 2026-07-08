@@ -22,6 +22,11 @@ export default function Careers() {
           </div>
         </section>
 
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 -mt-10 relative z-10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/careers.jpg" alt="A WiCare professional at work" className="w-full h-56 md:h-80 object-cover rounded-2xl shadow-2xl" width={1200} height={520} />
+        </div>
+
         <section className="py-16">
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
             <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-6">{c.lookingTitle}</h2>
