@@ -6,7 +6,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "
 const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap", variable: "--font-sans" });
 
 export const viewport: Viewport = {
-  themeColor: "#12302A",
+  themeColor: "#1B2B4A",
   width: "device-width",
   initialScale: 1,
 };
