@@ -34,11 +34,11 @@ export default function Hero() {
           {t.hero.titleHighlight}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
-          <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-black font-bold px-6 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-xl md:text-2xl">
+          <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-6 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-xl md:text-2xl tracking-wide">
             <Phone size={26} />+45 52 72 11 02
           </a>
-          <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-black font-bold px-7 py-5 rounded-2xl transition-all duration-300 shadow-xl hover:scale-[1.02] text-lg">
-            <WhatsAppIcon size={24} />WhatsApp
+          <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium px-7 py-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg tracking-wide">
+            <WhatsAppIcon size={22} />WhatsApp
           </a>
         </div>
         <p className="text-white/80 text-base mt-4">

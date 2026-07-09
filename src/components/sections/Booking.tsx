@@ -19,7 +19,7 @@ export default function Booking() {
         <a
           href="tel:+4552721102"
           onClick={() => track('phone')}
-          className="inline-flex items-center gap-4 bg-accent hover:bg-accent-deep text-black font-bold text-2xl md:text-3xl px-12 py-6 rounded-full transition-all duration-300 shadow-xl hover:scale-105 mb-16"
+          className="inline-flex items-center gap-4 bg-accent hover:bg-accent-deep text-primary font-bold text-2xl md:text-3xl px-12 py-6 rounded-full transition-all duration-300 shadow-xl hover:scale-105 mb-16"
         >
           <Phone size={32} />
           +45 52 72 11 02

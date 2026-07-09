@@ -27,7 +27,7 @@ export default function Services() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={img} alt={title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={520} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                {highlight && <div className="absolute top-4 right-4 bg-accent text-black text-xs font-semibold px-3 py-1 rounded-full">{t.services.flagship}</div>}
+                {highlight && <div className="absolute top-4 right-4 bg-accent text-primary text-xs font-semibold px-3 py-1 rounded-full">{t.services.flagship}</div>}
                 <div className="absolute bottom-3 left-4 w-11 h-11 rounded-xl bg-primary/85 backdrop-blur-sm flex items-center justify-center">
                   <Icon size={22} className="text-accent" />
                 </div>

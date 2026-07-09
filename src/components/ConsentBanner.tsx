@@ -48,7 +48,7 @@ export default function ConsentBanner() {
           <button type="button" onClick={() => decide(false)} className="text-white/70 hover:text-white text-sm font-medium px-4 py-2.5">
             {c.decline}
           </button>
-          <button type="button" onClick={() => decide(true)} className="bg-accent hover:bg-accent-deep text-black font-semibold text-sm px-6 py-2.5 rounded-full transition-colors">
+          <button type="button" onClick={() => decide(true)} className="bg-accent hover:bg-accent-deep text-primary font-semibold text-sm px-6 py-2.5 rounded-full transition-colors">
             {c.accept}
           </button>
         </div>

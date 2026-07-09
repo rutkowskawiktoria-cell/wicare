@@ -51,7 +51,7 @@ export default function Careers() {
             </ol>
 
             <div className="bg-light rounded-2xl p-8 text-center">
-              <a href={mailto} className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-black font-bold px-8 py-4 rounded-full transition-all duration-300 text-base tracking-wide uppercase shadow-lg">
+              <a href={mailto} className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 text-base tracking-wide uppercase shadow-lg">
                 <Mail size={20} />{c.applyCta}
               </a>
               <p className="text-gray-600 text-base mt-5">

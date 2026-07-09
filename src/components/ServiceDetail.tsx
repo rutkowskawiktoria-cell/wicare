@@ -94,7 +94,7 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
             </p>
             <a
               href="tel:+4552721102"
-              className="inline-flex items-center gap-3 bg-accent hover:bg-accent-deep text-black font-bold text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
+              className="inline-flex items-center gap-3 bg-accent hover:bg-accent-deep text-primary font-bold text-2xl px-10 py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
             >
               <Phone size={28} />+45 52 72 11 02
             </a>

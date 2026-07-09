@@ -79,7 +79,7 @@ export default function ContactForm() {
               </select>
             </div>
             <textarea required aria-label={f.message} placeholder={f.message} value={form.message} onChange={set('message')} rows={5} className={inputCls} />
-            <button type="submit" disabled={status === 'sending'} className="w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-deep text-black font-bold px-8 py-4 rounded-full transition-all text-base tracking-wide uppercase shadow-lg disabled:opacity-60">
+            <button type="submit" disabled={status === 'sending'} className="w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-deep text-primary font-bold px-8 py-4 rounded-full transition-all text-base tracking-wide uppercase shadow-lg disabled:opacity-60">
               <Send size={18} />{status === 'sending' ? f.sending : f.send}
             </button>
             {status === 'err' && <p className="text-red-600 text-sm text-center">{f.error}</p>}
