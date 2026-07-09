@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import Logo from './Logo';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -10,12 +9,10 @@ export default function Footer() {
     <footer className="bg-primary text-white py-14 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12">
-          <Link href="/" className="flex items-center gap-3" aria-label="WiCare ApS home">
-            <Logo size={44} />
-            <div className="text-left">
-              <span className="font-serif text-2xl font-semibold tracking-wide">WiCare</span>
-              <span className="block text-xs tracking-wider text-accent">wicare.vip</span>
-            </div>
+          <Link href="/" className="flex items-center" aria-label="WiCare ApS home">
+            <span className="font-sans text-2xl font-bold tracking-tight text-white">
+              Wi<span className="text-[#6BA8CE]">Care</span>
+            </span>
           </Link>
           <p className="text-white/70 text-base max-w-md mt-5 leading-relaxed">{t.footer.tagline}</p>
         </div>
