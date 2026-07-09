@@ -30,7 +30,7 @@ export default function Hero() {
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-3 sm:mb-5">
           {t.hero.title}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-accent italic font-light mb-7">
+        <p className="text-xl sm:text-2xl md:text-3xl text-white/90 italic font-light mb-7">
           {t.hero.titleHighlight}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
