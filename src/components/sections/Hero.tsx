@@ -44,7 +44,7 @@ export default function Hero() {
         <p className="text-white/80 text-base mt-4">
           <Link href="/#services" className="underline underline-offset-4 hover:text-accent">{t.hero.ctaServices}</Link>
         </p>
-        <p className="text-lg md:text-2xl text-white/70 max-w-3xl mx-auto mt-8 leading-relaxed font-light whitespace-pre-line">
+        <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto mt-8 leading-relaxed font-light whitespace-pre-line">
           {t.hero.subtitle}
         </p>
       </div>
