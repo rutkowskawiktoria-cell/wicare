@@ -1,0 +1,59 @@
+# WiCare ApS — Project Memory (read this first)
+
+Purpose of this file: give any future session full context immediately, so it does **not** re-explore the codebase from scratch (saves time and tokens). Update it when something durable changes.
+
+## What this is
+Marketing website for **WiCare ApS** — VIP home & lifestyle services (Home Cleaning, Private Dining & Catering, Property & Garden Care) in the **northern suburbs of Copenhagen**. Live: **https://wicare.vip**. Primary market is **Danish**.
+
+## Stack & hosting
+- **Next.js 15** (App Router), **static export** (`output: 'export'`, `trailingSlash: true`, `images.unoptimized`).
+- Tailwind CSS v3. Fonts via **next/font** (Playfair Display serif, Inter sans).
+- Repo working copy: `/Users/at/Documents/WiCare/WiCare_latest` (sandbox: `/sessions/*/mnt/WiCare_latest`).
+- GitHub: `rutkowskawiktoria-cell/wicare`, deploy branch `main`. The git remote already holds a push token — **never print it** (pipe pushes through `sed -E 's/ghp_[A-Za-z0-9]+/ghp_***/g'`). Recommend the owner use a fine-grained PAT and rotate periodically.
+- **Deploy pipeline**: push `main` → GitHub Actions "Deploy to GitHub Pages" builds `out/` → Pages → **Cloudflare** (proxied, Copenhagen edge). Propagation is slow (the "updating_pages" step can take 2–8 min; deploys sometimes queue).
+
+## Build / test workflow (important)
+- `npm run build` needs internet to fetch Google Fonts at build (next/font). **It succeeds on GitHub Actions but FAILS in the sandbox** (no access to fonts.googleapis.com) — that failure is expected and only means the font fetch, not a code error.
+- For local validation use **`npx tsc --noEmit`** (fast, no network) and `npx --yes esbuild@0.23.0 <file> --outfile=/tmp/o.js` for per-file syntax.
+- Verify live via the Chrome MCP: fetch same-origin and inspect. Note **Tailwind emits colors as `rgb(r g b / a)` channels**, not hex — search for e.g. `27 43 74` (navy) not `#1B2B4A`.
+
+## Brand (navy + steel-blue — matches the uniforms/van/logo)
+Tokens in `tailwind.config.js`:
+- primary `#1B2B4A` (navy, sampled from polos) · secondary `#26406B` · accent `#6BA8CE` (steel blue) · accent-dark `#2E6A93` (text on light, AA) · accent-deep `#4E8FBE` · light `#F1F4F8`.
+- Also hard-coded in `src/app/globals.css` (body text, focus outline, scrollbar), `layout.tsx` viewport `themeColor`, `Logo.tsx` crest gradient.
+- **Logo** = the "WiCare" wordmark (white/navy "Wi" + steel-blue "Care", `#6BA8CE` on dark / `#3E7CA6` on light) in Navbar + Footer. Crest dropped from nav; `Logo.tsx` crest still used on `/card`.
+- Assets regenerated in navy/blue: `public/favicon.svg`, `apple-touch-icon.png`, `logo.png`, `og-image.png`.
+
+### Do NOT reintroduce
+- **Critida / olive oil / Partners** — removed entirely.
+- **Emerald/brass** palette (`#12302A` / `#C9A96A`) — replaced by navy/steel-blue.
+- **Bright WhatsApp green** `#25D366` — use frosted-glass (hero) or emerald/secondary (floating/card).
+- Stark **black** button text — use `text-primary`.
+
+## i18n
+- Bilingual EN/DK, **client-side**, in `src/lib/i18n/LanguageContext.tsx`. Default rendered (crawlable) locale is **Danish** (`initialLocale || 'da'`) because the market is Danish; non-DK visitors switch to English client-side (browser lang + ipapi.co). `<html lang="da">`.
+- Copy in `src/lib/i18n/translations.ts` (`const en` / `const da: typeof en` — keep shapes identical).
+- Meta titles/descriptions are Danish + local keywords (per page, incl. `services/[slug]/page.tsx` `daMeta` map).
+- Full localized `/da` + `/en` routes with hreflang are **not** built (this is the "Danish-default interim"). That's the proper next SEO step if needed.
+
+## Pages & features
+- Routes: `/`, `/services/[the-home|the-table|the-estate]`, `/blog` + `/blog/[slug]`, `/careers`, `/faq`, `/card`, `/privacy`, `/terms`. Service display names: Home Cleaning / Private Dining & Catering / Property & Garden Care (slugs stay `the-home/table/estate`).
+- **Contact form** `src/components/sections/ContactForm.tsx` — Web3Forms; set `WEB3FORMS_KEY` (owner's free key) to enable direct submissions, else falls back to Gmail compose. Has honeypot spam trap.
+- **Analytics**: GTM `GTM-TXV53GK8` + GA4 `G-T2ZVMZK3M8`, gated behind **Consent Mode v2** (consent banner `ConsentBanner.tsx`, denied until opt-in). `src/lib/track.ts` pushes `cta_click` / `generate_lead`.
+- **Schema**: LocalBusiness (layout) + Service + FAQPage + BreadcrumbList.
+- **Photos**: `public/services/*.webp` (+ `-detail`), `hero-bg.webp`, `careers.webp`, `van.webp`. Source PNGs (real uniform photos) live in `/Users/at/Documents/Claude/WiCare/*.png`. Re-encode to WebP with PIL (quality ~60 hero / ~62 cards). Hero is a high-priority `<img>` (LCP), preloaded in `layout.tsx`.
+
+## SEO / infra status
+- Sitemap `/sitemap.xml` (auto from `sitemap.ts`), robots via `robots.ts`. Search Console verified (`sc-domain:wicare.vip`), sitemap submitted & read OK; ~7 pages indexed early on.
+- **Cloudflare**: proxied, SSL **Full**, Bot Fight Mode **OFF** (don't turn on — challenges Googlebot), static assets cached ~31 days, zstd. **HSTS is off (`max-age=0`) — owner should enable** (SSL/TLS → Edge Certificates). Email Obfuscation is ON (adds a small render-blocking `email-decode.js`; owner can turn off in Scrape Shield). CSP/X-Frame-Options not set (owner can add via Transform Rules).
+- **Owner-only actions that actually drive discovery** (not code): **Google Business Profile** (biggest local lever, not set up yet), collect **reviews**, Danish directory citations (Krak/Degulesider/Proff/Trustpilot). New domain → organic takes weeks–months; **Google Ads** is the only way to get traffic immediately.
+
+## Automation
+- Scheduled task **`wicare-monthly-audit`** (1st of month, 08:00) at `/Users/at/Documents/Claude/Scheduled/wicare-monthly-audit/SKILL.md` runs the full technical/SEO/legal/UX/CRO audit, fixes what's safe, and saves a dated report to `/Users/at/Documents/Claude/WiCare/`.
+- Reusable scripts live in `scripts/` (e.g. image optimization) — prefer running these over ad-hoc AI steps to save tokens.
+
+## Token-saving conventions
+1. **Read this file first** — don't re-scan the whole repo.
+2. Validate with `tsc --noEmit`; only run a full `npm run build` when you truly need the `out/` output (and remember it fails in-sandbox on fonts).
+3. Reuse `scripts/*` for repetitive work (image resize/WebP, pre-deploy checks).
+4. Verify deploys with one scripted fetch, not many screenshots.
