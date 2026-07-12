@@ -53,7 +53,13 @@ Tokens in `tailwind.config.js`:
 - `.github/workflows/ci.yml` runs on every non-main branch + PRs to main: it type-checks and does a full `npm run build` **without deploying**. So a broken change is caught on `dev` and can never reach live by accident.
 - `.github/workflows/deploy.yml` triggers **only on push to `main`** — that is the single action that publishes to the live site.
 - Flow: make changes on `dev` → CI build-check passes → (preview) → merge/PR `dev → main` to publish. Never commit straight to `main` for feature work.
-- Preview URL for visually reviewing `dev` before publishing: **Cloudflare Pages** connected to the repo (auto preview deploys per branch), or Vercel. Set up in the dashboard; keep wicare.vip on GitHub Pages as production.
+### Hosting & preview (finalized — "Option 1")
+- **Production = GitHub Pages** at wicare.vip, served through **Cloudflare's edge (proxied)** in **Alexander's** Cloudflare account (the account that holds the `wicare.vip` DNS zone). `deploy.yml` (push→main) is the only thing that publishes live.
+- **Staging / preview = a Cloudflare Worker named `wicare`** in **Wiktoria's** Cloudflare account (account id `d0df002d…`), connected to this repo. It uses `wrangler.jsonc` (`assets.directory = ./out`) to serve the static export.
+  - Build command `npm run build`; production deploy `npx wrangler deploy`; **non-production deploy `npx wrangler versions upload`** (so `dev` makes previews, not prod deploys).
+  - `main` → `wicare.rutkowska-wiktoria.workers.dev` (a full staging mirror of live). `dev`/other branches → preview URL `*-wicare.rutkowska-wiktoria.workers.dev`. Preview URLs are enabled.
+- **Why not one system:** the `wicare.vip` zone is in Alexander's account but the Worker is in Wiktoria's, and Cloudflare requires the zone + Worker in the same account to attach a custom domain. So the Worker can't serve wicare.vip. Canonical tags on every page point to `https://wicare.vip/...`, so the workers.dev mirror won't cause duplicate-content issues.
+- To move prod onto Cloudflare later: recreate the Worker in **Alexander's** account (where the zone is) and attach `wicare.vip` there — no DNS/registrar changes needed.
 
 ## Automation
 - Scheduled task **`wicare-monthly-audit`** (1st of month, 08:00) at `/Users/at/Documents/Claude/Scheduled/wicare-monthly-audit/SKILL.md` runs the full technical/SEO/legal/UX/CRO audit, fixes what's safe, and saves a dated report to `/Users/at/Documents/Claude/WiCare/`.
