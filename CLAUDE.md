@@ -48,6 +48,13 @@ Tokens in `tailwind.config.js`:
 - **Cloudflare**: proxied, SSL **Full**, Bot Fight Mode **OFF** (don't turn on — challenges Googlebot), static assets cached ~31 days, zstd. **HSTS is off (`max-age=0`) — owner should enable** (SSL/TLS → Edge Certificates). Email Obfuscation is ON (adds a small render-blocking `email-decode.js`; owner can turn off in Scrape Shield). CSP/X-Frame-Options not set (owner can add via Transform Rules).
 - **Owner-only actions that actually drive discovery** (not code): **Google Business Profile** (biggest local lever, not set up yet), collect **reviews**, Danish directory citations (Krak/Degulesider/Proff/Trustpilot). New domain → organic takes weeks–months; **Google Ads** is the only way to get traffic immediately.
 
+## Dev / test workflow (never edit live directly)
+- **`main` = live** (deploys to wicare.vip). **`dev` = working branch** — all changes land here first.
+- `.github/workflows/ci.yml` runs on every non-main branch + PRs to main: it type-checks and does a full `npm run build` **without deploying**. So a broken change is caught on `dev` and can never reach live by accident.
+- `.github/workflows/deploy.yml` triggers **only on push to `main`** — that is the single action that publishes to the live site.
+- Flow: make changes on `dev` → CI build-check passes → (preview) → merge/PR `dev → main` to publish. Never commit straight to `main` for feature work.
+- Preview URL for visually reviewing `dev` before publishing: **Cloudflare Pages** connected to the repo (auto preview deploys per branch), or Vercel. Set up in the dashboard; keep wicare.vip on GitHub Pages as production.
+
 ## Automation
 - Scheduled task **`wicare-monthly-audit`** (1st of month, 08:00) at `/Users/at/Documents/Claude/Scheduled/wicare-monthly-audit/SKILL.md` runs the full technical/SEO/legal/UX/CRO audit, fixes what's safe, and saves a dated report to `/Users/at/Documents/Claude/WiCare/`.
 - Reusable scripts live in `scripts/` (e.g. image optimization) — prefer running these over ad-hoc AI steps to save tokens.

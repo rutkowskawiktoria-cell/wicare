@@ -1,0 +1,26 @@
+name: CI - Build check (no deploy)
+
+# Runs on every branch EXCEPT main, and on PRs into main.
+# It only type-checks and builds — it never deploys. This lets us verify a
+# change is safe on `dev` before merging to `main` (which is the only thing
+# that publishes to the live site wicare.vip).
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Type-check
+        run: npx tsc --noEmit
+      - name: Production build
+        run: npm run build
