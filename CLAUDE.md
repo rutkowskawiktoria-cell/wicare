@@ -61,6 +61,11 @@ Tokens in `tailwind.config.js`:
 - **Why not one system:** the `wicare.vip` zone is in Alexander's account but the Worker is in Wiktoria's, and Cloudflare requires the zone + Worker in the same account to attach a custom domain. So the Worker can't serve wicare.vip. Canonical tags on every page point to `https://wicare.vip/...`, so the workers.dev mirror won't cause duplicate-content issues.
 - To move prod onto Cloudflare later: recreate the Worker in **Alexander's** account (where the zone is) and attach `wicare.vip` there — no DNS/registrar changes needed.
 
+## Email
+- **hello@wicare.vip** is the public contact address, shown site-wide (footer, business card, contact-form Gmail fallback, careers mailto, privacy/terms contact, LocalBusiness schema `email`). It **forwards to wicareaps@gmail.com** via **Cloudflare Email Routing** (in **Alexander's** account, the zone that holds wicare.vip DNS).
+- DNS: Cloudflare Email Routing MX (`route1/2/3.mx.cloudflare.net`, pri 4/6/14) + SPF (`v=spf1 include:_spf.mx.cloudflare.net ~all`) + DKIM (`cf2024-1._domainkey`). The old Namecheap `eforward1-5.registrar-servers.com` MX were removed to let these take over. Routing status = Enabled; catch-all = Disabled (only hello@ forwards).
+- Contact form still delivers via **Web3Forms** (keyed, destination set in the Web3Forms dashboard — not hardcoded); no address in code besides the mailto/compose fallbacks which point to hello@wicare.vip.
+
 ## Automation
 - Scheduled task **`wicare-monthly-audit`** (1st of month, 08:00) at `/Users/at/Documents/Claude/Scheduled/wicare-monthly-audit/SKILL.md` runs the full technical/SEO/legal/UX/CRO audit, fixes what's safe, and saves a dated report to `/Users/at/Documents/Claude/WiCare/`.
 - Reusable scripts live in `scripts/` (e.g. image optimization) — prefer running these over ad-hoc AI steps to save tokens.
