@@ -8,7 +8,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 export default function Careers() {
   const { t } = useLanguage();
   const c = t.careers;
-  const mailto = `mailto:wicareaps@gmail.com?subject=${encodeURIComponent(c.emailSubject)}&body=${encodeURIComponent(c.emailBody)}`;
+  const mailto = `mailto:hello@wicare.vip?subject=${encodeURIComponent(c.emailSubject)}&body=${encodeURIComponent(c.emailBody)}`;
 
   return (
     <div className="min-h-screen bg-white">
@@ -55,9 +55,9 @@ export default function Careers() {
                 <Mail size={20} />{c.applyCta}
               </a>
               <p className="text-gray-600 text-base mt-5">
-                {c.emailNote.split('wicareaps@gmail.com')[0]}
-                <a href={mailto} className="text-accent-dark font-semibold underline underline-offset-2 break-words">wicareaps@gmail.com</a>
-                {c.emailNote.split('wicareaps@gmail.com')[1] || ''}
+                {c.emailNote.split('hello@wicare.vip')[0]}
+                <a href={mailto} className="text-accent-dark font-semibold underline underline-offset-2 break-words">hello@wicare.vip</a>
+                {c.emailNote.split('hello@wicare.vip')[1] || ''}
               </p>
             </div>
           </div>

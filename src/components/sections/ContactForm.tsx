@@ -29,7 +29,7 @@ export default function ContactForm() {
 
     if (!WEB3FORMS_KEY) {
       const body = `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nService: ${form.service}\n\n${form.message}`;
-      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=wicareaps@gmail.com&su=${encodeURIComponent('Consultation request — ' + form.name)}&body=${encodeURIComponent(body)}`;
+      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=hello@wicare.vip&su=${encodeURIComponent('Consultation request — ' + form.name)}&body=${encodeURIComponent(body)}`;
       window.open(url, '_blank', 'noopener');
       setStatus('ok');
       return;

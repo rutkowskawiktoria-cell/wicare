@@ -25,9 +25,9 @@ export default function Footer() {
                 <Phone size={16} />
                 +45 52 72 11 02
               </a>
-              <a href="mailto:wicareaps@gmail.com" className="flex items-center justify-center md:justify-start gap-2 text-white/85 hover:text-accent transition-colors">
+              <a href="mailto:hello@wicare.vip" className="flex items-center justify-center md:justify-start gap-2 text-white/85 hover:text-accent transition-colors">
                 <Mail size={16} />
-                wicareaps@gmail.com
+                hello@wicare.vip
               </a>
             </div>
           </div>

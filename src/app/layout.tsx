@@ -99,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 { "@type": "City", name: "Vedbæk" },
               ],
               telephone: "+4552721102",
-              email: "wicareaps@gmail.com",
+              email: "hello@wicare.vip",
               foundingDate: "2026",
               taxID: "46213270",
               vatID: "DK46213270",
