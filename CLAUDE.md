@@ -68,6 +68,7 @@ Tokens in `tailwind.config.js`:
 
 ## Automation
 - Scheduled task **`wicare-monthly-audit`** (1st of month, 08:00) at `/Users/at/Documents/Claude/Scheduled/wicare-monthly-audit/SKILL.md` runs the full technical/SEO/legal/UX/CRO audit, fixes what's safe, and saves a dated report to `/Users/at/Documents/Claude/WiCare/`.
+- Scheduled task **`wicare-email-forwarding-check`** (1st of month, 08:30) at `/Users/at/Documents/Claude/Scheduled/wicare-email-forwarding-check/SKILL.md` verifies via DNS + live site that Cloudflare Email Routing is intact (MX `route1/2/3.mx.cloudflare.net`, SPF `include:_spf.mx.cloudflare.net`, DKIM `cf2024-1._domainkey`) and that hello@wicare.vip still forwards to wicareaps@gmail.com and shows on the site. Flags drift (missing MX, old `eforward*.registrar-servers.com` reappearing, wrong SPF).
 - Reusable scripts live in `scripts/` (e.g. image optimization) — prefer running these over ad-hoc AI steps to save tokens.
 
 ## Token-saving conventions
