@@ -1,6 +1,7 @@
 export const dynamic = "force-static";
 import { services } from '@/lib/services';
 import { posts } from '@/lib/blog';
+import { areas } from '@/lib/areas';
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,5 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
-  return [...staticPages, ...servicePages, ...blogPages];
+  const areaPages: MetadataRoute.Sitemap = areas.map((a) => ({
+    url: `${baseUrl}/omraader/${a.slug}/`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.75,
+  }));
+  return [...staticPages, ...servicePages, ...blogPages, ...areaPages];
 }

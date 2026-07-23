@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { areas } from '@/lib/areas';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -55,8 +56,14 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-2">{t.footer.areasTitle}</p>
-          <p className="text-white/70 text-sm max-w-3xl mx-auto mb-8 leading-relaxed whitespace-pre-line">{t.footer.areas}</p>
+          <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-4">{t.footer.areasTitle}</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 max-w-3xl mx-auto mb-8">
+            {areas.map((a) => (
+              <Link key={a.slug} href={`/omraader/${a.slug}/`} className="text-white/70 text-sm hover:text-accent transition-colors">
+                {a.name}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/75 text-sm">{t.footer.copyright}</p>
