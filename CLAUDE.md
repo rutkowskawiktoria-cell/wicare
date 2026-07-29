@@ -46,7 +46,7 @@ Tokens in `tailwind.config.js`:
 
 ## SEO / infra status
 - Sitemap `/sitemap.xml` (auto from `sitemap.ts`), robots via `robots.ts`. Search Console verified (`sc-domain:wicare.vip`), sitemap submitted & read OK; ~7 pages indexed early on.
-- **Cloudflare**: proxied, SSL **Full**, Bot Fight Mode **OFF** (don't turn on — challenges Googlebot), static assets cached ~31 days, zstd. **HSTS is off (`max-age=0`) — owner should enable** (SSL/TLS → Edge Certificates). Email Obfuscation is ON (adds a small render-blocking `email-decode.js`; owner can turn off in Scrape Shield). CSP/X-Frame-Options not set (owner can add via Transform Rules).
+- **Cloudflare**: proxied, SSL **Full**, Bot Fight Mode **OFF** (don't turn on — challenges Googlebot), static assets cached ~31 days, zstd. **HSTS is now ON** (max-age 6 months, includeSubDomains, preload). Email Obfuscation is ON (adds a small render-blocking `email-decode.js`; owner can turn off in Scrape Shield). **Security headers** added via Cloudflare Response Header Transform Rule "Security headers" (all requests): `X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: geolocation=(), camera=(), microphone=()`. A strict CSP is intentionally NOT set (would break GTM/GA/consent banner/ipapi/fonts).
 - **Owner-only actions that actually drive discovery** (not code): **Google Business Profile** (biggest local lever, not set up yet), collect **reviews**, Danish directory citations (Krak/Degulesider/Proff/Trustpilot). New domain → organic takes weeks–months; **Google Ads** is the only way to get traffic immediately.
 
 ## Dev / test workflow (never edit live directly)
@@ -64,7 +64,8 @@ Tokens in `tailwind.config.js`:
 
 ## Email
 - **hello@wicare.vip** is the public contact address, shown site-wide (footer, business card, contact-form Gmail fallback, careers mailto, privacy/terms contact, LocalBusiness schema `email`). It **forwards to wicareaps@gmail.com** via **Cloudflare Email Routing** (in **Alexander's** account, the zone that holds wicare.vip DNS).
-- DNS: Cloudflare Email Routing MX (`route1/2/3.mx.cloudflare.net`, pri 4/6/14) + SPF (`v=spf1 include:_spf.mx.cloudflare.net ~all`) + DKIM (`cf2024-1._domainkey`). The old Namecheap `eforward1-5.registrar-servers.com` MX were removed to let these take over. Routing status = Enabled; catch-all = Disabled (only hello@ forwards).
+- DNS: Cloudflare Email Routing MX (`route1/2/3.mx.cloudflare.net`, pri 4/6/14) + SPF (`v=spf1 include:_spf.mx.cloudflare.net ~all`) + DKIM (`cf2024-1._domainkey`, valid RSA key). The old Namecheap `eforward1-5.registrar-servers.com` MX were removed to let these take over. Routing status = Enabled; catch-all = Disabled (only hello@ forwards).
+- **DMARC** (added 2026-07): TXT `_dmarc.wicare.vip` = `v=DMARC1; p=quarantine; rua=mailto:hello@wicare.vip; fo=1`. Can tighten to `p=reject` later. Note: outbound mail is sent from Gmail (wicareaps@gmail.com), not @wicare.vip, so DKIM on cf2024-1 is adequate; only add a Google DKIM selector if "send as hello@wicare.vip" is ever configured. Lookalike domains (wicare.net/.org/.co/.info) are third-party owned — DMARC on .vip does NOT cover them; only defensive registration/monitoring helps.
 - Contact form still delivers via **Web3Forms** (keyed, destination set in the Web3Forms dashboard — not hardcoded); no address in code besides the mailto/compose fallbacks which point to hello@wicare.vip.
 
 ## Automation
