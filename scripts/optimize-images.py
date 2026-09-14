@@ -31,6 +31,10 @@ STANDARD = [
     ("cleaning2.png", "public/services/home-detail.webp",  1100, 64),
     ("cleaning3.png", "public/services/home-detail2.webp", 1100, 64),
     ("chef2.png",     "public/services/dining-detail.webp",1100, 64),
+    ("dining-event.jpg",  "public/services/dining-event.webp",  1000, 60),  # the-table gallery (real event photos)
+    ("dining-spread.jpg", "public/services/dining-spread.webp", 1200, 62),
+    ("dining-seafood.jpg","public/services/dining-seafood.webp",1000, 62),
+    ("dining-team.jpg",   "public/services/dining-team.webp",   1000, 60),
     ("Garden.png",    "public/services/garden-detail.webp",1100, 64),
     ("car.png",       "public/services/van.webp",          1200, 66),
     ("customer_service.png", "public/careers.webp",        1200, 66),
