@@ -9,7 +9,7 @@ export default function Booking() {
   const stats = t.booking.stats;
 
   return (
-    <section id="booking" className="section-padding bg-primary">
+    <section id="book" className="section-padding bg-primary">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="font-serif text-4xl md:text-5xl text-white font-semibold mb-4">{t.booking.heading}</h2>
         <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto">

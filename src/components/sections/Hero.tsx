@@ -17,7 +17,7 @@ export default function Hero() {
   const wa = `https://wa.me/4552721102?text=${encodeURIComponent(t.floating.whatsappMsg)}`;
 
   return (
-    <section className="relative min-h-screen flex items-start sm:items-center justify-center overflow-hidden pt-28 sm:pt-24 lg:pt-0">
+    <section id="booking" className="relative min-h-screen flex items-start sm:items-center justify-center overflow-hidden pt-28 sm:pt-24 lg:pt-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/hero-bg.webp" srcSet="/hero-bg-sm.webp 768w, /hero-bg.webp 1280w" sizes="100vw" alt="" aria-hidden="true" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1280} height={714} />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/35 to-primary/70" />

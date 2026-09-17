@@ -12,7 +12,7 @@ export default function Navbar() {
     { label: t.nav.whyWiCare, href: '/#trust' },
     { label: t.nav.testimonials, href: '/#testimonials' },
     { label: t.blog.nav, href: '/blog/' },
-    { label: t.nav.contact, href: '/#booking' },
+    { label: t.nav.contact, href: '/#book' },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function Navbar() {
             <a href="tel:+4552721102" className={`flex items-center gap-2 whitespace-nowrap text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}>
               <Phone size={16} /><span>+45 52 72 11 02</span>
             </a>
-            <Link href="/#booking" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-accent-deep transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
+            <Link href="/#book" className="whitespace-nowrap bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-accent-deep transition-colors duration-200 shadow-md">{t.nav.bookNow}</Link>
           </div>
           <button onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} className={`lg:hidden transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,7 +58,7 @@ export default function Navbar() {
             <div className="py-3">
               <LanguageSwitcher />
             </div>
-            <Link href="/#booking" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">{t.nav.getStarted}</Link>
+            <Link href="/#book" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">{t.nav.getStarted}</Link>
           </div>
         </div>
       )}

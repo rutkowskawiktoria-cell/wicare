@@ -42,7 +42,7 @@ export default function Footer() {
               <Link href="/faq/" className="block text-white/85 hover:text-accent transition-colors">{t.faq.nav}</Link>
               <Link href="/card/" className="block text-white/85 hover:text-accent transition-colors">{t.card.nav}</Link>
               <Link href="/#testimonials" className="block text-white/85 hover:text-accent transition-colors">{t.nav.testimonials}</Link>
-              <Link href="/#booking" className="block text-white/85 hover:text-accent transition-colors">{t.footer.bookNow}</Link>
+              <Link href="/#book" className="block text-white/85 hover:text-accent transition-colors">{t.footer.bookNow}</Link>
             </div>
           </div>
 
