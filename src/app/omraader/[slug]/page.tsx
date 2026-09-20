@@ -10,13 +10,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const area = getArea(slug);
   if (!area) return {};
-  const title = `Rengøring, Privat Kok & Havepleje i ${area.name} | WiCare ApS`;
-  const description = `VIP hjemmerengøring, privat madlavning & catering og ejendoms- & havepleje i ${area.name} (${area.postal}) og omegn. Diskret, baggrundstjekket service. Ring +45 52 72 11 02.`;
+  const title = `Rengøring & Erhvervsrengøring i ${area.name} | WiCare ApS`;
+  const description = `Hjemmerengøring, erhvervs- & kontorrengøring, privat kok og havepleje i ${area.name} (${area.postal}). Diskret, baggrundstjekket service. Ring +45 52 72 11 02.`;
   return {
     title,
     description,
     keywords: [
       `rengøring ${area.name}`,
+      `erhvervsrengøring ${area.name}`,
+      `kontorrengøring ${area.name}`,
+      `privat rengøring ${area.name}`,
       `hjemmerengøring ${area.name}`,
       `rengøringsfirma ${area.name}`,
       `privat kok ${area.name}`,
@@ -46,7 +49,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
   const url = `${siteUrl}/omraader/${area.slug}/`;
-  const serviceNames = ['Hjemmerengøring', 'Privat Madlavning & Catering', 'Ejendoms- & Havepleje'];
+  const serviceNames = ['Hjemmerengøring', 'Erhvervsrengøring & kontorrengøring', 'Privat Madlavning & Catering', 'Ejendoms- & Havepleje'];
 
   return (
     <>

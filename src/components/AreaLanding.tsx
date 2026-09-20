@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { getArea, areas } from '@/lib/areas';
+import { getArea, areas, areaBusiness } from '@/lib/areas';
 import { track } from '@/lib/track';
 
 const serviceCards = [
@@ -23,6 +23,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
 
   const wa = `https://wa.me/4552721102?text=${encodeURIComponent(t.floating.whatsappMsg)}`;
   const nearby = area.nearby.map(getArea).filter(Boolean);
+  const biz = areaBusiness[area.slug]?.[locale === 'da' ? 'da' : 'en'];
 
   const L = da
     ? {
@@ -37,6 +38,9 @@ export default function AreaLanding({ slug }: { slug: string }) {
         trust1: 'Baggrundstjekket personale',
         trust2: 'Fleksibel planlægning',
         trust3: 'Fast team & klare priser',
+        bizBadge: 'Erhverv',
+        bizHeading: 'Erhvervsrengøring i',
+        bizItems: ['Kontorrengøring', 'Klinikker', 'Showroom & butik', 'Fællesarealer', 'Uden for åbningstid', 'Fast aftale'],
       }
     : {
         h1a: 'VIP Cleaning, Private Chef & Garden Care in',
@@ -50,6 +54,9 @@ export default function AreaLanding({ slug }: { slug: string }) {
         trust1: 'Background-checked staff',
         trust2: 'Flexible scheduling',
         trust3: 'Dedicated team & clear pricing',
+        bizBadge: 'Business',
+        bizHeading: 'Commercial cleaning in',
+        bizItems: ['Office cleaning', 'Clinics', 'Showroom & retail', 'Shared areas', 'Out-of-hours', 'Fixed agreement'],
       };
 
   return (
@@ -113,6 +120,24 @@ export default function AreaLanding({ slug }: { slug: string }) {
             <p className="text-gray-700 text-lg leading-relaxed">{c.body}</p>
           </div>
         </section>
+
+        {/* Erhvervsrengøring — commercial / office cleaning */}
+        {biz && (
+          <section className="py-14">
+            <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+              <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{L.bizBadge}</p>
+              <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-5">
+                {L.bizHeading} {area.name}
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">{biz}</p>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {L.bizItems.map((i) => (
+                  <span key={i} className="px-4 py-2 rounded-full bg-light text-primary text-sm font-medium">{i}</span>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Nearby areas */}
         {nearby.length > 0 && (

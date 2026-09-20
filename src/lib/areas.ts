@@ -143,3 +143,46 @@ export const areas: Area[] = [
 export function getArea(slug: string): Area | undefined {
   return areas.find((a) => a.slug === slug);
 }
+
+// Commercial / office cleaning ("erhvervsrengøring") copy per town.
+// Added Sept 2026: Search Console showed "erhvervsrengøring <town>" is the single
+// biggest NON-BRAND query driving impressions (Holte 169, Skodsborg 81). Kept unique
+// per town to avoid duplicate content across the 9 area pages.
+export const areaBusiness: Record<string, { da: string; en: string }> = {
+  hellerup: {
+    da: 'Vi løser også erhvervsrengøring i Hellerup — kontorer, klinikker og showrooms, fra virksomhederne omkring Tuborg Havn til de mindre kontorfællesskaber langs Strandvejen. Fast skema, diskret personale og rengøring uden for åbningstid, hvis det passer jer bedre.',
+    en: 'We also handle commercial cleaning in Hellerup — offices, clinics and showrooms, from the companies around Tuborg Harbour to smaller office suites along Strandvejen. Fixed schedules, discreet staff and out-of-hours cleaning if that suits you better.',
+  },
+  charlottenlund: {
+    da: 'Erhvervsrengøring i Charlottenlund dækker kontorer, klinikker og butikslokaler. Vi tilpasser frekvens og tidspunkt, så rengøringen aldrig forstyrrer jeres kunder eller patienter.',
+    en: 'Commercial cleaning in Charlottenlund covers offices, clinics and retail spaces. We adapt the frequency and timing so cleaning never disturbs your customers or patients.',
+  },
+  klampenborg: {
+    da: 'I Klampenborg løser vi erhvervsrengøring for kontorer, restauranter og mindre virksomheder nær Bakken og Bellevue. Høj standard, faste teams og fleksible tider før eller efter åbningstid.',
+    en: 'In Klampenborg we handle commercial cleaning for offices, restaurants and smaller businesses near Bakken and Bellevue. A high standard, dedicated teams and flexible hours before or after opening.',
+  },
+  gentofte: {
+    da: 'Erhvervsrengøring i Gentofte omfatter kontorer, klinikker og fællesarealer. Vi leverer fast kontorrengøring med det samme team hver gang, så I altid ved, hvem der kommer.',
+    en: 'Commercial cleaning in Gentofte covers offices, clinics and shared areas. We provide regular office cleaning with the same team every time, so you always know who is coming.',
+  },
+  holte: {
+    da: 'Erhvervsrengøring i Holte er en af vores mest efterspurgte services — kontorer, klinikker og liberale erhverv i hele Rudersdal. Vi kører fast kontorrengøring om aftenen eller tidligt om morgenen, så jeres arbejdsdag ikke forstyrres.',
+    en: 'Commercial cleaning in Holte is one of our most requested services — offices, clinics and professional practices across Rudersdal. We run scheduled office cleaning in the evening or early morning so your workday is never interrupted.',
+  },
+  hoersholm: {
+    da: 'Vi står for erhvervsrengøring i Hørsholm for kontorer, klinikker og virksomheder i og omkring erhvervsområderne. Fast frekvens, tydelige aftaler og baggrundstjekket personale.',
+    en: 'We handle commercial cleaning in Hørsholm for offices, clinics and companies in and around the business districts. Set frequency, clear agreements and background-checked staff.',
+  },
+  rungsted: {
+    da: 'Erhvervsrengøring i Rungsted dækker kontorer, klinikker og virksomhederne omkring Rungsted Havn. Vi arbejder diskret og uden for åbningstid, når det er nødvendigt.',
+    en: 'Commercial cleaning in Rungsted covers offices, clinics and the businesses around Rungsted Harbour. We work discreetly and outside opening hours whenever needed.',
+  },
+  vedbaek: {
+    da: 'I Vedbæk tilbyder vi erhvervsrengøring til kontorer, klinikker og mindre virksomheder. Fast team, klare priser og mulighed for rengøring, før medarbejderne møder ind.',
+    en: 'In Vedbæk we offer commercial cleaning for offices, clinics and smaller businesses. A dedicated team, clear pricing and the option to clean before staff arrive.',
+  },
+  skodsborg: {
+    da: 'Erhvervsrengøring i Skodsborg omfatter kontorer, klinikker samt hotel- og wellnessmiljøer langs kysten. Vi leverer en ensartet, høj standard — også i weekender og uden for normal arbejdstid.',
+    en: 'Commercial cleaning in Skodsborg covers offices, clinics and the hotel and wellness venues along the coast. We deliver a consistent, high standard — including weekends and outside normal hours.',
+  },
+};
