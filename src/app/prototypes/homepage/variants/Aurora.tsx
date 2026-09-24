@@ -64,7 +64,7 @@ export default function Aurora() {
       gsap.utils.toArray<HTMLElement>('.au-rise').forEach((h) => {
         gsap.from(h.querySelectorAll('.ch'), { yPercent: 115, stagger: 0.02, duration: 1.2, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: h, start: 'top 85%' } });
       });
-      gsap.from('.au-card', { y: 90, opacity: 0, stagger: 0.12, duration: 1.3, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.au-bento', start: 'top 80%' } });
+      gsap.from('.au-card', { y: 90, opacity: 0, stagger: 0.12, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: '.au-bento', start: 'top 80%' } });
 
       // "Tillid" — the word is cut from the team photo, then the photo opens out of it.
       const tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.au-trust', start: 'top top', end: desktop ? '+=160%' : '+=130%', scrub: 0.7, pin: true, anticipatePin: 1 } });
@@ -92,12 +92,10 @@ export default function Aurora() {
     const y = (e.clientY - r.top) / r.height;
     t.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
     t.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
-    t.style.setProperty('--rx', `${((0.5 - y) * 7).toFixed(2)}deg`);
-    t.style.setProperty('--ry', `${((x - 0.5) * 9).toFixed(2)}deg`);
+    gsap.to(t, { rotationX: (0.5 - y) * 7, rotationY: (x - 0.5) * 9, transformPerspective: 1100, duration: 0.6, ease: 'power3.out', overwrite: 'auto' });
   };
   const unglow = (e: React.PointerEvent<HTMLElement>) => {
-    e.currentTarget.style.setProperty('--rx', '0deg');
-    e.currentTarget.style.setProperty('--ry', '0deg');
+    gsap.to(e.currentTarget, { rotationX: 0, rotationY: 0, duration: 0.8, ease: 'power3.out', overwrite: 'auto' });
   };
 
   return (

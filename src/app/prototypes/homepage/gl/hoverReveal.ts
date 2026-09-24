@@ -59,7 +59,9 @@ void main(){
 export type HoverReveal = { show: (i: number) => void; hide: () => void; dispose: () => void };
 
 export function createHoverReveal(canvas: HTMLCanvasElement, sources: string[]): HoverReveal {
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, premultipliedAlpha: false });
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setClearColor(0x000000, 0);
+  canvas.style.opacity = '0';
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, -10, 10);
@@ -140,10 +142,15 @@ export function createHoverReveal(canvas: HTMLCanvasElement, sources: string[]):
     }
     mesh.position.set(pos.x - w / 2 + planeW * 0.15, h / 2 - pos.y, 0);
     mesh.rotation.z = -uniforms.uVel.value.x * 0.12;
+    // Nothing on screen: hide the layer entirely instead of compositing an empty canvas.
     if (uniforms.uAlpha.value < 0.002 && alphaTarget === 0) {
-      renderer.clear();
+      if (canvas.style.opacity !== '0') {
+        renderer.clear();
+        canvas.style.opacity = '0';
+      }
       return;
     }
+    canvas.style.opacity = '1';
     renderer.render(scene, camera);
   };
   const loop = () => {

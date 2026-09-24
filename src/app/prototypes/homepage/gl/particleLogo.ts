@@ -126,7 +126,7 @@ export function createParticleLogo(canvas: HTMLCanvasElement, opts: { fontFamily
     camera.updateProjectionMatrix();
     const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const visW = visH * camera.aspect;
-    points.scale.setScalar(Math.min(1, (visW * 0.84) / worldW));
+    points.scale.setScalar(Math.min(1.25, (visW * 0.84) / worldW));
   };
   resize();
   const ro = new ResizeObserver(resize);
@@ -153,7 +153,8 @@ export function createParticleLogo(canvas: HTMLCanvasElement, opts: { fontFamily
   window.addEventListener('pointermove', onMove, { passive: true });
 
   let visible = true;
-  const io = new IntersectionObserver(([e]) => (visible = e.isIntersecting));
+  // IO can batch several entries for one target — the last one is the current state.
+  const io = new IntersectionObserver((entries) => (visible = entries[entries.length - 1].isIntersecting));
   io.observe(canvas);
   const clock = new THREE.Clock();
   let raf = 0;

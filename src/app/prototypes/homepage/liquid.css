@@ -38,7 +38,7 @@
 .lq-hero-content a, .lq-hero-content button { pointer-events: auto; }
 .lq-meta { position: absolute; top: calc(var(--nav-h) + 18px); left: var(--gutter); display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--soft); font-variant-numeric: tabular-nums; }
 .lq-kicker { display: block; max-width: 30ch; margin-bottom: 1rem; font-size: clamp(0.95rem, 1.2vw, 1.15rem); font-weight: 500; }
-.lq-giant { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(3.6rem, 12.5vw, 13.5rem); line-height: 0.86; letter-spacing: -0.045em; text-shadow: 0 10px 50px rgba(11, 20, 38, 0.35); perspective: 900px; }
+.lq-giant { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 12vw, 13.5rem); line-height: 0.86; letter-spacing: -0.045em; text-shadow: 0 10px 50px rgba(11, 20, 38, 0.35); perspective: 900px; }
 .lq-giant .fx-ch-mask { overflow: visible; }
 .lq-giant .fx-split:last-of-type .ch { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9); }
 .lq-hero-foot { display: grid; gap: 18px; margin-top: 26px; }
@@ -78,7 +78,7 @@
 .lq-services { position: relative; padding: clamp(96px, 13vw, 190px) 0; background: var(--pearl); }
 .lq-sec-head { display: grid; gap: 20px; margin-bottom: clamp(40px, 6vw, 88px); }
 @media (min-width: 960px) { .lq-sec-head { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 64px; } }
-.lq-h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 6.4vw, 6.6rem); line-height: 0.92; letter-spacing: -0.045em; }
+.lq-h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 5vw, 5.2rem); hyphens: auto; -webkit-hyphens: auto; line-height: 0.92; letter-spacing: -0.045em; }
 .lq-lede { margin-top: 18px; max-width: 46ch; color: var(--muted); font-size: 1.05rem; }
 .lq-sec-head .lq-lede { margin-top: 0; }
 .lq-hint2 { display: none; margin-top: 14px; font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--steel-ink); }
@@ -87,7 +87,7 @@
 .lq-list li { border-bottom: 1px solid var(--rule); }
 .lq-row { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 8px 20px; padding: 28px 0; color: inherit; text-decoration: none; transition: opacity 300ms var(--ease-out); }
 .lq-row-no { padding-top: 0.9em; font-size: 0.78rem; letter-spacing: 0.14em; color: var(--steel-ink); font-variant-numeric: tabular-nums; }
-.lq-row-title { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 5.6vw, 5.8rem); line-height: 1; letter-spacing: -0.045em; transition: transform 500ms var(--ease-out), color 300ms; }
+.lq-row-title { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 6.2vw, 4.8rem); hyphens: auto; -webkit-hyphens: auto; line-height: 1; letter-spacing: -0.045em; transition: transform 500ms var(--ease-out), color 300ms; }
 .lq-row-desc { grid-column: 2; max-width: 44ch; color: var(--muted); }
 .lq-row-arrow { display: none; }
 .lq-row-img { grid-column: 1 / -1; order: -1; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; margin-bottom: 10px; }
@@ -126,8 +126,7 @@
 .lq-glass { position: relative; overflow: hidden; min-height: 240px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; padding: 28px; border-radius: 22px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.28));
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(27, 43, 74, 0.06), 0 30px 60px -30px rgba(27, 43, 74, 0.35);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6);
-  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform 400ms var(--ease-out); }
+  -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6); }
 .lq-glass::before { content: ''; position: absolute; inset: 0; background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.85), transparent 60%); opacity: 0; transition: opacity 300ms; pointer-events: none; }
 @media (hover: hover) and (pointer: fine) { .lq-glass:hover::before { opacity: 0.6; } }
 .lq-glass-no { font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: 1; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1.2px var(--steel-ink); }
@@ -165,6 +164,7 @@
 /* ---------- contact ---------- */
 .lq-contact { padding: clamp(96px, 12vw, 180px) 0; background: var(--pearl); }
 .lq-contact-grid { display: grid; gap: 48px; }
+.lq-contact .lq-h2 { font-size: clamp(2.1rem, 3.8vw, 3.9rem); }
 @media (min-width: 960px) { .lq-contact-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); } }
 .lq-direct { display: grid; gap: 4px; margin-top: 32px; justify-items: start; }
 .lq-direct p { font-size: 0.82rem; color: var(--muted); }
@@ -183,9 +183,9 @@
 @media (prefers-reduced-motion: no-preference) { .lq-book-orb { animation: lq-spin 24s linear infinite; } }
 @keyframes lq-spin { to { transform: rotate(360deg); } }
 .lq-book-inner { position: relative; text-align: center; display: grid; justify-items: center; }
-.lq-book-h { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 6vw, 6rem); line-height: 0.95; letter-spacing: -0.045em; }
+.lq-book-h { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 5vw, 5rem); line-height: 0.95; letter-spacing: -0.045em; }
 .lq-book .lq-lede { color: #D6E2EF; }
-.lq-book-phone { margin-top: 30px; font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 9vw, 9rem); line-height: 1; letter-spacing: -0.05em; white-space: nowrap; text-decoration: none;
+.lq-book-phone { margin-top: 30px; font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 7vw, 7rem); line-height: 1; letter-spacing: -0.05em; white-space: nowrap; text-decoration: none;
   background: linear-gradient(100deg, #fff 0%, #fff 35%, #9CC6E2 50%, #fff 65%, #fff 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; }
 @media (prefers-reduced-motion: no-preference) { .lq-book-phone { animation: lq-shine 4.5s var(--ease-in-out) infinite; } }
 @keyframes lq-shine { 0% { background-position: 100% 0; } 100% { background-position: -150% 0; } }

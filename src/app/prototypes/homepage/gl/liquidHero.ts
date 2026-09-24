@@ -121,7 +121,7 @@ export function createLiquidHero(canvas: HTMLCanvasElement, src: string, onReady
   const coarse = window.matchMedia('(hover: none), (pointer: coarse)').matches;
   const target = { x: 0.68, y: 0.5 };
   let vel = 0;
-  let hoverTarget = coarse ? 0.7 : 0;
+  let hoverTarget = coarse ? 0.45 : 0;
   const onMove = (e: PointerEvent) => {
     const r = canvas.getBoundingClientRect();
     if (e.clientY > r.bottom || e.clientY < r.top) {
@@ -138,7 +138,8 @@ export function createLiquidHero(canvas: HTMLCanvasElement, src: string, onReady
   if (!coarse) window.addEventListener('pointermove', onMove, { passive: true });
 
   let visible = true;
-  const io = new IntersectionObserver(([e]) => (visible = e.isIntersecting), { threshold: 0 });
+  // IO can batch several entries for one target — the last one is the current state.
+  const io = new IntersectionObserver((entries) => (visible = entries[entries.length - 1].isIntersecting));
   io.observe(canvas);
 
   const clock = new THREE.Clock();
@@ -151,7 +152,7 @@ export function createLiquidHero(canvas: HTMLCanvasElement, src: string, onReady
       // no cursor on phones: let a slow current drift across the image instead
       target.x = 0.62 + Math.sin(t * 0.35) * 0.22;
       target.y = 0.45 + Math.cos(t * 0.27) * 0.18;
-      vel = 0.25 + Math.sin(t * 0.9) * 0.1;
+      vel = 0.06 + Math.sin(t * 0.9) * 0.03;
     }
     const m = uniforms.uMouse.value;
     m.x += (target.x - m.x) * 0.1;

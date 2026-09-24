@@ -116,7 +116,7 @@ export default function Liquid() {
       if (!motion) return;
       gsap.timeline({ delay: 0.5, defaults: { ease: 'expo.out' } })
         .from('.lq-giant .ch', { yPercent: 120, rotateX: -80, transformOrigin: '50% 100%', duration: 1.4, stagger: 0.035 })
-        .from('.lq-meta, .lq-kicker, .lq-hero-lede, .lq-hero-actions > *, .lq-hint', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.5);
+        .from('.lq-meta, .lq-kicker, .lq-hero-lede, .lq-hero-actions, .lq-hint', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.5);
       gsap.to('.lq-hero-content', { yPercent: -18, opacity: 0.2, ease: 'none', scrollTrigger: { trigger: '.lq-hero', start: 'top top', end: 'bottom top', scrub: true } });
 
       // brand section: pin while the particles assemble, then the motto lands
@@ -126,8 +126,9 @@ export default function Liquid() {
       gsap.utils.toArray<HTMLElement>('.lq-rise').forEach((h) => {
         gsap.from(h.querySelectorAll('.ch'), { yPercent: 110, stagger: 0.02, duration: 1.1, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: h, start: 'top 85%' } });
       });
-      gsap.from('.lq-row', { y: 60, opacity: 0, stagger: 0.1, duration: 1.1, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.lq-list', start: 'top 80%' } });
-      gsap.from('.lq-glass', { y: 80, opacity: 0, rotateX: -18, transformOrigin: '50% 0%', stagger: 0.1, duration: 1.2, ease: 'expo.out', clearProps: 'transform,transformOrigin', scrollTrigger: { trigger: '.lq-glass-grid', start: 'top 82%' } });
+      // animate the <li>, not the row: the row's own opacity is used for the hover dim (CSS transition)
+      gsap.from('.lq-list li', { y: 60, opacity: 0, stagger: 0.1, duration: 1.1, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.lq-list', start: 'top 80%' } });
+      gsap.from('.lq-glass', { y: 80, opacity: 0, rotationX: -18, transformOrigin: '50% 0%', stagger: 0.1, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.lq-glass-grid', start: 'top 82%' } });
 
       const loops = gsap.utils.toArray<HTMLElement>('.lq-mq-track').map((row, i) =>
         gsap.fromTo(row, { xPercent: i % 2 ? -50 : 0 }, { xPercent: i % 2 ? 0 : -50, duration: 46 + i * 8, ease: 'none', repeat: -1 }),
@@ -159,14 +160,13 @@ export default function Liquid() {
     const r = t.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width - 0.5;
     const y = (e.clientY - r.top) / r.height - 0.5;
-    t.style.setProperty('--rx', `${(-y * 10).toFixed(2)}deg`);
-    t.style.setProperty('--ry', `${(x * 12).toFixed(2)}deg`);
+    // GSAP owns the card's transform (entrance + tilt), so no CSS transition can fight it.
+    gsap.to(t, { rotationX: -y * 10, rotationY: x * 12, transformPerspective: 900, duration: 0.5, ease: 'power3.out', overwrite: 'auto' });
     t.style.setProperty('--mx', `${((x + 0.5) * 100).toFixed(1)}%`);
     t.style.setProperty('--my', `${((y + 0.5) * 100).toFixed(1)}%`);
   };
   const untilt = (e: React.PointerEvent<HTMLElement>) => {
-    e.currentTarget.style.setProperty('--rx', '0deg');
-    e.currentTarget.style.setProperty('--ry', '0deg');
+    gsap.to(e.currentTarget, { rotationX: 0, rotationY: 0, duration: 0.7, ease: 'power3.out', overwrite: 'auto' });
   };
 
   return (

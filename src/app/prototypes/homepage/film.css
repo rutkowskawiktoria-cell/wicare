@@ -45,7 +45,7 @@
 .fm-hero-content { position: relative; z-index: 2; height: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; justify-content: flex-end; padding: calc(var(--nav-h) + 24px) var(--gutter) clamp(28px, 5vh, 56px); }
 .fm-hero-meta { position: absolute; top: calc(var(--nav-h) + 18px); left: var(--gutter); display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--soft); font-variant-numeric: tabular-nums; }
 .fm-hero-kicker > span { display: inline-block; }
-.fm-hero-kicker { display: block; max-width: 30ch; margin-bottom: 0.8rem; font-size: clamp(0.95rem, 1.2vw, 1.15rem); font-weight: 500; color: #fff; }
+.fm-hero-kicker { display: block; max-width: 38ch; margin-bottom: 0.8rem; font-size: clamp(0.95rem, 1.2vw, 1.15rem); font-weight: 500; color: #fff; }
 .fm-giant { display: block; }
 .fm-giant-a { display: block; font-weight: 900; font-variation-settings: var(--cond); text-transform: uppercase; font-size: clamp(5.6rem, 22vw, 22rem); line-height: 0.8; letter-spacing: -0.005em; color: #fff; }
 .fm-giant-b { display: block; margin-top: -0.02em; padding-left: 0.06em; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(3rem, 9.4vw, 9.4rem); line-height: 0.95; color: var(--steel-hi); }
@@ -105,8 +105,8 @@
   .fm-services-head { flex: none; width: min(36vw, 560px); display: flex; flex-direction: column; justify-content: flex-end; }
   .fm-panel { flex: none; width: min(64vw, 1100px); height: 100%; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3.2vw; align-items: end; }
   .fm-panel-media { aspect-ratio: auto; height: 100%; }
-  .fm-panel-media img { inset: 0 -12%; width: 124%; }
-  .fm-panel-num { top: auto; bottom: -0.08em; right: auto; left: calc(56.5% - 0.1em); font-size: clamp(8rem, 16vw, 17rem); -webkit-text-stroke: 1px rgba(107, 168, 206, 0.6); }
+  .fm-panel-media img { inset: 0 -9%; width: 118%; }
+  .fm-panel-num { top: -0.06em; bottom: auto; right: 0; left: auto; font-size: clamp(7rem, 12vw, 13rem); -webkit-text-stroke: 1px rgba(107, 168, 206, 0.55); }
   .fm-panel-body { padding-bottom: 1vh; }
   .fm-progress { display: block; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 5vh; height: 1px; background: var(--rule); }
   .fm-progress i { display: block; height: 100%; background: var(--steel); transform: scaleX(0); transform-origin: left; }
@@ -150,6 +150,7 @@
 /* ---------- contact ---------- */
 .fm-contact { padding: clamp(96px, 12vw, 180px) 0; background: var(--night-2); }
 .fm-contact-grid { display: grid; gap: 48px; }
+.fm-contact .fm-h2 { font-size: clamp(2.6rem, 5vw, 5.4rem); }
 @media (min-width: 960px) { .fm-contact-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); align-items: start; } }
 .fm-direct { display: grid; gap: 4px; margin-top: 36px; justify-items: start; }
 .fm-direct p { font-size: 0.82rem; color: var(--soft); }
@@ -172,8 +173,10 @@
 .fm-book-inner { position: relative; width: 100%; padding-top: 30vh; padding-bottom: clamp(56px, 10vh, 120px); }
 .fm-book-h { font-weight: 900; font-variation-settings: var(--cond); text-transform: uppercase; font-size: clamp(2.6rem, 6vw, 6.4rem); line-height: 0.9; color: #fff; max-width: 12em; }
 .fm-book-phone { display: inline-block; margin-top: 28px; font-weight: 900; font-variation-settings: var(--cond); font-size: clamp(3.4rem, 12.5vw, 13rem); line-height: 0.86; color: #fff; text-decoration: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.fm-book-phone .ch { transition: transform 520ms var(--ease-out), color 300ms; transition-delay: calc(var(--n) * 18ms); }
-@media (hover: hover) and (pointer: fine) { .fm-book-phone:hover .ch { transform: translateY(-10%); color: var(--steel-hi); } }
+.fm-book-phone .fx-ch-mask { transition: transform 520ms var(--ease-out); }
+.fm-book-phone .ch { transition: color 300ms; }
+.fm-book-phone .fx-word:nth-child(1) .fx-ch-mask { transition-delay: 0ms; }
+@media (hover: hover) and (pointer: fine) { .fm-book-phone:hover .fx-ch-mask { transform: translateY(-10%); } .fm-book-phone:hover .ch { color: var(--steel-hi); } }
 .fm-facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .fm-facts li { font-size: 0.84rem; padding: 8px 14px; border-radius: 999px; background: rgba(10, 17, 31, 0.45); box-shadow: inset 0 0 0 1px var(--rule); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .fm-book-note { margin-top: 24px; max-width: 60ch; font-size: 0.84rem; color: var(--soft); }

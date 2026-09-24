@@ -39,7 +39,7 @@ export default function Film() {
           .from('.fm-hero-img', { scale: 1.35, duration: 2.4 }, 0)
           .from('.fm-giant-a .ch', { yPercent: 115, rotate: 8, duration: 1.3, stagger: 0.05 }, 0.45)
           .from('.fm-giant-b .ch', { yPercent: 115, duration: 1.1, stagger: 0.02 }, 0.65)
-          .from('.fm-hero-meta > span, .fm-hero-kicker > span, .fm-hero-lede, .fm-hero-actions > *', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8);
+          .from('.fm-hero-meta > span, .fm-hero-kicker > span, .fm-hero-lede, .fm-hero-actions', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8);
 
         // ── Hero: pinned fly-through into the house.
         const hero = gsap.timeline({
@@ -68,7 +68,7 @@ export default function Film() {
             });
             gsap.to('.fm-progress i', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.fm-hwrap', start: 'top top', end: () => '+=' + dist(), scrub: true } });
             gsap.utils.toArray<HTMLElement>('.fm-panel').forEach((p) => {
-              gsap.fromTo(p.querySelector('.fm-panel-media img'), { xPercent: -10 }, { xPercent: 10, ease: 'none', scrollTrigger: { trigger: p, containerAnimation: pan, start: 'left right', end: 'right left', scrub: true } });
+              gsap.fromTo(p.querySelector('.fm-panel-media img'), { xPercent: -6 }, { xPercent: 6, ease: 'none', scrollTrigger: { trigger: p, containerAnimation: pan, start: 'left right', end: 'right left', scrub: true } });
               gsap.from(p.querySelectorAll('.fm-panel-body > *'), { y: 40, opacity: 0, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: p, containerAnimation: pan, start: 'left 70%', end: 'left 30%', scrub: true } });
             });
           }
@@ -109,7 +109,7 @@ export default function Film() {
         cards.forEach((card, i) => {
           const next = cards[i + 1];
           if (!next) return;
-          gsap.to(card, { scale: 0.9 - (cards.length - i) * 0.01, filter: 'brightness(0.55)', ease: 'none', scrollTrigger: { trigger: next, start: 'top bottom', end: 'top 20%', scrub: true } });
+          gsap.to(card, { scale: 0.93 - (cards.length - i) * 0.01, filter: 'brightness(0.72)', ease: 'none', scrollTrigger: { trigger: next, start: 'top 75%', end: 'top 15%', scrub: true } });
         });
 
         // ── Headings rise letter by letter; the finale phone number too.
