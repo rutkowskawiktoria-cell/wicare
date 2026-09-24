@@ -1,6 +1,7 @@
 import { services } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import ServiceDetail from '@/components/ServiceDetail';
+import { areas } from '@/lib/areas';
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -80,14 +81,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               name: 'WiCare ApS',
               address: { '@type': 'PostalAddress', addressLocality: 'Hellerup', addressRegion: 'Capital Region of Denmark', addressCountry: 'DK' },
             },
-            areaServed: [
-              { '@type': 'City', name: 'Hellerup' },
-              { '@type': 'City', name: 'Charlottenlund' },
-              { '@type': 'City', name: 'Klampenborg' },
-              { '@type': 'City', name: 'Gentofte' },
-              { '@type': 'AdministrativeArea', name: 'Rudersdal' },
-              { '@type': 'AdministrativeArea', name: 'Hørsholm' },
-            ],
+            areaServed: areas.map((a) => ({ '@type': 'City', name: a.name, postalCode: a.postal })),
           }),
         }}
       />

@@ -25,19 +25,20 @@ export const viewport: Viewport = {
 };
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import ConsentBanner from "@/components/ConsentBanner";
+import { areas } from '@/lib/areas';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
-  description: "VIP hjemmerengøring, privat madlavning & catering og ejendoms- & havepleje i Københavns nordlige forstæder: Hellerup, Gentofte, Charlottenlund, Rudersdal, Hørsholm m.fl. Diskret, professionel service. Ring +45 52 72 11 02.",
+  description: "VIP hjemme- og erhvervsrengøring, privat kok & catering og havepleje til hjem og virksomheder nord for København: Hellerup, Gentofte, Lyngby, Rudersdal, Hørsholm m.fl. Ring +45 52 72 11 02.",
   keywords: ["rengøring Hellerup", "hjemmerengøring Gentofte", "rengøringsfirma nord for København", "privat kok København", "catering Hellerup", "havepleje Rudersdal", "vinduespudsning Klampenborg", "ejendomsservice Charlottenlund", "handyman Hørsholm", "VIP rengøring Strandvejen", "rengøringshjælp Rungsted", "privat madlavning Vedbæk", "WiCare"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
     title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
-    description: "Diskret VIP hjemmerengøring, privat madlavning & catering og havepleje i Hellerup, Gentofte, Rudersdal og resten af Københavns nordlige forstæder.",
+    description: "Diskret VIP-rengøring, privat madlavning & catering og havepleje til hjem og virksomheder i Hellerup, Gentofte, Rudersdal og resten af Københavns nordlige forstæder.",
     url: siteUrl,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
@@ -110,14 +111,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
               ],
               areaServed: [
-                { "@type": "City", name: "Hellerup" },
-                { "@type": "City", name: "Charlottenlund" },
-                { "@type": "City", name: "Klampenborg" },
-                { "@type": "City", name: "Gentofte" },
-                { "@type": "AdministrativeArea", name: "Rudersdal" },
-                { "@type": "AdministrativeArea", name: "Hørsholm" },
-                { "@type": "City", name: "Rungsted" },
-                { "@type": "City", name: "Vedbæk" },
+                ...areas.map((a) => ({ "@type": "City", name: a.name, postalCode: a.postal, addressCountry: "DK" })),
+                ...Array.from(new Set(areas.map((a) => a.municipality))).map((m) => ({ "@type": "AdministrativeArea", name: `${m} Kommune` })),
               ],
               telephone: "+4552721102",
               email: "hello@wicare.vip",
