@@ -27,12 +27,9 @@ export default function Hero() {
           <MapPin size={15} className="text-accent shrink-0" />
           <span className="text-[11px] sm:text-sm text-white/90 tracking-[0.12em] sm:tracking-widest uppercase font-medium leading-snug">{t.hero.badge}</span>
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-3 sm:mb-5 whitespace-pre-line">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 sm:mb-10 whitespace-pre-line">
           {t.hero.title}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-white/90 italic font-light mb-7">
-          {t.hero.titleHighlight}
-        </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
           <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-6 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-xl md:text-2xl tracking-wide">
             <Phone size={26} />+45 52 72 11 02
