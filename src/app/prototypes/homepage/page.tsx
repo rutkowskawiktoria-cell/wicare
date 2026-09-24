@@ -9,6 +9,7 @@ import './fx.css';
 import './film.css';
 import './liquid.css';
 import './aurora.css';
+import './signature.css';
 
 const albert = Albert_Sans({ subsets: ['latin'], display: 'swap', variable: '--font-albert' });
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], display: 'swap', variable: '--font-archivo' });

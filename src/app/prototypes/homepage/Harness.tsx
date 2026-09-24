@@ -1,6 +1,6 @@
 'use client';
 // Variant picker — Emil Kowalski's prototype PICKER spec, expressed in React.
-// Keys 1–3 / ←→ switch, R replays, ?v= persists. The swap itself is instant.
+// Keys 1–4 / ←→ switch, R replays, ?v= persists. The swap itself is instant.
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -9,11 +9,13 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 const Film = dynamic(() => import('./variants/Film'), { ssr: false });
 const Liquid = dynamic(() => import('./variants/Liquid'), { ssr: false });
 const Aurora = dynamic(() => import('./variants/Aurora'), { ssr: false });
+const Signature = dynamic(() => import('./variants/Signature'), { ssr: false });
 
 const VARIANTS = [
   { name: 'Cinematic', C: Film },
   { name: 'Liquid 3D', C: Liquid },
   { name: 'Aurora', C: Aurora },
+  { name: 'Signature', C: Signature },
 ];
 
 export default function Harness() {

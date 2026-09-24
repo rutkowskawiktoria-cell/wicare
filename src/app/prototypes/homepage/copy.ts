@@ -10,6 +10,19 @@ export const wa = (msg: string) => `https://wa.me/4552721102?text=${encodeURICom
 
 export const towns = areas.map((a) => ({ slug: a.slug, name: a.name, postal: a.postal }));
 
+// Approximate town centres (lat, lon) for the illustrative coast map.
+export const townGeo: Record<string, [number, number]> = {
+  hellerup: [55.7315, 12.571],
+  charlottenlund: [55.752, 12.578],
+  klampenborg: [55.769, 12.592],
+  gentofte: [55.748, 12.551],
+  holte: [55.811, 12.47],
+  hoersholm: [55.881, 12.501],
+  rungsted: [55.884, 12.54],
+  vedbaek: [55.853, 12.565],
+  skodsborg: [55.825, 12.572],
+};
+
 export type ServiceKey = 'home' | 'dining' | 'estate';
 export const serviceMeta: { key: ServiceKey; slug: string }[] = [
   { key: 'home', slug: 'the-home' },
@@ -141,6 +154,23 @@ const da = {
     ],
     prev: 'Forrige',
     next: 'Næste',
+  },
+  sg: {
+    loading: 'Indlæser',
+    skip: 'Spring over',
+    chapter: 'Kapitel',
+    chapters: ['Hjemmet', 'Bordet', 'Ejendommen', 'Tillid', 'Kontakt'],
+    numerals: ['I', 'II', 'III'],
+    sound: 'Lyd',
+    open: 'Åbent nu',
+    closed: 'Lukket nu',
+    openLine: 'Vi svarer inden for 2 arbejdstimer',
+    closedLine: 'Vi svarer inden for 2 arbejdstimer, når vi åbner',
+    hours: 'Man–fre 08–18',
+    city: 'København',
+    mapNote: 'Illustrativt kort',
+    credits: 'Medvirkende',
+    scene: 'Scene',
   },
   mobile: { call: 'Ring', whatsapp: 'WhatsApp' },
   img: {
@@ -281,6 +311,23 @@ const en: typeof da = {
     ],
     prev: 'Previous',
     next: 'Next',
+  },
+  sg: {
+    loading: 'Loading',
+    skip: 'Skip',
+    chapter: 'Chapter',
+    chapters: ['Home', 'Table', 'Estate', 'Trust', 'Contact'],
+    numerals: ['I', 'II', 'III'],
+    sound: 'Sound',
+    open: 'Open now',
+    closed: 'Closed now',
+    openLine: 'We reply within 2 business hours',
+    closedLine: 'We reply within 2 business hours once we open',
+    hours: 'Mon–Fri 08–18',
+    city: 'Copenhagen',
+    mapNote: 'Illustrative map',
+    credits: 'Starring',
+    scene: 'Scene',
   },
   mobile: { call: 'Call', whatsapp: 'WhatsApp' },
   img: {
