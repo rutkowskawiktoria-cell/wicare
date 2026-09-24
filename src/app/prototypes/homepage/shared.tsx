@@ -3,7 +3,7 @@
 // class names under its own root (.pz / .kl / .cc) — no visual opinions here.
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { copy, EMAIL, PHONE, TEL, towns, wa } from './copy';
+import { copy, EMAIL, PHONE, TEL, wa } from './copy';
 
 // Same key as the live ContactForm: empty = open a pre-filled Gmail compose to hello@.
 const WEB3FORMS_KEY = '';
@@ -209,6 +209,7 @@ export function ProtoContactForm({ serviceIndex = 0 }: { serviceIndex?: number }
   );
 }
 
+/** Area links live in each direction's own areas block on the homepage, so the footer stays short. */
 export function ProtoFooter() {
   const { c } = useCopy();
   return (
@@ -225,16 +226,6 @@ export function ProtoFooter() {
             WhatsApp
           </a>
         </div>
-        <nav className="pft-areas" aria-label={c.footer.areas}>
-          <p className="pft-heading">{c.footer.areas}</p>
-          <ul>
-            {towns.map((t) => (
-              <li key={t.slug}>
-                <a href={`/omraader/${t.slug}/`}>{t.name}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
         <div className="pft-base">
           <ul className="pft-links">
             {c.footer.links.map((l) => (

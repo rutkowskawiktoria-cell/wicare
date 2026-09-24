@@ -18,6 +18,10 @@
 }
 .pz-wrap { max-width: 1320px; margin: 0 auto; padding: 0 var(--gutter); }
 
+/* Bodoni hairlines vanish at max optical size on 1x screens — cap opsz for display text. */
+.pz-h1, .pz-h2, .pz-motto, .pz-num, .pz-entry-body h3, .pz-dl dt, .pz-quote blockquote p, .pz-direct-phone, .pz-book-h, .pz-book-areas a { font-variation-settings: 'opsz' 40; }
+.pz-book-phone { font-variation-settings: 'opsz' 24; }
+
 /* nav */
 .pz .pn { color: var(--ink); }
 .pz .pn[data-scrolled] { background: rgba(247, 249, 252, 0.96); box-shadow: 0 1px 0 var(--rule); }
@@ -27,10 +31,10 @@
 /* hero */
 .pz-hero { padding-top: calc(var(--nav-h) + clamp(28px, 6vw, 80px)); }
 .pz-hero-grid { display: grid; gap: 44px; }
-@media (min-width: 960px) { .pz-hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 5vw, 88px); align-items: end; } }
+@media (min-width: 960px) { .pz-hero-grid { grid-template-columns: minmax(0, 11fr) minmax(0, 12fr); gap: clamp(40px, 5vw, 80px); align-items: end; } }
 .pz-kicker { display: flex; align-items: center; gap: 12px; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--steel-ink); }
 .pz-kicker::before { content: ''; width: 28px; height: 1px; background: currentColor; }
-.pz-h1 { margin-top: 22px; font-family: var(--display); font-optical-sizing: auto; font-weight: 400; font-size: clamp(2.45rem, 5vw, 4.7rem); line-height: 1.03; letter-spacing: -0.012em; text-wrap: balance; }
+.pz-h1 { margin-top: 22px; font-family: var(--display); font-optical-sizing: auto; font-weight: 400; font-size: clamp(2.4rem, 4.3vw, 4.2rem); line-height: 1.04; letter-spacing: -0.012em; text-wrap: balance; }
 .pz-h1 em { font-style: italic; color: var(--steel-ink); }
 .pz-motto { margin-top: 26px; font-family: var(--display); font-size: 1.28rem; letter-spacing: 0.01em; }
 .pz-lede { margin-top: 8px; max-width: 44ch; color: var(--muted); }
@@ -72,8 +76,8 @@
 .pz-index { border-top: 1px solid var(--rule); counter-reset: none; }
 .pz-entry { border-bottom: 1px solid var(--rule); }
 .pz-entry-link { display: grid; gap: 18px; padding: clamp(28px, 4vw, 48px) 0; color: inherit; text-decoration: none; }
-@media (min-width: 900px) { .pz-entry-link { grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(24px, 4vw, 64px); align-items: center; } }
-.pz-num { font-family: var(--display); font-size: 1.15rem; color: var(--steel-ink); font-variant-numeric: lining-nums tabular-nums; }
+@media (min-width: 900px) { .pz-entry-link { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 88px); align-items: center; } }
+.pz-num { display: block; margin-bottom: 14px; font-family: var(--display); font-size: 1.15rem; color: var(--steel-ink); font-variant-numeric: lining-nums tabular-nums; }
 .pz-entry-body h3 { font-family: var(--display); font-optical-sizing: auto; font-weight: 400; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; margin-bottom: 12px; }
 .pz-entry-body p { color: var(--muted); max-width: 42ch; }
 .pz-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-weight: 600; font-size: 0.9rem; }

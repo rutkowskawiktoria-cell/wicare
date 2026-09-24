@@ -16,6 +16,15 @@ export default function Harness() {
   const [ready, setReady] = useState(false);
   const [current, setCurrent] = useState(0);
   const [nonce, setNonce] = useState(0);
+  // The call bar only occupies bottom-center on phones; that is the only time the picker moves to the top.
+  const [phone, setPhone] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const on = () => setPhone(mq.matches);
+    on();
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
   const pickerRef = useRef<HTMLElement>(null);
   const highlightRef = useRef<HTMLSpanElement>(null);
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -80,8 +89,7 @@ export default function Harness() {
   return (
     <>
       {ready && <Active key={`${current}-${nonce}`} />}
-      {/* Variants use a bottom-center call bar on phones, so the picker sits at the top. */}
-      <nav ref={pickerRef} className="proto-picker" data-position="top" aria-label="Prototype variants">
+      <nav ref={pickerRef} className="proto-picker" data-position={phone ? 'top' : undefined} aria-label="Prototype variants">
         <span ref={highlightRef} className="proto-picker-highlight" aria-hidden="true" />
         {VARIANTS.map((v, i) => (
           <button

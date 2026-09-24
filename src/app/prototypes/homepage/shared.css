@@ -7,11 +7,12 @@
   min-height: 100svh;
   overflow-x: clip;
 }
-.proto-root *, .proto-root *::before, .proto-root *::after { box-sizing: border-box; }
-.proto-root img { display: block; max-width: 100%; height: auto; }
-.proto-root a, .proto-root button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
-.proto-root :where(h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote) { margin: 0; }
-.proto-root :where(ul, ol) { padding: 0; list-style: none; }
+/* Resets are zero-specificity (:where) — Next does not guarantee CSS file order, so they must never beat a direction's rules. */
+:where(.proto-root) *, :where(.proto-root) *::before, :where(.proto-root) *::after { box-sizing: border-box; }
+:where(.proto-root) :where(img) { display: block; max-width: 100%; height: auto; }
+:where(.proto-root) :where(a, button) { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+:where(.proto-root) :where(h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote) { margin: 0; }
+:where(.proto-root) :where(ul, ol) { padding: 0; list-style: none; }
 .proto-root [id] { scroll-margin-top: calc(var(--nav-h) + 8px); }
 
 /* ---- Wordmark (identical to the live navbar: Inter bold, tight) ---- */
@@ -28,7 +29,7 @@
 .pn-brand { margin-right: auto; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
 .pn-links { display: none; gap: 28px; }
 @media (min-width: 1100px) { .pn-links { display: flex; } }
-.pn-links a { text-decoration: none; font-size: 0.86rem; color: inherit; opacity: 0.8; transition: opacity 160ms var(--ease-out); }
+.pn-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: 0.86rem; color: inherit; opacity: 0.8; transition: opacity 160ms var(--ease-out); }
 @media (hover: hover) and (pointer: fine) { .pn-links a:hover { opacity: 1; } }
 .pn-end { display: flex; align-items: center; gap: 8px; }
 .pn-lang { min-width: 44px; height: 44px; border: 0; background: transparent; color: inherit; font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; cursor: pointer; border-radius: 999px; transition: transform 160ms var(--ease-out); }
@@ -70,11 +71,10 @@
 @media (hover: hover) and (pointer: fine) { .pft a:hover { color: #fff; } }
 .pft-inner { max-width: 1320px; margin: 0 auto; padding: 64px var(--gutter) calc(40px + 72px); display: grid; gap: 40px; font-size: 0.92rem; }
 @media (min-width: 768px) { .pft-inner { padding-bottom: 40px; } }
-@media (min-width: 960px) { .pft-inner { grid-template-columns: 1.3fr 0.9fr 1.6fr; } .pft-base { grid-column: 1 / -1; } }
+@media (min-width: 768px) { .pft-inner { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } .pft-base { grid-column: 1 / -1; } }
 .pft-tagline { max-width: 38ch; margin-top: 16px; line-height: 1.6; }
 .pft-contact { display: grid; gap: 10px; align-content: start; }
-.pft-contact a { color: #fff; }
-.pft-heading { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; color: #fff; }
-.pft-areas ul { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.pft-contact a { color: #fff; display: inline-flex; align-items: center; min-height: 40px; justify-self: start; }
+.pft-links a { display: inline-flex; align-items: center; min-height: 36px; }
 .pft-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(183, 196, 214, 0.18); font-size: 0.8rem; }
 .pft-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }

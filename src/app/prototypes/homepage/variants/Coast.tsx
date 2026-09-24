@@ -41,7 +41,7 @@ export default function Coast() {
             <h1 className="kl-h1">
               <span className="kl-h1-kicker kl-in" style={{ '--d': '160ms' } as React.CSSProperties}>
                 {c.hero.title}
-              </span>
+              </span>{' '}
               <span className="kl-h1-big kl-in" style={{ '--d': '220ms' } as React.CSSProperties}>
                 {c.hero.big}
               </span>

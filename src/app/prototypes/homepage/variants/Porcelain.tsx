@@ -87,8 +87,8 @@ export default function Porcelain() {
                 return (
                   <li key={s.key} className="pz-entry">
                     <a className="pz-entry-link" href={`/services/${s.slug}/`}>
-                      <span className="pz-num">{String(i + 1).padStart(2, '0')}</span>
                       <div className="pz-entry-body">
+                        <span className="pz-num">{String(i + 1).padStart(2, '0')}</span>
                         <h3>{item.title}</h3>
                         <p>{item.desc}</p>
                         <span className="pz-more">
