@@ -64,7 +64,7 @@ export default function Aurora() {
       gsap.utils.toArray<HTMLElement>('.au-rise').forEach((h) => {
         gsap.from(h.querySelectorAll('.ch'), { yPercent: 115, stagger: 0.02, duration: 1.2, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: h, start: 'top 85%' } });
       });
-      gsap.from('.au-card', { y: 90, opacity: 0, stagger: 0.12, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: '.au-bento', start: 'top 80%' } });
+      gsap.from('.au-card', { y: 90, opacity: 0, stagger: 0.12, duration: 1.3, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.au-bento', start: 'top 80%' } });
 
       // "Tillid" — the word is cut from the team photo, then the photo opens out of it.
       const tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: '.au-trust', start: 'top top', end: desktop ? '+=160%' : '+=130%', scrub: 0.7, pin: true, anticipatePin: 1 } });

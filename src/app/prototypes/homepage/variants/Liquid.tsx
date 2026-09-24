@@ -126,8 +126,8 @@ export default function Liquid() {
       gsap.utils.toArray<HTMLElement>('.lq-rise').forEach((h) => {
         gsap.from(h.querySelectorAll('.ch'), { yPercent: 110, stagger: 0.02, duration: 1.1, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: h, start: 'top 85%' } });
       });
-      gsap.from('.lq-row', { y: 60, opacity: 0, stagger: 0.1, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: '.lq-list', start: 'top 80%' } });
-      gsap.from('.lq-glass', { y: 80, opacity: 0, rotateX: -18, transformOrigin: '50% 0%', stagger: 0.1, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.lq-glass-grid', start: 'top 82%' } });
+      gsap.from('.lq-row', { y: 60, opacity: 0, stagger: 0.1, duration: 1.1, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.lq-list', start: 'top 80%' } });
+      gsap.from('.lq-glass', { y: 80, opacity: 0, rotateX: -18, transformOrigin: '50% 0%', stagger: 0.1, duration: 1.2, ease: 'expo.out', clearProps: 'transform,transformOrigin', scrollTrigger: { trigger: '.lq-glass-grid', start: 'top 82%' } });
 
       const loops = gsap.utils.toArray<HTMLElement>('.lq-mq-track').map((row, i) =>
         gsap.fromTo(row, { xPercent: i % 2 ? -50 : 0 }, { xPercent: i % 2 ? 0 : -50, duration: 46 + i * 8, ease: 'none', repeat: -1 }),

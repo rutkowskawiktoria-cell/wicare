@@ -39,7 +39,7 @@ export default function Film() {
           .from('.fm-hero-img', { scale: 1.35, duration: 2.4 }, 0)
           .from('.fm-giant-a .ch', { yPercent: 115, rotate: 8, duration: 1.3, stagger: 0.05 }, 0.45)
           .from('.fm-giant-b .ch', { yPercent: 115, duration: 1.1, stagger: 0.02 }, 0.65)
-          .from('.fm-hero-meta, .fm-hero-kicker, .fm-hero-lede, .fm-hero-actions > *, .fm-cue', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8);
+          .from('.fm-hero-meta > span, .fm-hero-kicker > span, .fm-hero-lede, .fm-hero-actions > *', { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8);
 
         // ── Hero: pinned fly-through into the house.
         const hero = gsap.timeline({
@@ -47,11 +47,11 @@ export default function Film() {
           scrollTrigger: { trigger: '.fm-hero', start: 'top top', end: desktop ? '+=170%' : '+=120%', scrub: 0.6, pin: true, anticipatePin: 1 },
         });
         hero
-          .to('.fm-hero-img', { scale: desktop ? 2.6 : 2.1, duration: 0.55, ease: 'power2.in' }, 0)
+          .to('.fm-hero-zoom', { scale: desktop ? 2.6 : 2.1, duration: 0.55, ease: 'power2.in' }, 0)
           .to('.fm-letterbox i', { scaleY: 1, duration: 0.2 }, 0)
-          .to('.fm-giant-a .ch', { yPercent: -120, opacity: 0, stagger: 0.012, duration: 0.2 }, 0)
-          .to('.fm-giant-b .ch', { yPercent: -120, opacity: 0, stagger: 0.006, duration: 0.2 }, 0.03)
-          .to('.fm-hero-meta, .fm-hero-kicker, .fm-hero-lede, .fm-hero-actions, .fm-cue', { opacity: 0, y: -40, duration: 0.14 }, 0)
+          .to('.fm-giant-a .fx-ch-mask', { yPercent: -120, opacity: 0, stagger: 0.012, duration: 0.2 }, 0)
+          .to('.fm-giant-b .fx-ch-mask', { yPercent: -120, opacity: 0, stagger: 0.006, duration: 0.2 }, 0.03)
+          .to('.fm-hero-meta, .fm-hero-kicker, .fm-hero-foot, .fm-cue', { opacity: 0, y: -40, duration: 0.14 }, 0)
           .fromTo('.fm-hero-inside', { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' }, 0.36)
           .fromTo('.fm-motto .w', { opacity: 0, yPercent: 50, filter: 'blur(14px)' }, { opacity: 1, yPercent: 0, filter: 'blur(0px)', stagger: 0.1, duration: 0.14 }, 0.58)
           .to('.fm-letterbox i', { scaleY: 0, duration: 0.12 }, 0.88);
@@ -130,7 +130,9 @@ export default function Film() {
         {/* id="booking" stays on the hero: the printed business-card QR lands here. */}
         <section id="booking" className="fm-hero">
           <div className="fm-hero-stage">
-            <img className="fm-hero-img" src="/proto/hero.webp" width={1408} height={768} alt={c.img.hero} fetchPriority="high" decoding="async" />
+            <div className="fm-hero-zoom">
+              <img className="fm-hero-img" src="/proto/hero.webp" width={1408} height={768} alt={c.img.hero} fetchPriority="high" decoding="async" />
+            </div>
             <div className="fm-hero-inside">
               <img src="/proto/interior.webp" width={1408} height={768} alt={c.img.interior} decoding="async" />
             </div>
@@ -154,7 +156,9 @@ export default function Film() {
               <span>{c.hero.eyebrow}</span>
             </p>
             <h1 className="fm-h1">
-              <span className="fm-hero-kicker">{c.fx.kicker}</span>
+              <span className="fm-hero-kicker">
+                <span>{c.fx.kicker}</span>
+              </span>
               <span className="fx-sr">{c.fx.srGiant}</span>
               <span className="fm-giant" aria-hidden="true">
                 <Chars text={c.fx.giantA} className="fm-giant-a" />
