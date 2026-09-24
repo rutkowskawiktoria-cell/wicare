@@ -188,7 +188,7 @@ const da = {
 };
 
 const en: typeof da = {
-  nav: { services: 'Services', why: 'Why WiCare', reviews: 'Testimonials', contact: 'Contact', call: 'Call', lang: 'DA', langAria: 'Skift til dansk' },
+  nav: { services: 'Services', why: 'Why WiCare', reviews: 'Testimonials', contact: 'Contact', call: 'Call', lang: 'DK', langAria: 'Skift til dansk' },
   hero: {
     eyebrow: 'North of Copenhagen',
     title: 'VIP home & lifestyle services',
