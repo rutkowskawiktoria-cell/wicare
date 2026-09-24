@@ -52,6 +52,11 @@ export default function Concierge() {
                     </button>
                   ))}
                 </div>
+                <ul className="cc-keys-facts">
+                  {c.book.facts.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
               </div>
 
               <div className="cc-panel">

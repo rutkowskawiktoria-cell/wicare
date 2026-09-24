@@ -93,7 +93,9 @@ export default function Coast() {
               </article>
             );
           })}
-          <p className="kl-wrap kl-note">{c.services.note}</p>
+          <div className="kl-wrap">
+            <p className="kl-note">{c.services.note}</p>
+          </div>
         </section>
 
         <section className="kl-towns" aria-labelledby="kl-towns-h">
