@@ -4,6 +4,12 @@
 import * as THREE from 'three';
 import { coverFn, snoise3 } from './noise';
 
+type FrameSet = Set<() => void>;
+const glFrames = (): FrameSet => {
+  const w = window as unknown as { __glFrames?: FrameSet };
+  return (w.__glFrames ||= new Set());
+};
+
 const vert = /* glsl */ `
 uniform vec2 uVel;
 varying vec2 vUv;
@@ -116,8 +122,7 @@ export function createHoverReveal(canvas: HTMLCanvasElement, sources: string[]):
   let mixing = false;
   const clock = new THREE.Clock();
   let raf = 0;
-  const loop = () => {
-    raf = requestAnimationFrame(loop);
+  const frame = () => {
     const dt = Math.min(clock.getDelta(), 0.05);
     uniforms.uTime.value += dt;
     const px = pos.x;
@@ -141,6 +146,11 @@ export function createHoverReveal(canvas: HTMLCanvasElement, sources: string[]):
     }
     renderer.render(scene, camera);
   };
+  const loop = () => {
+    raf = requestAnimationFrame(loop);
+    frame();
+  };
+  glFrames().add(frame);
   loop();
 
   return {
@@ -165,6 +175,7 @@ export function createHoverReveal(canvas: HTMLCanvasElement, sources: string[]):
     },
     dispose: () => {
       cancelAnimationFrame(raf);
+      glFrames().delete(frame);
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('resize', resize);
       textures.forEach((t) => t.dispose());

@@ -4,6 +4,12 @@
 import * as THREE from 'three';
 import { coverFn, snoise3 } from './noise';
 
+type FrameSet = Set<() => void>;
+const glFrames = (): FrameSet => {
+  const w = window as unknown as { __glFrames?: FrameSet };
+  return (w.__glFrames ||= new Set());
+};
+
 const vert = /* glsl */ `
 varying vec2 vUv;
 void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }
@@ -137,8 +143,7 @@ export function createLiquidHero(canvas: HTMLCanvasElement, src: string, onReady
 
   const clock = new THREE.Clock();
   let raf = 0;
-  const loop = () => {
-    raf = requestAnimationFrame(loop);
+  const frame = () => {
     if (!visible || !ready) return;
     const t = clock.getElapsedTime();
     uniforms.uTime.value = t;
@@ -156,12 +161,18 @@ export function createLiquidHero(canvas: HTMLCanvasElement, src: string, onReady
     uniforms.uHover.value += (hoverTarget - uniforms.uHover.value) * 0.05;
     renderer.render(scene, camera);
   };
+  const loop = () => {
+    raf = requestAnimationFrame(loop);
+    frame();
+  };
+  glFrames().add(frame);
   loop();
 
   return {
     uniforms: uniforms as unknown as LiquidHero['uniforms'],
     dispose: () => {
       cancelAnimationFrame(raf);
+      glFrames().delete(frame);
       window.removeEventListener('pointermove', onMove);
       ro.disconnect();
       io.disconnect();

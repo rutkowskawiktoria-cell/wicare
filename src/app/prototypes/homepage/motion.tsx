@@ -8,6 +8,9 @@ import Lenis from 'lenis';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Prototype QA hook: lets automated checks step animations when the tab is hidden.
+if (typeof window !== 'undefined') Object.assign(window, { __gsap: gsap, __ST: ScrollTrigger });
+
 export const reducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

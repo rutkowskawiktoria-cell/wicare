@@ -49,7 +49,7 @@ export default function Aurora() {
       if (!motion) return;
 
       gsap.timeline({ defaults: { ease: 'expo.out' } })
-        .from('.au-photo-text', { scale: 1.25, opacity: 0, filter: 'blur(24px)', duration: 2.2 })
+        .from('.au-photo-text', { scale: 1.2, opacity: 0, letterSpacing: '0.04em', duration: 2.2 })
         .from('.au-giant-b .ch', { yPercent: 120, opacity: 0, duration: 1.3, stagger: 0.03 }, 0.5)
         .from('.au-meta, .au-kicker', { y: 20, opacity: 0, duration: 1, stagger: 0.08 }, 0.6)
         .from('.au-panel', { y: 60, opacity: 0, duration: 1.4 }, 0.8);

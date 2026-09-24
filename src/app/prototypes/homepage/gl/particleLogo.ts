@@ -2,6 +2,12 @@
 // and assemble into the logo as `progress` goes 0 → 1; the cursor pushes them aside.
 import * as THREE from 'three';
 
+type FrameSet = Set<() => void>;
+const glFrames = (): FrameSet => {
+  const w = window as unknown as { __glFrames?: FrameSet };
+  return (w.__glFrames ||= new Set());
+};
+
 const vert = /* glsl */ `
 uniform float uProgress;
 uniform float uTime;
@@ -151,8 +157,7 @@ export function createParticleLogo(canvas: HTMLCanvasElement, opts: { fontFamily
   io.observe(canvas);
   const clock = new THREE.Clock();
   let raf = 0;
-  const loop = () => {
-    raf = requestAnimationFrame(loop);
+  const frame = () => {
     if (!visible) return;
     uniforms.uTime.value = clock.getElapsedTime();
     const m = uniforms.uMouse.value;
@@ -162,6 +167,11 @@ export function createParticleLogo(canvas: HTMLCanvasElement, opts: { fontFamily
     points.rotation.y = Math.sin(uniforms.uTime.value * 0.2) * 0.08 * (1 - uniforms.uProgress.value * 0.6);
     renderer.render(scene, camera);
   };
+  const loop = () => {
+    raf = requestAnimationFrame(loop);
+    frame();
+  };
+  glFrames().add(frame);
   loop();
 
   return {
@@ -170,6 +180,7 @@ export function createParticleLogo(canvas: HTMLCanvasElement, opts: { fontFamily
     },
     dispose: () => {
       cancelAnimationFrame(raf);
+      glFrames().delete(frame);
       window.removeEventListener('pointermove', onMove);
       ro.disconnect();
       io.disconnect();
