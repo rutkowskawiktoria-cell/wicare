@@ -8,39 +8,36 @@ const meta = [
   { name: 'Henrik C.', initials: 'HC', rating: 5 },
 ];
 
+// Rendered as the right-hand column of the Trust section.
 export default function Testimonials() {
   const { t } = useLanguage();
   const testimonials = meta.map((m, i) => ({ ...m, profession: t.testimonials.short[i].profession, review: t.testimonials.short[i].review }));
   return (
-    <section id="testimonials" className="section-padding bg-light">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.testimonials.badge}</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.testimonials.heading}</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map(({ name, profession, review, initials, rating }) => (
-            <div key={initials} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(rating)].map((_, i) => (
-                  <Star key={i} size={18} className="fill-accent text-accent" />
-                ))}
-              </div>
-              <p className="text-gray-700 text-base leading-relaxed mb-6 italic">"{review}"</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold text-sm">{initials}</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-primary">{name}</p>
-                  <p className="text-gray-500 text-sm">{profession}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div id="testimonials" className="scroll-mt-24">
+      <div className="text-center lg:text-left mb-8">
+        <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.testimonials.badge}</p>
+        <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold">{t.testimonials.heading}</h2>
       </div>
-    </section>
+
+      <div className="space-y-4">
+        {testimonials.map(({ name, profession, review, initials, rating }) => (
+          <figure key={initials} className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="flex items-center gap-1 mb-3" aria-label={`${rating}/5`}>
+              {[...Array(rating)].map((_, i) => (
+                <Star key={i} size={16} className="fill-accent text-accent" />
+              ))}
+            </div>
+            <blockquote className="text-gray-700 leading-relaxed italic">&ldquo;{review}&rdquo;</blockquote>
+            <figcaption className="flex items-center gap-3 mt-4">
+              <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary font-bold text-xs">{initials}</span>
+              <span>
+                <span className="block font-semibold text-primary leading-tight">{name}</span>
+                <span className="block text-gray-500 text-sm">{profession}</span>
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
   );
 }
