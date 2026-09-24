@@ -1,0 +1,80 @@
+/* Shared structure for the three directions. Colour, type and texture live in each direction's file. */
+.proto-root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --gutter: clamp(20px, 4vw, 48px);
+  --nav-h: 72px;
+  min-height: 100svh;
+  overflow-x: clip;
+}
+.proto-root *, .proto-root *::before, .proto-root *::after { box-sizing: border-box; }
+.proto-root img { display: block; max-width: 100%; height: auto; }
+.proto-root a, .proto-root button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.proto-root :where(h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote) { margin: 0; }
+.proto-root :where(ul, ol) { padding: 0; list-style: none; }
+.proto-root [id] { scroll-margin-top: calc(var(--nav-h) + 8px); }
+
+/* ---- Wordmark (identical to the live navbar: Inter bold, tight) ---- */
+.wm { font-family: var(--font-sans), 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.025em; font-size: 1.5rem; line-height: 1; white-space: nowrap; }
+@media (min-width: 768px) { .wm { font-size: 1.7rem; } }
+.wm[data-tone='onLight'] { color: #1B2B4A; }
+.wm[data-tone='onLight'] .wm-care { color: #3E7CA6; }
+.wm[data-tone='onDark'] { color: #fff; }
+.wm[data-tone='onDark'] .wm-care { color: #6BA8CE; }
+
+/* ---- Nav ---- */
+.pn { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background-color 240ms var(--ease-out), box-shadow 240ms var(--ease-out); }
+.pn-inner { max-width: 1320px; margin: 0 auto; padding: 0 var(--gutter); height: var(--nav-h); display: flex; align-items: center; gap: 28px; }
+.pn-brand { margin-right: auto; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.pn-links { display: none; gap: 28px; }
+@media (min-width: 1100px) { .pn-links { display: flex; } }
+.pn-links a { text-decoration: none; font-size: 0.86rem; color: inherit; opacity: 0.8; transition: opacity 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .pn-links a:hover { opacity: 1; } }
+.pn-end { display: flex; align-items: center; gap: 8px; }
+.pn-lang { min-width: 44px; height: 44px; border: 0; background: transparent; color: inherit; font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; cursor: pointer; border-radius: 999px; transition: transform 160ms var(--ease-out); }
+.pn-lang:active { transform: scale(0.97); }
+.pn-call { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; text-decoration: none; font-weight: 600; font-size: 0.86rem; white-space: nowrap; transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out), transform 160ms var(--ease-out); }
+.pn-call:active { transform: scale(0.97); }
+.pn-call-num { display: none; font-variant-numeric: tabular-nums; }
+@media (min-width: 640px) { .pn-call-num { display: inline; } }
+
+/* ---- Mobile call bar ---- */
+.pmb { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1.5fr 1fr; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); transform: translateY(110%); transition: transform 280ms var(--ease-out); }
+.pmb[data-show] { transform: none; }
+.pmb a { min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: 600; font-size: 16px; transition: transform 160ms var(--ease-out); }
+.pmb a:active { transform: scale(0.97); }
+.pmb-call span { font-variant-numeric: tabular-nums; }
+@media (min-width: 768px) { .pmb { display: none; } }
+@media (prefers-reduced-motion: reduce) { .pmb { transition: none; } }
+
+/* ---- Contact form ---- */
+.pf { display: grid; gap: 18px; position: relative; }
+.pf-row { display: grid; gap: 18px; }
+@media (min-width: 640px) { .pf-row { grid-template-columns: 1fr 1fr; } }
+.pf-field { display: grid; gap: 8px; }
+.pf-label { font-size: 0.8rem; font-weight: 500; }
+.pf-input { width: 100%; min-height: 50px; font: inherit; font-size: 16px; padding: 12px 14px; outline: none; transition: border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background-color 160ms var(--ease-out); }
+.pf-select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-repeat: no-repeat; background-position: right 14px center; background-size: 12px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%231B2B4A' stroke-width='1.5'/%3E%3C/svg%3E"); }
+.pf-textarea { resize: vertical; min-height: 128px; }
+.pf-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.pf-submit { min-height: 54px; padding: 0 28px; border: 0; font: inherit; font-weight: 600; cursor: pointer; justify-self: start; transition: background-color 200ms var(--ease-out), transform 160ms var(--ease-out); }
+.pf-submit:active { transform: scale(0.97); }
+.pf-submit:disabled { opacity: 0.6; cursor: default; }
+.pf-error { font-size: 0.9rem; color: #B42318; }
+.pf-success { padding: 28px; font-size: 1.1rem; }
+@media (max-width: 639px) { .pf-submit { justify-self: stretch; } }
+
+/* ---- Footer (navy in every direction; type inherits) ---- */
+.pft { background: #1B2B4A; color: #B7C4D6; }
+.pft a { color: inherit; text-decoration: none; transition: color 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .pft a:hover { color: #fff; } }
+.pft-inner { max-width: 1320px; margin: 0 auto; padding: 64px var(--gutter) calc(40px + 72px); display: grid; gap: 40px; font-size: 0.92rem; }
+@media (min-width: 768px) { .pft-inner { padding-bottom: 40px; } }
+@media (min-width: 960px) { .pft-inner { grid-template-columns: 1.3fr 0.9fr 1.6fr; } .pft-base { grid-column: 1 / -1; } }
+.pft-tagline { max-width: 38ch; margin-top: 16px; line-height: 1.6; }
+.pft-contact { display: grid; gap: 10px; align-content: start; }
+.pft-contact a { color: #fff; }
+.pft-heading { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; color: #fff; }
+.pft-areas ul { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.pft-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(183, 196, 214, 0.18); font-size: 0.8rem; }
+.pft-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }

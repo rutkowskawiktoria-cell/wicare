@@ -1,0 +1,255 @@
+// Prototype-only copy. Drawn from the live site's translations (no new claims),
+// re-set in sentence case and lightly tightened. Promoted into translations.ts
+// only once a direction is chosen.
+import { areas } from '@/lib/areas';
+
+export const PHONE = '+45 52 72 11 02';
+export const TEL = 'tel:+4552721102';
+export const EMAIL = 'hello@wicare.vip';
+export const wa = (msg: string) => `https://wa.me/4552721102?text=${encodeURIComponent(msg)}`;
+
+export const towns = areas.map((a) => ({ slug: a.slug, name: a.name, postal: a.postal }));
+
+export type ServiceKey = 'home' | 'dining' | 'estate';
+export const serviceMeta: { key: ServiceKey; slug: string }[] = [
+  { key: 'home', slug: 'the-home' },
+  { key: 'dining', slug: 'the-table' },
+  { key: 'estate', slug: 'the-estate' },
+];
+
+const da = {
+  nav: { services: 'Services', why: 'Hvorfor WiCare', reviews: 'Udtalelser', contact: 'Kontakt', call: 'Ring', lang: 'EN', langAria: 'Switch to English' },
+  hero: {
+    eyebrow: 'Nord for København',
+    title: 'VIP hjem- og livsstilsservice',
+    highlight: 'leveret med omhu og præcision',
+    big: 'Leveret med omhu og præcision.',
+    motto: 'Diskretion. Præcision. Tillid.',
+    lede: 'Én betroet partner til dit hjem, din livsstil og din private bolig. Vi udfører din vision med fejlfri præcision.',
+    call: 'Ring',
+    whatsapp: 'Skriv på WhatsApp',
+    reply: 'Svar inden for 2 arbejdstimer · mandag–fredag',
+    caption: 'Fra Hellerup til Hørsholm',
+    coords: '55,73° N · 12,56° Ø',
+  },
+  waMsg: 'Hej WiCare, jeg vil gerne høre om jeres services.',
+  services: {
+    heading: 'Hvad vi tilbyder',
+    lede: 'Hver service defineres ud fra din aftale. Vælg det, du har brug for — intet er forudbestemt.',
+    more: 'Læs mere',
+    note: 'Omfatter også bilpleje, garderobepleje, duftservice og rengøring af elektronik — alt defineret i din aftale.',
+    items: {
+      home: {
+        title: 'Hjemmerengøring',
+        desc: 'VIP-rengøring til dit hjem og din arbejdsplads. White-glove service, omhyggeligt udvalgte produkter og fleksibel planlægning.',
+        includes: ['Private hjem', 'Kontor & arbejdsplads', 'White-glove service', 'Fleksibel planlægning'],
+      },
+      dining: {
+        title: 'Privat madlavning & catering',
+        desc: 'Erfarne kokke til private middage, firmacatering og eksklusive events.',
+        includes: ['Private middage', 'Firmacatering', 'Eksklusive events', 'Erfarne kokke'],
+      },
+      estate: {
+        title: 'Ejendoms- & havepleje',
+        desc: 'Havearbejde, byggeri, handyman-service, hundeluftning og vanding af planter. Én betroet partner til det hele.',
+        includes: ['Havearbejde', 'Byggeri & handyman', 'Hundeluftning', 'Vanding af planter'],
+      },
+    },
+  },
+  trust: {
+    heading: 'WiCare-forskellen',
+    items: [
+      { title: 'Erfarent team', desc: 'Dygtige fagfolk på tværs af alle services.' },
+      { title: 'Kvalitetsfokuseret', desc: 'Vi arbejder efter dine standarder — ved hvert besøg.' },
+      { title: 'Baggrundstjekket', desc: 'Hvert teammedlem er godkendt og betroet.' },
+      { title: 'Diskret & pålidelig', desc: 'Punktlig og professionel ved hvert besøg.' },
+    ],
+  },
+  reviews: {
+    heading: 'Hvad vores kunder siger',
+    items: [
+      { who: 'Executive Director, Hellerup', quote: 'Jeg er meget tilfreds med rengøringsservicen. Jeg har allerede anbefalet WiCare til to af mine venner.' },
+      { who: 'Ejendomsejer', quote: 'Mine venner spurgte, om jeg havde fået nye gulve. Det havde jeg ikke. Det er bare WiCare-resultatet.' },
+      { who: 'Privat kunde', quote: 'WiCares kokke lavede en privat middag derhjemme til min 30-års fødselsdag. Den var så god, at jeg anbefalede dem til mine kolleger.' },
+    ],
+  },
+  areas: { heading: 'Vi kommer i', lede: 'Københavns nordlige forstæder — fra Hellerup til Hørsholm.' },
+  contact: {
+    heading: 'Anmod om en konsultation',
+    intro: 'Fortæl os, hvad du har brug for, så svarer vi inden for to arbejdstimer.',
+    direct: 'Foretrækker du at ringe?',
+    name: 'Fulde navn',
+    email: 'E-mail',
+    phone: 'Telefon (valgfrit)',
+    service: 'Ønsket service',
+    serviceOptions: ['Hjemmerengøring', 'Privat madlavning & catering', 'Ejendoms- & havepleje', 'Andet'],
+    message: 'Hvordan kan vi hjælpe?',
+    send: 'Send anmodning',
+    sending: 'Sender…',
+    success: 'Tak — vi kontakter dig inden for to arbejdstimer.',
+    error: 'Noget gik galt. Ring eller skriv til os i stedet.',
+  },
+  book: {
+    heading: 'Klar til at komme i gang?',
+    lede: 'Ring til os i dag. Vi svarer inden for 2 arbejdstimer.',
+    facts: ['Svar inden for 2 arbejdstimer', 'Mandag–fredag', 'Fortrolig, respektfuld service'],
+    note: 'Opbevar venligst kontanter, smykker og andre værdigenstande et sikkert sted inden din aftale.',
+  },
+  concierge: {
+    short: { home: 'Rengøring', dining: 'Madlavning', estate: 'Ejendom & have' },
+    prompt: 'Hvad kan vi tage os af?',
+    includes: 'Omfatter',
+    request: 'Send en forespørgsel',
+    waFor: (s: string) => `Hej WiCare, jeg vil gerne høre om ${s.toLowerCase()}.`,
+    stepsHeading: 'Sådan foregår det',
+    steps: [
+      { title: 'Kontakt os', desc: 'Ring, skriv på WhatsApp eller send en forespørgsel. Vi svarer inden for 2 arbejdstimer.' },
+      { title: 'Vi aftaler omfanget', desc: 'Hver service defineres i din aftale — intet er forudbestemt.' },
+      { title: 'Vi udfører', desc: 'Diskret, punktligt og efter dine standarder — ved hvert besøg.' },
+    ],
+  },
+  footer: {
+    tagline: 'VIP hjem- og livsstilsservice til private boliger og professionelle miljøer i Københavns nordlige forstæder.',
+    areas: 'Områder',
+    links: [
+      { label: 'Indsigt', href: '/blog/' },
+      { label: 'Karriere', href: '/careers/' },
+      { label: 'FAQ', href: '/faq/' },
+      { label: 'Privatlivspolitik', href: '/privacy/' },
+      { label: 'Servicevilkår', href: '/terms/' },
+    ],
+    cvr: 'CVR 46213270',
+    copyright: '© 2026 WiCare ApS',
+  },
+  mobile: { call: 'Ring', whatsapp: 'WhatsApp' },
+  img: {
+    hero: 'Moderne villa ved skumring med oplyst glaspavillon og havudsigt',
+    home: 'Medarbejder i hvide handsker polerer en sølvlysestage',
+    home2: 'Medarbejder i WiCare-uniform rengør et antikt ur',
+    dining: 'Kok i WiCare-forklæde anretter en tallerken',
+    diningEvent: 'Langbord dækket op til privat middag med levende lys',
+    estate: 'Medarbejder klipper buksbom i en villahave',
+    team: 'Tre WiCare-medarbejdere i navy uniformer i en have',
+    van: 'WiCare-varevogn foran en moderne villa',
+  },
+};
+
+const en: typeof da = {
+  nav: { services: 'Services', why: 'Why WiCare', reviews: 'Testimonials', contact: 'Contact', call: 'Call', lang: 'DA', langAria: 'Skift til dansk' },
+  hero: {
+    eyebrow: 'North of Copenhagen',
+    title: 'VIP home & lifestyle services',
+    highlight: 'delivered with care and precision',
+    big: 'Delivered with care and precision.',
+    motto: 'Discretion. Precision. Trust.',
+    lede: 'One trusted partner for your home, your lifestyle and your private residence. Executing your vision with flawless precision.',
+    call: 'Call',
+    whatsapp: 'Message on WhatsApp',
+    reply: 'Reply within 2 business hours · Monday–Friday',
+    caption: 'From Hellerup to Hørsholm',
+    coords: '55.73° N · 12.56° E',
+  },
+  waMsg: "Hi WiCare, I'd like to ask about your services.",
+  services: {
+    heading: 'What we offer',
+    lede: 'Every service is defined by your agreement. Choose what you need — nothing is pre-bundled.',
+    more: 'Learn more',
+    note: 'Extends to vehicle detailing, wardrobe care, ambient scenting and device sanitisation — all defined by your agreement.',
+    items: {
+      home: {
+        title: 'Home cleaning',
+        desc: 'VIP cleaning for your home and workspace. White-glove service, carefully selected products and flexible scheduling.',
+        includes: ['Private homes', 'Offices & workspaces', 'White-glove service', 'Flexible scheduling'],
+      },
+      dining: {
+        title: 'Private dining & catering',
+        desc: 'Experienced chefs for private dinners, corporate catering and exclusive events.',
+        includes: ['Private dinners', 'Corporate catering', 'Exclusive events', 'Experienced chefs'],
+      },
+      estate: {
+        title: 'Property & garden care',
+        desc: 'Gardening, construction, handyman services, dog walking and plant watering. One trusted partner for everything.',
+        includes: ['Gardening', 'Construction & handyman', 'Dog walking', 'Plant watering'],
+      },
+    },
+  },
+  trust: {
+    heading: 'The WiCare difference',
+    items: [
+      { title: 'Experienced team', desc: 'Skilled professionals across every service.' },
+      { title: 'Quality focused', desc: 'We work to your standards — every visit.' },
+      { title: 'Background checked', desc: 'Every team member vetted and trusted.' },
+      { title: 'Discreet & reliable', desc: 'Punctual and professional, every visit.' },
+    ],
+  },
+  reviews: {
+    heading: 'What our clients say',
+    items: [
+      { who: 'Executive Director, Hellerup', quote: "I'm very happy with the cleaning service. I've already recommended WiCare to two of my friends." },
+      { who: 'Property owner', quote: "My friends asked if I'd installed new floors. I hadn't. That is just the WiCare result." },
+      { who: 'Private client', quote: "WiCare's chefs prepared a private dinner at home for my 30th birthday. It was so good I recommended them to my colleagues." },
+    ],
+  },
+  areas: { heading: 'Where we work', lede: 'The northern suburbs of Copenhagen — from Hellerup to Hørsholm.' },
+  contact: {
+    heading: 'Request a consultation',
+    intro: "Tell us what you need and we'll respond within two business hours.",
+    direct: 'Prefer to call?',
+    name: 'Full name',
+    email: 'Email',
+    phone: 'Phone (optional)',
+    service: 'Service of interest',
+    serviceOptions: ['Home cleaning', 'Private dining & catering', 'Property & garden care', 'Other'],
+    message: 'How can we help?',
+    send: 'Send request',
+    sending: 'Sending…',
+    success: "Thank you — we'll be in touch within two business hours.",
+    error: 'Something went wrong. Please call or email us instead.',
+  },
+  book: {
+    heading: 'Ready to get started?',
+    lede: 'Call us today. We respond within 2 business hours.',
+    facts: ['Reply within 2 business hours', 'Monday–Friday', 'Confidential, respectful service'],
+    note: 'Please store cash, jewellery and other valuables in a secure place before your appointment.',
+  },
+  concierge: {
+    short: { home: 'Cleaning', dining: 'Dining', estate: 'Property & garden' },
+    prompt: 'What can we take care of?',
+    includes: 'Includes',
+    request: 'Send a request',
+    waFor: (s: string) => `Hi WiCare, I'd like to ask about ${s.toLowerCase()}.`,
+    stepsHeading: 'How it works',
+    steps: [
+      { title: 'Get in touch', desc: 'Call, message us on WhatsApp or send a request. We reply within 2 business hours.' },
+      { title: 'We agree the scope', desc: 'Every service is defined in your agreement — nothing is pre-bundled.' },
+      { title: 'We take care of it', desc: 'Discreetly, punctually and to your standards — every visit.' },
+    ],
+  },
+  footer: {
+    tagline: 'VIP home and lifestyle services for private residences and professional environments across the northern suburbs of Copenhagen.',
+    areas: 'Areas',
+    links: [
+      { label: 'Insights', href: '/blog/' },
+      { label: 'Careers', href: '/careers/' },
+      { label: 'FAQ', href: '/faq/' },
+      { label: 'Privacy policy', href: '/privacy/' },
+      { label: 'Terms of service', href: '/terms/' },
+    ],
+    cvr: 'CVR 46213270',
+    copyright: '© 2026 WiCare ApS',
+  },
+  mobile: { call: 'Call', whatsapp: 'WhatsApp' },
+  img: {
+    hero: 'Modern villa at dusk with a lit glass pavilion and sea view',
+    home: 'Staff member in white gloves polishing a silver candlestick',
+    home2: 'Staff member in WiCare uniform cleaning an antique clock',
+    dining: 'Chef in a WiCare apron plating a dish',
+    diningEvent: 'Candlelit long table set for a private dinner',
+    estate: 'Staff member trimming box hedges in a villa garden',
+    team: 'Three WiCare staff in navy uniforms in a garden',
+    van: 'WiCare van outside a modern villa',
+  },
+};
+
+export const copy = { da, en };
+export type Copy = typeof da;
