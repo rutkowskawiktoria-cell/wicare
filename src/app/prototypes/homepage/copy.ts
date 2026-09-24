@@ -121,6 +121,27 @@ const da = {
     cvr: 'CVR 46213270',
     copyright: '© 2026 WiCare ApS',
   },
+  fx: {
+    kicker: 'VIP hjem- og livsstilsservice, leveret med',
+    giantA: 'Omhu',
+    giantB: '& præcision',
+    srGiant: 'omhu og præcision',
+    motto: ['Diskretion.', 'Præcision.', 'Tillid.'],
+    trustLine: 'Et erfarent team, der arbejder efter dine standarder. Hvert medlem er baggrundstjekket — diskret, punktligt og professionelt ved hvert besøg.',
+    scroll: 'Scroll',
+    hint: 'Før musen hen over billedet',
+    servicesHint: 'Hold musen over en service',
+    partner: 'Én betroet partner',
+    trustWord: 'Tillid',
+    counters: [
+      { value: 2, suffix: ' t', label: 'Svartid i arbejdstiden' },
+      { value: 9, suffix: '', label: 'Områder nord for København' },
+      { value: 3, suffix: '', label: 'Services — én partner' },
+      { value: 100, suffix: ' %', label: 'Diskret og fortroligt' },
+    ],
+    prev: 'Forrige',
+    next: 'Næste',
+  },
   mobile: { call: 'Ring', whatsapp: 'WhatsApp' },
   img: {
     hero: 'Moderne villa ved skumring med oplyst glaspavillon og havudsigt',
@@ -131,6 +152,8 @@ const da = {
     estate: 'Medarbejder klipper buksbom i en villahave',
     team: 'Tre WiCare-medarbejdere i navy uniformer i en have',
     van: 'WiCare-varevogn foran en moderne villa',
+    diningTeam: 'Kok anretter en ret, mens teamet dækker bord til en privat middag',
+    interior: 'Medarbejder rengør et antikt ur i en lys stue',
   },
 };
 
@@ -238,6 +261,27 @@ const en: typeof da = {
     cvr: 'CVR 46213270',
     copyright: '© 2026 WiCare ApS',
   },
+  fx: {
+    kicker: 'VIP home & lifestyle services, delivered with',
+    giantA: 'Care',
+    giantB: '& precision',
+    srGiant: 'care and precision',
+    motto: ['Discretion.', 'Precision.', 'Trust.'],
+    trustLine: 'An experienced team that works to your standards. Every member is background-checked — discreet, punctual and professional on every visit.',
+    scroll: 'Scroll',
+    hint: 'Move your cursor across the image',
+    servicesHint: 'Hover a service',
+    partner: 'One trusted partner',
+    trustWord: 'Trust',
+    counters: [
+      { value: 2, suffix: ' h', label: 'Reply time in business hours' },
+      { value: 9, suffix: '', label: 'Areas north of Copenhagen' },
+      { value: 3, suffix: '', label: 'Services — one partner' },
+      { value: 100, suffix: ' %', label: 'Discreet and confidential' },
+    ],
+    prev: 'Previous',
+    next: 'Next',
+  },
   mobile: { call: 'Call', whatsapp: 'WhatsApp' },
   img: {
     hero: 'Modern villa at dusk with a lit glass pavilion and sea view',
@@ -248,6 +292,8 @@ const en: typeof da = {
     estate: 'Staff member trimming box hedges in a villa garden',
     team: 'Three WiCare staff in navy uniforms in a garden',
     van: 'WiCare van outside a modern villa',
+    diningTeam: 'Chef plating a dish while the team sets the table for a private dinner',
+    interior: 'Staff member cleaning an antique clock in a bright living room',
   },
 };
 

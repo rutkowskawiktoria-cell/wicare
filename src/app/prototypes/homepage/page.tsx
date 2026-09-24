@@ -1,18 +1,20 @@
-// Redesign prototypes — three homepage directions behind a variant picker.
+// Redesign prototypes — three bold homepage directions behind a variant picker.
 // Lives only on the `redesign` branch preview. Not linked, not in the sitemap, noindex.
 import type { Metadata } from 'next';
-import { Albert_Sans, Bodoni_Moda, Familjen_Grotesk, Jost } from 'next/font/google';
+import { Albert_Sans, Archivo, Fraunces, Instrument_Serif, Syne } from 'next/font/google';
 import Harness from './Harness';
 import './picker.css';
 import './shared.css';
-import './porcelain.css';
-import './coast.css';
-import './concierge.css';
+import './fx.css';
+import './film.css';
+import './liquid.css';
+import './aurora.css';
 
-const bodoni = Bodoni_Moda({ subsets: ['latin'], style: ['normal', 'italic'], axes: ['opsz'], display: 'swap', variable: '--font-bodoni' });
 const albert = Albert_Sans({ subsets: ['latin'], display: 'swap', variable: '--font-albert' });
-const familjen = Familjen_Grotesk({ subsets: ['latin'], display: 'swap', variable: '--font-familjen' });
-const jost = Jost({ subsets: ['latin'], display: 'swap', variable: '--font-jost' });
+const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], display: 'swap', variable: '--font-archivo' });
+const instrument = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], display: 'swap', variable: '--font-instrument' });
+const syne = Syne({ subsets: ['latin'], display: 'swap', variable: '--font-syne' });
+const fraunces = Fraunces({ subsets: ['latin'], style: ['normal', 'italic'], axes: ['opsz', 'SOFT'], display: 'swap', variable: '--font-fraunces' });
 
 export const metadata: Metadata = {
   title: 'WiCare — homepage prototypes',
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function PrototypesPage() {
   return (
-    <div className={`${bodoni.variable} ${albert.variable} ${familjen.variable} ${jost.variable}`}>
+    <div className={`${albert.variable} ${archivo.variable} ${instrument.variable} ${syne.variable} ${fraunces.variable}`}>
       <Harness />
     </div>
   );

@@ -2,14 +2,18 @@
 // Variant picker — Emil Kowalski's prototype PICKER spec, expressed in React.
 // Keys 1–3 / ←→ switch, R replays, ?v= persists. The swap itself is instant.
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import Porcelain from './variants/Porcelain';
-import Coast from './variants/Coast';
-import Concierge from './variants/Concierge';
+import dynamic from 'next/dynamic';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+
+// Each direction is its own chunk (GSAP / Three.js load only for the one on screen).
+const Film = dynamic(() => import('./variants/Film'), { ssr: false });
+const Liquid = dynamic(() => import('./variants/Liquid'), { ssr: false });
+const Aurora = dynamic(() => import('./variants/Aurora'), { ssr: false });
 
 const VARIANTS = [
-  { name: 'Porcelæn', C: Porcelain },
-  { name: 'Kystlys', C: Coast },
-  { name: 'Concierge', C: Concierge },
+  { name: 'Cinematic', C: Film },
+  { name: 'Liquid 3D', C: Liquid },
+  { name: 'Aurora', C: Aurora },
 ];
 
 export default function Harness() {
@@ -37,8 +41,12 @@ export default function Harness() {
     hl.style.transform = `translateX(${el.offsetLeft}px)`;
   }, [current]);
 
+  const { locale } = useLanguage();
+
   const setActive = useCallback((i: number) => {
     if (i < 0 || i >= VARIANTS.length) return;
+    // Scroll-driven variants pin sections — start each one from the top.
+    window.scrollTo(0, 0);
     setCurrent(i);
     setNonce((n) => n + 1);
     const url = new URL(window.location.href);
@@ -78,7 +86,10 @@ export default function Harness() {
       if (num >= 1 && num <= VARIANTS.length) setActive(num - 1);
       else if (e.key === 'ArrowRight') setActive((current + 1) % VARIANTS.length);
       else if (e.key === 'ArrowLeft') setActive((current - 1 + VARIANTS.length) % VARIANTS.length);
-      else if (e.key === 'r' || e.key === 'R') setNonce((n) => n + 1);
+      else if (e.key === 'r' || e.key === 'R') {
+        window.scrollTo(0, 0);
+        setNonce((n) => n + 1);
+      }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
@@ -88,7 +99,8 @@ export default function Harness() {
 
   return (
     <>
-      {ready && <Active key={`${current}-${nonce}`} />}
+      {/* Re-mount on language change too: the split-letter headlines are rebuilt per locale. */}
+      {ready && <Active key={`${current}-${nonce}-${locale}`} />}
       <nav ref={pickerRef} className="proto-picker" data-position={phone ? 'top' : undefined} aria-label="Prototype variants">
         <span ref={highlightRef} className="proto-picker-highlight" aria-hidden="true" />
         {VARIANTS.map((v, i) => (
@@ -107,7 +119,11 @@ export default function Harness() {
           </button>
         ))}
         <span className="proto-picker-divider" aria-hidden="true" />
-        <button type="button" className="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)" onClick={() => setNonce((n) => n + 1)}>
+        <button type="button" className="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)" onClick={() => {
+            window.scrollTo(0, 0);
+            setNonce((n) => n + 1);
+          }}
+        >
           ↻
         </button>
       </nav>
