@@ -1,9 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], display: "swap", variable: "--font-serif" });
-const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap", variable: "--font-sans" });
+// Fonts are self-hosted (variable woff2, Latin subset, SIL Open Font License) so builds never
+// depend on reaching Google Fonts — a Google outage/rate-limit used to fail the deploy.
+const playfair = localFont({
+  src: [
+    { path: "./fonts/playfair-display-latin-wght-normal.woff2", weight: "400 900", style: "normal" },
+    { path: "./fonts/playfair-display-latin-wght-italic.woff2", weight: "400 900", style: "italic" },
+  ],
+  display: "swap",
+  variable: "--font-serif",
+});
+const inter = localFont({
+  src: [{ path: "./fonts/inter-latin-wght-normal.woff2", weight: "100 900", style: "normal" }],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const viewport: Viewport = {
   themeColor: "#1B2B4A",

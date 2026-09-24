@@ -7,13 +7,13 @@ Marketing website for **WiCare ApS** — VIP home & lifestyle services (Home Cle
 
 ## Stack & hosting
 - **Next.js 15** (App Router), **static export** (`output: 'export'`, `trailingSlash: true`, `images.unoptimized`).
-- Tailwind CSS v3. Fonts via **next/font** (Playfair Display serif, Inter sans).
+- Tailwind CSS v3. Fonts are **self-hosted via `next/font/local`** (`src/app/fonts/*.woff2`: Inter + Playfair Display variable, Latin, OFL) — switched Sept 2026 after a Google Fonts fetch failure broke the Pages deploy. CSS vars unchanged (`--font-sans`, `--font-serif`).
 - Repo working copy: `/Users/at/Documents/WiCare/WiCare_latest` (sandbox: `/sessions/*/mnt/WiCare_latest`).
 - GitHub: `rutkowskawiktoria-cell/wicare`, deploy branch `main`. The git remote already holds a push token — **never print it** (pipe pushes through `sed -E 's/ghp_[A-Za-z0-9]+/ghp_***/g'`). Recommend the owner use a fine-grained PAT and rotate periodically.
 - **Deploy pipeline**: push `main` → GitHub Actions "Deploy to GitHub Pages" builds `out/` → Pages → **Cloudflare** (proxied, Copenhagen edge). Propagation is slow (the "updating_pages" step can take 2–8 min; deploys sometimes queue).
 
 ## Build / test workflow (important)
-- `npm run build` needs internet to fetch Google Fonts at build (next/font). **It succeeds on GitHub Actions but FAILS in the sandbox** (no access to fonts.googleapis.com) — that failure is expected and only means the font fetch, not a code error.
+- `npm run build` no longer needs internet for the live site (fonts are local) — it now **builds fine in the sandbox** too. (The `redesign` branch prototypes still use `next/font/google`; build those with the mock in the Redesign section.)
 - For local validation use **`npx tsc --noEmit`** (fast, no network) and `npx --yes esbuild@0.23.0 <file> --outfile=/tmp/o.js` for per-file syntax.
 - Verify live via the Chrome MCP: fetch same-origin and inspect. Note **Tailwind emits colors as `rgb(r g b / a)` channels**, not hex — search for e.g. `27 43 74` (navy) not `#1B2B4A`.
 
