@@ -38,7 +38,7 @@
 .lq-hero-content a, .lq-hero-content button { pointer-events: auto; }
 .lq-meta { position: absolute; top: calc(var(--nav-h) + 18px); left: var(--gutter); display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--soft); font-variant-numeric: tabular-nums; }
 .lq-kicker { display: block; max-width: 30ch; margin-bottom: 1rem; font-size: clamp(0.95rem, 1.2vw, 1.15rem); font-weight: 500; }
-.lq-giant { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 12vw, 13.5rem); line-height: 0.86; letter-spacing: -0.045em; text-shadow: 0 10px 50px rgba(11, 20, 38, 0.35); perspective: 900px; }
+.lq-giant { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 11vw, 12rem); line-height: 0.86; letter-spacing: -0.045em; text-shadow: 0 10px 50px rgba(11, 20, 38, 0.35); perspective: 900px; }
 .lq-giant .fx-ch-mask { overflow: visible; }
 .lq-giant .fx-split:last-of-type .ch { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9); }
 .lq-hero-foot { display: grid; gap: 18px; margin-top: 26px; }
