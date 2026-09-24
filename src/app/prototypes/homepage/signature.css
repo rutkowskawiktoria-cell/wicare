@@ -63,9 +63,9 @@
 .sg-rail { position: fixed; right: 20px; top: 50%; z-index: 45; display: none; flex-direction: column; align-items: flex-end; gap: 4px; transform: translateY(-50%); }
 .sg-rail button { display: flex; align-items: center; gap: 12px; min-height: 30px; padding: 0; border: 0; background: none; color: var(--soft); font: inherit; font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; }
 .sg-rail span { opacity: 0; transform: translateX(8px); transition: opacity 250ms var(--ease-out), transform 350ms var(--ease-out); }
-.sg-rail i { width: 16px; height: 1px; background: rgba(234, 241, 248, 0.35); transition: width 400ms var(--ease-out), background-color 300ms; }
+.sg-rail i { width: 40px; height: 1px; background: rgba(234, 241, 248, 0.35); transform: scaleX(0.4); transform-origin: right; transition: transform 400ms var(--ease-out), background-color 300ms; }
 .sg-rail button[data-active] span { opacity: 1; transform: none; color: var(--ice); }
-.sg-rail button[data-active] i { width: 40px; background: var(--steel); }
+.sg-rail button[data-active] i { transform: none; background: var(--steel); }
 @media (hover: hover) and (pointer: fine) { .sg-rail:hover span { opacity: 1; transform: none; } }
 .sg-sound { position: fixed; right: var(--gutter); bottom: 14px; z-index: 45; display: none; align-items: center; gap: 10px; min-height: 40px; padding: 0 14px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(7, 13, 25, 0.5); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--ice); font: inherit; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; }
 .sg-eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 12px; }
