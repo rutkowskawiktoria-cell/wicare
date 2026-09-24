@@ -27,7 +27,7 @@ export default function Hero() {
           <MapPin size={15} className="text-accent shrink-0" />
           <span className="text-[11px] sm:text-sm text-white/90 tracking-[0.12em] sm:tracking-widest uppercase font-medium leading-snug">{t.hero.badge}</span>
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-3 sm:mb-5">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-3 sm:mb-5 whitespace-pre-line">
           {t.hero.title}
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-white/90 italic font-light mb-7">
@@ -45,7 +45,7 @@ export default function Hero() {
           <Link href="/#services" className="underline underline-offset-4 hover:text-accent">{t.hero.ctaServices}</Link>
         </p>
         <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto mt-8 leading-relaxed font-light whitespace-pre-line">
-          {t.hero.subtitle}
+          <strong className="font-bold text-white">{t.hero.motto}</strong> {t.hero.subtitle}
         </p>
       </div>
       <a href="#trust" aria-label="Scroll to why WiCare" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-accent transition-colors duration-300 animate-bounce">
