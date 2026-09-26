@@ -37,7 +37,6 @@ export default function Booking() {
             </a>
           </div>
 
-          <p className="text-gray-500 text-sm mt-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">{b.note}</p>
         </div>
 
         <div className="rounded-2xl bg-white shadow-xl border border-primary/5 p-7 md:p-9">
