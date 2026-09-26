@@ -37,7 +37,7 @@ STANDARD = [
     ("dining-spread.jpg", "public/services/dining-spread.webp", 1200, 62),
     ("dining-seafood.jpg","public/services/dining-seafood.webp",1000, 62),
     ("dining-team.jpg",   "public/services/dining-team.webp",   1000, 60),
-    ("Garden.png",    "public/services/garden-detail.webp",1100, 64, 0.635),  # top only: hides the dog (dog walking is not offered)
+    ("Garden.png",    "public/services/garden-detail-v2.webp",1100, 64, 0.635),  # top only: hides the dog (dog walking is not offered)
     ("car.png",       "public/services/van.webp",          1200, 66),
     ("customer_service.png", "public/careers.webp",        1200, 66),
 ]

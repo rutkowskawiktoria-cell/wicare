@@ -21,7 +21,7 @@ const imgMap: Record<string, string> = {
 const detailImgMap: Record<string, string[]> = {
   'the-home': ['/services/home-detail.webp', '/services/home-detail2.webp'],
   'the-table': ['/services/dining-event.webp', '/services/dining-spread.webp', '/services/dining-seafood.webp', '/services/dining-team.webp'],
-  'the-estate': ['/services/garden-detail.webp'],
+  'the-estate': ['/services/garden-detail-v2.webp'],
 };
 
 type Slug = 'the-home' | 'the-table' | 'the-estate';
