@@ -42,7 +42,8 @@ export default function Hero() {
           <Link href="/#services" className="underline underline-offset-4 hover:text-accent">{t.hero.ctaServices}</Link>
         </p>
         <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto mt-8 leading-relaxed font-light whitespace-pre-line">
-          <strong className="font-bold text-white">{t.hero.motto}</strong> {t.hero.subtitle}
+          <strong className="block font-bold text-white mb-2">{t.hero.motto}</strong>
+          {t.hero.subtitle}
         </p>
       </div>
       <a href="#services" aria-label="Scroll to services" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-accent transition-colors duration-300 animate-bounce">
