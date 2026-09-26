@@ -39,7 +39,7 @@ export const businessCopy = {
       { q: 'Hvordan håndterer I nøgler og adgang?', a: 'Nøgler og adgang håndteres sikkert og fortroligt, og alle vores medarbejdere er baggrundstjekkede.' },
     ],
     ctaTitle: 'Klar til en uforpligtende gennemgang?',
-    ctaDesc: 'Ring til os – vi svarer inden for 2 arbejdstimer.',
+    ctaDesc: 'Ring til os, så finder vi et tidspunkt, der passer jer.',
   },
   en: {
     badge: 'Business',
@@ -77,6 +77,6 @@ export const businessCopy = {
       { q: 'How do you handle keys and access?', a: 'Keys and access are handled securely and confidentially, and all our staff are background-checked.' },
     ],
     ctaTitle: 'Ready for a no-obligation walkthrough?',
-    ctaDesc: 'Call us. We respond within 2 business hours.',
+    ctaDesc: 'Call us and we will find a time that suits you.',
   },
 };
