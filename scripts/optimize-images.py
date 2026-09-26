@@ -12,8 +12,10 @@ Requires: pillow  (pip install pillow --break-system-packages)
 import sys, os
 from PIL import Image
 
-def enc(src, dst, width=None, quality=62):
+def enc(src, dst, width=None, quality=62, keep_top=None):
     im = Image.open(src).convert("RGB")
+    if keep_top:  # keep only the top fraction of the photo (e.g. crop out something at the bottom)
+        im = im.crop((0, 0, im.size[0], round(im.size[1] * keep_top)))
     if width and im.size[0] > width:
         h = round(im.size[1] * width / im.size[0])
         im = im.resize((width, h), Image.LANCZOS)
@@ -21,7 +23,7 @@ def enc(src, dst, width=None, quality=62):
     im.save(dst, "WEBP", quality=quality, method=6)
     print(f"{dst}  {im.size[0]}x{im.size[1]}  {os.path.getsize(dst)//1024} KB")
 
-# Standard set: (source filename in PHOTO_DIR, dest under public/, width, quality)
+# Standard set: (source filename in PHOTO_DIR, dest under public/, width, quality[, keep_top])
 STANDARD = [
     ("hero2.png",     "public/hero-bg.webp",              1280, 50),  # desktop LCP hero
     ("hero2.png",     "public/hero-bg-sm.webp",            768, 55),  # mobile hero (srcset)
@@ -35,7 +37,7 @@ STANDARD = [
     ("dining-spread.jpg", "public/services/dining-spread.webp", 1200, 62),
     ("dining-seafood.jpg","public/services/dining-seafood.webp",1000, 62),
     ("dining-team.jpg",   "public/services/dining-team.webp",   1000, 60),
-    ("Garden.png",    "public/services/garden-detail.webp",1100, 64),
+    ("Garden.png",    "public/services/garden-detail.webp",1100, 64, 0.635),  # top only: hides the dog (dog walking is not offered)
     ("car.png",       "public/services/van.webp",          1200, 66),
     ("customer_service.png", "public/careers.webp",        1200, 66),
 ]
@@ -49,9 +51,9 @@ if __name__ == "__main__":
         if "--quality" in args: quality = int(args[args.index("--quality") + 1])
         enc(args[0], args[1], width, quality or 62)
     else:
-        for name, dst, w, q in STANDARD:
+        for name, dst, w, q, *rest in STANDARD:
             src = os.path.join(PHOTO_DIR, name)
             if os.path.exists(src):
-                enc(src, dst, w, q)
+                enc(src, dst, w, q, rest[0] if rest else None)
             else:
                 print(f"skip (missing): {src}")

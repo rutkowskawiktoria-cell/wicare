@@ -56,6 +56,7 @@ Tokens in `tailwind.config.js`:
 - **Schema**: LocalBusiness (layout) + Service + FAQPage + BreadcrumbList.
 - **Photos**: `public/services/*.webp` (+ `-detail`), `hero-bg.webp` (+ `-sm` mobile variant), `careers.webp`, `van.webp`. Source PNGs/JPGs (real photos) live in `/Users/at/Documents/Claude/WiCare/`. Re-encode to WebP with PIL (quality ~60 hero / ~62 cards) — see `scripts/optimize-images.py` STANDARD list. Hero is a high-priority `<img>` (LCP), preloaded in `layout.tsx`.
 - **the-table gallery**: the Private Dining page detail gallery (`detailImgMap['the-table']` in `ServiceDetail.tsx`) uses 4 real event photos — `dining-event` (candlelit table), `dining-spread` (catering setup), `dining-seafood` (shrimp close-up), `dining-team` (chefs) — rendered as a 2×2 object-cover grid. Sources archived as `dining-*.jpg` in the photo dir. (Old `dining-detail.webp` left in place but unreferenced.)
+- **the-estate detail photo** `garden-detail.webp` is cropped to the top ~64% so the dog in the source photo is hidden (dog walking isn't offered); `scripts/optimize-images.py` keeps that crop via the optional `keep_top` value.
 
 ## SEO / infra status
 - Sitemap `/sitemap.xml` (auto from `sitemap.ts`), robots via `robots.ts`. Search Console verified (`sc-domain:wicare.vip`), sitemap submitted & read OK; ~7 pages indexed early on.
