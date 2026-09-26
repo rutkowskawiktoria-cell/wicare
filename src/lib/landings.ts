@@ -44,15 +44,6 @@ export const landings: Record<LandingKey, { da: LandingCopy; en: LandingCopy }> 
         { title: 'Vi sammensætter menuen', desc: 'Klassisk dansk eller med et moderne twist – tilpasset allergier og kostbehov.' },
         { title: 'Vi laver maden hos jer', desc: 'Vi står for anretning og servering efter aftale og rydder op bagefter.' },
       ],
-      menu: {
-        heading: 'Eksempel på en julefrokost',
-        note: 'Kun et eksempel – menuen sammensættes altid efter jeres ønsker.',
-        courses: [
-          { title: 'Kolde retter', items: ['Marinerede sild med karrysalat og æg', 'Varmrøget laks med rygeostcreme', 'Håndpillede rejer med citron og dild'] },
-          { title: 'Lune retter', items: ['Flæskesteg med sprød svær og rødkål', 'Hjemmelavede frikadeller', 'Lun leverpostej med bacon og svampe'] },
-          { title: 'Dessert', items: ['Risalamande med kirsebærsauce', 'Småkager og kaffe'] },
-        ],
-      },
       moreHeading: 'Mere fra vores køkken',
       more: [
         { href: '/firmacatering/', title: 'Firmacatering', desc: 'Møder, frokoster og arrangementer hele året.' },
@@ -88,15 +79,6 @@ export const landings: Record<LandingKey, { da: LandingCopy; en: LandingCopy }> 
         { title: 'We design the menu', desc: 'Classic Danish or with a modern twist – adapted to allergies and dietary needs.' },
         { title: 'We cook at your place', desc: 'We plate and serve by arrangement, and clean up afterwards.' },
       ],
-      menu: {
-        heading: 'A sample Christmas lunch',
-        note: 'Just an example – the menu is always designed around your wishes.',
-        courses: [
-          { title: 'Cold dishes', items: ['Marinated herring with curry salad and egg', 'Hot-smoked salmon with smoked-cheese cream', 'Hand-peeled shrimp with lemon and dill'] },
-          { title: 'Warm dishes', items: ['Roast pork with crackling and red cabbage', 'Homemade meatballs (frikadeller)', 'Warm liver pâté with bacon and mushrooms'] },
-          { title: 'Dessert', items: ['Risalamande with cherry sauce', 'Biscuits and coffee'] },
-        ],
-      },
       moreHeading: 'More from our kitchen',
       more: [
         { href: '/firmacatering/', title: 'Corporate catering', desc: 'Meetings, lunches and events all year round.' },
