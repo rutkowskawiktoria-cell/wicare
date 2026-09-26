@@ -65,7 +65,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="bg-primary pt-20 pb-16" style={{ paddingTop: '6.5rem' }}>
+        <section data-loc="hero" className="bg-primary pt-20 pb-16" style={{ paddingTop: '6.5rem' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <p className="inline-flex items-center gap-2 text-accent text-xs tracking-widest uppercase font-semibold mb-4">
               <MapPin size={15} /> {area.name} · {area.postal}
@@ -160,7 +160,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
         )}
 
         {/* CTA */}
-        <section className="py-16 bg-primary">
+        <section data-loc="cta" className="py-16 bg-primary">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="font-serif text-2xl md:text-3xl text-white font-semibold mb-3">
               {L.ctaTitle} {area.name}?

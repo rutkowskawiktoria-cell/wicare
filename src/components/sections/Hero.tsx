@@ -29,7 +29,14 @@ export default function Hero() {
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-4 sm:mb-5 whitespace-pre-line">
           {t.hero.title}
         </h1>
-        <p className="text-accent text-base sm:text-lg md:text-xl font-medium tracking-wide mb-8 sm:mb-10">{t.hero.servicesLine}</p>
+        <p className="text-white text-[13px] sm:text-base md:text-lg font-semibold uppercase tracking-[0.12em] sm:tracking-[0.18em] leading-relaxed mb-8 sm:mb-10 [text-shadow:0_1px_12px_rgba(27,43,74,0.9)]">
+          {t.hero.servicesLine.split(' · ').map((item, i) => (
+            <span key={item}>
+              {i > 0 && <span aria-hidden="true"> · </span>}
+              <span className="whitespace-nowrap">{item}</span>
+            </span>
+          ))}
+        </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
           <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-6 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-xl md:text-2xl tracking-wide">
             <Phone size={26} />+45 52 72 11 02

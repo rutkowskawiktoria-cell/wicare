@@ -44,7 +44,7 @@ export default function LandingPage({ page }: { page: LandingKey }) {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="bg-primary pb-24" style={{ paddingTop: '6.5rem' }}>
+        <section data-loc="hero" className="bg-primary pb-24" style={{ paddingTop: '6.5rem' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-4">{c.badge}</p>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-5 leading-tight">{c.h1}</h1>
@@ -172,7 +172,7 @@ export default function LandingPage({ page }: { page: LandingKey }) {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-primary">
+        <section data-loc="cta" className="py-16 bg-primary">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="font-serif text-2xl md:text-3xl text-white font-semibold mb-3">{c.ctaTitle}</h2>
             <p className="text-white/75 text-lg mb-8">{c.ctaDesc}</p>
