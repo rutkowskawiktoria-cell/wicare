@@ -5,6 +5,19 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import ChefIntro from '@/components/ChefIntro';
+
+// Extra links shown on the private dining page (flagship) to the catering landing pages.
+const diningLinks = {
+  da: { heading: 'Også til virksomheder og højtider', items: [
+    { href: '/firmacatering/', title: 'Firmacatering', desc: 'Møder, frokoster, receptioner og kundearrangementer.' },
+    { href: '/julefrokost/', title: 'Julefrokost', desc: 'Firmajulefrokost eller julefrokost derhjemme med privat kok.' },
+  ] },
+  en: { heading: 'Also for businesses and the holidays', items: [
+    { href: '/firmacatering/', title: 'Corporate catering', desc: 'Meetings, lunches, receptions and client events.' },
+    { href: '/julefrokost/', title: 'Christmas lunch', desc: 'A company or private Christmas lunch with a private chef.' },
+  ] },
+};
 
 const iconMap: Record<string, React.ElementType> = {
   'the-home': Sparkles,
@@ -75,6 +88,8 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
           </div>
         </section>
 
+        {slug === 'the-table' && <ChefIntro />}
+
         {detailImgs.length > 0 && (
           <section className="pb-8">
             <div className={`max-w-5xl mx-auto px-6 lg:px-8 grid gap-6 ${detailImgs.length > 1 ? 'md:grid-cols-2' : ''}`}>
@@ -82,6 +97,23 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img key={src} src={src} alt={service.name} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl" width={1200} height={650} />
               ))}
+            </div>
+          </section>
+        )}
+
+        {slug === 'the-table' && (
+          <section className="py-14">
+            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+              <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-8">{diningLinks[locale === 'da' ? 'da' : 'en'].heading}</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {diningLinks[locale === 'da' ? 'da' : 'en'].items.map((l) => (
+                  <Link key={l.href} href={l.href} className="group rounded-2xl border border-primary/10 p-7 hover:border-accent hover:shadow-lg transition-all">
+                    <h3 className="font-serif text-xl text-primary font-semibold mb-2">{l.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{l.desc}</p>
+                    <span className="inline-block mt-4 text-accent-dark font-medium text-sm group-hover:translate-x-1 transition-transform">→</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
         )}

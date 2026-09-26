@@ -1,23 +1,37 @@
 'use client';
 import Link from 'next/link';
-import { Phone, Building2, Stethoscope, Store, UtensilsCrossed, DoorOpen, CheckCircle2 } from 'lucide-react';
+import { Phone, CheckCircle2, Building2, Home, Wine, Presentation, GlassWater, Handshake, TreePine } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
+import ChefIntro from '@/components/ChefIntro';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { businessCopy } from '@/lib/business';
+import { landings, type LandingKey } from '@/lib/landings';
 import { areas } from '@/lib/areas';
 
-const icons = [Building2, Stethoscope, Store, UtensilsCrossed, DoorOpen];
+// Shared layout for the catering landing pages (/julefrokost/, /firmacatering/). Copy lives in src/lib/landings.ts.
+const visuals: Record<LandingKey, { img: string; alt: { da: string; en: string }; icons: React.ElementType[] }> = {
+  julefrokost: {
+    img: '/services/dining-event.webp',
+    alt: { da: 'Dækket bord med levende lys til et privat selskab', en: 'Candlelit table set for a private party' },
+    icons: [Building2, Home, Wine],
+  },
+  firmacatering: {
+    img: '/services/dining-spread.webp',
+    alt: { da: 'Catering anrettet til et arrangement', en: 'Catering set up for an event' },
+    icons: [Presentation, GlassWater, Handshake, TreePine],
+  },
+};
 
-export default function BusinessCleaning() {
+export default function LandingPage({ page }: { page: LandingKey }) {
   const { locale } = useLanguage();
-  const c = businessCopy[locale === 'da' ? 'da' : 'en'];
+  const lang = locale === 'da' ? 'da' : 'en';
+  const c = landings[page][lang];
+  const v = visuals[page];
 
   const phone = (
     <a
       href="tel:+4552721102"
-     
       className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-7 py-4 rounded-2xl transition-all text-lg"
     >
       <Phone size={22} />
@@ -30,30 +44,35 @@ export default function BusinessCleaning() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="bg-primary pb-16" style={{ paddingTop: '6.5rem' }}>
+        <section className="bg-primary pb-24" style={{ paddingTop: '6.5rem' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <p className="text-accent text-xs tracking-widest uppercase font-semibold mb-4">{c.badge}</p>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-5 leading-tight">{c.h1}</h1>
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">{c.intro}</p>
+            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">{c.intro}</p>
             {phone}
             <p className="text-white/60 text-sm mt-4">{c.ctaSecondary}</p>
           </div>
         </section>
 
-        {/* What we clean */}
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 -mt-14 relative z-10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={v.img} alt={v.alt[lang]} className="w-full h-60 md:h-96 object-cover rounded-2xl shadow-2xl" width={1200} height={700} />
+        </div>
+
+        {/* Occasions */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-10">{c.whatHeading}</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-              {c.what.map((w, i) => {
-                const Icon = icons[i] ?? Building2;
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-10">{c.cardsHeading}</h2>
+            <div className={`grid sm:grid-cols-2 gap-5 ${c.cards.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}>
+              {c.cards.map((card, i) => {
+                const Icon = v.icons[i] ?? Building2;
                 return (
-                  <div key={w.title} className="bg-light rounded-2xl p-6">
+                  <div key={card.title} className="bg-light rounded-2xl p-6">
                     <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center mb-4">
                       <Icon size={24} className="text-accent-dark" />
                     </div>
-                    <h3 className="font-serif text-lg text-primary font-semibold mb-2">{w.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{w.desc}</p>
+                    <h3 className="font-serif text-lg text-primary font-semibold mb-2">{card.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
                   </div>
                 );
               })}
@@ -61,11 +80,11 @@ export default function BusinessCleaning() {
           </div>
         </section>
 
-        {/* How we work */}
+        {/* How it works */}
         <section className="py-16 bg-light">
           <div className="max-w-5xl mx-auto px-6 lg:px-8">
             <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-10">{c.howHeading}</h2>
-            <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-7">
+            <ul className={`grid gap-x-10 gap-y-7 ${c.how.length === 3 ? 'md:grid-cols-3' : 'sm:grid-cols-2'}`}>
               {c.how.map((h) => (
                 <li key={h.title} className="flex gap-3">
                   <CheckCircle2 size={22} className="text-accent-dark shrink-0 mt-1" />
@@ -79,7 +98,32 @@ export default function BusinessCleaning() {
           </div>
         </section>
 
-        {/* Cross-sell */}
+        {/* Sample menu (julefrokost) */}
+        {c.menu && (
+          <section className="py-16">
+            <div className="max-w-2xl mx-auto px-6 lg:px-8">
+              <div className="rounded-2xl border border-primary/10 shadow-xl px-8 py-10 md:px-12 text-center">
+                <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold">{c.menu.heading}</h2>
+                <div className="w-12 h-px bg-accent mx-auto my-6" />
+                {c.menu.courses.map((course) => (
+                  <div key={course.title} className="mb-7 last:mb-0">
+                    <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{course.title}</p>
+                    <ul className="space-y-1.5">
+                      {course.items.map((it) => (
+                        <li key={it} className="font-serif text-lg text-primary">{it}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <p className="text-gray-500 text-sm italic mt-8">{c.menu.note}</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <ChefIntro tone={c.menu ? 'light' : 'white'} />
+
+        {/* Cross-links */}
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6 lg:px-8">
             <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-10">{c.moreHeading}</h2>

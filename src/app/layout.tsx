@@ -26,6 +26,7 @@ export const viewport: Viewport = {
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import ConsentBanner from "@/components/ConsentBanner";
 import { areas } from '@/lib/areas';
+import ContactTracking from '@/components/ContactTracking';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
@@ -107,9 +108,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               description: "VIP home and lifestyle services for private homes and businesses across the northern suburbs of Copenhagen: private dining & catering, cleaning, and garden & construction work.",
               address: { "@type": "PostalAddress", addressLocality: "Hellerup", addressRegion: "Capital Region of Denmark", addressCountry: "DK" },
               geo: { "@type": "GeoCoordinates", latitude: 55.7320, longitude: 12.5640 },
-              openingHoursSpecification: [
-                { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
-              ],
               areaServed: [
                 ...areas.map((a) => ({ "@type": "City", name: a.name, postalCode: a.postal, addressCountry: "DK" })),
                 ...Array.from(new Set(areas.map((a) => a.municipality))).map((m) => ({ "@type": "AdministrativeArea", name: `${m} Kommune` })),
@@ -132,6 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body suppressHydrationWarning>
+        <ContactTracking />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

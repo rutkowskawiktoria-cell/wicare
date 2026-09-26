@@ -1,7 +1,6 @@
 'use client';
 import { Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { track } from '@/lib/track';
 
 // "Klar til at komme i gang?" — call-first (the owner prefers phone calls, so there is no form).
 // id="book" is the target of every on-site "Book Now" link; id="contact" keeps old /#contact links working.
@@ -19,7 +18,7 @@ export default function Booking() {
 
           <a
             href="tel:+4552721102"
-            onClick={() => track('phone')}
+           
             className="inline-flex items-center gap-3 bg-primary hover:bg-secondary text-white font-bold text-xl md:text-2xl px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:scale-105"
           >
             <Phone size={26} />
@@ -28,10 +27,10 @@ export default function Booking() {
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 mt-6 text-sm">
             <span className="text-gray-500">{b.or}:</span>
-            <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark underline underline-offset-4 decoration-primary/30 transition-colors">
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark underline underline-offset-4 decoration-primary/30 transition-colors">
               {b.whatsapp}
             </a>
-            <a href="mailto:hello@wicare.vip" onClick={() => track('email')} className="inline-flex items-center gap-1.5 text-primary hover:text-accent-dark underline underline-offset-4 decoration-primary/30 transition-colors">
+            <a href="mailto:hello@wicare.vip" className="inline-flex items-center gap-1.5 text-primary hover:text-accent-dark underline underline-offset-4 decoration-primary/30 transition-colors">
               <Mail size={14} aria-hidden="true" />
               hello@wicare.vip
             </a>

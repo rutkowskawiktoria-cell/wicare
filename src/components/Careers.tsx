@@ -51,12 +51,12 @@ export default function Careers() {
             </ol>
 
             <div className="bg-light rounded-2xl p-8 text-center">
-              <a href={mailto} className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 text-base tracking-wide uppercase shadow-lg">
+              <a href={mailto} data-lead="false" className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 text-base tracking-wide uppercase shadow-lg">
                 <Mail size={20} />{c.applyCta}
               </a>
               <p className="text-gray-600 text-base mt-5">
                 {c.emailNote.split('hello@wicare.vip')[0]}
-                <a href={mailto} className="text-accent-dark font-semibold underline underline-offset-2 break-words">hello@wicare.vip</a>
+                <a href={mailto} data-lead="false" className="text-accent-dark font-semibold underline underline-offset-2 break-words">hello@wicare.vip</a>
                 {c.emailNote.split('hello@wicare.vip')[1] || ''}
               </p>
             </div>

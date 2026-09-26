@@ -26,7 +26,7 @@ export const businessCopy = {
     ],
     moreHeading: 'Også til jeres virksomhed',
     more: [
-      { href: '/services/the-table/', title: 'Firmacatering & private arrangementer', desc: 'Frokost, møder og arrangementer ved vores kok med 13+ års erfaring fra Michelin-restauranter og Folketinget.' },
+      { href: '/firmacatering/', title: 'Firmacatering & private arrangementer', desc: 'Frokost, møder og arrangementer ved vores kok, Wiktoria R., med 13+ års erfaring fra Michelin-restauranter og Folketinget.' },
       { href: '/services/the-estate/', title: 'Udearealer & vedligehold', desc: 'Havearbejde og byggeopgaver omkring jeres bygning, samlet hos én partner.' },
     ],
     areasHeading: 'Erhvervsrengøring i dit område',
@@ -64,7 +64,7 @@ export const businessCopy = {
     ],
     moreHeading: 'Also for your business',
     more: [
-      { href: '/services/the-table/', title: 'Corporate catering & private events', desc: 'Lunches, meetings and events by our chef, with 13+ years of experience from Michelin-starred restaurants and the Danish Parliament.' },
+      { href: '/firmacatering/', title: 'Corporate catering & private events', desc: 'Lunches, meetings and events by our chef, Wiktoria R., with 13+ years of experience from Michelin-starred restaurants and the Danish Parliament.' },
       { href: '/services/the-estate/', title: 'Grounds & maintenance', desc: 'Gardening and construction work around your building, handled by one partner.' },
     ],
     areasHeading: 'Commercial cleaning in your area',

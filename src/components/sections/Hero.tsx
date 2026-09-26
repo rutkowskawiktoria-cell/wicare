@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { ChevronDown, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { track } from '@/lib/track';
 
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
@@ -27,14 +26,15 @@ export default function Hero() {
           <MapPin size={15} className="text-accent shrink-0" />
           <span className="text-[11px] sm:text-sm text-white/90 tracking-[0.12em] sm:tracking-widest uppercase font-medium leading-snug">{t.hero.badge}</span>
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 sm:mb-10 whitespace-pre-line">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-4 sm:mb-5 whitespace-pre-line">
           {t.hero.title}
         </h1>
+        <p className="text-accent text-base sm:text-lg md:text-xl font-medium tracking-wide mb-8 sm:mb-10">{t.hero.servicesLine}</p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xl mx-auto">
-          <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-6 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-xl md:text-2xl tracking-wide">
+          <a href="tel:+4552721102" className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-6 py-5 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-xl md:text-2xl tracking-wide">
             <Phone size={26} />+45 52 72 11 02
           </a>
-          <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium px-7 py-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg tracking-wide">
+          <a href={wa} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium px-7 py-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] text-lg tracking-wide">
             <WhatsAppIcon size={22} />WhatsApp
           </a>
         </div>

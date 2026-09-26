@@ -16,7 +16,7 @@ export default function FloatingActions() {
   const wa = `https://wa.me/4552721102?text=${encodeURIComponent(t.floating.whatsappMsg)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div data-loc="floating" className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       <Link href="/#book" className="bg-accent text-primary text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full shadow-2xl hover:bg-accent-deep hover:scale-105 transition-all duration-200 block">{t.floating.bookNow}</Link>
       <a href={wa} target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-secondary text-white border border-accent/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:scale-110 transition-all duration-200" aria-label={t.floating.whatsappAria}>
         <WhatsAppIcon size={26} />

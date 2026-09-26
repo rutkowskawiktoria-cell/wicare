@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { getArea, areas, areaBusiness } from '@/lib/areas';
-import { track } from '@/lib/track';
 
 const serviceCards = [
   { slug: 'the-table', Icon: ChefHat, da: 'Privat kok & catering', en: 'Private Chef & Catering' },
@@ -76,10 +75,10 @@ export default function AreaLanding({ slug }: { slug: string }) {
             </h1>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">{c.intro}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+4552721102" onClick={() => track('phone')} className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-7 py-4 rounded-2xl transition-all text-lg">
+              <a href="tel:+4552721102" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-7 py-4 rounded-2xl transition-all text-lg">
                 <Phone size={22} />+45 52 72 11 02
               </a>
-              <a href={wa} onClick={() => track('whatsapp')} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-7 py-4 rounded-2xl transition-all text-lg">
+              <a href={wa} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-7 py-4 rounded-2xl transition-all text-lg">
                 WhatsApp
               </a>
             </div>
@@ -167,7 +166,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
               {L.ctaTitle} {area.name}?
             </h2>
             <p className="text-white/75 text-lg mb-8">{L.ctaDesc}</p>
-            <a href="tel:+4552721102" onClick={() => track('phone')} className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-8 py-4 rounded-2xl transition-all text-lg">
+            <a href="tel:+4552721102" className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-8 py-4 rounded-2xl transition-all text-lg">
               <Phone size={22} />+45 52 72 11 02
             </a>
           </div>
