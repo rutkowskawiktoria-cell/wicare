@@ -8,7 +8,6 @@ import ContactForm from '@/components/sections/ContactForm';
 // id="book" is the target of every on-site "Book Now" link; the form card carries id="contact".
 export default function Booking() {
   const { t } = useLanguage();
-  const stats = t.booking.stats;
 
   return (
     <section id="book" className="py-16 md:py-24 bg-primary">
@@ -25,16 +24,6 @@ export default function Booking() {
             <Phone size={26} />
             +45 52 72 11 02
           </a>
-
-          <div className="grid grid-cols-3 gap-3 mt-10">
-            {stats.map(({ number, label, desc }) => (
-              <div key={label} className="bg-white/10 rounded-2xl p-4 border border-white/15 text-center lg:text-left">
-                <p className="text-accent text-2xl md:text-3xl font-bold leading-none mb-2">{number}</p>
-                <p className="text-white text-sm font-semibold">{label}</p>
-                <p className="text-white/60 text-xs mt-1 hidden sm:block">{desc}</p>
-              </div>
-            ))}
-          </div>
 
           <p className="text-white/60 text-sm mt-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">{t.booking.note}</p>
         </div>
