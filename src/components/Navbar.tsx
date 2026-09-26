@@ -10,7 +10,7 @@ export default function Navbar() {
   const navLinks = [
     { label: t.nav.services, href: '/#services' },
     { label: t.nav.whyWiCare, href: '/#trust' },
-    { label: t.nav.testimonials, href: '/#testimonials' },
+    { label: t.nav.business, href: '/erhvervsrengoering/' },
     { label: t.blog.nav, href: '/blog/' },
     { label: t.nav.contact, href: '/#book' },
   ];
@@ -58,7 +58,7 @@ export default function Navbar() {
             <div className="py-3">
               <LanguageSwitcher />
             </div>
-            <Link href="/#book" onClick={() => setMenuOpen(false)} className="block w-full text-center bg-accent text-white font-medium px-6 py-3 rounded-full mt-4">{t.nav.getStarted}</Link>
+            <a href="tel:+4552721102" onClick={() => setMenuOpen(false)} className="flex items-center justify-center gap-2 w-full bg-accent text-white font-medium px-6 py-3 rounded-full mt-4"><Phone size={18} />{t.nav.getStarted}</a>
           </div>
         </div>
       )}

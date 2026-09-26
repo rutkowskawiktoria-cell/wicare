@@ -10,8 +10,8 @@ import { track } from '@/lib/track';
 
 const serviceCards = [
   { slug: 'the-home', Icon: Sparkles, da: 'Hjemmerengøring', en: 'Home Cleaning' },
-  { slug: 'the-table', Icon: ChefHat, da: 'Privat Kok & Catering', en: 'Private Chef & Catering' },
-  { slug: 'the-estate', Icon: Wrench, da: 'Ejendoms- & Havepleje', en: 'Property & Garden Care' },
+  { slug: 'the-table', Icon: ChefHat, da: 'Privat kok & catering', en: 'Private Chef & Catering' },
+  { slug: 'the-estate', Icon: Wrench, da: 'Ejendoms- & havepleje', en: 'Property & Garden Care' },
 ];
 
 export default function AreaLanding({ slug }: { slug: string }) {
@@ -27,7 +27,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
 
   const L = da
     ? {
-        h1a: 'VIP Rengøring, Privat Kok & Havepleje i',
+        h1a: 'VIP-rengøring, privat kok & havepleje i',
         servicesHeading: 'Vores services i',
         whyHeading: 'Hvorfor WiCare i',
         ctaTitle: 'Klar til at komme i gang i',
@@ -40,6 +40,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
         trust3: 'Fast team & klare priser',
         bizBadge: 'Erhverv',
         bizHeading: 'Erhvervsrengøring i',
+        bizMore: 'Læs mere om erhvervsrengøring',
         bizItems: ['Kontorrengøring', 'Klinikker', 'Showroom & butik', 'Fællesarealer', 'Uden for åbningstid', 'Fast aftale'],
       }
     : {
@@ -56,6 +57,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
         trust3: 'Dedicated team & clear pricing',
         bizBadge: 'Business',
         bizHeading: 'Commercial cleaning in',
+        bizMore: 'More about commercial cleaning',
         bizItems: ['Office cleaning', 'Clinics', 'Showroom & retail', 'Shared areas', 'Out-of-hours', 'Fixed agreement'],
       };
 
@@ -135,6 +137,9 @@ export default function AreaLanding({ slug }: { slug: string }) {
                   <span key={i} className="px-4 py-2 rounded-full bg-light text-primary text-sm font-medium">{i}</span>
                 ))}
               </div>
+              <Link href="/erhvervsrengoering/" className="inline-block mt-8 text-accent-dark font-semibold hover:text-primary transition-colors">
+                {L.bizMore} →
+              </Link>
             </div>
           </section>
         )}

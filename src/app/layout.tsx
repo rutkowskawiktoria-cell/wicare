@@ -30,21 +30,21 @@ import { areas } from '@/lib/areas';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
+  title: "WiCare ApS | VIP-rengøring, privat kok & havepleje nord for København",
   description: "VIP hjemme- og erhvervsrengøring, privat kok & catering og havepleje til hjem og virksomheder nord for København: Hellerup, Gentofte, Lyngby, Rudersdal, Hørsholm m.fl. Ring +45 52 72 11 02.",
   keywords: ["rengøring Hellerup", "hjemmerengøring Gentofte", "rengøringsfirma nord for København", "privat kok København", "catering Hellerup", "havepleje Rudersdal", "vinduespudsning Klampenborg", "ejendomsservice Charlottenlund", "handyman Hørsholm", "VIP rengøring Strandvejen", "rengøringshjælp Rungsted", "privat madlavning Vedbæk", "WiCare"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
-    title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje – Nord for København",
+    title: "WiCare ApS | VIP-rengøring, privat kok & havepleje nord for København",
     description: "Diskret VIP-rengøring, privat madlavning & catering og havepleje til hjem og virksomheder i Hellerup, Gentofte, Rudersdal og resten af Københavns nordlige forstæder.",
     url: siteUrl,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WiCare ApS | VIP Rengøring, Privat Kok & Havepleje",
+    title: "WiCare ApS | VIP-rengøring, privat kok & havepleje",
     description: "Diskret VIP hjem- og livsstilsservice i Københavns nordlige forstæder.",
     images: ["/og-image.png"],
   },

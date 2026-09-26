@@ -10,6 +10,7 @@ export default function Footer() {
   const link = 'text-white/80 hover:text-accent transition-colors';
   const quickLinks = [
     { href: '/#services', label: t.nav.services },
+    { href: '/erhvervsrengoering/', label: t.nav.business },
     { href: '/blog/', label: t.blog.nav },
     { href: '/careers/', label: t.careers.nav },
     { href: '/faq/', label: t.faq.nav },

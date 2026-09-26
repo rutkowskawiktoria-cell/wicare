@@ -35,7 +35,7 @@ export const posts: BlogPost[] = [
       cta: "Home Cleaning provides discreet, white-glove home cleaning across the northern suburbs of Copenhagen. Call us to arrange a consultation.",
     },
     da: {
-      title: "Sådan Vælger Du en Betroet Luksus Rengøringsservice i Nord for København",
+      title: "Sådan vælger du en betroet luksusrengøring nord for København",
       description: "En praktisk guide for boligejere i Hellerup, Gentofte og Strandvejsområdet til at vælge en diskret, pålidelig rengøringsservice i topklasse.",
       intro: "At invitere et rengøringsteam ind i dit hjem er et udtryk for tillid. I Københavns nordlige forstæder, hvor privatliv og standarder betyder noget, handler det rette valg om langt mere end pris. Her er, hvad du skal kigge efter.",
       sections: [
@@ -45,7 +45,7 @@ export const posts: BlogPost[] = [
         { h: "Respekt for dine ejendele", p: "Et professionelt team behandler dit hjem med omhu og beder dig om at sikre kontanter, smykker og værdigenstande inden hvert besøg. Den ærlighed er tegn på en velsmurt forretning, ikke en advarsel." },
         { h: "Pålidelighed du kan mærke", p: "Punktlighed, hurtig svartid og den samme standard ved hvert besøg adskiller en luksusservice fra en almindelig. Spørg om svartider, og hvordan planlægning håndteres." },
       ],
-      cta: "Home Cleaning leverer diskret white-glove rengøring i hele Københavns nordlige forstæder. Ring til os for at aftale en konsultation.",
+      cta: "WiCare leverer diskret white-glove hjemmerengøring i hele Københavns nordlige forstæder. Ring til os for at aftale et uforpligtende besøg.",
     },
   },
   {
@@ -66,7 +66,7 @@ export const posts: BlogPost[] = [
       cta: "Private Dining & Catering brings professional private dining and catering to homes across North Copenhagen. Call us to plan your evening.",
     },
     da: {
-      title: "Lej en Privat Kok til Middagsselskab i Hellerup og Gentofte",
+      title: "Lej en privat kok til middagsselskabet i Hellerup og Gentofte",
       description: "Alt, du behøver at vide om at booke en privat kok til en intim middag eller fejring i Københavns nordlige forstæder.",
       intro: "En privat kok forvandler en aften derhjemme til noget mindeværdigt, uden arbejdet eller oprydningen. Uanset om det er en intim middag for to eller en stor fejring, er her, hvordan du gør det rigtigt.",
       sections: [
@@ -75,7 +75,7 @@ export const posts: BlogPost[] = [
         { h: "Overvej vin og forløb", p: "God mad fortjener gennemtænkt parring og tempo. Tal om, hvorvidt du ønsker vinforslag, hvor mange retter der passer til aftenen, og hvornår du vil sidde til bords kontra mingle." },
         { h: "Lad dem klare resten", p: "En professionel kok medbringer råvarerne, laver mad i dit køkken, serverer hver ret og efterlader køkkenet skinnende rent. Din eneste opgave er at nyde aftenen med dine gæster." },
       ],
-      cta: "Private Dining & Catering bringer professionel privat spisning og catering til hjem i hele Nord for København. Ring til os for at planlægge din aften.",
+      cta: "Med privat madlavning & catering bringer WiCare fine dining og catering hjem til dig i hele Københavns nordlige forstæder. Ring til os for at planlægge din aften.",
     },
   },
   {
@@ -105,7 +105,7 @@ export const posts: BlogPost[] = [
         { h: "Efterår: forbered til vejret", p: "Rens tagrender, tjek afvanding, og servicér alt, der skal stå over for de koldere måneder. Lidt vedligeholdelse nu forhindrer dyre overraskelser senere." },
         { h: "Vinter: hold tingene kørende", p: "Pasning af indendørs planter, regelmæssige hjemtjek og hurtige handyman-reparationer holder hjemmet komfortabelt og passet, også når du er på rejse." },
       ],
-      cta: "Property & Garden Care klarer havearbejde, byggeri, handyman-arbejde, hundeluftning og vanding af planter i hele Nord for København. Ring til os for at planlægge din ejendomspleje.",
+      cta: "WiCare klarer havearbejde, byggeri, handyman-arbejde, hundeluftning og vanding af planter i hele Københavns nordlige forstæder. Ring til os for at planlægge din ejendomspleje.",
     },
   },
   {
@@ -126,7 +126,7 @@ export const posts: BlogPost[] = [
       cta: "Experience the Home Cleaning standard in your home across North Copenhagen. Call us to arrange a visit.",
     },
     da: {
-      title: "Hvad Du Kan Forvente af en White-Glove Rengøringsservice",
+      title: "Hvad du kan forvente af en white-glove rengøringsservice",
       description: "Hvordan en premium white-glove rengøringsservice adskiller sig fra almindelig rengøring, og hvad det betyder for dit hjem.",
       intro: "Al rengøring er ikke ens. En white-glove service defineres af opmærksomhed, konsistens og omhu. Her er, hvordan den standard faktisk ser ud i praksis.",
       sections: [
@@ -135,7 +135,7 @@ export const posts: BlogPost[] = [
         { h: "Et team der kender dit hjem", p: "Fordi det samme godkendte team vender tilbage hver gang, lærer de dine præferencer, dine materialer og de små ting, der gør dit hjem til dit." },
         { h: "Stille grundighed", p: "Den bedste service er diskret og diskret. Du skal mærke resultatet uden nogensinde at mærke forstyrrelsen." },
       ],
-      cta: "Oplev Home Cleaning-standarden i dit hjem i hele Nord for København. Ring til os for at aftale et besøg.",
+      cta: "Oplev WiCares white-glove standard i dit hjem i hele Københavns nordlige forstæder. Ring til os for at aftale et besøg.",
     },
   },
   {
@@ -156,7 +156,7 @@ export const posts: BlogPost[] = [
       cta: "Private Dining & Catering handles the menu, cooking and cleanup so you can simply host. Call us to plan your dinner in North Copenhagen.",
     },
     da: {
-      title: "Vært for en Intim Privat Middag Derhjemme: En Værtsguide",
+      title: "Sådan er du vært for en intim privat middag derhjemme",
       description: "Enkle måder at være vært for en smuk, afslappet privat middag derhjemme, og hvor en privat kok gør forskellen.",
       intro: "De bedste middage føles ubesværede for værten. Med lidt planlægning og den rette hjælp i køkkenet kan du være fuldt til stede med dine gæster fra første glas til sidste ret.",
       sections: [
@@ -165,7 +165,7 @@ export const posts: BlogPost[] = [
         { h: "Lad køkkenet blive klaret", p: "Når en privat kok tager sig af menu, madlavning og servering, er du fri til at være vært frem for at forsvinde ud i køkkenet mellem retterne." },
         { h: "Slut i ro", p: "Giv plads efter måltidet til kaffe, samtale og en afslappet afslutning. Målet er en aften, dine gæster husker, ikke en tidsplan, der skal holdes." },
       ],
-      cta: "Private Dining & Catering klarer menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag i Nord for København.",
+      cta: "Med privat madlavning & catering klarer WiCare menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag.",
     },
   },
   {
@@ -186,7 +186,7 @@ export const posts: BlogPost[] = [
       cta: "Home Cleaning makes every visit discreet, careful and tailored to your home. Call us to arrange your cleaning in North Copenhagen.",
     },
     da: {
-      title: "Forbered Dit Hjem til et Rengøringsbesøg",
+      title: "Sådan forbereder du dit hjem til et rengøringsbesøg",
       description: "Få enkle trin, før dit rengøringsteam ankommer, som beskytter dine værdigenstande og giver det bedste resultat.",
       intro: "Et godt rengøringsbesøg starter, før teamet ankommer. Få minutters forberedelse beskytter det, der betyder noget for dig, og hjælper dit team med at levere det bedst mulige resultat.",
       sections: [
@@ -195,7 +195,7 @@ export const posts: BlogPost[] = [
         { h: "Del dine prioriteter", p: "Hvis bestemte rum eller detaljer betyder mest denne uge, så sig det. Et fast team tilpasser hvert besøg til, hvad dit hjem har brug for lige nu." },
         { h: "Sørg for fri adgang", p: "Aftal på forhånd, hvordan teamet kommer ind, og hvilke områder der er omfattet, så besøget forløber gnidningsfrit fra første minut." },
       ],
-      cta: "Home Cleaning gør hvert besøg diskret, omhyggeligt og tilpasset dit hjem. Ring til os for at aftale din rengøring i Nord for København.",
+      cta: "WiCares hjemmerengøring gør hvert besøg diskret, omhyggeligt og tilpasset dit hjem. Ring til os for at aftale din rengøring.",
     },
   },
   {
@@ -216,7 +216,7 @@ export const posts: BlogPost[] = [
       cta: "Property & Garden Care keeps your home cared for while you travel across North Copenhagen. Call us to arrange support.",
     },
     da: {
-      title: "Ejendomspleje Mens Du Rejser: Planter, Kæledyr og Hjemtjek",
+      title: "Ejendomspleje, mens du rejser: planter, kæledyr og hjemtjek",
       description: "Sådan holder du dit hjem passet, mens du er væk, fra vanding af planter til hundeluftning og regelmæssige tjek.",
       intro: "Rejser er lettere, når du ved, at dit hjem er i gode hænder. Den rette støtte holder alt passet, mens du er væk, så du vender hjem til et hjem præcis, som du forlod det.",
       sections: [
@@ -225,7 +225,7 @@ export const posts: BlogPost[] = [
         { h: "Regelmæssige hjemtjek", p: "Periodiske tjek fanger små problemer, som en lækage eller en fejl, før de bliver til rigtige problemer, og holder hjemmet udluftet og klar." },
         { h: "Ét kontaktpunkt", p: "At have én betroet partner til at styre det hele betyder færre nøgler, færre fremmede og ét nummer at ringe til, hvis der er behov for noget." },
       ],
-      cta: "Property & Garden Care holder dit hjem passet, mens du rejser, i hele Nord for København. Ring til os for at aftale støtte.",
+      cta: "WiCare holder dit hjem passet, mens du rejser, i hele Københavns nordlige forstæder. Ring til os for at aftale hjælp.",
     },
   },
   {
@@ -246,8 +246,8 @@ export const posts: BlogPost[] = [
       cta: "WiCare is built on discretion, precision and trust, serving the northern suburbs of Copenhagen. Call us to start a conversation.",
     },
     da: {
-      title: "Hvorfor Diskretion Betyder Noget, Når Du Vælger Husholdningsservices",
-      description: "For profilerede husstande i Nord for København er diskretion ikke en luksus, men et krav. Her er, hvad det virkelig betyder.",
+      title: "Hvorfor diskretion betyder noget, når du vælger hjemmeservice",
+      description: "For profilerede husstande nord for København er diskretion ikke en luksus, men et krav. Her er, hvad det virkelig betyder.",
       intro: "For mange husstande i Københavns nordlige forstæder er privatliv ikke valgfrit. Den, du inviterer ind i dit hjem, bør forstå det og bevise det i måden, de arbejder på.",
       sections: [
         { h: "Privatliv er en del af servicen", p: "Ægte diskretion betyder, at dit hjem, din tidsplan og dit liv forbliver private. Det bør være indbygget i, hvordan en virksomhed ansætter, træner og arbejder, ikke tilføjet som en eftertanke." },
@@ -263,3 +263,11 @@ export const posts: BlogPost[] = [
 export function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);
 }
+
+// Danish labels for the (English) category keys shown on the blog.
+export const categoryDa: Record<string, string> = {
+  'Home Cleaning': 'Hjemmerengøring',
+  'Private Dining & Catering': 'Privat madlavning & catering',
+  'Property & Garden Care': 'Ejendoms- & havepleje',
+  Guide: 'Guide',
+};

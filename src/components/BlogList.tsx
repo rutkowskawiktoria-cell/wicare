@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { categoryDa } from '@/lib/blog';
 import { posts } from '@/lib/blog';
 
 export default function BlogList() {
@@ -30,7 +31,7 @@ export default function BlogList() {
               return (
                 <Link key={post.slug} href={`/blog/${post.slug}/`} className="group block bg-light rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-4 text-xs">
-                    <span className="text-accent-dark font-semibold uppercase tracking-wider">{post.category}</span>
+                    <span className="text-accent-dark font-semibold uppercase tracking-wider">{locale === 'da' ? categoryDa[post.category] ?? post.category : post.category}</span>
                     <span className="text-gray-400 flex items-center gap-1"><Clock size={12} />{post.readingMins} {t.blog.minRead}</span>
                   </div>
                   <h2 className="font-serif text-xl md:text-2xl text-primary font-semibold mb-3 leading-snug group-hover:text-accent-dark transition-colors">{c.title}</h2>

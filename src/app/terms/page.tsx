@@ -1,12 +1,12 @@
 import LegalContent from '@/components/LegalContent';
 
 export const metadata = {
-  title: 'Terms of Service | WiCare ApS',
-  description: 'Terms and conditions for WiCare ApS VIP lifestyle services in the northern suburbs of Copenhagen.',
+  title: 'Servicevilkår | WiCare ApS',
+  description: 'Servicevilkår for WiCare ApS – VIP-services til hjem og virksomheder i Københavns nordlige forstæder.',
   alternates: { canonical: '/terms/' },
   openGraph: {
-    title: 'Terms of Service | WiCare ApS',
-    description: 'Terms and conditions for WiCare ApS VIP lifestyle services in the northern suburbs of Copenhagen.',
+    title: 'Servicevilkår | WiCare ApS',
+    description: 'Servicevilkår for WiCare ApS – VIP-services til hjem og virksomheder i Københavns nordlige forstæder.',
     url: '/terms/',
     siteName: 'WiCare ApS',
     locale: 'en_DK',

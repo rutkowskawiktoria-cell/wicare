@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const area = getArea(slug);
   if (!area) return {};
-  const title = `Rengøring & Erhvervsrengøring i ${area.name} | WiCare ApS`;
+  const title = `Rengøring & erhvervsrengøring i ${area.name} | WiCare ApS`;
   const description = `Hjemmerengøring, erhvervs- & kontorrengøring, privat kok og havepleje i ${area.name} (${area.postal}). Diskret, baggrundstjekket service. Ring +45 52 72 11 02.`;
   return {
     title,
