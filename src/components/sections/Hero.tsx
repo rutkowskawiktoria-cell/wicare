@@ -45,7 +45,7 @@ export default function Hero() {
           <strong className="font-bold text-white">{t.hero.motto}</strong> {t.hero.subtitle}
         </p>
       </div>
-      <a href="#trust" aria-label="Scroll to why WiCare" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-accent transition-colors duration-300 animate-bounce">
+      <a href="#services" aria-label="Scroll to services" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-accent transition-colors duration-300 animate-bounce">
         <ChevronDown size={28} />
       </a>
     </section>

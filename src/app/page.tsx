@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
-import Trust from '@/components/sections/Trust';
 import Services from '@/components/sections/Services';
 import Booking from '@/components/sections/Booking';
 import AreasMap from '@/components/sections/AreasMap';
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <Services />
         <AreasMap />
-        <Trust />
         <Booking />
       </main>
       <Footer />

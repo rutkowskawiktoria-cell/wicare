@@ -9,7 +9,6 @@ export default function Navbar() {
   const { t } = useLanguage();
   const navLinks = [
     { label: t.nav.services, href: '/#services' },
-    { label: t.nav.whyWiCare, href: '/#trust' },
     { label: t.nav.business, href: '/erhvervsrengoering/' },
     { label: t.blog.nav, href: '/blog/' },
     { label: t.nav.contact, href: '/#book' },

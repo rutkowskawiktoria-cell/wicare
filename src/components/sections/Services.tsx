@@ -4,14 +4,15 @@ import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const serviceMeta = [
-  { slug: 'the-home', icon: Sparkles, img: '/services/home.webp', highlight: true },
-  { slug: 'the-table', icon: ChefHat, img: '/services/dining.webp' },
-  { slug: 'the-estate', icon: Wrench, img: '/services/garden.webp' },
+  // Private dining & catering is the flagship (Sept 2026) — shown first and highlighted.
+  { slug: 'the-table', icon: ChefHat, img: '/services/dining.webp', card: 1, highlight: true },
+  { slug: 'the-home', icon: Sparkles, img: '/services/home.webp', card: 0 },
+  { slug: 'the-estate', icon: Wrench, img: '/services/garden.webp', card: 2 },
 ];
 
 export default function Services() {
   const { t } = useLanguage();
-  const services = serviceMeta.map((s, i) => ({ ...s, title: t.services.cards[i].subtitle, desc: t.services.cards[i].desc }));
+  const services = serviceMeta.map((s) => ({ ...s, title: t.services.cards[s.card].subtitle, desc: t.services.cards[s.card].desc }));
   return (
     <section id="services" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

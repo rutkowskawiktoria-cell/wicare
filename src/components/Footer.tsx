@@ -15,7 +15,6 @@ export default function Footer() {
     { href: '/careers/', label: t.careers.nav },
     { href: '/faq/', label: t.faq.nav },
     { href: '/card/', label: t.card.nav },
-    { href: '/#testimonials', label: t.nav.testimonials },
     { href: '/#book', label: t.footer.bookNow },
   ];
 
