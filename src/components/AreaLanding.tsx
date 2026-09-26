@@ -9,9 +9,9 @@ import { getArea, areas, areaBusiness } from '@/lib/areas';
 import { track } from '@/lib/track';
 
 const serviceCards = [
-  { slug: 'the-home', Icon: Sparkles, da: 'Hjemmerengøring', en: 'Home Cleaning' },
   { slug: 'the-table', Icon: ChefHat, da: 'Privat kok & catering', en: 'Private Chef & Catering' },
-  { slug: 'the-estate', Icon: Wrench, da: 'Ejendoms- & havepleje', en: 'Property & Garden Care' },
+  { slug: 'the-home', Icon: Sparkles, da: 'Rengøring – hjem & erhverv', en: 'Cleaning – Homes & Businesses' },
+  { slug: 'the-estate', Icon: Wrench, da: 'Have & byggeri', en: 'Garden & Construction' },
 ];
 
 export default function AreaLanding({ slug }: { slug: string }) {
@@ -27,7 +27,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
 
   const L = da
     ? {
-        h1a: 'VIP-rengøring, privat kok & havepleje i',
+        h1a: 'Privat kok, rengøring & have i',
         servicesHeading: 'Vores services i',
         whyHeading: 'Hvorfor WiCare i',
         ctaTitle: 'Klar til at komme i gang i',
@@ -44,7 +44,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
         bizItems: ['Kontorrengøring', 'Klinikker', 'Showroom & butik', 'Fællesarealer', 'Uden for åbningstid', 'Fast aftale'],
       }
     : {
-        h1a: 'VIP Cleaning, Private Chef & Garden Care in',
+        h1a: 'Private Chef, Cleaning & Garden Care in',
         servicesHeading: 'Our services in',
         whyHeading: 'Why WiCare in',
         ctaTitle: 'Ready to get started in',

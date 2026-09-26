@@ -9,19 +9,19 @@ export async function generateStaticParams() {
 
 const daMeta: Record<string, { title: string; description: string; keywords: string[] }> = {
   'the-home': {
-    title: 'Hjemmerengøring nord for København | WiCare ApS',
-    description: 'VIP hjemmerengøring i Hellerup, Gentofte, Charlottenlund og resten af Københavns nordlige forstæder. Diskret white-glove service med baggrundstjekket personale. Ring +45 52 72 11 02.',
-    keywords: ['rengøring Hellerup', 'hjemmerengøring Gentofte', 'rengøringsfirma nord for København', 'vinduespudsning Klampenborg', 'rengøringshjælp Charlottenlund', 'VIP rengøring Strandvejen', 'WiCare ApS'],
+    title: 'Rengøring til hjem & erhverv nord for København | WiCare ApS',
+    description: 'VIP hjemmerengøring og erhvervsrengøring i Hellerup, Gentofte, Charlottenlund og resten af Københavns nordlige forstæder. Diskret white-glove service med baggrundstjekket personale. Ring +45 52 72 11 02.',
+    keywords: ['rengøring Hellerup', 'hjemmerengøring Gentofte', 'erhvervsrengøring nord for København', 'rengøringsfirma nord for København', 'vinduespudsning Klampenborg', 'rengøringshjælp Charlottenlund', 'VIP rengøring Strandvejen', 'WiCare ApS'],
   },
   'the-table': {
     title: 'Privat kok & catering nord for København | WiCare ApS',
-    description: 'Privat madlavning og catering til middage, fejringer og firmafrokoster i Hellerup, Gentofte og omegn. Erfarne kokke, skræddersyede menuer. Ring +45 52 72 11 02.',
+    description: 'Privat madlavning og catering til middage, fejringer og firmafrokoster i Hellerup, Gentofte og omegn. Vores kok har 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget. Skræddersyede menuer. Ring +45 52 72 11 02.',
     keywords: ['privat kok København', 'privat kok Hellerup', 'catering Gentofte', 'privat madlavning Rudersdal', 'firmacatering nord for København', 'middagsselskab kok Vedbæk', 'WiCare ApS'],
   },
   'the-estate': {
-    title: 'Havepleje & ejendomsservice nord for København | WiCare ApS',
-    description: 'Havearbejde, handyman, byggeri og ejendomspleje i Rudersdal, Hørsholm, Hellerup og omegn. Én betroet partner til det hele. Ring +45 52 72 11 02.',
-    keywords: ['havepleje Rudersdal', 'havearbejde Hørsholm', 'handyman Hellerup', 'ejendomsservice Charlottenlund', 'anlægsgartner nord for København', 'vedligeholdelse villa Rungsted', 'WiCare ApS'],
+    title: 'Have & byggeri nord for København | WiCare ApS',
+    description: 'Havearbejde, anlæg og byggeprojekter i Rudersdal, Hørsholm, Hellerup og omegn. Omfang og pris aftales med dig. Ring +45 52 72 11 02.',
+    keywords: ['havepleje Rudersdal', 'havearbejde Hørsholm', 'byggeri Hellerup', 'havearbejde Charlottenlund', 'anlægsgartner nord for København', 'vedligeholdelse villa Rungsted', 'WiCare ApS'],
   },
 };
 

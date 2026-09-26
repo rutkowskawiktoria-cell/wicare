@@ -55,11 +55,11 @@ export const areas: Area[] = [
     nearby: ['hellerup', 'skovshoved', 'ordrup', 'klampenborg'],
     da: {
       intro: 'I Charlottenlund tilbyder WiCare VIP-hjemmerengøring, privat kok og komplet ejendoms- og havepleje. Vi passer store villahaver og herskabslejligheder med samme omhu og præcision.',
-      body: 'Bor du nær Charlottenlund Slotshave eller Skovshoved Havn, kender vi områdets ejendomme godt. Vi kombinerer rengøring, handyman-opgaver og havearbejde til én fast aftale, så du kun har én kontakt for hele hjemmet. Nabobyerne Hellerup og Klampenborg dækkes lige så nemt.',
+      body: 'Bor du nær Charlottenlund Slotshave eller Skovshoved Havn, kender vi områdets ejendomme godt. Vi kombinerer rengøring, havearbejde og byggeopgaver til én fast aftale, så du kun har én kontakt for hele hjemmet. Nabobyerne Hellerup og Klampenborg dækkes lige så nemt.',
     },
     en: {
       intro: 'In Charlottenlund, WiCare offers VIP home cleaning, a private chef and complete property and garden care. We look after large villa gardens and stately apartments with the same care and precision.',
-      body: 'Whether you live near Charlottenlund Palace Park or Skovshoved Harbour, we know the area’s properties well. We combine cleaning, handyman work and gardening into a single standing agreement, so you have just one contact for the whole home. Neighbouring Hellerup and Klampenborg are covered just as easily.',
+      body: 'Whether you live near Charlottenlund Palace Park or Skovshoved Harbour, we know the area’s properties well. We combine cleaning, gardening and construction work into a single standing agreement, so you have just one contact for the whole home. Neighbouring Hellerup and Klampenborg are covered just as easily.',
     },
   },
   {
@@ -151,11 +151,11 @@ export const areas: Area[] = [
     nearby: ['kongens-lyngby', 'virum', 'holte'],
     da: {
       intro: 'I Sorgenfri tilbyder WiCare diskret hjemmerengøring, privat kok og havepleje til villaer med store, grønne grunde.',
-      body: 'Omkring Sorgenfri Slot, Mølleåen og Frilandsmuseet ligger haver, der skal passes med omhu. Vi samler rengøring, handyman-opgaver og havearbejde i én aftale, så du kun har ét nummer at ringe til. Vi dækker også Kongens Lyngby og Virum.',
+      body: 'Omkring Sorgenfri Slot, Mølleåen og Frilandsmuseet ligger haver, der skal passes med omhu. Vi samler rengøring, havearbejde og byggeopgaver i én aftale, så du kun har ét nummer at ringe til. Vi dækker også Kongens Lyngby og Virum.',
     },
     en: {
       intro: 'In Sorgenfri, WiCare offers discreet home cleaning, a private chef and garden care for villas with large, green plots.',
-      body: 'Around Sorgenfri Palace, the Mølleå river and the Open Air Museum are gardens that need careful tending. We combine cleaning, handyman work and gardening into one agreement, so you only have one number to call. We also cover Kongens Lyngby and Virum.',
+      body: 'Around Sorgenfri Palace, the Mølleå river and the Open Air Museum are gardens that need careful tending. We combine cleaning, gardening and construction work into one agreement, so you only have one number to call. We also cover Kongens Lyngby and Virum.',
     },
   },
   {
@@ -199,11 +199,11 @@ export const areas: Area[] = [
     nearby: ['soelleroed', 'virum', 'birkeroed', 'hoersholm'],
     da: {
       intro: 'WiCare dækker Holte og Rudersdal med diskret hjemmerengøring, privat madlavning og komplet havepleje til villaer og store grunde.',
-      body: 'Rudersdals store haver og villaer kræver en partner, der kan koordinere anlægsgartner, handyman og rengøring under ét. Det gør vi – med faste teams, transparente priser og fokus på detaljen. Vi betjener også Hørsholm og Vedbæk.',
+      body: 'Rudersdals store haver og villaer kræver en partner, der kan koordinere havearbejde, byggeopgaver og rengøring under ét. Det gør vi – med faste teams, transparente priser og fokus på detaljen. Vi betjener også Hørsholm og Vedbæk.',
     },
     en: {
       intro: 'WiCare covers Holte and Rudersdal with discreet home cleaning, private dining and complete garden care for villas and large plots.',
-      body: 'Rudersdal’s large gardens and villas call for a partner who can coordinate landscaping, handyman work and cleaning under one roof. That’s what we do — with dedicated teams, transparent pricing and an eye for detail. We also serve Hørsholm and Vedbæk.',
+      body: 'Rudersdal’s large gardens and villas call for a partner who can coordinate landscaping, construction work and cleaning under one roof. That’s what we do — with dedicated teams, transparent pricing and an eye for detail. We also serve Hørsholm and Vedbæk.',
     },
   },
   {
@@ -263,11 +263,11 @@ export const areas: Area[] = [
     nearby: ['rungsted', 'skodsborg', 'holte'],
     da: {
       intro: 'I Vedbæk tilbyder WiCare VIP-rengøring, privat kok og komplet ejendoms- og havepleje til hjem nær kysten.',
-      body: 'Vedbæks strandnære villaer fortjener en betroet partner til rengøring, havearbejde og handyman-opgaver. Vi samler det hele i én aftale med faste teams og klare priser. Skodsborg og Rungsted betjenes lige så nemt.',
+      body: 'Vedbæks strandnære villaer fortjener en betroet partner til rengøring, havearbejde og byggeopgaver. Vi samler det hele i én aftale med faste teams og klare priser. Skodsborg og Rungsted betjenes lige så nemt.',
     },
     en: {
       intro: 'In Vedbæk, WiCare offers VIP cleaning, a private chef and complete property and garden care for homes near the coast.',
-      body: 'Vedbæk’s seaside villas deserve a trusted partner for cleaning, gardening and handyman work. We bring it all into one agreement with dedicated teams and clear pricing. Skodsborg and Rungsted are served just as easily.',
+      body: 'Vedbæk’s seaside villas deserve a trusted partner for cleaning, gardening and construction work. We bring it all into one agreement with dedicated teams and clear pricing. Skodsborg and Rungsted are served just as easily.',
     },
   },
   {
@@ -311,11 +311,11 @@ export const areas: Area[] = [
     nearby: ['hoersholm', 'vedbaek', 'skodsborg'],
     da: {
       intro: 'WiCare betjener Rungsted og Rungsted Kyst med diskret hjemmerengøring, privat madlavning og havepleje til strandvejsvillaer og lejligheder.',
-      body: 'Langs Rungsted Havn og Strandvejen leverer vi white-glove rengøring, private kokke til middage og fuld havepleje – med den diskretion, områdets beboere forventer. Vi dækker også Hørsholm og Vedbæk.',
+      body: 'Langs Rungsted Havn og Strandvejen leverer vi white-glove rengøring, vores private kok til middage og fuld havepleje – med den diskretion, områdets beboere forventer. Vi dækker også Hørsholm og Vedbæk.',
     },
     en: {
       intro: 'WiCare serves Rungsted and Rungsted Kyst with discreet home cleaning, private dining and garden care for Strandvejen villas and apartments.',
-      body: 'Along Rungsted Harbour and Strandvejen we provide white-glove cleaning, private chefs for dinners and full garden care — with the discretion residents expect. We also cover Hørsholm and Vedbæk.',
+      body: 'Along Rungsted Harbour and Strandvejen we provide white-glove cleaning, our private chef for dinners and full garden care — with the discretion residents expect. We also cover Hørsholm and Vedbæk.',
     },
   },
   {
@@ -327,11 +327,11 @@ export const areas: Area[] = [
     nearby: ['birkeroed', 'hoersholm'],
     da: {
       intro: 'WiCare betjener Allerød og Lillerød med diskret hjemmerengøring, privat madlavning og havepleje til villaer og større grunde.',
-      body: 'Allerøds villaer og landejendomme ligger tæt på skov og sø – og kræver en partner, der kan tage sig af både hus og have. Vi samler rengøring, handyman-opgaver og havearbejde i én fast aftale. Birkerød og Hørsholm betjenes også.',
+      body: 'Allerøds villaer og landejendomme ligger tæt på skov og sø – og kræver en partner, der kan tage sig af både hus og have. Vi samler rengøring, havearbejde og byggeopgaver i én fast aftale. Birkerød og Hørsholm betjenes også.',
     },
     en: {
       intro: 'WiCare serves Allerød and Lillerød with discreet home cleaning, private dining and garden care for villas and larger plots.',
-      body: 'Allerød’s villas and country properties sit close to forest and lakes — and need a partner who can look after both house and garden. We combine cleaning, handyman work and gardening into one standing agreement. Birkerød and Hørsholm are served too.',
+      body: 'Allerød’s villas and country properties sit close to forest and lakes — and need a partner who can look after both house and garden. We combine cleaning, gardening and construction work into one standing agreement. Birkerød and Hørsholm are served too.',
     },
   },
 ];

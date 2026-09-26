@@ -19,7 +19,7 @@ export const posts: BlogPost[] = [
   {
     slug: "choosing-luxury-home-cleaning-north-copenhagen",
     date: "2026-02-04",
-    category: "Home Cleaning",
+    category: "Cleaning",
     readingMins: 5,
     en: {
       title: "How to Choose a Trusted Luxury Home Cleaning Service in North Copenhagen",
@@ -32,7 +32,7 @@ export const posts: BlogPost[] = [
         { h: "Respect for your belongings", p: "A professional team treats your home with care and will ask you to secure cash, jewellery and valuables before each visit. That honesty is a sign of a well-run business, not a red flag." },
         { h: "Reliability you can feel", p: "Punctuality, a quick response time, and the same standard on every visit are what separate a luxury service from an ordinary one. Ask about response times and how scheduling is handled." },
       ],
-      cta: "Home Cleaning provides discreet, white-glove home cleaning across the northern suburbs of Copenhagen. Call us to arrange a consultation.",
+      cta: "WiCare provides discreet, white-glove cleaning for homes and businesses across the northern suburbs of Copenhagen. Call us to arrange a no-obligation visit.",
     },
     da: {
       title: "Sådan vælger du en betroet luksusrengøring nord for København",
@@ -63,7 +63,7 @@ export const posts: BlogPost[] = [
         { h: "Consider wine and flow", p: "Great food deserves thoughtful pairing and pacing. Discuss whether you would like wine suggestions, how many courses suit the evening, and when you would like to be at the table versus mingling." },
         { h: "Let them handle the rest", p: "A professional chef brings the ingredients, cooks in your kitchen, serves each course, and leaves the kitchen spotless. Your only job is to enjoy the evening with your guests." },
       ],
-      cta: "Private Dining & Catering brings professional private dining and catering to homes across North Copenhagen. Call us to plan your evening.",
+      cta: "Our chef, with 13+ years of experience including Michelin-starred restaurants and the Danish Parliament, brings private dining and catering to your home. Call us to plan your evening.",
     },
     da: {
       title: "Lej en privat kok til middagsselskabet i Hellerup og Gentofte",
@@ -75,13 +75,13 @@ export const posts: BlogPost[] = [
         { h: "Overvej vin og forløb", p: "God mad fortjener gennemtænkt parring og tempo. Tal om, hvorvidt du ønsker vinforslag, hvor mange retter der passer til aftenen, og hvornår du vil sidde til bords kontra mingle." },
         { h: "Lad dem klare resten", p: "En professionel kok medbringer råvarerne, laver mad i dit køkken, serverer hver ret og efterlader køkkenet skinnende rent. Din eneste opgave er at nyde aftenen med dine gæster." },
       ],
-      cta: "Med privat madlavning & catering bringer WiCare fine dining og catering hjem til dig i hele Københavns nordlige forstæder. Ring til os for at planlægge din aften.",
+      cta: "Vores kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget, bringer fine dining og catering hjem til dig. Ring til os for at planlægge din aften.",
     },
   },
   {
     slug: "strandvej-villa-maintenance-checklist",
     date: "2026-03-03",
-    category: "Property & Garden Care",
+    category: "Garden & Construction",
     readingMins: 5,
     en: {
       title: "The Strandvej Villa Maintenance Checklist",
@@ -89,11 +89,11 @@ export const posts: BlogPost[] = [
       intro: "A beautiful home stays beautiful through steady, well-planned care. Use this seasonal checklist to keep a villa along the Strandvej coast in its best condition, with one trusted partner handling the details.",
       sections: [
         { h: "Spring: reset the garden", p: "As the season turns, prune, plant and tidy the garden, clear winter debris, and prepare terraces and outdoor furniture for the lighter months. Early attention sets up the whole year." },
-        { h: "Summer: protect and maintain", p: "Keep planting watered, lawns trimmed, and exterior surfaces clean. It is also the right time for small construction and handyman projects while the weather cooperates." },
+        { h: "Summer: protect and maintain", p: "Keep planting watered, lawns trimmed, and exterior surfaces clean. It is also the right time for construction projects while the weather cooperates." },
         { h: "Autumn: prepare for weather", p: "Clear gutters, check drainage, and service anything that will face the colder months. A little maintenance now prevents costly surprises later." },
-        { h: "Winter: keep things running", p: "Indoor plant care, regular home checks, and quick handyman fixes keep the home comfortable and cared for, even when you are travelling." },
+        { h: "Winter: keep things running", p: "Regular checks of the roof, gutters and outdoor areas, and quick repairs when needed, keep the property in good shape through the darkest months." },
       ],
-      cta: "Property & Garden Care handles gardening, construction, handyman work, dog walking and watering plants across North Copenhagen. Call us to plan your property care.",
+      cta: "WiCare handles garden work, landscaping and construction projects across the northern suburbs of Copenhagen, with scope and price agreed with you. Call us to plan your project.",
     },
     da: {
       title: "Vedligeholdelsestjeklisten til Strandvejsvillaen",
@@ -101,17 +101,17 @@ export const posts: BlogPost[] = [
       intro: "Et smukt hjem forbliver smukt gennem stabil, velplanlagt pleje. Brug denne sæsonbestemte tjekliste til at holde en villa langs Strandvejen i bedste stand, med én betroet partner til detaljerne.",
       sections: [
         { h: "Forår: nulstil haven", p: "Når sæsonen skifter, beskær, plant og ryd op i haven, fjern vinterens efterladenskaber, og gør terrasser og havemøbler klar til de lysere måneder. Tidlig opmærksomhed sætter hele året op." },
-        { h: "Sommer: beskyt og vedligehold", p: "Hold beplantning vandet, græsplæner klippet og udvendige overflader rene. Det er også det rette tidspunkt til mindre bygge- og handyman-projekter, mens vejret er med dig." },
+        { h: "Sommer: beskyt og vedligehold", p: "Hold beplantning vandet, græsplæner klippet og udvendige overflader rene. Det er også det rette tidspunkt til byggeprojekter, mens vejret er med dig." },
         { h: "Efterår: forbered til vejret", p: "Rens tagrender, tjek afvanding, og servicér alt, der skal stå over for de koldere måneder. Lidt vedligeholdelse nu forhindrer dyre overraskelser senere." },
-        { h: "Vinter: hold tingene kørende", p: "Pasning af indendørs planter, regelmæssige hjemtjek og hurtige handyman-reparationer holder hjemmet komfortabelt og passet, også når du er på rejse." },
+        { h: "Vinter: hold tingene kørende", p: "Regelmæssige tjek af tag, tagrender og udearealer og hurtige reparationer efter behov holder ejendommen i god stand gennem de mørkeste måneder." },
       ],
-      cta: "WiCare klarer havearbejde, byggeri, handyman-arbejde, hundeluftning og vanding af planter i hele Københavns nordlige forstæder. Ring til os for at planlægge din ejendomspleje.",
+      cta: "WiCare klarer havearbejde, anlæg og byggeprojekter i hele Københavns nordlige forstæder – omfang og pris aftales med dig. Ring til os for at planlægge dit projekt.",
     },
   },
   {
     slug: "what-to-expect-white-glove-cleaning",
     date: "2026-03-17",
-    category: "Home Cleaning",
+    category: "Cleaning",
     readingMins: 4,
     en: {
       title: "What to Expect from a White-Glove Cleaning Service",
@@ -123,7 +123,7 @@ export const posts: BlogPost[] = [
         { h: "A team that knows your home", p: "Because the same vetted team returns each time, they learn your preferences, your materials, and the small things that make your home yours." },
         { h: "Quietly thorough", p: "The best service is discreet and unobtrusive. You should feel the result without ever feeling the disruption." },
       ],
-      cta: "Experience the Home Cleaning standard in your home across North Copenhagen. Call us to arrange a visit.",
+      cta: "Experience the WiCare white-glove standard in your home or business. Call us to arrange a visit.",
     },
     da: {
       title: "Hvad du kan forvente af en white-glove rengøringsservice",
@@ -153,7 +153,7 @@ export const posts: BlogPost[] = [
         { h: "Let the kitchen be handled", p: "When a private chef takes care of the menu, cooking and service, you are free to host rather than disappear into the kitchen between courses." },
         { h: "End unhurried", p: "Leave room after the meal for coffee, conversation and a relaxed close. The goal is an evening your guests remember, not a schedule to keep." },
       ],
-      cta: "Private Dining & Catering handles the menu, cooking and cleanup so you can simply host. Call us to plan your dinner in North Copenhagen.",
+      cta: "Our chef handles the menu, cooking and cleanup so you can simply host. Call us to plan your dinner.",
     },
     da: {
       title: "Sådan er du vært for en intim privat middag derhjemme",
@@ -165,13 +165,13 @@ export const posts: BlogPost[] = [
         { h: "Lad køkkenet blive klaret", p: "Når en privat kok tager sig af menu, madlavning og servering, er du fri til at være vært frem for at forsvinde ud i køkkenet mellem retterne." },
         { h: "Slut i ro", p: "Giv plads efter måltidet til kaffe, samtale og en afslappet afslutning. Målet er en aften, dine gæster husker, ikke en tidsplan, der skal holdes." },
       ],
-      cta: "Med privat madlavning & catering klarer WiCare menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag.",
+      cta: "Vores kok klarer menu, madlavning og oprydning, så du blot kan være vært. Ring til os for at planlægge din middag.",
     },
   },
   {
     slug: "preparing-your-home-for-a-cleaning-visit",
     date: "2026-04-14",
-    category: "Home Cleaning",
+    category: "Cleaning",
     readingMins: 4,
     en: {
       title: "Preparing Your Home for a Cleaning Visit",
@@ -183,7 +183,7 @@ export const posts: BlogPost[] = [
         { h: "Share your priorities", p: "If certain rooms or details matter most this week, say so. A dedicated team adapts each visit to what your home needs right now." },
         { h: "Leave access clear", p: "Agree in advance how the team will enter and which areas are in scope, so the visit runs smoothly from the first minute." },
       ],
-      cta: "Home Cleaning makes every visit discreet, careful and tailored to your home. Call us to arrange your cleaning in North Copenhagen.",
+      cta: "WiCare makes every cleaning visit discreet, careful and tailored to your home. Call us to arrange your cleaning.",
     },
     da: {
       title: "Sådan forbereder du dit hjem til et rengøringsbesøg",
@@ -196,36 +196,6 @@ export const posts: BlogPost[] = [
         { h: "Sørg for fri adgang", p: "Aftal på forhånd, hvordan teamet kommer ind, og hvilke områder der er omfattet, så besøget forløber gnidningsfrit fra første minut." },
       ],
       cta: "WiCares hjemmerengøring gør hvert besøg diskret, omhyggeligt og tilpasset dit hjem. Ring til os for at aftale din rengøring.",
-    },
-  },
-  {
-    slug: "property-care-while-you-travel",
-    date: "2026-04-28",
-    category: "Property & Garden Care",
-    readingMins: 4,
-    en: {
-      title: "Property Care While You Travel: Plants, Pets and Home Checks",
-      description: "How to keep your home cared for while you are away, from watering plants to dog walking and regular checks.",
-      intro: "Travel is easier when you know your home is in good hands. The right support keeps everything cared for while you are away, so you return to a home exactly as you left it.",
-      sections: [
-        { h: "Watering and tending plants", p: "Indoor and outdoor planting needs steady attention. Regular watering and care keep your greenery healthy through long absences." },
-        { h: "Dog walking and routine", p: "Pets do best with routine. Reliable dog walking, with photo updates while you are away, keeps your companion happy and your mind at ease." },
-        { h: "Regular home checks", p: "Periodic checks catch small issues, such as a leak or a fault, before they become real problems, and keep the home aired and ready." },
-        { h: "One point of contact", p: "Having a single trusted partner manage it all means fewer keys, fewer strangers, and one number to call if anything is needed." },
-      ],
-      cta: "Property & Garden Care keeps your home cared for while you travel across North Copenhagen. Call us to arrange support.",
-    },
-    da: {
-      title: "Ejendomspleje, mens du rejser: planter, kæledyr og hjemtjek",
-      description: "Sådan holder du dit hjem passet, mens du er væk, fra vanding af planter til hundeluftning og regelmæssige tjek.",
-      intro: "Rejser er lettere, når du ved, at dit hjem er i gode hænder. Den rette støtte holder alt passet, mens du er væk, så du vender hjem til et hjem præcis, som du forlod det.",
-      sections: [
-        { h: "Vanding og pasning af planter", p: "Inde- og udeplanter kræver stabil opmærksomhed. Regelmæssig vanding og pleje holder dit grønne sundt gennem lange fravær." },
-        { h: "Hundeluftning og rutine", p: "Kæledyr trives bedst med rutine. Pålidelig hundeluftning, med fotoopdateringer mens du er væk, holder din ven glad og dit sind roligt." },
-        { h: "Regelmæssige hjemtjek", p: "Periodiske tjek fanger små problemer, som en lækage eller en fejl, før de bliver til rigtige problemer, og holder hjemmet udluftet og klar." },
-        { h: "Ét kontaktpunkt", p: "At have én betroet partner til at styre det hele betyder færre nøgler, færre fremmede og ét nummer at ringe til, hvis der er behov for noget." },
-      ],
-      cta: "WiCare holder dit hjem passet, mens du rejser, i hele Københavns nordlige forstæder. Ring til os for at aftale hjælp.",
     },
   },
   {
@@ -266,8 +236,8 @@ export function getPost(slug: string) {
 
 // Danish labels for the (English) category keys shown on the blog.
 export const categoryDa: Record<string, string> = {
-  'Home Cleaning': 'Hjemmerengøring',
+  Cleaning: 'Rengøring',
   'Private Dining & Catering': 'Privat madlavning & catering',
-  'Property & Garden Care': 'Ejendoms- & havepleje',
+  'Garden & Construction': 'Have & byggeri',
   Guide: 'Guide',
 };
