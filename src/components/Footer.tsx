@@ -11,6 +11,7 @@ export default function Footer() {
   const quickLinks = [
     { href: '/services/the-table/', label: t.nav.chef },
     { href: '/firmacatering/', label: t.nav.catering },
+    { href: '/selskaber/', label: t.nav.parties },
     { href: '/julefrokost/', label: t.nav.xmas },
     { href: '/#additional', label: t.nav.other },
     { href: '/erhvervsrengoering/', label: t.nav.cleaningBiz },

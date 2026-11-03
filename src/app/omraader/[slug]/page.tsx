@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug);
   if (!area) return {};
   const title = `Privat kok & catering i ${area.name} | WiCare`;
-  const description = `Privat kok og catering i ${area.name} (${area.postal}) – private middage, firmaarrangementer og julefrokost ved en kok med 13+ års erfaring. Også rengøring og erhvervsrengøring. Ring +45 52 72 11 02.`;
+  const description = `Privat kok og catering i ${area.name} (${area.postal}) – private middage, fester, firmaarrangementer og julefrokost ved en kok med 13+ års erfaring. Også rengøring og erhvervsrengøring. Ring +45 52 72 11 02.`;
   return {
     title,
     description,
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       `kok ud af huset ${area.name}`,
       `firmacatering ${area.name}`,
       `julefrokost ${area.name}`,
+      `kok til fest ${area.name}`,
       `privat middag ${area.name}`,
       `rengøring ${area.name}`,
       `erhvervsrengøring ${area.name}`,
@@ -48,7 +49,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
   const url = `${siteUrl}/omraader/${area.slug}/`;
-  const serviceNames = ['Privat kok', 'Catering & firmacatering', 'Julefrokost', 'Rengøring & erhvervsrengøring', 'Have & byggeri'];
+  const serviceNames = ['Privat kok', 'Catering & firmacatering', 'Fester & selskaber', 'Julefrokost', 'Rengøring & erhvervsrengøring', 'Have & byggeri'];
 
   return (
     <>

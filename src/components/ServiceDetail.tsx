@@ -9,11 +9,13 @@ import ChefIntro from '@/components/ChefIntro';
 
 // Extra links shown on the private dining page (flagship) to the catering landing pages.
 const diningLinks = {
-  da: { heading: 'Også til virksomheder og højtider', items: [
+  da: { heading: 'Også til fester, virksomheder og højtider', items: [
+    { href: '/selskaber/', title: 'Fester & selskaber', desc: 'Fødselsdage, konfirmationer, bryllupper og havefester.' },
     { href: '/firmacatering/', title: 'Firmacatering', desc: 'Møder, frokoster, receptioner og kundearrangementer.' },
     { href: '/julefrokost/', title: 'Julefrokost', desc: 'Firmajulefrokost eller julefrokost derhjemme med privat kok.' },
   ] },
-  en: { heading: 'Also for businesses and the holidays', items: [
+  en: { heading: 'Also for parties, businesses and the holidays', items: [
+    { href: '/selskaber/', title: 'Parties & celebrations', desc: 'Birthdays, confirmations, weddings and garden parties.' },
     { href: '/firmacatering/', title: 'Corporate catering', desc: 'Meetings, lunches, receptions and client events.' },
     { href: '/julefrokost/', title: 'Christmas lunch', desc: 'A company or private Christmas lunch with a private chef.' },
   ] },
@@ -103,9 +105,9 @@ export default function ServiceDetail({ slug }: { slug: Slug }) {
 
         {slug === 'the-table' && (
           <section className="py-14">
-            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto px-6 lg:px-8">
               <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-8">{diningLinks[locale === 'da' ? 'da' : 'en'].heading}</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 {diningLinks[locale === 'da' ? 'da' : 'en'].items.map((l) => (
                   <Link key={l.href} href={l.href} className="group rounded-2xl border border-primary/10 p-7 hover:border-accent hover:shadow-lg transition-all">
                     <h3 className="font-serif text-xl text-primary font-semibold mb-2">{l.title}</h3>

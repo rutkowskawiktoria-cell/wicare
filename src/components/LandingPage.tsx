@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Phone, CheckCircle2, Building2, Home, Wine, Presentation, GlassWater, Handshake, TreePine } from 'lucide-react';
+import { Phone, CheckCircle2, Building2, Home, Wine, Presentation, GlassWater, Handshake, TreePine, Cake, Sparkles, Heart, Sun } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -9,7 +9,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { landings, type LandingKey } from '@/lib/landings';
 import { areas } from '@/lib/areas';
 
-// Shared layout for the catering landing pages (/julefrokost/, /firmacatering/). Copy lives in src/lib/landings.ts.
+// Shared layout for the catering landing pages (/julefrokost/, /firmacatering/, /selskaber/). Copy lives in src/lib/landings.ts.
 const visuals: Record<LandingKey, { img: string; alt: { da: string; en: string }; icons: React.ElementType[] }> = {
   julefrokost: {
     img: '/services/dining-event.webp',
@@ -20,6 +20,11 @@ const visuals: Record<LandingKey, { img: string; alt: { da: string; en: string }
     img: '/services/dining-spread.webp',
     alt: { da: 'Catering anrettet til et arrangement', en: 'Catering set up for an event' },
     icons: [Presentation, GlassWater, Handshake, TreePine],
+  },
+  selskaber: {
+    img: '/services/dining-seafood.webp',
+    alt: { da: 'Anrettede retter til en fest', en: 'Plated dishes for a celebration' },
+    icons: [Cake, Sparkles, Heart, Sun],
   },
 };
 
@@ -127,7 +132,7 @@ export default function LandingPage({ page }: { page: LandingKey }) {
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6 lg:px-8">
             <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold text-center mb-10">{c.moreHeading}</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className={`grid gap-6 ${c.more.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
               {c.more.map((m) => (
                 <Link key={m.href} href={m.href} className="group rounded-2xl border border-primary/10 p-7 hover:border-accent hover:shadow-lg transition-all">
                   <h3 className="font-serif text-xl text-primary font-semibold mb-2">{m.title}</h3>

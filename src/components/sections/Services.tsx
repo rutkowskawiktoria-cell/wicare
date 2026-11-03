@@ -8,7 +8,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 const diningMeta = [
   { href: '/services/the-table/', img: '/services/dining-event.webp' },
   { href: '/firmacatering/', img: '/services/dining-spread.webp' },
-  { href: '/julefrokost/', img: '/services/dining-seafood.webp' },
+  { href: '/selskaber/', img: '/services/dining-seafood.webp' },
 ];
 
 export default function Services() {

@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, Phone, MapPin, CheckCircle2, Building2, TreePine } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, Phone, MapPin, CheckCircle2, Building2, PartyPopper } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -12,7 +12,7 @@ import ChefIntro from '@/components/ChefIntro';
 const diningCards = [
   { href: '/services/the-table/', Icon: ChefHat, da: 'Private middage', en: 'Private dinners' },
   { href: '/firmacatering/', Icon: Building2, da: 'Firmacatering', en: 'Corporate catering' },
-  { href: '/julefrokost/', Icon: TreePine, da: 'Julefrokost', en: 'Christmas lunch' },
+  { href: '/selskaber/', Icon: PartyPopper, da: 'Fester & selskaber', en: 'Parties & celebrations' },
 ];
 const extraCards = [
   { href: '/services/the-home/', Icon: Sparkles, da: 'Rengøring – hjem & erhverv', en: 'Cleaning – Homes & Businesses' },

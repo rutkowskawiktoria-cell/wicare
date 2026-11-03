@@ -32,21 +32,21 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
   title: "WiCare | Privat kok & catering nord for København",
-  description: "Privat kok og catering til private middage, firmaarrangementer og julefrokost nord for København. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget. Ring +45 52 72 11 02.",
-  keywords: ["privat kok", "privat kok København", "privat kok Hellerup", "privat kok Gentofte", "privat kok Rudersdal", "catering nord for København", "catering Hellerup", "firmacatering", "julefrokost catering", "kok ud af huset", "privat middag", "fine dining hjemme", "WiCare"],
+  description: "Privat kok og catering til private middage, fester, firmaarrangementer og julefrokost nord for København. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget. Ring +45 52 72 11 02.",
+  keywords: ["privat kok", "privat kok København", "privat kok Hellerup", "privat kok Gentofte", "privat kok Rudersdal", "catering nord for København", "catering Hellerup", "firmacatering", "julefrokost catering", "kok til fest", "catering til fest", "kok ud af huset", "privat middag", "fine dining hjemme", "WiCare"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
     title: "WiCare | Privat kok & catering nord for København",
-    description: "Privat kok og catering til middage, firmaarrangementer og julefrokost i Hellerup, Gentofte, Lyngby, Rudersdal og Hørsholm. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget.",
+    description: "Privat kok og catering til middage, fester, firmaarrangementer og julefrokost i Hellerup, Gentofte, Lyngby, Rudersdal og Hørsholm. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget.",
     url: siteUrl,
     images: [{ url: "/og-chef.jpg", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "WiCare | Privat kok & catering nord for København",
-    description: "Privat kok og catering til middage, firmaarrangementer og julefrokost nord for København.",
+    description: "Privat kok og catering til middage, fester, firmaarrangementer og julefrokost nord for København.",
     images: ["/og-chef.jpg"],
   },
   robots: { index: true, follow: true },
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               image: `${siteUrl}/og-chef.jpg`,
               priceRange: "$$$",
               slogan: "Discretion. Precision. Trust.",
-              description: "Private chef and catering north of Copenhagen: private dinners, corporate catering and Christmas lunches by a chef with 13+ years of experience, including Michelin-starred restaurants and the Danish Parliament. Also cleaning for homes and businesses and garden & construction work.",
+              description: "Private chef and catering north of Copenhagen: private dinners, parties and celebrations, corporate catering and Christmas lunches by a chef with 13+ years of experience, including Michelin-starred restaurants and the Danish Parliament. Also cleaning for homes and businesses and garden & construction work.",
               address: { "@type": "PostalAddress", addressLocality: "Hellerup", addressRegion: "Capital Region of Denmark", addressCountry: "DK" },
               geo: { "@type": "GeoCoordinates", latitude: 55.7320, longitude: 12.5640 },
               areaServed: [
