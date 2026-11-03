@@ -25,8 +25,9 @@ def enc(src, dst, width=None, quality=62, keep_top=None):
 
 # Standard set: (source filename in PHOTO_DIR, dest under public/, width, quality[, keep_top])
 STANDARD = [
-    ("hero2.png",     "public/hero-bg.webp",              1280, 50),  # desktop LCP hero
-    ("hero2.png",     "public/hero-bg-sm.webp",            768, 55),  # mobile hero (srcset)
+    ("chef2.png",     "public/hero-chef.webp",            1280, 52),  # desktop LCP hero (private chef plating, Nov 2026)
+    ("chef2.png",     "public/hero-chef-sm.webp",          768, 56),  # mobile hero (srcset)
+    ("hero2.png",     "public/hero-bg.webp",              1280, 50),  # old villa hero (unused since Nov 2026)
     ("cleaning.png",  "public/services/home.webp",         900, 58),
     ("chef.png",      "public/services/dining.webp",       900, 58),
     ("garden3.png",   "public/services/garden.webp",       900, 58),

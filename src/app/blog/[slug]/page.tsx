@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             inLanguage: 'da',
             url: `${siteUrl}/blog/${post.slug}/`,
             mainEntityOfPage: `${siteUrl}/blog/${post.slug}/`,
-            image: `${siteUrl}/og-image.png`,
+            image: `${siteUrl}/og-chef.jpg`,
             author: { '@type': 'Organization', name: 'WiCare ApS' },
             publisher: {
               '@type': 'Organization',

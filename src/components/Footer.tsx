@@ -9,10 +9,11 @@ export default function Footer() {
   const { t } = useLanguage();
   const link = 'text-white/80 hover:text-accent transition-colors';
   const quickLinks = [
-    { href: '/#services', label: t.nav.services },
-    { href: '/erhvervsrengoering/', label: t.nav.business },
+    { href: '/services/the-table/', label: t.nav.chef },
     { href: '/firmacatering/', label: t.nav.catering },
     { href: '/julefrokost/', label: t.nav.xmas },
+    { href: '/#additional', label: t.nav.other },
+    { href: '/erhvervsrengoering/', label: t.nav.cleaningBiz },
     { href: '/blog/', label: t.blog.nav },
     { href: '/careers/', label: t.careers.nav },
     { href: '/faq/', label: t.faq.nav },

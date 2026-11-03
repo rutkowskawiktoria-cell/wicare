@@ -10,22 +10,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const area = getArea(slug);
   if (!area) return {};
-  const title = `Rengøring & erhvervsrengøring i ${area.name} | WiCare ApS`;
-  const description = `Privat kok & catering, hjemme- og erhvervsrengøring samt have & byggeri i ${area.name} (${area.postal}). Diskret, baggrundstjekket service. Ring +45 52 72 11 02.`;
+  const title = `Privat kok & catering i ${area.name} | WiCare`;
+  const description = `Privat kok og catering i ${area.name} (${area.postal}) – private middage, firmaarrangementer og julefrokost ved en kok med 13+ års erfaring. Også rengøring og erhvervsrengøring. Ring +45 52 72 11 02.`;
   return {
     title,
     description,
     keywords: [
-      `rengøring ${area.name}`,
-      `erhvervsrengøring ${area.name}`,
-      `kontorrengøring ${area.name}`,
-      `privat rengøring ${area.name}`,
-      `hjemmerengøring ${area.name}`,
-      `rengøringsfirma ${area.name}`,
       `privat kok ${area.name}`,
       `catering ${area.name}`,
+      `kok ud af huset ${area.name}`,
+      `firmacatering ${area.name}`,
+      `julefrokost ${area.name}`,
+      `privat middag ${area.name}`,
+      `rengøring ${area.name}`,
+      `erhvervsrengøring ${area.name}`,
       `havepleje ${area.name}`,
-      `byggeri ${area.name}`,
       'nord for København',
       'WiCare ApS',
     ],
@@ -37,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'WiCare ApS',
       locale: 'da_DK',
       type: 'website',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WiCare ApS' }],
+      images: [{ url: '/og-chef.jpg', width: 1200, height: 630, alt: 'WiCare ApS' }],
     },
   };
 }
@@ -49,7 +48,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
   const url = `${siteUrl}/omraader/${area.slug}/`;
-  const serviceNames = ['Privat madlavning & catering', 'Hjemmerengøring', 'Erhvervsrengøring & kontorrengøring', 'Have & byggeri'];
+  const serviceNames = ['Privat kok', 'Catering & firmacatering', 'Julefrokost', 'Rengøring & erhvervsrengøring', 'Have & byggeri'];
 
   return (
     <>
@@ -64,7 +63,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             url,
             telephone: '+4552721102',
             email: 'hello@wicare.vip',
-            image: `${siteUrl}/og-image.png`,
+            image: `${siteUrl}/og-chef.jpg`,
             priceRange: '$$$',
             areaServed: { '@type': 'City', name: area.name, postalCode: area.postal, addressCountry: 'DK' },
             address: { '@type': 'PostalAddress', addressLocality: area.name, postalCode: area.postal, addressRegion: 'Hovedstaden', addressCountry: 'DK' },

@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/erhvervsrengoering/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/erhvervsrengoering/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/firmacatering/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/julefrokost/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/blog/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/services/${s.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
-    priority: 0.8,
+    priority: s.slug === 'the-table' ? 0.95 : 0.6, // private dining is the main business
   }));
   const blogPages: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${baseUrl}/blog/${p.slug}/`,

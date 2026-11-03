@@ -18,8 +18,8 @@ export default function Hero() {
   return (
     <section id="booking" className="relative min-h-screen flex items-start sm:items-center justify-center overflow-hidden pt-28 sm:pt-24 lg:pt-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/hero-bg.webp" srcSet="/hero-bg-sm.webp 768w, /hero-bg.webp 1280w" sizes="100vw" alt="" aria-hidden="true" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1280} height={714} />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/35 to-primary/70" />
+      <img src="/hero-chef.webp" srcSet="/hero-chef-sm.webp 768w, /hero-chef.webp 1280w" sizes="100vw" alt="" aria-hidden="true" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1280} height={714} />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/55 via-primary/45 to-primary/75" />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
         <div className="inline-flex items-center gap-2 max-w-[88vw] bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-5 py-2 mb-8">

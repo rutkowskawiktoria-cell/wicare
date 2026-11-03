@@ -8,10 +8,11 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 export default function Navbar() {
   const { t } = useLanguage();
   const navLinks = [
-    { label: t.nav.services, href: '/#services' },
+    // Private chef & catering is the main business (Nov 2026); other services sit under "Øvrige services".
+    { label: t.nav.chef, href: '/services/the-table/' },
+    { label: t.nav.catering, href: '/firmacatering/' },
     { label: t.nav.xmas, href: '/julefrokost/' }, // seasonal: remove in January
-    { label: t.nav.business, href: '/erhvervsrengoering/' },
-    { label: t.blog.nav, href: '/blog/' },
+    { label: t.nav.other, href: '/#additional' },
     { label: t.nav.contact, href: '/#book' },
   ];
   const [scrolled, setScrolled] = useState(false);

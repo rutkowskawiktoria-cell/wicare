@@ -1,44 +1,45 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, ExternalLink } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-const serviceMeta = [
-  // Private dining & catering is the flagship (Sept 2026) — shown first and highlighted.
-  { slug: 'the-table', icon: ChefHat, img: '/services/dining.webp', card: 1, highlight: true },
-  { slug: 'the-home', icon: Sparkles, img: '/services/home.webp', card: 0 },
-  { slug: 'the-estate', icon: Wrench, img: '/services/garden.webp', card: 2 },
+// Main offer (Nov 2026): WiCare is first and foremost a private chef & catering business.
+// Three dining offers with real event photos; cleaning + garden live in ExtraServices.tsx.
+const diningMeta = [
+  { href: '/services/the-table/', img: '/services/dining-event.webp' },
+  { href: '/firmacatering/', img: '/services/dining-spread.webp' },
+  { href: '/julefrokost/', img: '/services/dining-seafood.webp' },
 ];
 
 export default function Services() {
   const { t } = useLanguage();
-  const services = serviceMeta.map((s) => ({ ...s, title: t.services.cards[s.card].subtitle, desc: t.services.cards[s.card].desc }));
+  const s = t.services;
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{t.services.sectionBadge}</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{t.services.heading}</h2>
+        <div className="text-center mb-14 max-w-3xl mx-auto">
+          <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{s.sectionBadge}</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold">{s.heading}</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mt-5">{s.subheading}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map(({ slug, icon: Icon, img, title, desc, highlight }) => (
-            <Link key={title} href={`/services/${slug}`} className={`group relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${highlight ? 'bg-primary text-white shadow-xl' : 'bg-light text-primary shadow-md hover:shadow-xl'}`}>
-              <div className="relative h-52 overflow-hidden">
+          {s.dining.map((d, i) => (
+            <Link
+              key={d.title}
+              href={diningMeta[i].href}
+              className={`group relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${i === 0 ? 'bg-primary text-white shadow-xl' : 'bg-light text-primary shadow-md'}`}
+            >
+              <div className="relative h-64 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img} alt={title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={520} />
+                <img src={diningMeta[i].img} alt={d.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width={800} height={600} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                {highlight && <div className="absolute top-4 right-4 bg-accent text-primary text-xs font-semibold px-3 py-1 rounded-full">{t.services.flagship}</div>}
-                <div className="absolute bottom-3 left-4 w-11 h-11 rounded-xl bg-primary/85 backdrop-blur-sm flex items-center justify-center">
-                  <Icon size={22} className="text-accent" />
-                </div>
               </div>
-
               <div className="p-8 flex flex-col flex-1">
-                <h3 className={`font-serif text-2xl font-semibold mb-3 ${highlight ? 'text-white' : 'text-primary'}`}>{title}</h3>
-                <p className={`text-base leading-relaxed mb-6 break-words hyphens-auto whitespace-pre-line flex-1 ${highlight ? 'text-white/85' : 'text-gray-600'}`}>{desc}</p>
-                <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider group-hover:underline ${highlight ? 'text-accent' : 'text-accent-dark'}`}>
-                  {t.services.learnMore} <ExternalLink size={12} />
+                <h3 className={`font-serif text-2xl font-semibold mb-3 ${i === 0 ? 'text-white' : 'text-primary'}`}>{d.title}</h3>
+                <p className={`text-base leading-relaxed mb-6 flex-1 ${i === 0 ? 'text-white/85' : 'text-gray-600'}`}>{d.desc}</p>
+                <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider group-hover:gap-2.5 transition-all ${i === 0 ? 'text-accent' : 'text-accent-dark'}`}>
+                  {s.learnMore} <ArrowRight size={14} />
                 </span>
               </div>
             </Link>

@@ -24,7 +24,7 @@ export const services: Service[] = [
     name: 'Private Dining & Catering',
     subtitle: '',
     description: 'Private dinners, exclusive events and corporate catering by our chef, with 13+ years of experience including Michelin-starred restaurants and the Danish Parliament. Northern suburbs of Copenhagen.',
-    longDescription: 'Private Dining & Catering is our flagship service. Our chef brings more than 13 years of experience, including Michelin-starred restaurants and the Danish Parliament, directly to your home or business. Whether it is an intimate dinner for two, a boardroom lunch, or a grand celebration, every dish is crafted with precision, creativity, and world-class technique.',
+    longDescription: 'Private dining & catering is the heart of WiCare. Our chef brings more than 13 years of experience, including Michelin-starred restaurants and the Danish Parliament, directly to your home or business. Whether it is an intimate dinner for two, a boardroom lunch, or a grand celebration, every dish is crafted with precision, creativity, and world-class technique.',
     features: ['Private chef dining', 'Corporate catering', 'Michelin experience', 'Bespoke menus', 'Wine pairing', 'Event planning'],
     details: ['13+ years of experience, including Michelin-starred restaurants and the Danish Parliament', 'Custom menu design for every occasion', 'Ingredient sourcing from premium Danish purveyors', 'Seamless setup, service, and cleanup'],
     highlight: true,

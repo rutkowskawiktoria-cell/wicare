@@ -13,7 +13,7 @@ export default function Booking() {
     <section id="book" className="py-16 md:py-24 bg-light">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div id="contact" className="scroll-mt-24 text-center lg:text-left">
-          <h2 className="font-serif text-4xl md:text-5xl text-primary font-semibold mb-4">{b.heading}</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-primary font-semibold mb-4 leading-tight">{b.heading}</h2>
           <p className="text-gray-600 text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0">{b.subheading}</p>
 
           <a

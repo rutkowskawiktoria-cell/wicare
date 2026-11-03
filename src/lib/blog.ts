@@ -237,7 +237,7 @@ export function getPost(slug: string) {
 // Danish labels for the (English) category keys shown on the blog.
 export const categoryDa: Record<string, string> = {
   Cleaning: 'Rengøring',
-  'Private Dining & Catering': 'Privat madlavning & catering',
+  'Private Dining & Catering': 'Privat kok & catering',
   'Garden & Construction': 'Have & byggeri',
   Guide: 'Guide',
 };

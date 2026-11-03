@@ -32,7 +32,7 @@ export const metadata = {
     siteName: 'WiCare ApS',
     locale: 'da_DK',
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WiCare ApS' }],
+    images: [{ url: '/og-chef.jpg', width: 1200, height: 630, alt: 'WiCare ApS' }],
   },
 };
 

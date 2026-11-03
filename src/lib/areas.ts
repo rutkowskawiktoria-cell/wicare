@@ -426,3 +426,88 @@ export const areaBusiness: Record<string, { da: string; en: string }> = {
     en: 'We handle commercial cleaning in Allerød for offices, clinics and companies in the business districts and the town centre. Dedicated teams, fixed times and no surprises.',
   },
 };
+
+// Private chef & catering intro per town (Nov 2026 — dining is the main business). Unique per town
+// to avoid duplicate content across the area pages; shown first on /omraader/[slug].
+export const areaDining: Record<string, { da: string; en: string }> = {
+  hellerup: {
+    da: 'Privat kok i Hellerup: vi laver middagen hjemme hos dig – fra en intim aften i lejligheden ved Tuborg Havn til selskabet i villaen på Strandvejen. Menuen sammensættes efter jeres smag, og vi rydder op bagefter.',
+    en: 'Private chef in Hellerup: we cook dinner in your home – from an intimate evening in an apartment by Tuborg Harbour to a party in a villa on Strandvejen. The menu is designed around your taste, and we clean up afterwards.',
+  },
+  skovshoved: {
+    da: 'Middag med havudsigt i Skovshoved: vores kok laver fine dining i dit hjem tæt på havnen – til middagen for to eller fejringen med familie og venner.',
+    en: 'Dinner with a sea view in Skovshoved: our chef cooks fine dining in your home near the harbour – for a dinner for two or a celebration with family and friends.',
+  },
+  charlottenlund: {
+    da: 'Privat kok i Charlottenlund til middagsselskabet, fødselsdagen eller sommerfesten i villahaven nær Slotshaven. Vi sammensætter menuen med dig og klarer køkkenet fra start til slut.',
+    en: 'Private chef in Charlottenlund for your dinner party, birthday or summer party in a villa garden near the Palace Park. We design the menu with you and run the kitchen from start to finish.',
+  },
+  ordrup: {
+    da: 'I Ordrup laver vores kok middagen hjemme hos dig – til jubilæet, familiefesten eller aftenen med gode venner. Menu, vin og servering aftales efter jeres ønsker.',
+    en: 'In Ordrup our chef cooks dinner in your home – for an anniversary, a family party or an evening with good friends. Menu, wine and service are arranged to your wishes.',
+  },
+  klampenborg: {
+    da: 'Privat kok og catering i Klampenborg – til sommerfesten tæt på Bellevue, middagen i villaen eller arrangementet for jeres gæster. Vi laver maden på stedet og rydder op bagefter.',
+    en: 'Private chef and catering in Klampenborg – for a summer party near Bellevue, dinner in your villa or an event for your guests. We cook on site and clean up afterwards.',
+  },
+  gentofte: {
+    da: 'Privat kok og catering i Gentofte til private middage, konfirmationer og firmaarrangementer. Vores kok sammensætter menuen til anledningen – med hensyn til allergier og kostbehov.',
+    en: 'Private chef and catering in Gentofte for private dinners, confirmations and company events. Our chef designs the menu for the occasion – with care for allergies and dietary needs.',
+  },
+  jaegersborg: {
+    da: 'I Jægersborg kommer vores kok hjem til dig og laver middagen, så du kan være vært uden at stå i køkkenet. Til fødselsdage, familiefester og weekendens middagsselskab.',
+    en: 'In Jægersborg our chef comes to your home and cooks dinner, so you can host without standing in the kitchen. For birthdays, family parties and weekend dinner parties.',
+  },
+  'kongens-lyngby': {
+    da: 'Privat kok og firmacatering i Kongens Lyngby – fra middagen derhjemme ved Lyngby Sø til frokosten for virksomheden i byen. Menuen tilpasses anledningen og jeres gæster.',
+    en: 'Private chef and corporate catering in Kongens Lyngby – from dinner at home by Lyngby Lake to lunch for a company in town. The menu is adapted to the occasion and your guests.',
+  },
+  sorgenfri: {
+    da: 'I Sorgenfri laver vores kok fine dining hjemme hos dig – til havefesten, jubilæet eller den rolige middag for to. Vi klarer indkøb, madlavning og oprydning.',
+    en: 'In Sorgenfri our chef cooks fine dining in your home – for a garden party, an anniversary or a quiet dinner for two. We take care of the shopping, the cooking and the cleanup.',
+  },
+  virum: {
+    da: 'Privat kok i Virum til middagsselskaber og familiefester i villaen tæt på Furesøen. Vi sammensætter menuen med dig, laver maden på stedet og serverer efter aftale.',
+    en: 'Private chef in Virum for dinner parties and family celebrations in a villa near Lake Furesø. We design the menu with you, cook on site and serve by arrangement.',
+  },
+  taarbaek: {
+    da: 'En privat middag i Taarbæk mellem skov og vand: vores kok laver maden i dit hjem, så aftenen kan handle om dine gæster. Menu og vin efter jeres ønsker.',
+    en: 'A private dinner in Taarbæk between forest and sea: our chef cooks in your home, so the evening can be about your guests. Menu and wine to your wishes.',
+  },
+  holte: {
+    da: 'Privat kok og catering i Holte og Rudersdal – til middagen i villaen, sommerfesten i haven eller virksomhedens arrangement. Menu, omfang og pris aftales med dig.',
+    en: 'Private chef and catering in Holte and Rudersdal – for dinner in your villa, a summer party in the garden or a company event. Menu, scope and price are agreed with you.',
+  },
+  soelleroed: {
+    da: 'I Søllerød laver vores kok middagen hjemme hos dig – til jubilæet, familiefesten eller middagsselskabet. Menuen tilpasses anledningen og dine gæster.',
+    en: 'In Søllerød our chef cooks dinner in your home – for an anniversary, a family party or a dinner party. The menu is adapted to the occasion and your guests.',
+  },
+  naerum: {
+    da: 'Privat kok i Nærum til fødselsdage, familiefester og firmaets arrangementer. Vores kok laver maden på stedet og tager hensyn til allergier og kostbehov.',
+    en: 'Private chef in Nærum for birthdays, family parties and company events. Our chef cooks on site and caters for allergies and dietary needs.',
+  },
+  skodsborg: {
+    da: 'Fine dining hjemme i Skodsborg – mellem kysten og skoven laver vores kok middagen til dig og dine gæster. Vi klarer køkkenet, så du kan nyde aftenen.',
+    en: 'Fine dining at home in Skodsborg – between the coast and the forest, our chef cooks dinner for you and your guests. We run the kitchen so you can enjoy the evening.',
+  },
+  vedbaek: {
+    da: 'Privat kok i Vedbæk til middagen i strandvillaen, sommerfesten eller den store familiefest. Vi sammensætter menuen med dig og rydder op, når gæsterne er gået.',
+    en: 'Private chef in Vedbæk for dinner in a seaside villa, a summer party or a big family celebration. We design the menu with you and clean up when the guests have gone.',
+  },
+  birkeroed: {
+    da: 'Privat kok og catering i Birkerød – til middagen derhjemme, havefesten eller virksomhedens frokost. Menu og omfang aftales efter jeres ønsker.',
+    en: 'Private chef and catering in Birkerød – for dinner at home, a garden party or a company lunch. Menu and scope are arranged to your wishes.',
+  },
+  hoersholm: {
+    da: 'I Hørsholm laver vores kok maden hjemme hos dig eller i virksomheden – fra den intime middag til julefrokosten. Vin, servering og oprydning efter aftale.',
+    en: 'In Hørsholm our chef cooks at your home or your business – from an intimate dinner to the Christmas lunch. Wine, service and cleanup by arrangement.',
+  },
+  rungsted: {
+    da: 'Privat kok i Rungsted til middage med udsigt over Øresund, sommerfester og jubilæer. Vores kok laver fine dining i dit hjem og tilpasser menuen til dine gæster.',
+    en: 'Private chef in Rungsted for dinners overlooking the Øresund, summer parties and anniversaries. Our chef cooks fine dining in your home and adapts the menu to your guests.',
+  },
+  alleroed: {
+    da: 'Privat kok og catering i Allerød – til familiefesten, jubilæet eller firmaets arrangement. Vi laver maden på stedet, serverer efter aftale og rydder op bagefter.',
+    en: 'Private chef and catering in Allerød – for a family party, an anniversary or a company event. We cook on site, serve by arrangement and clean up afterwards.',
+  },
+};

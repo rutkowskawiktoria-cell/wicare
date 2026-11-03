@@ -31,23 +31,23 @@ import ContactTracking from '@/components/ContactTracking';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://wicare.vip";
 
 export const metadata: Metadata = {
-  title: "WiCare | Privat kok, catering, rengøring & have nord for København",
-  description: "Privat kok & catering, hjemme- og erhvervsrengøring samt have & byggeri til hjem og virksomheder nord for København: Hellerup, Gentofte, Lyngby, Rudersdal, Hørsholm m.fl. Ring +45 52 72 11 02.",
-  keywords: ["rengøring Hellerup", "hjemmerengøring Gentofte", "rengøringsfirma nord for København", "privat kok København", "catering Hellerup", "havepleje Rudersdal", "vinduespudsning Klampenborg", "erhvervsrengøring nord for København", "byggeri Hørsholm", "VIP rengøring Strandvejen", "rengøringshjælp Rungsted", "privat madlavning Vedbæk", "WiCare"],
+  title: "WiCare | Privat kok & catering nord for København",
+  description: "Privat kok og catering til private middage, firmaarrangementer og julefrokost nord for København. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget. Ring +45 52 72 11 02.",
+  keywords: ["privat kok", "privat kok København", "privat kok Hellerup", "privat kok Gentofte", "privat kok Rudersdal", "catering nord for København", "catering Hellerup", "firmacatering", "julefrokost catering", "kok ud af huset", "privat middag", "fine dining hjemme", "WiCare"],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "da_DK", alternateLocale: "en_DK", siteName: "WiCare ApS",
-    title: "WiCare | Privat kok, catering, rengøring & have nord for København",
-    description: "Privat kok & catering, VIP-rengøring og have & byggeri til hjem og virksomheder i Hellerup, Gentofte, Rudersdal og resten af Københavns nordlige forstæder.",
+    title: "WiCare | Privat kok & catering nord for København",
+    description: "Privat kok og catering til middage, firmaarrangementer og julefrokost i Hellerup, Gentofte, Lyngby, Rudersdal og Hørsholm. Kok med 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget.",
     url: siteUrl,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "WiCare ApS" }],
+    images: [{ url: "/og-chef.jpg", width: 1200, height: 630, alt: "WiCare ApS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WiCare | Privat kok, catering, rengøring & have",
-    description: "Diskret VIP hjem- og livsstilsservice i Københavns nordlige forstæder.",
-    images: ["/og-image.png"],
+    title: "WiCare | Privat kok & catering nord for København",
+    description: "Privat kok og catering til middage, firmaarrangementer og julefrokost nord for København.",
+    images: ["/og-chef.jpg"],
   },
   robots: { index: true, follow: true },
   icons: {
@@ -64,9 +64,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="preload"
           as="image"
-          href="/hero-bg.webp"
+          href="/hero-chef.webp"
           // @ts-expect-error responsive preload attributes
-          imagesrcset="/hero-bg-sm.webp 768w, /hero-bg.webp 1280w"
+          imagesrcset="/hero-chef-sm.webp 768w, /hero-chef.webp 1280w"
           imagesizes="100vw"
           fetchPriority="high"
         />
@@ -102,10 +102,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               name: "WiCare ApS",
               url: siteUrl,
               logo: `${siteUrl}/logo.png`,
-              image: `${siteUrl}/og-image.png`,
+              image: `${siteUrl}/og-chef.jpg`,
               priceRange: "$$$",
               slogan: "Discretion. Precision. Trust.",
-              description: "VIP home and lifestyle services for private homes and businesses across the northern suburbs of Copenhagen: private dining & catering, cleaning, and garden & construction work.",
+              description: "Private chef and catering north of Copenhagen: private dinners, corporate catering and Christmas lunches by a chef with 13+ years of experience, including Michelin-starred restaurants and the Danish Parliament. Also cleaning for homes and businesses and garden & construction work.",
               address: { "@type": "PostalAddress", addressLocality: "Hellerup", addressRegion: "Capital Region of Denmark", addressCountry: "DK" },
               geo: { "@type": "GeoCoordinates", latitude: 55.7320, longitude: 12.5640 },
               areaServed: [

@@ -1,16 +1,22 @@
 'use client';
 import Link from 'next/link';
-import { Sparkles, ChefHat, Wrench, Phone, MapPin, CheckCircle2 } from 'lucide-react';
+import { Sparkles, ChefHat, Wrench, Phone, MapPin, CheckCircle2, Building2, TreePine } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { getArea, areas, areaBusiness } from '@/lib/areas';
+import { getArea, areas, areaBusiness, areaDining } from '@/lib/areas';
+import ChefIntro from '@/components/ChefIntro';
 
-const serviceCards = [
-  { slug: 'the-table', Icon: ChefHat, da: 'Privat kok & catering', en: 'Private Chef & Catering' },
-  { slug: 'the-home', Icon: Sparkles, da: 'Rengøring – hjem & erhverv', en: 'Cleaning – Homes & Businesses' },
-  { slug: 'the-estate', Icon: Wrench, da: 'Have & byggeri', en: 'Garden & Construction' },
+// Private chef & catering is the main business (Nov 2026); cleaning + garden are additional services.
+const diningCards = [
+  { href: '/services/the-table/', Icon: ChefHat, da: 'Private middage', en: 'Private dinners' },
+  { href: '/firmacatering/', Icon: Building2, da: 'Firmacatering', en: 'Corporate catering' },
+  { href: '/julefrokost/', Icon: TreePine, da: 'Julefrokost', en: 'Christmas lunch' },
+];
+const extraCards = [
+  { href: '/services/the-home/', Icon: Sparkles, da: 'Rengøring – hjem & erhverv', en: 'Cleaning – Homes & Businesses' },
+  { href: '/services/the-estate/', Icon: Wrench, da: 'Have & byggeri', en: 'Garden & Construction' },
 ];
 
 export default function AreaLanding({ slug }: { slug: string }) {
@@ -23,37 +29,38 @@ export default function AreaLanding({ slug }: { slug: string }) {
   const wa = `https://wa.me/4552721102?text=${encodeURIComponent(t.floating.whatsappMsg)}`;
   const nearby = area.nearby.map(getArea).filter(Boolean);
   const biz = areaBusiness[area.slug]?.[locale === 'da' ? 'da' : 'en'];
+  const dining = areaDining[area.slug]?.[locale === 'da' ? 'da' : 'en'] ?? c.intro;
 
   const L = da
     ? {
-        h1a: 'Privat kok, rengøring & have i',
-        servicesHeading: 'Vores services i',
-        whyHeading: 'Hvorfor WiCare i',
-        ctaTitle: 'Klar til at komme i gang i',
-        ctaDesc: 'Ring til os i dag – så finder vi den rette løsning sammen.',
+        h1a: 'Privat kok & catering i',
+        servicesHeading: 'Til enhver anledning i',
+        whyHeading: 'Øvrige services i',
+        ctaTitle: 'Planlægger du en middag eller et arrangement i',
+        ctaDesc: 'Ring til os, så sammensætter vi en menu til din anledning.',
         learnMore: 'Læs mere',
         nearbyHeading: 'Vi betjener også',
         allAreas: 'Alle områder',
-        trust1: 'Baggrundstjekket personale',
-        trust2: 'Fleksibel planlægning',
-        trust3: 'Fast team & klare priser',
+        trust1: 'Kok med 13+ års erfaring',
+        trust2: 'Menu efter dine ønsker',
+        trust3: 'Også aftener og weekender',
         bizBadge: 'Erhverv',
         bizHeading: 'Erhvervsrengøring i',
         bizMore: 'Læs mere om erhvervsrengøring',
         bizItems: ['Kontorrengøring', 'Klinikker', 'Showroom & butik', 'Fællesarealer', 'Uden for åbningstid', 'Fast aftale'],
       }
     : {
-        h1a: 'Private Chef, Cleaning & Garden Care in',
-        servicesHeading: 'Our services in',
-        whyHeading: 'Why WiCare in',
-        ctaTitle: 'Ready to get started in',
-        ctaDesc: 'Call us today and we will find the right solution together.',
+        h1a: 'Private Chef & Catering in',
+        servicesHeading: 'For every occasion in',
+        whyHeading: 'Additional services in',
+        ctaTitle: 'Planning a dinner or an event in',
+        ctaDesc: 'Call us and we will put together a menu for your occasion.',
         learnMore: 'Learn more',
         nearbyHeading: 'We also serve',
         allAreas: 'All areas',
-        trust1: 'Background-checked staff',
-        trust2: 'Flexible scheduling',
-        trust3: 'Dedicated team & clear pricing',
+        trust1: 'Chef with 13+ years of experience',
+        trust2: 'Menu to your wishes',
+        trust3: 'Evenings and weekends too',
         bizBadge: 'Business',
         bizHeading: 'Commercial cleaning in',
         bizMore: 'More about commercial cleaning',
@@ -73,7 +80,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-5 leading-tight">
               {L.h1a} {area.name}
             </h1>
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">{c.intro}</p>
+            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">{dining}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="tel:+4552721102" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent-deep text-primary font-semibold px-7 py-4 rounded-2xl transition-all text-lg">
                 <Phone size={22} />+45 52 72 11 02
@@ -97,8 +104,8 @@ export default function AreaLanding({ slug }: { slug: string }) {
               {L.servicesHeading} {area.name}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {serviceCards.map(({ slug: s, Icon, da: nda, en: nen }) => (
-                <Link key={s} href={`/services/${s}/`} className="group bg-light rounded-2xl p-7 hover:shadow-lg transition-all">
+              {diningCards.map(({ href, Icon, da: nda, en: nen }) => (
+                <Link key={href} href={href} className="group bg-light rounded-2xl p-7 hover:shadow-lg transition-all">
                   <div className="w-14 h-14 rounded-2xl bg-accent/15 flex items-center justify-center mb-5">
                     <Icon size={28} className="text-accent-dark" />
                   </div>
@@ -112,19 +119,31 @@ export default function AreaLanding({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* Why / local body */}
-        <section className="py-14 bg-light">
+        <ChefIntro />
+
+        {/* Additional services (cleaning, garden & construction) — unique local copy */}
+        <section className="py-14">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-5">
               {L.whyHeading} {area.name}
             </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">{c.body}</p>
+            <p className="text-gray-700 text-lg leading-relaxed">{c.intro}</p>
+            <p className="text-gray-700 text-lg leading-relaxed mt-4">{c.body}</p>
+            <div className="grid sm:grid-cols-2 gap-4 mt-8 text-left">
+              {extraCards.map(({ href, Icon, da: nda, en: nen }) => (
+                <Link key={href} href={href} className="group flex items-center gap-3 rounded-xl border border-primary/10 px-5 py-4 hover:border-accent transition-colors">
+                  <Icon size={20} className="text-accent-dark shrink-0" />
+                  <span className="font-medium text-primary">{da ? nda : nen}</span>
+                  <span className="ml-auto text-accent-dark group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Erhvervsrengøring — commercial / office cleaning */}
         {biz && (
-          <section className="py-14">
+          <section className="py-14 bg-light">
             <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
               <p className="text-accent-dark text-xs tracking-widest uppercase font-semibold mb-3">{L.bizBadge}</p>
               <h2 className="font-serif text-2xl md:text-3xl text-primary font-semibold mb-5">
@@ -133,7 +152,7 @@ export default function AreaLanding({ slug }: { slug: string }) {
               <p className="text-gray-700 text-lg leading-relaxed mb-8">{biz}</p>
               <div className="flex flex-wrap items-center justify-center gap-3">
                 {L.bizItems.map((i) => (
-                  <span key={i} className="px-4 py-2 rounded-full bg-light text-primary text-sm font-medium">{i}</span>
+                  <span key={i} className="px-4 py-2 rounded-full bg-white text-primary text-sm font-medium">{i}</span>
                 ))}
               </div>
               <Link href="/erhvervsrengoering/" className="inline-block mt-8 text-accent-dark font-semibold hover:text-primary transition-colors">

@@ -5,12 +5,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wicare.vip';
 
 export const metadata = {
   title: 'Ofte stillede spørgsmål | WiCare ApS nord for København',
-  description: 'Svar på almindelige spørgsmål om WiCares VIP rengøring, private madlavning og havepleje i Hellerup, Gentofte, Rudersdal og Københavns nordlige forstæder.',
-  keywords: ['rengøring nord for København', 'privat kok Hellerup', 'havepleje Gentofte', 'WiCare ApS'],
+  description: 'Svar på spørgsmål om privat kok og catering nord for København: kokken, firmaarrangementer, julefrokost, allergier, områder og booking – samt rengøring og have & byggeri.',
+  keywords: ['privat kok spørgsmål', 'privat kok Hellerup', 'catering nord for København', 'julefrokost catering', 'WiCare ApS'],
   alternates: { canonical: '/faq/' },
   openGraph: {
     title: 'Ofte stillede spørgsmål | WiCare ApS',
-    description: 'Almindelige spørgsmål om WiCares VIP hjem- og livsstilsservice i Københavns nordlige forstæder.',
+    description: 'Spørgsmål og svar om WiCares private kok og catering nord for København.',
     url: '/faq/',
     siteName: 'WiCare ApS',
     locale: 'da_DK',
