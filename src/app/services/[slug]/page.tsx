@@ -14,9 +14,11 @@ const daMeta: Record<string, { title: string; description: string; keywords: str
     keywords: ['rengøring Hellerup', 'hjemmerengøring Gentofte', 'erhvervsrengøring nord for København', 'rengøringsfirma nord for København', 'vinduespudsning Klampenborg', 'rengøringshjælp Charlottenlund', 'VIP rengøring Strandvejen', 'WiCare ApS'],
   },
   'the-table': {
-    title: 'Privat kok & catering nord for København | WiCare ApS',
-    description: 'Privat madlavning og catering til middage, fejringer og firmafrokoster i Hellerup, Gentofte og omegn. Vores kok har 13+ års erfaring, bl.a. fra Michelin-restauranter og Folketinget. Skræddersyede menuer. Ring +45 52 72 11 02.',
-    keywords: ['privat kok København', 'privat kok Hellerup', 'catering Gentofte', 'privat madlavning Rudersdal', 'firmacatering nord for København', 'middagsselskab kok Vedbæk', 'WiCare ApS'],
+    // Kept distinct from the homepage title ("WiCare | Privat kok & catering nord for København") so the
+    // two pages don't compete for the same query: this page = the private dinner at home.
+    title: 'Privat kok til middagen derhjemme | Private middage | WiCare',
+    description: 'Privat kok til middagen hjemme hos dig i Hellerup, Gentofte og omegn. Vores kok har 13+ års erfaring, bl.a. fra Michelin-restauranter og som souschef i Folketinget. Ring +45 52 72 11 02.',
+    keywords: ['privat kok middag derhjemme', 'privat kok København', 'privat kok Hellerup', 'privat kok Gentofte', 'privat kok Rudersdal', 'kok til middag', 'middagsselskab kok Vedbæk', 'fine dining hjemme', 'WiCare ApS'],
   },
   'the-estate': {
     title: 'Have & byggeri nord for København | WiCare ApS',
